@@ -77,9 +77,9 @@ Legend:
 | `social.content.artifact_list` | Free read. Resolver for `artifact_id`. |
 | `social.content.media_uploaded` | Pair of `media_upload_url`. Required `expected_revision`, `media_id`, `artifact_id`. |
 | `social.content.artifact_update` | Required `artifact_id`, `expected_revision`. Changes a draft that is not published yet. On 409 `published_immutable`, use `social.content.replacement_create`. |
-| `social.content.replacement_create` | Required `artifact_id`, `expected_revision`. Copies a new draft and does not publish. That draft needs its own yes. |
+| `social.content.replacement_create` | Required `artifact_id`, `expected_revision`. Copies a new draft at status `proposed` and does not publish. That draft needs its own yes. |
 | `social.content.delivery_publish` | Required `delivery_id`. Public, immediate, and irreversible. 0 credits. dry_run returns `approved_publish_hash`. Live sends `trigger` `explicit` and that hash after the owner's yes on that exact video. Do not retry when the outcome is unknown or `reconciliation_required` is true. |
-| `social.content.delete_republish_propose` | Deletion. It deletes the original post and its engagement. Owner yes on that deletion. |
+| `social.content.delete_republish_propose` | Proposes a deletion. The original post and its engagement are deleted when the replacement is approved and delivered. That deletion still needs a yes. |
 | `social.content.unschedule` | Required `expected_revision`, `artifact_id`. Pulls an armed send that has not started. Not `unplan`. Does not retract a live post. |
 | `social.content.generate_hooks` | Free. Required `user_request`, `platform`. dry_run allowed. |
 | `social.draft_score` | Free read. Required `text`. dry_run executes the read. |
