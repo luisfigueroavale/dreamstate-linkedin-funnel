@@ -9,7 +9,7 @@ Read the Proof page `brand.local/identity.md` names, Tone of Voice, `brand.local
 
 A blank follower file or a blank `brand.local/identity.md` stops the work. A blank `brand.local/voice.md` still allows a draft. Label it uncalibrated in the notes, never in the post. Keep lines they already wrote, and stay plain where they did not.
 
-One useful point. Name its source, the reader, and the funnel job. Work from the brief and the files already here. Ask only when a missing fact would change the point. Do not invent a milestone, an anecdote, a customer quote, a revenue figure, or a line about what most people do. Posts already in this repo are examples, not proof.
+Make one useful point. Name its source, the reader, and the funnel job. Work from the brief and the files already here. Ask only when a missing fact would change the point. Do not invent a milestone, an anecdote, a customer quote, a revenue figure, or a line about what most people do. Posts already in this repo are examples, not proof.
 
 There is no separate formats file. Let the material pick the shape, and keep it. Steps in order when the piece is a process. A story when a real change happened. Evidence when the point is a claim. A comparison when the reader is choosing.
 
@@ -23,8 +23,8 @@ Repurposing keeps one argument from the source. It does not squeeze the whole so
 
 Deliver one paste-ready draft. Source notes, the uncalibrated label, and anything still unverified sit outside the copy. The post contains no commentary on how it was written. Offer another opening only when they ask, or when the body cannot support the line. That opening still comes from `opening-line`.
 
-Write the draft to `vault/posts/<slug>.md` with the fields in `vault/fields.md`. One pillar. The channel is the one they asked for. Leave `publish_date` empty. If that file exists, edit it. Do not open a second file for the same post, and do not start a second board. Move the line on `vault/board.md`. After they accept it, add the concept back with `vault-find`.
+Write the draft to `vault/posts/<slug>.md` with the fields in `vault/fields.md`. Use one pillar. The channel is the one they asked for. Leave `publish_date` empty. If that file exists, edit it. Do not open a second file for the same post, and do not start a second board. Move the line on `vault/board.md`. After they accept it, add the concept back with `vault-find`.
 
-The URL goes in the comment under the post, and the post tells the reader to look there. Hand them that comment as text. Do not publish it. The URL uses `utm_source=linkedin` and the weekly campaign slug. When the material is a list, use `1.` or `•`. No em dash. No hashtag stack.
+The URL goes in the comment under the post, and the post tells the reader to look there. Hand them that comment as text. Do not publish it. The URL uses `utm_source=linkedin` and the weekly campaign slug. When the material is a list, use `1.` or `•`. Do not use an em dash. Do not stack hashtags.
 
 `social.content.artifact_create` only when they ask to store it. `whoami` first. If more than one workspace is listed, stop until they name one. `tools_get` the capability, then run it. The fetched schema wins. When that schema has dry_run, dry_run first, show the quote, then live with `quote_hash`, `max_credits`, and a new `idempotency_key`. One artifact. When the idea is for LinkedIn and X, put both channels in `platform_payloads`. Fetch that field's shape. If more than one account can post and they did not pick, ask. If a stored draft for this post already exists, read it with `social.content.artifact_get` and do not create another. If the create cannot run, hand them the file and say the account copy was not saved. Saving a draft does not schedule. A day mark belongs to `week-board`. Do not call `social.content.schedule`. Say that nothing was sent.

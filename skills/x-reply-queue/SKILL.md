@@ -21,7 +21,7 @@ A public reply uses `social.engagement.comment` only after `tools_get` shows tha
 
 ## Where the lists live
 
-Blank files in `references/` start at `Status: blank`. Stop and fill them with the owner before the first drafts. Ask only for what the pages and their past replies do not already show. When they supply old replies, read at least 50, skip the automated ones, and write texture into `brand.local/voice.md` as rules. Do not paste those sentences into the rule list. Two pauses: after voice, receipts, and lanes; again after the watchlist, the circle, and the reach list.
+Blank files in `references/` start at `Status: blank`. Stop and fill them with the owner before the first drafts. Ask only for what the pages and their past replies do not already show. When they supply old replies, read at least 50, skip the automated ones, and write texture into `brand.local/voice.md` as rules. Do not paste those sentences into the rule list. Pause twice: once after voice, receipts, and lanes, and again after the watchlist, the circle, and the reach list.
 
 `references/watchlist.md` holds 50 to 150 accounts. Seed it with whoever already gets their replies, whoever they volunteer, and peers who post inside the lanes. A row has a handle, a display name, a follower count, a lane, and notes. Priority is a digit from 1 to 3, or the word off. Off stays out of every pass. Their own handle stays out.
 
@@ -33,7 +33,7 @@ Blank files in `references/` start at `Status: blank`. Stop and fill them with t
 
 ## Cadence
 
-Ask when their targets are online. Twice on those days. For a US audience, use that timezone's morning and its afternoon. Each ordinary pass looks back 3 hours. Hand them somewhere from eight replies through fifteen. Their share of the work is about ten minutes. Keep the window short. People see the replies that land early.
+Ask when their targets are online. Run twice on those days. For a US audience, use that timezone's morning and its afternoon. Each ordinary pass looks back 3 hours. Hand them somewhere from eight replies through fifteen. Their share of the work is about ten minutes. Keep the window short. People see the replies that land early.
 
 On a day the owner posts, they answer the replies under that post themselves, during the first hour. This queue does not include those.
 
@@ -45,11 +45,11 @@ Hand back two lines: the page path, the count, and the 2 or 3 to send first beca
 
 ## Circle and reach
 
-About 10 accounts, engaged on every run, so the name becomes familiar and they answer. Pick them with the owner from a 7-day look: they post often in the lanes, they get real engagement, and they reply to other people. One line under the circle heading: handle, name, followers, and why. Lines under Alternates are ignored. Move a line up to swap someone in.
+About 10 accounts, engaged on every run, so the name becomes familiar and they answer. Pick them with the owner from a 7-day look: they post often in the lanes, they get real engagement, and they reply to other people. Under the circle heading, write one line with the handle, the name, the follower count, and why. Lines under Alternates are ignored. Move a line up to swap someone in.
 
 Circle posts stay eligible out to 6 hours. They receive a 1.6 boost. The page marks them with a circle chip. The taste ledger does not drop them, and the half-score for repeated skips does not apply. In a speed pass they stay in even under 50,000 followers. If they were missing from the watchlist, treat them as on it for that pass. When anyone in the circle posted inside the window, the batch includes at least one reply to them.
 
-`references/reach.md` is for the speed pass: active accounts at or above 50,000 followers, in or near the lanes, on topics where the owner can add a real line. Confirm the follower count before a name goes in. Skip a political feed, a crypto feed, an account that only posts tool roundups, and a company account with no back-and-forth. One line: handle and follower count. The speed set is that file, plus the circle, plus watchlist rows already at 50,000 followers. If the file is still blank, speed uses the circle and those watchlist rows.
+`references/reach.md` is for the speed pass: active accounts at or above 50,000 followers, in or near the lanes, on topics where the owner can add a real line. Confirm the follower count before a name goes in. Skip a political feed, a crypto feed, an account that only posts tool roundups, and a company account with no back-and-forth. Write one line with the handle and the follower count. The speed set is that file, plus the circle, plus watchlist rows already at 50,000 followers. If the file is still blank, speed uses the circle and those watchlist rows.
 
 ## What enters
 
@@ -121,11 +121,11 @@ Drop the pick when that thread is a promo pile or a bot pile. Do not repeat a po
 
 ## Draft
 
-Read `brand/AGENTS.md`, `brand.local/`, `references/verdicts.md`, and `taste.json` before writing. One reply per post. Every fact comes from the receipts, the Proof page, the voice file, or the post. Every number comes from the Proof page.
+Read `brand/AGENTS.md`, `brand.local/`, `references/verdicts.md`, and `taste.json` before writing. Write one reply per post. Every fact comes from the receipts, the Proof page, the voice file, or the post. Every number comes from the Proof page.
 
-A reply is one thought to a peer: usually one or two short sentences, 70 to 160 characters, and never over 200. Say it with contractions and plain words, in the texture already in `brand.local/voice.md` (how they laugh, whether they use emoji, lowercase, the words they use for people). No windup sentence, no punchline sentence, and no triad of parallel beats. One receipt is enough. Do not pile a story, a number, and a lesson into the same line, and do not show off a number nobody asked for. At most one question, and only after a concrete line. The question is short, and the poster could answer it from experience.
+A reply is one thought to a peer: usually one or two short sentences, 70 to 160 characters, and never over 200. Say it with contractions and plain words, in the texture already in `brand.local/voice.md` (how they laugh, whether they use emoji, lowercase, the words they use for people). Do not write a windup sentence, a punchline sentence, or a triad of parallel beats. One receipt is enough. Do not pile a story, a number, and a lesson into the same line, and do not show off a number nobody asked for. At most one question, and only after a concrete line. The question is short, and the poster could answer it from experience.
 
-No compliment as the opener or as padding. No link, no hashtag, no product plug. When they have named the company, that name appears only when it is the receipt itself, and in at most one reply out of ten. If they have not named it, there is no name check. No em dash and no en dash.
+Do not open with a compliment or use one as padding. Do not add a link, a hashtag, or a product plug. When they have named the company, that name appears only when it is the receipt itself, and in at most one reply out of ten. If they have not named it, there is no name check. Do not use an em dash or an en dash.
 
 Set `angle` to one of these seven names. `receipt`: the line is work they already do. `gap`: the post left out the piece they know. `tried`: they followed that advice, or they dropped it. `method`: the post never shows the how, and they have one. `ask`: a short question sits after a concrete line. `pushback`: their own work gives them a reason to disagree. `joke`: the post is funny and they can add a true detail.
 

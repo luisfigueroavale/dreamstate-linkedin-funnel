@@ -9,7 +9,7 @@ You own the opening and how it meets the body. Voice, facts, and the ending stay
 
 Read the draft or the factual brief, `brand.local/voice.md`, and `audience.local/ideal-follower.md`. Name the reader and the one point the body will pay off. Match tone to posts the owner already shipped or saved under `vault/`. Wording they gave on this request wins over a family template. A public number comes only from Proof, a file they supplied, or a tool result.
 
-The first line may be a claim, a question, a confession, a comparison, a result, a story detail, or a framework promise. Ban invented drama. Ban a mandatory I. Ban compulsory numbers. An I is allowed when it is already their voice. A number is allowed only when it is already theirs. No em dash. No invented number.
+The first line may be a claim, a question, a confession, a comparison, a result, a story detail, or a framework promise. Ban invented drama. Ban a mandatory I. Ban compulsory numbers. An I is allowed when it is already their voice. A number is allowed only when it is already theirs. Do not use an em dash. Do not invent a number.
 
 Prefer one of these families, and only with facts they have: result plus method; a test or a comparison, with the stance on the next line; a claim, then how the reader benefits; news plus result; confession plus change; stakes, then the response; before then after; receipt as promise. Ban the crowd-is-doing-it opener, the one that says people at large already do the thing and that almost nobody will admit the rest. It reads as generated copy.
 
@@ -23,7 +23,7 @@ Shape:
 
 1. Name the concrete point, why this reader cares, and any tension that is actually true.
 2. Write the opening, or edit the one they handed you. Line 2 adds a specific, a consequence, a contrast, or a promise, and it must not restate line 1.
-3. When they ask for options and leave the count unspecified, default to 3. Change the angle, not the adjectives. One hook when writing the whole post.
+3. When they ask for options and leave the count unspecified, default to 3. Change the angle, not the adjectives. Write one hook when writing the whole post.
 4. Judge each for a stranger: clear, specific, relevant, in their voice, and paid off by the body.
 5. Measure the exact chosen text. Read the 140 prefix and the 210 prefix. If a needed word arrives late, bring it forward. Leave a short line short.
 

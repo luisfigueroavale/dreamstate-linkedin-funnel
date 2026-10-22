@@ -23,13 +23,13 @@ The owner posts the comment, or says yes on that exact text. A yes on different 
 
 To comment, `social.engagement.comment`: omit `approved`, or use smoke_test, to preview. Live posts only with `approved: true`, an `idempotency_key`, and yes on that exact text. Required `account_id`, `post_social_id` (a composite id, not an activity URN), and `body` (1–4000). Zero credits, and it still counts on the sender's daily quota.
 
-`social.posts.comment_publish` is the other call. It is 2 credits. dry_run previews; live repeats `quote_hash` with `max_credits` 2. Required `channel` `"linkedin"`, `account_id`, `target_post_urn`, `body` (1–3000), and `consequence` `"public_comment"`. It runs only from an approved durable run step, or the call returns 409 `durable_run_step_required`. Owner yes on that exact body. Do not retry when the outcome is unknown. Do not use that call to fill the queue.
+`social.posts.comment_publish` is the other call. It is 2 credits. dry_run previews; live repeats `quote_hash` with `max_credits` 2. Required `channel` `"linkedin"`, `account_id`, `target_post_urn`, `body` (1–3000), and `consequence` `"public_comment"`. It runs only from an approved durable run step, or the call returns 409 `durable_run_step_required`. The owner says yes on that exact body. Do not retry when the outcome is unknown. Do not use that call to fill the queue.
 
-`social.engagement.react`: `account_id`, `post_social_id`, optional `comment_id`, `reaction` defaulting to like. No dry_run. smoke_test previews. Live needs `approved: true`, an `idempotency_key`, and yes on that reaction. It also counts on the daily quota. Do not react unless they named that reaction.
+`social.engagement.react`: `account_id`, `post_social_id`, optional `comment_id`, `reaction` defaulting to like. It has no dry_run. Use smoke_test to preview. Live needs `approved: true`, an `idempotency_key`, and yes on that reaction. It also counts on the daily quota. Do not react unless they named that reaction.
 
 ## Cadence
 
-Twice a weekday. Ask when their audience is actually on LinkedIn. Many use mid-morning. The second pass is mid-afternoon. Use their time zone. Window is 3 hours. The batch is 10 to 12 comments. Weekends are thin. Open the window back to the prior run's `fetched_at`. In the handover, say those posts are older. Replies under the owner's own posts stay off this queue. They answer those themselves.
+Run twice on a weekday. Ask when their audience is actually on LinkedIn. Many use mid-morning. The second pass is mid-afternoon. Use their time zone. The window is 3 hours. The batch is 10 to 12 comments. Weekends are thin. Open the window back to the prior run's `fetched_at`. In the handover, say those posts are older. Replies under the owner's own posts stay off this queue. They answer those themselves.
 
 ## Learn
 
@@ -49,9 +49,9 @@ If `brand.local/voice.md` has no comment rules yet, measure and ask before the f
 
 Watchlist priorities `1`, `2`, and `3`. Priority `off` drops the row. Sheet columns: `notes`, `lane`, `priority`, `headline`, `followers`, `profile_url`, and `name`. Notes say how they know the person (a client, a friend, an event, a podcast) and how warm the comment may be. Aim for 50 to 100 people. A blank follower count scores as 2,000.
 
-Resolve the two definition ids, attach, and only then run, after yes. One search per profile, newest first, held to the window. Cap parallel reads at 5. Retry a failure one by one. Keep that person's own posts. Skip a reshare of somebody else. Add niche keyword searches for people who are not on the watchlist. Drop anything they already commented on. Drop anything the previous run already showed. Dedupe on share id: a repost can carry a new urn and still point at the original url.
+Resolve the two definition ids, attach, and only then run, after yes. Run one search per profile, newest first, and hold it to the window. Cap parallel reads at 5. Retry a failure one by one. Keep that person's own posts. Skip a reshare of somebody else. Add niche keyword searches for people who are not on the watchlist. Drop anything they already commented on. Drop anything the previous run already showed. Dedupe on share id: a repost can carry a new urn and still point at the original url.
 
-Niche rows, when lanes exist, need fit of at least 2. Drop niche hits flagged `promo`, `politics`, `hiring`, or `non_english`. `niche_min_reactions` starts at 15. People only. Never the owner. Never a profile already watched.
+Niche rows, when lanes exist, need fit of at least 2. Drop niche hits flagged `promo`, `politics`, `hiring`, or `non_english`. `niche_min_reactions` starts at 15. Include people only. Never include the owner. Never include a profile already watched.
 
 Mark flags on watchlist hits rather than silently deleting them: `comment_gate`, `hiring`, `politics`, `promo`, `milestone`, `link_only`, `non_english`.
 
@@ -123,8 +123,8 @@ Run `node scripts/queue-lint.mjs work/comment-queue/<YYYY-MM-DD>-<HHMM>z.json` b
 
 Write `work/comment-queue/<YYYY-MM-DD>-<HHMM>z.json` in UTC. Store `errors`, `skipped_top`, `items`, `credits_used`, `candidates_total`, `watchlist_profiles`, `window_start`, `fetched_at`, and `run_id`. Each item keeps the candidate fields plus `angle`, `why`, and `drafts` as a list of `move`, `label`, and `text`. A draft that uses a story also stores `ref` and `ref_source` as the source path, not a second copy of a sentence they typed over your draft. `skipped_top` is the high scores you left out, with the reason. `work/` is gitignored.
 
-Run `scripts/queue-page.mjs` with the run file, `skills/comment-queue/queue.html`, and the page under `work/comment-queue/`. One column. Freshest post first. Each card shows name, headline, age, text, and counts, then the comment in a box that grows, a word count, a character count against the 200-character lint, and the personal moment with its source path. Controls are Skip, then Copy, then a control labeled Copy & open. That last control puts the text on the clipboard, opens the post in a new tab, and marks the card done. Skip asks why, in one tap. Edits and marks stay in that browser. Footer line: nothing is sent until the owner posts it, or says yes on that exact text. Do not download remote images and do not embed them. No text from the read means no card.
+Run `scripts/queue-page.mjs` with the run file, `skills/comment-queue/queue.html`, and the page under `work/comment-queue/`. Use one column. Put the freshest post first. Each card shows name, headline, age, text, and counts, then the comment in a box that grows, a word count, a character count against the 200-character lint, and the personal moment with its source path. Controls are Skip, then Copy, then a control labeled Copy & open. That last control puts the text on the clipboard, opens the post in a new tab, and marks the card done. Skip asks why, in one tap. Edits and marks stay in that browser. Footer line: nothing is sent until the owner posts it, or says yes on that exact text. Do not download remote images and do not embed them. No text from the read means no card.
 
-Handover in two lines. Give the count. Name the 2 or 3 that will go stale first, and tell them to do those before the rest.
+Keep the handover to two lines. Give the count. Name the 2 or 3 that will go stale first, and tell them to do those before the rest.
 
 A live post of one card is only `social.engagement.comment` after yes on that exact body, using the composite `post_social_id`. Preview by omitting `approved` or by smoke_test. Do not switch to `social.posts.comment_publish` unless they asked for that call and said yes on that exact body. That call is 2 credits, dry_run previews, and live repeats `quote_hash` with `max_credits` 2 from an approved durable run step.

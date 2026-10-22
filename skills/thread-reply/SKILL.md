@@ -5,13 +5,13 @@ description: "Draft one reply in an existing thread for the owner to send. Use f
 
 Follow `docs/skill-frame.md`.
 
-One reply, one open thread, owner's voice, thread link beside the draft. Nothing goes out until the owner accepts that exact text. Smallest helpful move. Help before a signup or first use. A call only for a buyer who already qualifies, and only as a question. Existing threads (`docs/conversations.md`). A new conversation or cadence is `warm-cadence`. Listing the slice is `inbox-desk`.
+Write one reply in one open thread, in the owner's voice, with the thread link beside the draft. Nothing goes out until the owner accepts that exact text. Use the smallest helpful move. Give help before a signup or a first use. Offer a call only for a buyer who already qualifies, and only as a question. Existing threads are in `docs/conversations.md`. A new conversation or cadence is `warm-cadence`. Listing the slice is `inbox-desk`.
 
-Read `AGENTS.md`, then the filled files `brand/AGENTS.md` points at, then `audience/AGENTS.md` and `audience.local/ideal-follower.md` when fit matters. The buyer is the Ideal Customer page in Company Context. For a DM, compress `brand.local/voice.md` and `vault/voice/` samples, and reuse this thread's earlier owner lines. Ids are in `docs/tool-map.md`. `tools_get` before `tools_run`. Fetched schema wins. No second context tree. No reply shapes in a side file. These rules are the set.
+Read `AGENTS.md`, then the filled files `brand/AGENTS.md` points at, then `audience/AGENTS.md` and `audience.local/ideal-follower.md` when fit matters. The buyer is the Ideal Customer page in Company Context. For a DM, compress `brand.local/voice.md` and `vault/voice/` samples, and reuse this thread's earlier owner lines. Ids are in `docs/tool-map.md`. `tools_get` before `tools_run`. The fetched schema wins. Do not add a second context tree. Do not put reply shapes in a side file. These rules are the set.
 
 `whoami` before the first write or spend. If more than one workspace is listed, ask which, and stop.
 
-A direct message is usually under 240 characters, one to four short paragraphs. It answers their latest line. One operator to another.
+A direct message is usually under 240 characters, one to four short paragraphs. It answers their latest line. Write as one operator to another.
 
 A comment on someone else's post is `comment-queue`: one to three lines, a concrete observation or a question, almost never a pitch. A long post or an article is `linkedin-draft`. This skill writes neither.
 
@@ -19,7 +19,7 @@ An own-post reply is not an inbox send. Preview with `social.comments.reply`. Af
 
 ## How it should sound
 
-Answer the last message, including any constraint or stack they named. While a buyer stays in the thread, answer what they just said and ask which setup part comes next. Describe the product only after they ask. Everyday words, precise nouns, the owner's informal rhythm. No slang quota. Each link on its own line. No sign-off. No em dash. Use a period, a comma, or and. Plain ending. No chirpy goodbye.
+Answer the last message, including any constraint or stack they named. While a buyer stays in the thread, answer what they just said and ask which setup part comes next. Describe the product only after they ask. Everyday words, precise nouns, the owner's informal rhythm. Do not set a slang quota. Put each link on its own line. Do not add a sign-off. Do not use an em dash. Use a period, a comma, or and. End plainly. Do not add a chirpy goodbye.
 
 A requested repo, recording, or link goes in that same message. Hand the file over while fit is still open. Fit is not a toll on the file. Hand over a linked page with one casual line. Do not inventory the page.
 
@@ -37,7 +37,7 @@ A booking link is allowed once they requested a conversation, or while you are s
 
 A status chip or due filter is only a hint. Reread the thread. Skip when the newest line went out from this account, or line order is unclear. Catch a link already sent, a question, a signup, or a meeting already promised. Before an outbound line counts as the owner's voice, confirm a sequence or other automation did not write it. Read any other stored thread for that person first. Classify the last inbound line from its words.
 
-One close. Do not stack a second ask.
+Use one close. Do not stack a second ask.
 
 Nothing to answer means no reply: a thanks, a done after they booked, or a note they will look later.
 

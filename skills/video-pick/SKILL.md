@@ -5,7 +5,7 @@ description: "Decide the next video before anyone records: three gates, a scorec
 
 Follow `docs/skill-frame.md`.
 
-No recording until three gates pass. Gate 1 compares the idea with the channel median they supply. Gate 2 keeps an outside structure only at 3× or more, from 3 or more channels, across 2 or more niches, inside 90 days, in evidence they provided, and not worn at home. Gate 3 is the first minute. The ledger is the day after, three days, a week, and four weeks (28 days). Studio click-through and retention only. Never write zero. If a path needs an API key, drop it.
+Do not record until three gates pass. Gate 1 compares the idea with the channel median they supply. Gate 2 keeps an outside structure only at 3× or more, from 3 or more channels, across 2 or more niches, inside 90 days, in evidence they provided, and not worn at home. Gate 3 is the first minute. The ledger is the day after, three days, a week, and four weeks (28 days). Record studio click-through and retention only. Never write zero. If a path needs an API key, drop it.
 
 | Gate | Question | Evidence | Hand over | Who decides |
 |---|---|---|---|---|
@@ -107,7 +107,7 @@ Read the packaging library before you draft. After each check, record the shape,
 
 Script minute one as 5 beats. Aim near 160 words. A clear take may stretch toward 220. The template band is 150 to 170. Every beat names the picture. Sentence one restates the title. Frame one is the hero object from the still. Write three alternates of sentence one. The owner reads them aloud, picks, and films that opening before the rest. `record-script` waits until all three gates pass. `long-cut` uses the cut marks.
 
-A studio paste uses the share still watching at 0:30. High means the opening delivered the package. Low means change the title, the still, or the opening. No universal benchmark. Compare with this channel's previous 10 of similar length when they paste that. Prove the promise, then show the work. On a business channel, use at most 3 short lines, restate the promise, raise curiosity past the packaging, and enter point 1.
+A studio paste uses the share still watching at 0:30. High means the opening delivered the package. Low means change the title, the still, or the opening. There is no universal benchmark. Compare with this channel's previous 10 of similar length when they paste that. Prove the promise, then show the work. On a business channel, use at most 3 short lines, restate the promise, raise curiosity past the packaging, and enter point 1.
 
 From transcripts they supply of their last 3 or 4 videos, note the first 15 seconds, 0:15 through 1:00, and keep or cut. Count "essentially", "actually", "basically", and the words in minute one. That is their pace. Outlier openings often land around 200 to 270 words and open on the proof object, a numbered promise against a contrast, the belief this video breaks, or the wave with its date. A disclaimer or another creator is a rare open.
 
@@ -131,13 +131,13 @@ The week-out pace is the calibration column. Views per day are views divided by 
 
 ## Rules
 
-The owner picks the idea and the packaging. No number without a source. Ratios come from this sheet. Results come from cleared Proof. Never record on a failed gate. Raw numbers stay in `vault/sources/<date>-<slug>/` with `origin.md`. The synthesis is `vault/notes/video/<date>-<slug>.md`. Lessons live in the ledger and the packaging library. Numerals in what you hand them. No em dashes in that copy. `week-spread` is the weekly caller when the recording is the trunk and the idea is not chosen yet.
+The owner picks the idea and the packaging. No number without a source. Ratios come from this sheet. Results come from cleared Proof. Never record on a failed gate. Raw numbers stay in `vault/sources/<date>-<slug>/` with `origin.md`. The synthesis is `vault/notes/video/<date>-<slug>.md`. Lessons live in the ledger and the packaging library. Use numerals in what you hand them. Do not use em dashes in that copy. `week-spread` is the weekly caller when the recording is the trunk and the idea is not chosen yet.
 
 An outlier needs at least 5 peers of similar age and length, or the ratio is not evidence. Drop livestreams, anything under four minutes, and off-audience topics. Note a sponsor. Bands under 2×, 2–5×, 5–10×, and over 10× are labels. The 3× cut sits inside 2–5×.
 
 ## Failure modes
 
-One viral video is an anecdote. A gap is closed when a bigger niche channel got there first. Crowded means many small uploads at baseline. Under 7 days, do not trust the ratio alone. If there is no tool where they live, the receipt is 0. Nothing back from a probe, once that wave has died, is not an opening. Under 5 peers: no ratio. A foreign outlier on the angle stays. A rerun of the last 3 is not a sequel. No niche outcome fails Fit. A claim the video will not show fails the promise check. An uncleared number stays off the title. A miss at 8 or more, or a hit under 8, moves the rubric. Uncalibrated below 3 ledger rows. One niche, under 3 channels, or under 3× is not validated. Home median under 1.5× across 3 or more channels is worn. A greeting, their name, a subscribe ask, theory before the payoff, or a hop-in fails the minute.
+One viral video is an anecdote. A gap is closed when a bigger niche channel got there first. Crowded means many small uploads at baseline. Under 7 days, do not trust the ratio alone. If there is no tool where they live, the receipt is 0. Nothing back from a probe, once that wave has died, is not an opening. Under 5 peers, there is no ratio. A foreign outlier on the angle stays. A rerun of the last 3 is not a sequel. No niche outcome fails Fit. A claim the video will not show fails the promise check. An uncleared number stays off the title. A miss at 8 or more, or a hit under 8, moves the rubric. Below 3 ledger rows, the sheet is uncalibrated. One niche, under 3 channels, or under 3× is not validated. Home median under 1.5× across 3 or more channels is worn. A greeting, their name, a subscribe ask, theory before the payoff, or a hop-in fails the minute.
 
 ## Host client, not used
 

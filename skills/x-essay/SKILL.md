@@ -19,11 +19,11 @@ Use the shortest explanation that is still complete. Two sentences and one pictu
 
 Separate what they demonstrated from what they only propose. A number comes only from the Proof page. Keep each time window in its own claim. A reference piece is craft only. Study how it makes the stakes plain, and how a picture holds a fact. Do not take its stories, its numbers, or its lines.
 
-Numerals. No em dash. No hashtags. No generic machine phrasing. A link on their own site uses `utm_source=x` and `utm_campaign` set to the weekly slug on the brief. Every other link stays clean.
+Use numerals. Do not use an em dash, a hashtag, or generic machine phrasing. A link on their own site uses `utm_source=x` and `utm_campaign` set to the weekly slug on the brief. Every other link stays clean.
 
 A picture only where it explains the next claim. That is a cover, or an inline frame beside the paragraph it proves. Record the cover path and each inline path on the brief. Number those inline files in article order, and add where each one sits. Keep a caption only when it adds a fact the picture does not show. Placeholder text from an editor is not a caption. New pictures are `frame-build` or `station-map`. Keep the HTML. The still is the last frame of that timeline, at full size. Do not redraw it from a small export.
 
-For the post that goes with a new video, use this shape. One line on the reader's world or the result. One or two lines on what the video shows. Attach the native video if they have the file. If the file is missing, say so and leave the video off. Put the full https URL in the post. Do not shorten that URL.
+For the post that goes with a new video, use this shape. Write one line on the reader's world or the result. Write one or two lines on what the video shows. Attach the native video if they have the file. If the file is missing, say so and leave the video off. Put the full https URL in the post. Do not shorten that URL.
 
 A hand edit sets the rule in `brand.local/voice.md` without storing a second copy of their sentence. Compare that edit with the draft before it. The rule covers the depth and the pace, plus each addition, each cut, and each rename. Length, examples, headings, and tone in the edit replace the earlier draft. Writing the rule does not start another rewrite. It does not publish.
 

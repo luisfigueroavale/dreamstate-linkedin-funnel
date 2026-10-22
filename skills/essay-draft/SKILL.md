@@ -7,7 +7,7 @@ Follow `docs/skill-frame.md`.
 
 Start from a sourced idea. Read the filled reader file (`audience.local/ideal-follower.md`), the voice file (`brand.local/voice.md`), and the whole primary source they named, not an excerpt, before any sentence. Name the question the reader is actually asking, and the answer this piece can support. The brief sets the format and the length. Do not pad to a made-up count.
 
-One argument. Map the argument before drafting: thesis, the claims that hold it up, the evidence for each, one counterpoint or limit, and what the reader can do with it. Before drafting, check the source behind each claim. If the evidence is missing, narrow the thesis or label the line a hypothesis.
+Make one argument. Map the argument before drafting: thesis, the claims that hold it up, the evidence for each, one counterpoint or limit, and what the reader can do with it. Before drafting, check the source behind each claim. If the evidence is missing, narrow the thesis or label the line a hypothesis.
 
 Draft so each section promises something concrete. Every example stays inside the source, and only when it is useful to the question. When the reader has to perform a process, include a worked example. Keep the owner's experience, research, and each guest's account in separate sentences. Keep dates, scope, and uncertainty in the sentence that needs them.
 

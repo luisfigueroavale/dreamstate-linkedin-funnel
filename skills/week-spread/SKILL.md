@@ -50,7 +50,7 @@ A video link is the full https URL. Do not shorten it. A short link is treated a
 
 Every link to their own site carries UTM. Source is the platform: `linkedin`, `x`, `youtube`, or `newsletter`. The campaign is one short slug for the whole week, written on the brief, and copied onto every link, so a signup can be tied to this week.
 
-One parent row for the recording. Every other piece is a row on that week, with a status, a platform, and a date. Status is Idea, Drafting, Review, Published, or Backlog. Do not open a pile of unrelated rows.
+Use one parent row for the recording. Every other piece is a row on that week, with a status, a platform, and a date. Status is Idea, Drafting, Review, Published, or Backlog. Do not open a pile of unrelated rows.
 
 Date every row from release day D. The letter and the X essay go on D. The rest follows `docs/week-spread.md`.
 
@@ -93,7 +93,7 @@ Each slate line carries four fields: why it is hot (the outlier, or numbers they
 
 ## Stage 1
 
-1. Take the picked idea in their words. One pillar. One job. Ground it in `brand.local/` and `audience.local/ideal-follower.md`.
+1. Take the picked idea in their words. Use one pillar and one job. Ground it in `brand.local/` and `audience.local/ideal-follower.md`.
 2. For stance, read what they already published on this. The recording extends it, or it names the change.
 3. For facts, verify product claims, model claims, and market claims where they were published, and write the date beside each one. `source-notes` does that read. Do not invent the citation.
 4. For the worked example and the resource, prefer what they can show, and a file that already exists. A new resource is `magnet-build`, and only if they ask.

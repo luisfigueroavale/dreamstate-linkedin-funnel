@@ -7,7 +7,7 @@ Follow `docs/skill-frame.md`.
 
 Read `brand.local/identity.md`, `brand.local/voice.md`, and `vault/voice/`. If `audience.local/ideal-follower.md` is filled, read it so a reader phrase is not filed as the owner's. If the voice file is missing, copy `brand/voice.md` to `brand.local/voice.md`. Template prompts are not owner rules. If identity names a Tone of Voice page, point at it and do not contradict or paste it. If unread, say so. Voice rules go only in `brand.local/voice.md`. No formats file, second guide, index, or log.
 
-Save a new sample in `vault/voice/` under its filename. If taken, add the date beside the older file. Do not summarize, commit, or fetch a public post as a stand-in. Invent no sample or quote.
+Save a new sample in `vault/voice/` under its filename. If taken, add the date beside the older file. Do not summarize, commit, or fetch a public post as a stand-in. Do not invent a sample or a quote.
 
 Beside each path, classify: written by the owner, a speech transcript, a ghostwritten post they approved, a draft they rejected, or external inspiration. An edit is preference. An engagement count is an outcome, not authorship. External inspiration is not a rule or example. A spoken habit is not a writing rule unless written samples show it. A rejected draft may add under Don't or Banned words, not a line to copy. An approved ghostwritten post records what they let stand. Only a later edit is preference evidence.
 
