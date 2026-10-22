@@ -71,4 +71,4 @@ Copy `vault/week/brief.md` to `vault/week/<date>.md`. The idea is one sentence t
 
 ## Not in this desk
 
-No walkthrough link. No second planning database: the board is `vault/board.md`, and Dreamstate holds drafts. No video-host uploader: the owner uploads after `video-hold` packages the folder. No ranking plugin, no paid social radar, and no 3D scene library.
+No walkthrough link. No second planning database: the board is `vault/board.md`, and Dreamstate holds drafts. YouTube publish is `video-hold`, after a yes on that exact video. No ranking plugin, no paid social radar, and no 3D scene library.

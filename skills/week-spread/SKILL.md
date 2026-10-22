@@ -128,9 +128,9 @@ Remind them: a clear screen, accounts they are willing to show, no client materi
 | 3 | Titles | `title-pair` | Both titles are still true of the cut |
 | 4 | Description | `video-blurb` | A block they can paste, with chapters |
 | 5 | Thumbnail | `thumb-frame` | Both sizes that skill names |
-| 6 | Hand off | `video-hold` if they want the folder stored | They upload. You do not |
+| 6 | Hand off | `video-hold` | That skill publishes after a yes on that exact video |
 
-There is no video-host uploader in this desk: no host connection, no OAuth client, no channel. Do not copy an uploader from another project. Packaging is not permission to publish. After they upload, they tell you the id. Ask them to leave it private until they say it can be public. This desk does not ship a transcription service.
+`video-hold` publishes on the connected YouTube account. Packaging is not that yes. Privacy stays private until they name otherwise. Do not copy a connection from another project. This desk does not ship a transcription service.
 
 ## Stage 5
 

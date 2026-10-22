@@ -20,7 +20,7 @@ A row is one source rule. The tool cell is the Dreamstate capability or definiti
 | `frame-review` | `src-brand-check` | 345 | 594 | 33 | 3 | 0 |
 | `vault-find` | `src-local-search` | 235 | 258 | 16 | 12 | 0 |
 | `pillar-map` | `src-pillar-plan` | 394 | 626 | 40 | 8 | 0 |
-| `week-spread` | `src-week-cascade` | 2408 | 2440 | 122 | 9 | 0 |
+| `week-spread` | `src-week-cascade` | 2408 | 2415 | 123 | 8 | 0 |
 | `week-board` | `src-week-posts` | 412 | 652 | 31 | 3 | 0 |
 | `source-notes` | `src-source-research` | 165 | 299 | 37 | 0 | 0 |
 | `cross-cut` | `src-repurpose` | 254 | 383 | 21 | 3 | 0 |
@@ -42,10 +42,10 @@ A row is one source rule. The tool cell is the Dreamstate capability or definiti
 | `thumb-patterns` | `src-thumb-patterns` | 337 | 509 | 43 | 7 | 0 |
 | `title-pair` | `src-title-pair` | 695 | 910 | 66 | 3 | 0 |
 | `video-pick` | `src-video-pick` | 3779 | 4923 | 363 | 8 | 0 |
-| `video-hold` | `src-video-publish` | 173 | 317 | 11 | 4 | 0 |
+| `video-hold` | `src-video-publish` | 173 | 444 | 14 | 1 | 0 |
 | `release-reel` | `src-release-reel` | 197 | 344 | 18 | 2 | 0 |
 | `long-cut` | `src-long-cut` | 1070 | 1026 | 44 | 1 | 0 |
-| `picture-lock` | `src-picture-lock` | 3817 | 2122 | 101 | 27 | 0 |
+| `picture-lock` | `src-picture-lock` | 3817 | 2122 | 102 | 26 | 0 |
 | `footage-pass` | `src-footage-pass` | 177 | 282 | 52 | 0 | 0 |
 | `talk-cut` | `src-talk-cut` | 1189 | 1422 | 47 | 0 | 0 |
 | `clip-select` | `src-clip-select` | 162 | 240 | 37 | 0 | 0 |
@@ -62,7 +62,7 @@ A row is one source rule. The tool cell is the Dreamstate capability or definiti
 | `warm-cadence` | `src-sequence` | 285 | 550 | 45 | 7 | 0 |
 | `magnet-build` | `src-magnet-build` | 268 | 448 | 49 | 2 | 0 |
 | `magnet-send` | `src-magnet-send` | 1789 | 1800 | 55 | 17 | 0 |
-| **Total** | | **41475** | **46387** | **2739** | **342** | **0** |
+| **Total** | | **41475** | **46489** | **2744** | **337** | **0** |
 
 ## desk-setup
 
@@ -497,7 +497,7 @@ Neutral id: `src-pillar-plan`. Source words: 394. Our words: 626. 8-gram overlap
 
 ## week-spread
 
-Neutral id: `src-week-cascade`. Source words: 2408. Our words: 2440. 8-gram overlap: 0.
+Neutral id: `src-week-cascade`. Source words: 2408. Our words: 2415. 8-gram overlap: 0.
 
 | # | Source rule | Our rule | Tool |
 |---|---|---|---|
@@ -512,7 +512,7 @@ Neutral id: `src-week-cascade`. Source words: 2408. Our words: 2440. 8-gram over
 | R07 | Stage 1 finishes as a filled brief; they set the release day and, when the recording is a review, their verdict | The nine stages: the dated brief is filled; they decide the release day and a review verdict | local |
 | R08 | Stage 2 finishes as dated rows; they step in only when two pieces want the same day | The nine stages: rows on the brief and the board; only a day that two pieces both want | local |
 | R09 | Stage 3 finishes as the file they record; they decide what the camera shows | The nine stages: the file they record; what the camera shows | none |
-| R10 | Stage 4 finishes as a folder they can upload; they pick the title, the thumbnail, and they upload | The nine stages: folder ready for them to upload | local |
+| R10 | Stage 4 finishes as a folder they can upload; they pick the title, the thumbnail, and they upload | The nine stages: they still pick the title and the thumbnail; `video-hold` publishes after a yes on that exact video | social.content.delivery_publish |
 | R11 | Stage 5 finishes as copy on each row; they edit and choose which lines stand alone | The nine stages: copy on each row; edits, and which lines stand alone | none |
 | R12 | Stage 6 finishes armed only after a yes on that item | The nine stages: armed only after yes | social.content.schedule |
 | R13 | Stage 7 finishes as signals, fit, a delivered file, and reply drafts; they approve any send not already allowed | The nine stages: signals, fit, the file delivered, and reply drafts; any send they have not already allowed | none |
@@ -579,8 +579,8 @@ Neutral id: `src-week-cascade`. Source words: 2408. Our words: 2440. 8-gram over
 | R70 | Both titles must still be true of the cut | Stage 4: title-pair | local |
 | R71 | The description is a block they can paste, with chapters | Stage 4: video-blurb | local |
 | R72 | Check the thumbnail at both sizes that skill names | Stage 4: thumb-frame | local |
-| R73 | They upload and then tell you the id; ask them to leave it private until they say it can be public | Stage 4: video-hold stores the folder; you do not upload | local |
-| G06 | Upload through a video-host client | gap: no host connection, no auth client, and no channel; do not copy an uploader from another project | gap: host video client |
+| R73 | They upload and then tell you the id; ask them to leave it private until they say it can be public | Stage 4: `video-hold` publishes after a yes on that exact video; privacy stays `private` until they name otherwise | social.content.delivery_publish |
+| R122 | Upload through a video-host client | `video-hold` publishes on the connected YouTube account; do not copy a connection from another project | social.content.delivery_publish |
 | R74 | Write the letter first; it is the argument the other pieces reuse | Stage 5: letter-draft comes before any piece that reuses its argument | local |
 | R75 | Then write the long X piece from that letter, the short note that the recording is up, and the LinkedIn posts, without mining a fresh argument for every row | Stage 5: do not mine the transcript again to invent a fresh argument | local |
 | R76 | Run LinkedIn copy through the draft skill and the opening-line skill, and put the URL in the comment under the post | Stage 5: the post tells the reader to look there | local |
@@ -1656,7 +1656,7 @@ Neutral id: `src-video-blurb`. Source words: 271. Our words: 410. 8-gram overlap
 | R25 | Also return a separate list of every link or time still open, including a link not opened or a link with no address | body: separate list of every link or time still open | none |
 | R26 | On a script with no cut, that list says the times are provisional | body: on a script with no cut, the list says the times are provisional | none |
 | R27 | An upload belongs to video-hold; this pass does not upload | body: an upload belongs to video-hold; this skill does not upload | none |
-| G01 | Host chapter rules are not checked against current documentation | gap: upload readiness stays in video-hold | gap: Dreamstate can't do this |
+| G01 | Host chapter rules are not checked against current documentation | gap: this pass does not check current host chapter documentation | none |
 | G02 | A title is not drafted in this pass even when someone asks | gap: titles stay in title-pair | none |
 
 ## thumb-frame
@@ -2219,25 +2219,27 @@ Neutral id: `src-video-pick`. Source words: 3779. Our words: 4923. 8-gram overla
 
 ## video-hold
 
-Neutral id: `src-video-publish`. Source words: 173. Our words: 317. 8-gram overlap: 0.
+Neutral id: `src-video-publish`. Source words: 173. Our words: 444. 8-gram overlap: 0.
 
 | # | Source rule | Our rule | Tool |
 |---|---|---|---|
-| G01 | Place a new or revised picture on a confirmed channel and treat processing as checked there | gap: this desk has no video-host uploader | gap: Dreamstate can't do this |
-| R01 | Open the finished picture on disk, plus the title, the blurb, the poster frame, and any privacy choice or clock time they already named. If the picture, the title, the blurb, or the poster frame is absent, ask, and do not make one up. If privacy was not named, ask before a draft is stored | body: read the finished file, title, description, thumbnail, and any visibility, schedule, or time zone; ask when the file, title, description, or thumbnail is missing; ask before a draft when visibility is missing | none |
-| R02 | This desk ships no uploader, no sign-in client, and no channel link. Token files are not kept | body: no video-host uploader; sign-in and the host API are dropped | none |
-| G02 | Read the connected tool's operations and prove which channel is attached | gap: do not inspect a host account or confirm a channel | gap: Dreamstate can't do this |
-| R03 | A missing sign-in is not a reason to borrow a connection from a different project | body: do not copy credentials from another project | none |
-| R04 | One folder holds the final picture, the title, the blurb, the poster frame, captions, a playlist only if they asked, privacy, clock time, and time zone | body: build one folder with the final file, title, description, thumbnail, captions, playlist only when asked, visibility, schedule, and time zone | none |
-| R05 | Platform limits and any quota figure come from their notes or a page they name. Do not guess a quota. That read is not a host call | body: read platform limits and any quota figure from their notes or a page they name | none |
+| R12 | Place a new or revised picture on a confirmed channel and treat processing as checked there | body: one video on the connected YouTube account through `social.content.artifact_create`, the media pair, then `social.content.delivery_publish`; processing readback stays G04 | social.content.delivery_publish |
+| R01 | Open the finished picture on disk, plus the title, the blurb, the poster frame, and any privacy choice or clock time they already named. If the picture, the title, the blurb, or the poster frame is absent, ask, and do not make one up. If privacy was not named, ask before a draft is stored | body: read the finished file, title, description, thumbnail, and any privacy, schedule, or time zone; ask when the file, title, description, or thumbnail is missing; privacy is always set, and unnamed privacy is `private` | none |
+| R02 | This desk ships no uploader, no sign-in client, and no channel link. Token files are not kept | body: publish goes through Dreamstate; `senders.social_accounts.list` with `platform` `youtube` supplies `account_id`; no connected account means stop | senders.social_accounts.list |
+| R13 | Read the connected tool's operations and prove which channel is attached | body: `social.channels_list` is the channel row; YouTube supports write, schedule, publish, and analytics; publish route `youtube_data_api_v3`; analytics `youtube_analytics`; re-read before a publish | social.channels_list |
+| R03 | A missing sign-in is not a reason to borrow a connection from a different project | body: do not copy a connection from another project | none |
+| R04 | One folder holds the final picture, the title, the blurb, the poster frame, captions, a playlist only if they asked, privacy, clock time, and time zone | body: one video per post; title is `snippet.title`, 100 characters or fewer; description is `snippet.description`, 5000 characters or fewer; privacy, schedule, and time zone stay with that draft | none |
+| R05 | Platform limits and any quota figure come from their notes or a page they name. Do not guess a quota. That read is not a host call | body: title limit 100 and description limit 5000 come from the fetched `platform_payloads.youtube` schema; do not guess a quota past that | social.content.artifact_create |
 | R06 | Building the folder is not permission to publish | body: packaging is not permission to publish | none |
-| G03 | Once they allow a send, carry out that scope on the host, including a change to a picture already there | gap: do not send the file to a host or change a video already on a host | gap: Dreamstate can't do this |
-| R07 | Store a draft only when they ask, then keep the returned id before any later step | body: `social.content.artifact_create` only when they ask; record the returned artifact id before any later step | social.content.artifact_create |
-| R08 | If that create result is unclear, or a draft for this picture is already stored, read it back. If the id is unknown, list drafts. If neither shows it, stop, and do not make a second one | body: `social.content.artifact_get`, or `social.content.artifact_list` when the id is unknown; if neither shows the draft, stop | social.content.artifact_get |
-| R09 | Use only the privacy and the clock time they named. Arming a future send is its own yes and still needs a bind on that version. If they named a clock time and no time zone, ask first | body: `social.content.schedule` is a separate yes (`expected_revision`, `scheduled_at`, `artifact_id`) and still needs `social.content.approve`; missing time zone on a named schedule means ask | social.content.schedule |
-| G04 | Read processing, final metadata, the poster frame, captions, and access back from the host, and report a public address | gap: processing, a public page, and whether the thumbnail or captions are live are only for the owner after they upload | gap: Dreamstate can't do this |
-| R10 | Say what was stored: the folder, the artifact id, and that the bytes landed. A schedule is a separate yes. Processing and a public page stay with the owner. Do not invent a public address | body: stored means the folder, the artifact id, and that the bytes landed via `social.content.media_upload_url` then `social.content.media_uploaded`; that pair does not publish | social.content.media_uploaded |
-| R11 | A successful create does not prove the host finished processing or that the picture is public | body: a successful create is not proof a host finished processing or that the video is public | none |
+| R14 | Once they allow a send, carry out that scope on the host, including a change to a picture already there | body: owner yes on that exact video, title, description, and privacy, then `social.content.delivery_publish` with `delivery_id`, `trigger` `explicit`, and the dry_run `approved_publish_hash`; a draft not yet published changes through `social.content.artifact_update`; `published_immutable` uses `social.content.replacement_create`, which copies a new draft and does not publish, and that draft needs its own yes | social.content.delivery_publish |
+| R07 | Store a draft only when they ask, then keep the returned id before any later step | body: `social.content.artifact_create` only when they ask; required `content` and `channels` `["youtube"]`; pass `account_ids` and `platform_payloads.youtube.account_id`; record the artifact id | social.content.artifact_create |
+| R08 | If that create result is unclear, or a draft for this picture is already stored, read it back. If the id is unknown, list drafts. If neither shows it, stop, and do not make a second one | body: `social.content.artifact_get` is live and has no dry_run, or `social.content.artifact_list` when the id is unknown; if neither shows the draft, stop | social.content.artifact_get |
+| R09 | Use only the privacy and the clock time they named. Arming a future send is its own yes and still needs a bind on that version. If they named a clock time and no time zone, ask first | body: privacy is always `status.privacyStatus`, default `private`; `social.content.schedule` (`artifact_id`, `expected_revision`, `scheduled_at`) writes a delivery and does not post; dispatch still needs `social.content.approve`; a named time with no time zone means ask | social.content.schedule |
+| G04 | Read processing, final metadata, the poster frame, captions, and access back from the host, and report a public address | gap: the publish receipt is the delivery row; processing, captions, and a public page are not in that response | gap: Dreamstate can't do this |
+| R10 | Say what was stored: the folder, the artifact id, and that the bytes landed. A schedule is a separate yes. Processing and a public page stay with the owner. Do not invent a public address | body: report the folder, the artifact id, the delivery id, and the privacy set; `social.content.media_upload_url` then `social.content.media_uploaded` do not publish | social.content.media_uploaded |
+| R11 | A successful create does not prove the host finished processing or that the picture is public | body: a successful create is not proof processing finished; do not invent a public address | none |
+
+Channel list, not a source rule in this pair: `social.channels_list` also includes Threads, TikTok, Instagram, Facebook, and Reddit. Reddit schedule and publish are draft-only. This skill does not schedule or publish Reddit. No source rule in `src-video-publish` named those channels.
 
 ## release-reel
 
@@ -2417,7 +2419,7 @@ Neutral id: `src-picture-lock`. Source words: 3817. Our words: 2122. 8-gram over
 | G01 | Keep rebuilding until the still sheet is clean, at most 3 passes, then report what remains | gap: do not roll another render to chase a clean sheet | gap: this skill stops after one pass |
 | G02 | Do not pause to ask between stages unless the content choice is genuinely ambiguous | gap: consent still requires a yes before a spend, a schedule, or a send | gap: consent still requires a yes |
 | G03 | A separate treatment skill decides the edit, and a description skill takes the chapter cards as its chapter list | gap: this pass does not chain those jobs | gap: this pass does not chain those jobs |
-| G04 | Copy the finished file into a host upload folder | gap: no video-host uploader | gap: Dreamstate can't do this |
+| R102 | Copy the finished file into a host upload folder | this pass does not upload; `video-hold` publishes that file with `social.content.delivery_publish` after a yes on that exact video | social.content.delivery_publish |
 | G05 | Bundled graphics runtime, its first-use install, its licence note, its render-hash cache, the image library, and copying colours into that kit's theme | gap: no bundled graphics runtime on this desk | gap: no bundled graphics runtime on this desk |
 | G06 | Editor timeline interchange, its lanes, markers carrying id and cue, and repairing the importer when a load breaks | gap: this skill does not write an editor timeline | gap: this skill does not write an editor timeline |
 | G07 | One word at a time in lowercase, a serif payoff about every 5 to 10 seconds and never two at once, an accent marker at most once per 10 seconds, blur-in frame counts, a longer entrance than the exit, caption sizes, and a line height near 0.7 | gap: those caption treatments are not gates | gap: those caption treatments are not gates |
