@@ -5,38 +5,24 @@ description: "Build a giveaway someone can finish without you: promise, worked e
 
 Follow `docs/skill-frame.md`.
 
-Read `audience/AGENTS.md`, then `audience.local/ideal-follower.md`. If that file is missing or still says `Status: blank`, stop. The reader is that file. Read `brand.local/identity.md`. If it is missing or still says `Status: blank`, stop. The offer is the Ideal Customer page. Claims you may print are the Proof page. Name each page you read, and the revision when the read returns one. If Proof was not read, print no number and no result. A figure from another company's customers stays out. Do not paste Company Context, either page, or the follower file into the giveaway.
+Read `audience/AGENTS.md`, then `audience.local/ideal-follower.md`, and `brand.local/identity.md`. Missing or `Status: blank`: stop. The follower file is the reader. Offer: Ideal Customer page. Printable claims: Proof page. Name each page and any revision returned. Proof unread: no number and no result. No figure from another company's customers. Do not paste Company Context, either page, or the follower file into the giveaway.
 
-Name the reader's next job before you choose a format: a decision, a calculation, a workflow they can configure, or a draft they can finish. Write the promise as one sentence in `promise.md`. That sentence names the output they hold when they are done.
+Next job first: a decision, a calculation, a workflow they can configure, or a draft they can finish. `promise.md` is one sentence naming the output they hold when done.
 
-Pick the format that finishes the job. Use a calculator when they repeat a decision. Use a template when the work comes around again. Use a repository when the workflow runs or takes configuration. Use a checklist when the inspection has a clear stop. Use a guide when the method needs the steps in words. Do not make a hosted page the format for every request.
+Calculator for a repeated decision. Template when work returns. Repository when the workflow runs or needs configuration. Checklist when inspection has a clear stop. Guide when the method needs steps in words. A hosted page is not the format for every request.
 
-Create `magnets/<slug>/` from the shape of `magnets/example/`. Replace every line. Do not leave the example sentences in place. A later reader can start again from the same blank.
+`magnets/<slug>/` follows `magnets/example/`. Replace every line. No leftover example sentence. A later reader restarts from the same blank.
 
-The folder holds these pieces:
+- `promise.md`: that sentence.
+- `example.md`: a full pass to that output. First line says example. An invented figure is marked invented, not a customer's result, with no customer numbers.
+- Copyable blank: `blank.md`, or the sheet, checklist, template, or repository, with `blank.md` pointing at it. They can edit it.
+- `delivery.md`: keyword, full URL, sentence carrying that URL. No short link. Keep existing UTM. Unpublished: unknown. Do not invent an address.
+- `README.md`: who, problem, promise, pieces, first result, setup. Setup names every tool, account, cost, install, price, and unsupported step. Add a published stable address. After the first result, one optional next step. Extras stay after that.
 
-- `promise.md`. The one-sentence promise.
-- `example.md`. A complete pass that reaches the same output the promise names. The first line says it is an example. When a figure is invented, that file says the figure is invented. It is not a customer's result.
-- The blank they copy. `blank.md`, or the sheet, checklist, template, or repository that is the real blank, with `blank.md` pointing at it. They can edit it.
-- `delivery.md`. The keyword, the full URL, and the sentence you would send. The sentence carries that full URL. Leave any short link out of it. Keep UTM when the URL already has it. If nothing is published, write unknown on the URL line. Do not invent an address.
-- `README.md`. Who it is for, the problem, the promise, the pieces in the folder, the first result they should reach, and what they need before they start. That last part names every tool, every account, every cost, and every step you will not support. When a stable address is already published, put it here too. After the first result, one optional next step that fits this piece. Further extras stay after that first result.
+`README.md` gets a stranger to that result, then the check: bad input, a skipped named requirement, and what failure shows. It pays off the promise. A sales conversation is not a step. They finish with you out of the room.
 
-`README.md` walks a stranger to that one result, then tells them how to check it, including the failures you already know for this piece: a bad input, a requirement you named that they skipped, and what they see when the check fails. The file pays off the promise. A sales conversation is not a step. They can finish with you out of the room.
+Read as that stranger. Cut a step whose login, account, or tool is unnamed beside setup. Open every promised file and link. Unknown is not a promised link. Remove or replace a link that does not open. Do not message anyone to test the path. Missing script: delete that sentence. Repository: fresh copy, run, read files written. Document: read the export through. Sheet: test an empty cell, a zero, and a row past the last designed. Done when one result is reachable alone. A preview is a preview, a scaffold a scaffold, not a working integration.
 
-Read the folder once as that stranger. Cut any step whose login, account, or tool you did not name beside setup.
+Hand the folder over. No send, post, enroll, keyword arm, or outside board. Publishing is a separate yes. This skill does not publish. An own launch post goes to `linkedin-draft` or `x-draft` once the folder exists. Do not send that post.
 
-Open each file you promised and each link you promised. Unknown is not a link you promised. A link that does not open is removed or replaced with one that does. Do not send a message to test the path. If the copy names a script, that script is in the folder. If it is not, delete the sentence. When the piece is a repository, start from a fresh copy, run it, and read the files it writes. When the piece is a document, open the exported file and read it through. When the piece is a sheet, run the formulas. Try an empty cell, a zero, and a row past the last one you designed. The folder is finished when a stranger can reach one result from it alone. Call a preview a preview. Call a scaffold a scaffold. Do not call either a working integration.
-
-Hand over the folder you wrote. This skill does not send, post, enroll, or arm a keyword rule. It does not put the giveaway on an outside board. Publishing waits for a separate yes, and this skill does not publish. When they ask for a launch post as its own request, that request goes to `linkedin-draft` or `x-draft` after the folder exists. Do not send that post.
-
-Before the owner sees the folder, confirm:
-
-- The promise is one sentence and names the output.
-- The example is labeled as an example, and it borrows no customer numbers.
-- The blank is something they can copy.
-- `delivery.md` has the keyword, the full URL or the word unknown, and the sentence.
-- The read-through removed every unnamed login.
-- Setup names the install, the accounts, the price, and the steps left out.
-- Every promised file and link is real, and the check for that format was done.
-- Company Context is not in the giveaway.
-- Nothing was sent.
+Before the owner sees it, confirm the points above. Nothing was sent.
