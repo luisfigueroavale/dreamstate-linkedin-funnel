@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en" data-desk="comments">
+<head>
+<meta charset="utf-8" data-page="comments">
+<meta name="viewport" content="initial-scale=1, width=device-width">
+<title>Comment queue</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; font: 16px/1.45 "Iowan Old Style", Palatino, serif; background: #efe7d6; color: #241c12; }
+  main { max-width: 40rem; margin: 0 auto; padding: 1rem 1rem 5rem; }
+  h1 { font-size: 1.4rem; margin: 0 0 0.2rem; }
+  .meta { color: #6a5b45; font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.85rem; }
+  article { background: #fffaf1; border: 1px solid #d9cbb0; padding: 0.85rem 1rem 1rem; margin-top: 0.8rem; }
+  article.is-closed .body { display: none; }
+  .name { font-weight: 700; color: inherit; }
+  .copy { white-space: pre-wrap; margin: 0.55rem 0; }
+  textarea { width: 100%; box-sizing: border-box; font: 1rem/1.4 ui-sans-serif, system-ui, sans-serif; padding: 0.5rem; border: 1px solid #cbb892; background: #fff; }
+  .bar { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; margin-top: 0.4rem; }
+  .len { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.8rem; color: #6a5b45; flex: 1 1 8rem; }
+  .len.hot { color: #9a3412; font-weight: 700; }
+  button, a.go { font-family: ui-sans-serif, system-ui, sans-serif; font-size: 0.9rem; border: 1px solid #241c12; background: #fffaf1; color: inherit; padding: 0.3rem 0.7rem; cursor: pointer; text-decoration: none; }
+  a.go { background: #241c12; color: #fffaf1; }
+  .choices { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.35rem; }
+  .choices[hidden] { display: none; }
+  .from { font-size: 0.8rem; color: #6a5b45; }
+  footer { margin-top: 1.4rem; text-align: center; color: #6a5b45; font-size: 0.85rem; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #1a140e; color: #f6edd9; }
+    article { background: #2a2118; border-color: #4a3b2a; }
+    textarea, button { background: #1a140e; color: inherit; border-color: #4a3b2a; }
+    a.go { background: #f6edd9; color: #1a140e; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <h1>Comment queue</h1>
+  <p class="meta" id="progress">0 of 0</p>
+  <p class="meta" id="when"></p>
+  <div id="stack"></div>
+  <footer>Nothing leaves this page by itself. Paste it on the post, or say yes on this exact text.</footer>
+</main>
+<script type="application/json" id="payload">{"run_id":"","fetched_at":"","items":[]}</script>
+<script>
+(function () {
+  var LIMIT = 200;
+  var raw = document.querySelector("#payload").textContent;
+  var pack = JSON.parse(raw);
+  var bucket = "desk.comment-queue." + (pack.run_id || "unsaved");
+  var reasons = ["Post too old", "Already said", "Wrong angle", "Too long", "Not how I talk", "Not my topic", "No reason"];
+  var memory = window.localStorage;
+
+  function recall(id) { return memory.getItem(bucket + "/" + id); }
+  function keep(id, value) {
+    if (value == null) memory.removeItem(bucket + "/" + id);
+    else memory.setItem(bucket + "/" + id, value);
+  }
+  function wordCount(text) {
+    return text.trim().split(/\s+/).filter(Boolean).length;
+  }
+  function stamp(iso) {
+    var then = Date.parse(iso || "");
+    if (Number.isNaN(then)) return "";
+    var mins = Math.round((Date.now() - then) / 60000);
+    if (mins < 90) return mins + " min";
+    var hrs = Math.round(mins / 60);
+    if (hrs < 36) return hrs + " hr";
+    return Math.round(hrs / 24) + " d";
+  }
+  function putOnClipboard(text) {
+    var clip = navigator.clipboard;
+    if (!clip || !clip.writeText) return Promise.resolve();
+    return clip.writeText(text);
+  }
+
+  var rows = (pack.items || []).slice().sort(function (left, right) {
+    return Date.parse(right.created_at || 0) - Date.parse(left.created_at || 0);
+  });
+  var stack = document.querySelector("#stack");
+  if (pack.lint !== "pass") {
+    var blocked = document.createElement("p");
+    blocked.className = "meta";
+    blocked.textContent = "Lint did not pass. No cards.";
+    stack.appendChild(blocked);
+    document.querySelector("#progress").textContent = "Lint did not pass. No cards.";
+    return;
+  }
+  var closed = 0;
+  if (!rows.length) {
+    var empty = document.createElement("p");
+    empty.className = "meta";
+    empty.textContent = "No posts in this window.";
+    stack.appendChild(empty);
+  }
+
+  function paintProgress() {
+    document.querySelector("#progress").textContent = closed + " of " + rows.length;
+  }
+
+  rows.forEach(function (item) {
+    var variants = [];
+    if (Array.isArray(item.drafts) && item.drafts.length) variants = item.drafts;
+    else if (item.draft) variants = [{ text: item.draft, label: "Draft" }];
+    else variants = [{ text: "", label: "Draft" }];
+
+    var card = document.createElement("article");
+    var body = document.createElement("div");
+    body.className = "body";
+
+    var title = document.createElement(item.url ? "a" : "div");
+    title.className = "name";
+    title.textContent = item.name || "Unknown";
+    if (item.url) {
+      title.href = item.url;
+      title.rel = "noreferrer";
+      title.target = "_blank";
+    }
+    body.appendChild(title);
+
+    var bits = [];
+    var ago = stamp(item.created_at);
+    if (ago) bits.push(ago);
+    if (item.headline) bits.push(item.headline);
+    if (bits.length) {
+      var line = document.createElement("div");
+      line.className = "meta";
+      line.textContent = bits.join(" · ");
+      body.appendChild(line);
+    }
+    if (item.text) {
+      var post = document.createElement("p");
+      post.className = "copy";
+      post.textContent = item.text;
+      body.appendChild(post);
+    }
+    var stats = item.metrics || {};
+    var statBits = [];
+    if (stats.reactions != null) statBits.push(String(stats.reactions) + " reactions");
+    if (stats.comments != null) statBits.push(String(stats.comments) + " comments");
+    if (stats.reposts) statBits.push(String(stats.reposts) + " reposts");
+    if (statBits.length) {
+      var statLine = document.createElement("div");
+      statLine.className = "meta";
+      statLine.textContent = statBits.join(" · ");
+      body.appendChild(statLine);
+    }
+
+    variants.forEach(function (variant, index) {
+      var block = document.createElement("div");
+      if (variants.length > 1) {
+        var tag = document.createElement("div");
+        tag.className = "meta";
+        tag.textContent = variant.label || variant.move || ("Option " + (index + 1));
+        block.appendChild(tag);
+      }
+      var field = document.createElement("textarea");
+      field.rows = 2;
+      field.setAttribute("aria-label", "Draft for " + (item.name || "post"));
+      var prior = recall(item.id + ":text:" + index);
+      field.value = prior != null ? prior : (variant.text || "");
+      block.appendChild(field);
+      if (variant.ref) {
+        var src = document.createElement("p");
+        src.className = "from";
+        src.textContent = "Source " + variant.ref + (variant.ref_source ? " — " + variant.ref_source : "");
+        block.appendChild(src);
+      }
+      var bar = document.createElement("div");
+      bar.className = "bar";
+      var len = document.createElement("span");
+      len.className = "len";
+      var copyBtn = document.createElement("button");
+      copyBtn.type = "button";
+      copyBtn.textContent = "Copy text";
+      var go = document.createElement("a");
+      go.className = "go";
+      go.textContent = "Copy & open";
+      go.href = item.url || "#";
+      go.rel = "noreferrer";
+      go.target = "_blank";
+      bar.appendChild(len);
+      bar.appendChild(copyBtn);
+      bar.appendChild(go);
+      block.appendChild(bar);
+
+      function showLength() {
+        var value = field.value;
+        var count = wordCount(value);
+        var chars = value.length;
+        len.textContent = count + " words, " + chars + " of " + LIMIT;
+        var tooLong = chars > LIMIT;
+        var tooShort = count < 6;
+        var tooWordy = count > 70;
+        len.classList.toggle("hot", tooLong || tooShort || tooWordy);
+        field.style.height = "auto";
+        field.style.height = field.scrollHeight + "px";
+      }
+      field.addEventListener("input", function () {
+        var same = field.value === (variant.text || "");
+        keep(item.id + ":text:" + index, same ? null : field.value);
+        showLength();
+      });
+      copyBtn.addEventListener("click", function () {
+        putOnClipboard(field.value).then(function () {
+          copyBtn.textContent = "In clipboard";
+          window.setTimeout(function () { copyBtn.textContent = "Copy text"; }, 900);
+        });
+        keep(item.id + ":state", "copied");
+      });
+      go.addEventListener("click", function () {
+        putOnClipboard(field.value);
+        keep(item.id + ":state", "opened");
+        keep(item.id + ":pick", String(index));
+        window.setTimeout(function () { closeCard("Commented"); }, 350);
+      });
+      showLength();
+      body.appendChild(block);
+    });
+
+    var skip = document.createElement("button");
+    skip.type = "button";
+    skip.textContent = "Skip";
+    var choices = document.createElement("div");
+    choices.className = "choices";
+    choices.hidden = true;
+    reasons.forEach(function (reason) {
+      var choice = document.createElement("button");
+      choice.type = "button";
+      choice.textContent = reason;
+      choice.addEventListener("click", function () {
+        keep(item.id + ":state", "skipped");
+        keep(item.id + ":why", reason);
+        closeCard("Skipped: " + reason);
+      });
+      choices.appendChild(choice);
+    });
+    skip.addEventListener("click", function () { choices.hidden = !choices.hidden; });
+    var skipBar = document.createElement("div");
+    skipBar.className = "bar";
+    skipBar.appendChild(skip);
+    body.appendChild(skipBar);
+    body.appendChild(choices);
+
+    var summary = document.createElement("p");
+    summary.className = "meta";
+    function closeCard(label) {
+      if (!card.classList.contains("is-closed")) closed += 1;
+      card.classList.add("is-closed");
+      summary.textContent = "";
+      summary.appendChild(document.createTextNode((item.name || "Post") + " — " + label + " "));
+      var back = document.createElement("button");
+      back.type = "button";
+      back.textContent = "Undo";
+      back.addEventListener("click", function () {
+        keep(item.id + ":state", null);
+        keep(item.id + ":why", null);
+        card.classList.remove("is-closed");
+        closed -= 1;
+        summary.textContent = "";
+        paintProgress();
+      });
+      summary.appendChild(back);
+      paintProgress();
+    }
+    card.appendChild(body);
+    card.appendChild(summary);
+    stack.appendChild(card);
+
+    var state = recall(item.id + ":state");
+    if (state === "opened") closeCard("Commented");
+    else if (state === "skipped") closeCard("Skipped: " + (recall(item.id + ":why") || ""));
+  });
+
+  var fetched = pack.fetched_at ? new Date(pack.fetched_at) : null;
+  var when = rows.length + " comments, newest at the top";
+  if (fetched && !Number.isNaN(fetched.getTime())) when += ". Fetched " + fetched.toLocaleString();
+  document.querySelector("#when").textContent = when + ".";
+  paintProgress();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "run_id": "fixture-li",
+  "fetched_at": "2026-10-22T00:00:00Z",
+  "company": null,
+  "items": [
+    {
+      "drafts": [
+        {
+          "text": "I kept the first version because the second one hid the real number from the sheet.",
+          "move": "receipt"
+        }
+      ]
+    }
+  ]
+}

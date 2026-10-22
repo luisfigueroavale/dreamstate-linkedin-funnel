@@ -1,0 +1,11 @@
+{
+  "run_id": "fixture-x",
+  "pulled_at": "2026-10-22T00:00:00Z",
+  "company": null,
+  "picks": [
+    {
+      "text": "I tried that cut on my own file and the first take held.",
+      "move": "receipt"
+    }
+  ]
+}

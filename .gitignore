@@ -1,0 +1,17 @@
+node_modules/
+__pycache__/
+*.pyc
+work/
+output/
+brand.local/
+audience.local/
+vault/voice/*
+!vault/voice/README.md
+vault/sources/*
+!vault/sources/README.md
+.DS_Store
+*.log
+.playwright/
+.banned-terms.local
+docs/coverage.local.md
+pictures/**/export/

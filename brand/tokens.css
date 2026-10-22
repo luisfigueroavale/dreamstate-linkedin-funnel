@@ -1,0 +1,36 @@
+/*
+  Token names for picture templates. Templates import this file.
+  Every value is unset on purpose. This is not a brand.
+
+  Owner values live in brand.local/tokens.css (gitignored).
+  The render scripts load that file after this one.
+  Names match the table in brand/style.md. Do not rename them.
+*/
+
+:root {
+  --color-bg: unset;
+  --color-fg: unset;
+  --color-muted: unset;
+  --color-accent: unset;
+  --color-line: unset;
+  --color-surface: unset;
+  --font-display: unset;
+  --font-body: unset;
+  --size-kicker: unset;
+  --size-title: unset;
+  --size-body: unset;
+  --size-small: unset;
+  --space-safe: unset;
+  --space-block: unset;
+  --space-tight: unset;
+  --grid-columns: unset;
+  --grid-gutter: unset;
+  --size-portrait-w: unset;
+  --size-portrait-h: unset;
+  --size-thumb-w: unset;
+  --size-thumb-h: unset;
+  --size-phone-w: unset;
+  --size-gif-w: unset;
+  --size-gif-h: unset;
+  --logo-max-height: unset;
+}

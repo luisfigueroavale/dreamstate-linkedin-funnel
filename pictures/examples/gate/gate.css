@@ -1,0 +1,41 @@
+/*
+  Example only. Colors are the preview stand-in unless brand.local/tokens.css is filled.
+  This file does not animate. scene.js does.
+*/
+
+.stage {
+  padding-left: 120px;
+}
+
+.rail {
+  position: absolute;
+  left: 78px;
+  top: 168px;
+  width: 8px;
+  height: 640px;
+}
+
+.rail-line {
+  stroke: var(--color-accent, #1c1917);
+  stroke-width: 3;
+  stroke-linecap: butt;
+}
+
+.meter {
+  position: absolute;
+  left: 120px;
+  bottom: 248px;
+  width: 860px;
+  height: 12px;
+}
+
+.hold-dot {
+  position: absolute;
+  left: 120px;
+  bottom: 280px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-accent, #1c1917);
+  opacity: 0;
+}

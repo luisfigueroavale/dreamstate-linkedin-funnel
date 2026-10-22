@@ -1,0 +1,10 @@
+{
+  "width": 1080,
+  "height": 1350,
+  "fps": 25,
+  "gifFps": 15,
+  "gifWidth": 720,
+  "gifHeight": 900,
+  "phoneWidth": 390,
+  "note": "Duration comes from window.__timeline.duration in scene.js. Do not set a second duration here."
+}

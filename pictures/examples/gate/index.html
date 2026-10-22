@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" data-desk="example">
+<head>
+  <meta charset="utf-8" />
+  <title>Example frame</title>
+  <link rel="stylesheet" href="../../../brand/tokens.css" />
+  <link rel="stylesheet" href="../../frames/frame.css" />
+  <link rel="stylesheet" href="gate.css" />
+</head>
+<body class="portrait">
+  <!--
+    Reading order: Read the page, Write one post, Show the frame, Wait for a yes, then the ask.
+    Example copy. Not a customer. Not a result.
+  -->
+  <main class="stage">
+    <p class="kicker" data-part="kicker">Example frame</p>
+    <svg class="rail" viewBox="0 0 8 640" aria-hidden="true">
+      <line class="rail-line" x1="4" y1="0" x2="4" y2="640" stroke-dasharray="640" stroke-dashoffset="640" />
+    </svg>
+    <ol class="plates">
+      <li class="plate" data-part="plate">
+        <div class="num">1</div>
+        <h2>Read the page</h2>
+        <p>Open the source before the line.</p>
+      </li>
+      <li class="plate" data-part="plate">
+        <div class="num">2</div>
+        <h2>Write one post</h2>
+        <p>Keep the claim the source allows.</p>
+      </li>
+      <li class="plate" data-part="plate">
+        <div class="num">3</div>
+        <h2>Show the frame</h2>
+        <p>Put those lines on the plates.</p>
+      </li>
+      <li class="plate" data-part="plate">
+        <div class="num">4</div>
+        <h2>Wait for a yes</h2>
+        <p>Do not post the file yourself.</p>
+      </li>
+    </ol>
+    <span class="hold-dot" data-part="dot"></span>
+    <canvas class="meter" data-meter width="860" height="12"></canvas>
+    <p class="cta" data-part="cta">Comment FRAME for the blank file.</p>
+    <p class="example-mark" data-part="mark">Example. Not a result.</p>
+  </main>
+  <script src="../../timeline.js"></script>
+  <script src="scene.js"></script>
+</body>
+</html>
