@@ -13,10 +13,10 @@ Say what they will know and can do when it stops. Order a read-aloud script, out
 
 1. Promise the end state first.
 2. Give the context they need next.
-3. Demonstrate in order, plainly with no click.
+3. Demonstrate the steps in order, with no click.
 4. State what this will not do and where it fails.
-5. Show a recordable payoff.
-6. Name one next action.
+5. Show a payoff footage can capture.
+6. Name one next action to take.
 
 `title-pair` writes titles. That claim is the promise.
 
@@ -28,6 +28,6 @@ Show real output if present. Name the file or screen. Label proposed screen and 
 
 Match the requested runtime. Read spoken lines aloud. Cut a line you cannot finish in one breath. Time it, then trim or restore. Add no lines to fill the clock. Bracket on-screen beats.
 
-Write that form. Return script, shot list, and missing assets. Name bracket, visual, source, and in hand. List a missing screen, file, number, or clip. Speak a number only when source or walk returned it.
+Return the script and shot list. Name the bracket, visual, and source. List a missing screen, file, number, or clip. Speak a number only when source or walk returned it.
 
 `video-blurb` and chapters wait for the final-cut transcript. `thumb-frame` follows title. Promise only what the video can show. Run `brand/taste.md` before owner sees pages. Nothing was recorded.

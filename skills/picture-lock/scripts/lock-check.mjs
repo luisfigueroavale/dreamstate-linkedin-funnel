@@ -15,7 +15,8 @@
  * summary peak above the true-peak target; a black stretch (d=0.10, pix_th=0.05);
  * a requested media file or probe tool that is missing.
  *
- * Warns: cue outside [at-2s, at+2.5s]; zoom under 1.2s; duration outside the
+ * Warns: cue outside [at-2s, at+2.5s]; zoom under 1.2s; reframe scale outside
+ * 1.1 to 1.3; duration outside the
  * kind band; number digits missing nearby with no source; card gap under 1s;
  * sound hits under 1.5s apart; sparse or dense card counts; more than 60s
  * between events; event bounds skipped because there is no clock.
@@ -492,6 +493,8 @@ function main() {
       if (!(scale > 0)) errors.push(`fail ${id} needs a positive scale`);
       else if (scale < ZOOM_SCALE_MIN || scale > ZOOM_SCALE_MAX) {
         errors.push(`fail ${id} scale ${scale} is outside ${ZOOM_SCALE_MIN} to ${ZOOM_SCALE_MAX}`);
+      } else if (scale < 1.1 || scale > 1.3) {
+        warnings.push(`warn ${id} reframe scale ${scale} is outside 1.1 to 1.3`);
       }
       if (shortZoom) warnings.push(`warn ${id} lasts ${dur.toFixed(2)}s; a zoom under ${ZOOM_SHORT_S}s looks like a mistake`);
       if (cam && scale > 0) {
