@@ -13,4 +13,5 @@ vault/sources/*
 *.log
 .playwright/
 .banned-terms.local
+docs/coverage.local.md
 pictures/**/export/

@@ -63,4 +63,4 @@ Before drafting a post, read `vault/notes/` and the post file. After the owner a
 | People who engaged | `post-path` |
 | A giveaway | `magnet-build`, then `magnet-send` |
 
-The index is [skills/README.md](skills/README.md). The pair map is [docs/coverage.md](docs/coverage.md). Every source rule is matched there or named as a gap.
+The index is [skills/README.md](skills/README.md).
