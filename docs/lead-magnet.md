@@ -1,6 +1,6 @@
 # Lead magnet
 
-A giveaway is a file a stranger can use without you in the room. Skills: `magnet-build`, `magnet-send`. Read `audience/AGENTS.md` first. The reader is `audience.local/ideal-follower.md`. If that file is blank, stop.
+A giveaway is a file a stranger can use without you in the room. Use `magnet-build`, then `magnet-send`. Read `audience/AGENTS.md` first. The reader is `audience.local/ideal-follower.md`. If that file is blank, stop.
 
 ## Build
 

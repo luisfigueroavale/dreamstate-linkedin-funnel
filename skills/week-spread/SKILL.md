@@ -94,11 +94,11 @@ Each slate line carries four fields: why it is hot (the outlier, or numbers they
 ## Stage 1
 
 1. Take the picked idea in their words. One pillar. One job. Ground it in `brand.local/` and `audience.local/ideal-follower.md`.
-2. Stance: read what they already published on this. The recording extends it, or it names the change.
-3. Facts: verify product claims, model claims, and market claims where they were published, and write the date beside each one. `source-notes` does that read. Do not invent the citation.
-4. Worked example and resource: prefer what they can show, and a file that already exists. A new resource is `magnet-build`, and only if they ask.
+2. For stance, read what they already published on this. The recording extends it, or it names the change.
+3. For facts, verify product claims, model claims, and market claims where they were published, and write the date beside each one. `source-notes` does that read. Do not invent the citation.
+4. For the worked example and the resource, prefer what they can show, and a file that already exists. A new resource is `magnet-build`, and only if they ask.
 5. Packaging before the outline. `title-pair` writes two titles and two thumbnail directions. A structure counts as checked outside the niche only when `video-pick` says so. Otherwise it stays a hypothesis. The outline then has to make that promise true.
-6. Outline: `record-script` writes the opening minute word for word (that skill's gate on the first minute), then chapters. Each chapter says what is on screen and which claim it makes true. One chapter answers one objection a buyer raises, so a later reply can point at it. Use `record-script` for a full script when that helps.
+6. For the outline, `record-script` writes the opening minute word for word (that skill's gate on the first minute), then chapters. Each chapter says what is on screen and which claim it makes true. One chapter answers one objection a buyer raises, so a later reply can point at it. Use `record-script` for a full script when that helps.
 7. Write the brief from `vault/week/brief.md`.
 
 Ask only the release day, and their verdict when the recording is a review. Decide the rest and list it under Still open.
@@ -138,7 +138,7 @@ Write the letter first with `letter-draft`. It is the argument the other pieces 
 
 LinkedIn copy goes through `linkedin-draft` and `opening-line`. On LinkedIn the URL goes in the comment under the post, and the post tells the reader to look there. A LinkedIn article is optional, and only if they ask: `essay-to-linkedin`.
 
-Root 3, the harvest: read the finished-cut transcript and tag each idea, in this order: take, line, receipt, strong claim, proof moment, framework, chapter. Ask whether it can stand without the recording. Yes: one chapter as its own post, a picture (`frame-build` or `station-map`), a proof, an opinion, or a short X post planned in `x-week`. No: Backlog. `cross-cut` helps the split. Pictures are HTML. Do not add a 3D scene library.
+Root 3 is the harvest. Read the finished-cut transcript and tag each idea, in this order: take, line, receipt, strong claim, proof moment, framework, chapter. Ask whether it can stand without the recording. If yes, use one chapter as its own post, a picture (`frame-build` or `station-map`), a proof, an opinion, or a short X post planned in `x-week`. If no, put it on Backlog. `cross-cut` helps the split. Pictures are HTML. Do not add a 3D scene library.
 
 ## Stage 6
 

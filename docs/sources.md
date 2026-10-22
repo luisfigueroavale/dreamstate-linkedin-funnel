@@ -20,7 +20,7 @@ A claim in a post, a picture, a title, or a reply needs a source you can point a
 
 ## Paid reads
 
-Prices and modes for `visibility.research.web_search` and `visibility.research.urls_fetch` are in [calls.md](calls.md). Cheapest first: a file already in `vault/sources/`, then a page they named, then one of those two calls.
+Prices and modes for `visibility.research.web_search` and `visibility.research.urls_fetch` are in [calls.md](calls.md). Start with the cheapest source: a file already in `vault/sources/`, then a page they named, then one of those two calls.
 
 ## Feeds are definitions
 

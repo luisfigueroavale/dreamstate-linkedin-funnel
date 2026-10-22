@@ -7,7 +7,7 @@ Follow `docs/skill-frame.md`.
 
 Read the finished file on disk, the title, the description, the thumbnail, and any privacy, schedule, or time zone they named. If the file, the title, the description, or the thumbnail is missing, ask. Do not invent it. Do not copy a connection from another project.
 
-`senders.social_accounts.list` with `platform` `youtube` supplies `account_id` (the account `id`). No connected YouTube account: stop. `social.channels_list` is the channel row. Both reads are live. Neither accepts dry_run. Re-read the channel row before a publish. YouTube supports write, schedule, publish, and analytics. The publish route is `youtube_data_api_v3`. Analytics come from `youtube_analytics`. The same list includes Threads, TikTok, Instagram, and Facebook. Reddit is draft-only for schedule and publish, so this skill does not schedule or publish Reddit.
+`senders.social_accounts.list` with `platform` `youtube` supplies `account_id` (the account `id`). If no YouTube account is connected, stop. `social.channels_list` is the channel row. Both reads are live. Neither accepts dry_run. Re-read the channel row before a publish. YouTube supports write, schedule, publish, and analytics. The publish route is `youtube_data_api_v3`. Analytics come from `youtube_analytics`. The same list includes Threads, TikTok, Instagram, and Facebook. Reddit is draft-only for schedule and publish, so this skill does not schedule or publish Reddit.
 
 One video per post. The title is `platform_payloads.youtube.snippet.title`, 100 characters or fewer. The description is `snippet.description`, 5000 characters or fewer. Privacy is always set in `status.privacyStatus`: `private`, `unlisted`, or `public`. When they did not name one, use `private`. `public` only when they named public.
 
@@ -21,4 +21,4 @@ Publish in this order: `social.content.artifact_create`, the upload, `social.con
 
 A draft that is not published yet can change through `social.content.artifact_update` (`artifact_id`, `expected_revision`). If that returns `published_immutable`, `social.content.replacement_create` (`artifact_id`, `expected_revision`) copies a new draft and does not publish. That new draft still needs its own yes before publish. Do not call `social.content.delete_republish_propose`.
 
-Say what happened: the folder, the artifact id, the delivery id, and the privacy you set. A successful create is not proof processing finished. Do not invent a public address.
+Say what happened. Name the folder, the artifact id, the delivery id, and the privacy you set. A successful create is not proof processing finished. Do not invent a public address.

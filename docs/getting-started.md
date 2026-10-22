@@ -4,7 +4,7 @@ Do these in order. Each step names the skill. The agent reads that skill before 
 
 ## 1. Plugin and workspace
 
-Skill: `desk-setup`, then `workspace-check` on later sessions.
+Use `desk-setup`, then `workspace-check` on later sessions.
 
 Install the plugin with `npx @trydreamstate/cli install`, or add the marketplace `luisfigueroavale/dreamstate-plugins` and install `dreamstate@dreamstate` for Claude Code or Codex. The plugin's `.mcp.json` is the server. Do not add another.
 
@@ -12,7 +12,7 @@ Install the plugin with `npx @trydreamstate/cli install`, or add the marketplace
 
 ## 2. Company Context
 
-Skill: `context-intake`.
+Use `context-intake`.
 
 Company Context is the knowledge base the other skills read. The buyer, the proof, and the voice live there:
 
@@ -30,7 +30,7 @@ The write is `knowledge.brain.context.compose_pages`. Dry run first. You say yes
 
 ## 3. Local brand files
 
-Skill: `local-brand`. Read [brand/AGENTS.md](../brand/AGENTS.md) first.
+Use `local-brand`. Read [brand/AGENTS.md](../brand/AGENTS.md) first.
 
 ```sh
 mkdir -p brand.local/assets
@@ -42,7 +42,7 @@ Fill `brand.local/identity.md` and `brand.local/voice.md` before any draft. Fill
 
 ## 4. The reader
 
-Skill: `desk-setup` copies the template. You fill it.
+Here, `desk-setup` copies the template. You fill it.
 
 ```sh
 mkdir -p audience.local
@@ -53,13 +53,13 @@ Read [audience/AGENTS.md](../audience/AGENTS.md). Fill the one-sentence reader, 
 
 ## 5. Vault
 
-Skill: `vault-find` before any draft. `pillar-map` once, when you know the topics.
+Use `vault-find` before any draft. `pillar-map` once, when you know the topics.
 
 Posts live in `vault/posts/`, one file each. The board is `vault/board.md`. Notes the writer reads, then updates, are `vault/notes/`. Your raw material goes in `vault/sources/` and is not committed.
 
 ## 6. Pictures
 
-Skills: `frame-build`, `frame-review`.
+Use `frame-build`, then `frame-review`.
 
 ```sh
 npm install
@@ -68,13 +68,13 @@ npm run still
 npm run capture
 ```
 
-`npm run still` writes PNGs at 1x and 2x. That PNG is the last frame of the JavaScript timeline in the same HTML file. `npm run capture` walks that timeline and writes the MP4 and the GIF. Rules: [picture-rules.md](picture-rules.md).
+`npm run still` writes PNGs at 1x and 2x. That PNG is the last frame of the JavaScript timeline in the same HTML file. `npm run capture` walks that timeline and writes the MP4 and the GIF. The rules are in [picture-rules.md](picture-rules.md).
 
 ## 7. After a post is live
 
 Skills: `post-path`, then `warm-cadence` or `thread-reply`.
 
-Collect engagers into a worksheet, score company and person apart, and do not message anyone until you approve the text and the audience. Details: [watchers.md](watchers.md), [fit-gate.md](fit-gate.md), [conversations.md](conversations.md).
+Collect engagers into a worksheet, score company and person apart, and do not message anyone until you approve the text and the audience. The details are in [watchers.md](watchers.md), [fit-gate.md](fit-gate.md), and [conversations.md](conversations.md).
 
 ## 8. A giveaway
 

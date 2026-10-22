@@ -5,22 +5,22 @@ description: "Check a finished export for cuts, captions, motion, picture, sound
 
 Follow `docs/skill-frame.md`.
 
-Hold encoded file, source, and edit list. No script runs the seven checks. Use machine tools and record each result.
+Hold the encoded file, the source, and the edit list. No script runs the seven checks. Use machine tools and record each result.
 
-Cuts: hear every join, short pad on both sides. Each word complete. Line still means what was said.
-Captions: names, numbers, short words, cue timing, line breaks, crop. Read them against words you hear.
-Motion: cue and payoff with audio playing. Fact lands with speech. Watch overlaps.
-Image: align source and output frames. Leave intended overlays and crops out before a quality score.
-Audio: listen at a matched level. Peaks, channel layout, integrated loudness near -14 LUFS, and a true-peak ceiling of -1.5 dBTP.
-Playback: decode whole file. Play in their player if on this machine.
-Pacing: play whole story. No duplicate take. No gap you cannot explain.
+For cuts, hear every join, with a short pad on both sides. Each word is complete. The line still means what was said.
+For captions, check names, numbers, short words, cue timing, line breaks, and crop. Read them against the words you hear.
+For motion, check the cue and the payoff with the audio playing. The fact lands with the speech. Watch the overlaps.
+For the image, align the source and the output frames. Leave intended overlays and crops out before a quality score.
+For audio, listen at a matched level. Check peaks, channel layout, integrated loudness near -14 LUFS, and a true-peak ceiling of -1.5 dBTP.
+For playback, decode the whole file. Play it in their player if it is on this machine.
+For pacing, play the whole story. Allow no duplicate take and no gap you cannot explain.
 
-`ffprobe` the encoded file. Duration matches edit list. Width and height stay native frame size. Read channel count and layout. Sample opening second. Fade to black there fails unless edit list asked for black.
+Run `ffprobe` on the encoded file. The duration matches the edit list. Width and height stay at the native frame size. Read the channel count and the layout. Sample the opening second. A fade to black there fails unless the edit list asked for black.
 
-Align frames on shared timestamps. Keep intended overlays and crops out before scoring. Another clip's threshold does not bind this one. Fresh temporary directory each run, so files cannot mix.
+Align frames on shared timestamps. Keep intended overlays and crops out before scoring. Another clip's threshold does not bind this one. Use a fresh temporary directory on each run, so files cannot mix.
 
-Failure names location, defect, and fix. Re-check changed part. Confirm same path, size, duration. JSON parse or renderer exit code does not prove picture or sound. Header read is not a decode.
+A failure names the location, the defect, and the fix. Re-check the changed part. Confirm the same path, size, and duration. A JSON parse, or a renderer exit code, does not prove the picture or the sound. A header read is not a decode.
 
-Report measured, inspected, unverified. Measured: tool and printed value. Inspected: what you heard or saw. Missing `ffprobe`, loudness meter, or target player: unverified. Do not claim a gate when tool was missing. Pass is not permission to publish.
+Report what you measured, what you inspected, and what is unverified. Measured means the tool and the printed value. Inspected means what you heard or saw. If `ffprobe`, the loudness meter, or the target player is missing, mark that item unverified. Do not claim a gate when the tool was missing. A pass is not permission to publish.
 
-Titles or overlays: read `brand.local` before type or color. Missing or blank: ask. Judgment stays unverified.
+For titles or overlays, read `brand.local` before you set type or color. If that file is missing or blank, ask. Judgment stays unverified.

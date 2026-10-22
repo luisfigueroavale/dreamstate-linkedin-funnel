@@ -28,7 +28,7 @@ A wave is a product, method, or release moving this week. Before gate 1, write t
 
 Every claim names a measurement they supplied: the url, the views, the channel median, the ratio, and the capture date. A fetched page may date a launch. It does not supply a view count. One viral video is an anecdote. Call a trend or a title shape validated only after 3 or more outliers, each at 3× or above, across 3 or more channels and 2 or more niches. Log each verdict in `vault/notes/packaging-library.md`. A tip is counted the same day with this sheet before it is evidence. Their own uploads are proven only in the ledger. A ratio is current views against that channel's comparable uploads. It is not click-through, not views per hour, and not causation. Never call the age-band ratio velocity.
 
-Call prices and modes: `docs/calls.md`. Cheapest first: a file already in `vault/sources/`. No paid research without a yes. Do not add a host client, a plugin, or a caption downloader.
+Call prices and modes are in `docs/calls.md`. The cheapest source is a file already in `vault/sources/`. No paid research without a yes. Do not add a host client, a plugin, or a caption downloader.
 
 ## Measure
 
@@ -36,7 +36,7 @@ Best source first. Before hand-typed counts, resolve `source.account_posts_youtu
 
 Score the sheet locally. The script does not open a socket. What rank computes, what depth computes, and the sheet JSON are in `skills/video-pick/references/score-sheet.md`. Count 6 probes. Sheet size is a search cap of 20, a depth cap of 3, and those 6 probes. Default breadth is 4. Default outlier is 3. Going past 30 searches needs another yes.
 
-Save numbers under `vault/sources/<date>-<slug>/` (append only). A fix is a new file. Add `origin.md`: what was counted, when, the command, and that no host was called. Append one line to `vault/sources/README.md`. Do not commit the folder.
+Save numbers under `vault/sources/<date>-<slug>/` (append only). A fix is a new file. In `origin.md`, record what was counted, when, the command, and that no host was called. Append one line to `vault/sources/README.md`. Do not commit the folder.
 
 ```sh
 node skills/video-pick/scripts/score-sheet.mjs rank --sheet vault/sources/<date>-<slug>/sheet.json --out vault/sources/<date>-<slug>
@@ -91,7 +91,7 @@ The niche picks the topic. Packaging is proved elsewhere. When the same shape wi
 2. One structure at a time, from 4 to 6 niches, at least 2 outside their field. Own seed file. `branch` is the donating niche. Window 90 days. Depth 0. `keep` is the structure. `fit` is the niche outcome. Do not merge them.
 3. Apply the three-part pass below.
 4. Open the top 5 donor stills they paste. Record subject (to-camera, back-shot, object, or UI), the one hero object, word count, and contrast. Brief `thumb-patterns` and `thumb-frame`. On-image words name the niche outcome. The hero is the wave's mark. About 2 to 4 words. No other creator's face unless the video is about that person. Do not generate a face.
-5. Promise check: the title and the still claim only what the video shows. A number only when Proof has cleared it.
+5. Promise check. The title and the still claim only what the video shows. A number only when Proof has cleared it.
 
 Hand over 2 titles and 2 still directions, each with donors (url, niche, ratio) and the saturation check. The owner picks.
 
@@ -99,7 +99,7 @@ Donor fields and the eight structures (experiment, equation, time box, removed t
 
 `donors.json` uses `rows` for outside niches and `niche_rows` for the wear test. Optional `structure` drops rows whose title misses that shape. A row with no ratio or no age is ignored, not treated as zero. Window fields are `window_days` 90 and `niche_window_days` 30.
 
-Pass, all three. Proved elsewhere: inside 90 days, at least 3 outliers at 3× or above, at least 3 channels, at least 2 donor niches. Not worn at home: the same shape on 3 or 4 niche seeds across 30 days. Worn means 3 or more home-niche channels used it and the median of their ratios sits under 1.5×. That median averages the two central ratios on an even count. A median of 1.5× is not under the line. A missing ratio stays missing. Transfer the skeleton. Preserve word order, any parenthesis, and the slot where a number sits. Put the wave and the niche outcome into those slots, then run the promise check.
+Pass, all three. Proved elsewhere means, inside 90 days, at least 3 outliers at 3× or above, at least 3 channels, and at least 2 donor niches. Not worn at home means the same shape on 3 or 4 niche seeds across 30 days. Worn means 3 or more home-niche channels used it and the median of their ratios sits under 1.5×. That median averages the two central ratios on an even count. A median of 1.5× is not under the line. A missing ratio stays missing. Transfer the skeleton. Preserve word order, any parenthesis, and the slot where a number sits. Put the wave and the niche outcome into those slots, then run the promise check.
 
 Read the packaging library before you draft. After each check, record the shape, when you counted it, each donor's url, niche, and ratio, whether the home niche is saturated, and a verdict: validated, worn, or not proven. Below 10 videos of their own, a pattern in their old stills is a hint, not a rule. After the ledger has rows, read those stills for the subject, the object, and the words on hits and missing on misses.
 
@@ -107,7 +107,7 @@ Read the packaging library before you draft. After each check, record the shape,
 
 Script minute one as 5 beats. Aim near 160 words. A clear take may stretch toward 220. The template band is 150 to 170. Every beat names the picture. Sentence one restates the title. Frame one is the hero object from the still. Write three alternates of sentence one. The owner reads them aloud, picks, and films that opening before the rest. `record-script` waits until all three gates pass. `long-cut` uses the cut marks.
 
-A studio paste uses the share still watching at 0:30. High means the opening delivered the package. Low means change the title, the still, or the opening. No universal benchmark. Compare with this channel's previous 10 of similar length when they paste that. Prove the promise, then show the work. On a business channel: at most 3 short lines, restate the promise, raise curiosity past the packaging, and enter point 1.
+A studio paste uses the share still watching at 0:30. High means the opening delivered the package. Low means change the title, the still, or the opening. No universal benchmark. Compare with this channel's previous 10 of similar length when they paste that. Prove the promise, then show the work. On a business channel, use at most 3 short lines, restate the promise, raise curiosity past the packaging, and enter point 1.
 
 From transcripts they supply of their last 3 or 4 videos, note the first 15 seconds, 0:15 through 1:00, and keep or cut. Count "essentially", "actually", "basically", and the words in minute one. That is their pace. Outlier openings often land around 200 to 270 words and open on the proof object, a numbered promise against a contrast, the belief this video breaks, or the wave with its date. A disclaimer or another creator is a rare open.
 
@@ -137,7 +137,7 @@ An outlier needs at least 5 peers of similar age and length, or the ratio is not
 
 ## Failure modes
 
-One viral video is an anecdote. Gap closed: a bigger niche channel got there first. Crowded: many small uploads at baseline. Under 7 days: do not trust the ratio alone. No tool where they live: Receipt 0. Nothing back from a probe, once that wave has died, is not an opening. Under 5 peers: no ratio. A foreign outlier on the angle stays. A rerun of the last 3 is not a sequel. No niche outcome fails Fit. A claim the video will not show fails the promise check. An uncleared number stays off the title. A miss at 8 or more, or a hit under 8, moves the rubric. Uncalibrated below 3 ledger rows. One niche, under 3 channels, or under 3× is not validated. Home median under 1.5× across 3 or more channels is worn. A greeting, their name, a subscribe ask, theory before the payoff, or a hop-in fails the minute.
+One viral video is an anecdote. A gap is closed when a bigger niche channel got there first. Crowded means many small uploads at baseline. Under 7 days, do not trust the ratio alone. If there is no tool where they live, the receipt is 0. Nothing back from a probe, once that wave has died, is not an opening. Under 5 peers: no ratio. A foreign outlier on the angle stays. A rerun of the last 3 is not a sequel. No niche outcome fails Fit. A claim the video will not show fails the promise check. An uncleared number stays off the title. A miss at 8 or more, or a hit under 8, moves the rubric. Uncalibrated below 3 ledger rows. One niche, under 3 channels, or under 3× is not validated. Home median under 1.5× across 3 or more channels is worn. A greeting, their name, a subscribe ask, theory before the payoff, or a hop-in fails the minute.
 
 ## Host client, not used
 
