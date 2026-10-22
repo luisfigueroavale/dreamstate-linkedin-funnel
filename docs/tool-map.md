@@ -99,6 +99,14 @@ Legend:
 | `visibility.linkedin.followers_import` | Required `worksheet_id`, `linkedin_account_id`, `target_provider_id`. dry_run supported. 0 credits. |
 | `visibility.linkedin.comments.refresh` | Required `delivery_id`. 0 credits. Articles and newsletters return 422. Not a comment publish. |
 | `knowledge.vault.ingest` | Required `title`, `markdown`. Always creates a new note. A blank idempotency key is refused. Not for Company Context pages. |
+| `tables.table_sources.attach` | 0 credits. Reversible. Required `table_id`. `source_column_id` may be null. Pass `binding_spec` or `binding`, not both. `source_id` only when editing an existing source. Spending happens on `tables.table_sources.run`, not here. |
+| `social.linkedin_posts.get` | Required `account_id`, `post_id`. 0 credits. Calls LinkedIn. Read only. No real dry_run. Do not send that mode. |
+| `unibox.inbox.reply_drafts_list` | Free read. No required args. Optional `conversation_id`, `channels`, `limit` (max 200), `cursor`. No dry_run. Source of `expected_revision` for a reply draft. |
+| `unibox.inbox.analyze` | 1 credit. Required `conversation_id`. Optional `analysis_mode` (`classify_only` or `draft_reply`, default `draft_reply`), `account_id`, `message_id`. dry_run, then `quote_hash`, `max_credits`, `idempotency_key`. Never sends. |
+| `visibility.analytics_refresh` | 0 credits. Required `platform`, `account_id` (from `senders.social_accounts.list`), `metric_scope` (`account`, `post`, or `audience`). `post` also needs `provider_post_id`. No dry_run. Use smoke_test. Read `freshness.state`. `unsupported` means nothing was fetched. |
+| `visibility.content.feedback.record` | 0 credits. Required `artifact_id`, `artifact_version`, `accepted_first_try`, `user_edited`, `published` (booleans). A stale version returns 409. |
+| `visibility.linkedin_post_notifications_list` | Required `delivery_id` from `social.content.article_deliveries_list`. Optional `limit` (max 100). No paging. A busy post truncates at 100. No dry_run. |
+| `social.engagement.react` | 0 credits, and it posts a public reaction. Required `account_id`, `post_social_id`. Optional `comment_id`, `reaction` (default `like`), `approved`. No dry_run. smoke_test to preview. Live needs `approved: true`, an `idempotency_key`, and the owner's yes on that reaction. Counts on the sender's daily quota. |
 
 ## Definition ids
 
@@ -124,14 +132,6 @@ Search, then `tools_get`. Do not call these from memory.
 
 | Look up | Why it is open |
 |---|---|
-| `tables.table_sources.attach` | Binds a definition id onto a table. Arguments were not fetched. |
-| `social.linkedin_posts.get` | Named as the source of `post_id` for `comments_list`. Arguments were not fetched. |
-| `unibox.inbox.reply_drafts_list` | Named as the source of `expected_revision` for a reply draft. Arguments were not fetched. |
-| `unibox.inbox.analyze` | Price on the verified list is 1 credit. Arguments were not fetched. dry_run only if the schema allows it. |
-| `visibility.analytics_refresh` | Named when `analytics_query` says a refresh is required. Arguments were not fetched. |
-| `visibility.content.feedback.record` | Named for structured accept or edit metrics. Arguments were not fetched. Use `social.content.post_feedback_record` for a text note. |
-| `visibility.linkedin_post_notifications_list` | Named as the read after `comments.refresh`. Arguments were not fetched. |
-| `social.engagement.react` | Named on the live-approval list. Arguments were not fetched. |
 | `column.ai` | `tools_get` returned not found on 2026-10-22. Do not invent an open-text column type. |
 
 ## Reads that are not sends

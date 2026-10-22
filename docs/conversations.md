@@ -29,7 +29,7 @@ Fallback copy is required on every step that uses a row field. Empty fields must
 
 The draft answers their last message, usually under 240 characters, one next step, no meeting push unless they asked, in their language. Show channel, account, recipient, and the final text. Save with `unibox.inbox.reply_draft_edit` (`expected_revision`, `name`, `labels`, and `content` with `body`). Send with `unibox.context.thread_reply_send` only after yes: `content.body`, a new `client_request_id`, and `max_live_sends` 1.
 
-`unibox.inbox.analyze` is 1 credit on the verified price list. Its arguments are to-check until `tools_get`. Dry run only if that schema allows it. Do not analyze a pile of threads to look busy.
+`unibox.inbox.analyze` costs 1 credit and never sends. Required `conversation_id`. Optional `analysis_mode` (`classify_only` or `draft_reply`, default `draft_reply`), `account_id`, `message_id`. dry_run, show `quote_hash`, then live with `max_credits` and an `idempotency_key`. Do not analyze a pile of threads to look busy. `unibox.inbox.reply_drafts_list` is a free read with no required args (optional `conversation_id`, `channels`, `limit` up to 200, `cursor`). Do not send dry_run to that list.
 
 A meeting on the calendar is `integrations.calendar.events_create`. It emails every attendee. Owner yes first. Do not invent `calendar.events_*`.
 

@@ -5,4 +5,12 @@ description: "Run select, audio, overlay, and check for one short. Use when the 
 
 Follow `docs/skill-frame.md`.
 
-Order is `clip-select`, `clip-audio`, `clip-motion`, then `clip-check`. If a step's output file is absent, stop there and name it. Do not skip audio and ship a silent file. Cuts do not require `brand.local`. Overlays and titles do. Write one file and record the ffmpeg command. Do not upload it.
+Read the brief and inspect the footage. Leave the source files unchanged. Set the message, the aspect, and the runtime. Settle routine choices the request already implies. Keep the message the brief already states.
+
+Put `raw/`, `transcripts/`, `edit/`, and `renders/` in the ignored output directory they named. This skill ships no prebuilt assembler. Every span on the decision list records the source file, start, end, beat, and reason.
+
+Order is `clip-select`, then `clip-audio`. Write captions from the words and times of the final cut. Stale offsets from the source files must not drive them. Use `clip-motion` only when a graphic earns the moment. Then `clip-check`. Compare each name, number, and unit with the recording, by hand.
+
+When one pass is practical, encode once from the files you kept. Cache each transcript and any other generated file with the settings that made it, so versions stay distinct. Read the tool's help before you invent a flag.
+
+If a step's file is missing, stop and name it. Do not ship silence. Cuts do not need `brand.local`. Overlays and titles do. Return the rendered file, the decision list, the source-to-output map, and the `clip-check` results. Write the ffmpeg command into `edit/`. A script with no render is not a finished edit. Do not upload.

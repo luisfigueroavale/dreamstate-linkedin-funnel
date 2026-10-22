@@ -28,7 +28,7 @@ Cheapest first: a file already in `vault/sources/`, then a page they named, then
 
 ## Feeds are definitions
 
-`source.account_posts_linkedin_profile` and `source.linkedin_posts_search` are catalog definition ids. `tools_get` does not find them as capabilities. Resolve with `tables.executable_definitions.list_resolved`. Bind with `tables.table_sources.attach` only after `tools_get`. Attach arguments are to-check.
+`source.account_posts_linkedin_profile` and `source.linkedin_posts_search` are catalog definition ids. `tools_get` does not find them as capabilities. Resolve with `tables.executable_definitions.list_resolved`. Bind with `tables.table_sources.attach`: `table_id` required, `source_column_id` nullable, `binding_spec` or `binding` but not both, and `source_id` only when you are editing. That attach costs 0 and is reversible. `tables.table_sources.run` is the call that spends.
 
 `social.feeds.create` stores a repeating source (`table_id`, `kind`, `cadence`, `stored_max_credits`) that can spend later. Owner yes. Do not pass both `account_urls` and `keyword`.
 

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reply queue</title>
+<style>
+  :root {
+    --paper: #f6f5f2;
+    --sheet: #fff;
+    --ink: #1c1917;
+    --quiet: #78716c;
+    --rule: #e7e5e4;
+    --well: #f5f5f4;
+    --good: #3f6212;
+    --hot: #9a3412;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font: 15px/1.45 ui-sans-serif, system-ui, sans-serif;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 20px 16px 72px; }
+  header { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+  h1 { font-size: 20px; margin: 0; font-weight: 650; }
+  .tally { color: var(--quiet); font-variant-numeric: tabular-nums; font-size: 13px; }
+  .meter { height: 3px; background: var(--rule); margin: 12px 0; }
+  .meter > span { display: block; height: 3px; width: 0; background: var(--good); }
+  .note { color: var(--quiet); margin: 0 0 18px; font-size: 13px; }
+  ol { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+  article {
+    background: var(--sheet);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 14px;
+  }
+  .who { display: flex; gap: 10px; align-items: center; }
+  .face {
+    width: 36px; height: 36px; border-radius: 50%;
+    background: var(--well); display: grid; place-items: center;
+    font-weight: 650; overflow: hidden; flex: none;
+  }
+  .face img { width: 100%; height: 100%; object-fit: cover; }
+  .who a { color: inherit; font-weight: 650; text-decoration: none; }
+  .meta { color: var(--quiet); font-size: 13px; }
+  .pill {
+    font-size: 11px; border: 1px solid var(--rule); border-radius: 999px;
+    padding: 1px 7px; color: var(--good);
+  }
+  .body { white-space: pre-wrap; overflow-wrap: anywhere; margin: 8px 0; }
+  .shots { display: grid; gap: 4px; margin: 8px 0; }
+  .shots.pair { grid-template-columns: 1fr 1fr; }
+  .shots img { width: 100%; border-radius: 10px; display: block; }
+  .counts { color: var(--quiet); font-size: 13px; display: flex; gap: 12px; }
+  .counts a { margin-left: auto; color: var(--quiet); }
+  label { display: block; margin-top: 10px; }
+  textarea {
+    width: 100%; min-height: 44px; resize: none; border: 0; border-radius: 10px;
+    background: var(--well); padding: 10px; font: inherit; color: inherit;
+  }
+  .row { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
+  .n { margin-right: auto; color: var(--quiet); font-variant-numeric: tabular-nums; font-size: 12px; }
+  .n.warn { color: var(--hot); }
+  button, .go {
+    font: inherit; border-radius: 999px; padding: 6px 12px; cursor: pointer;
+    border: 1px solid var(--rule); background: transparent; color: inherit; text-decoration: none;
+  }
+  .go { background: var(--ink); color: var(--paper); }
+  article[data-state="sent"] .full, article[data-state="skipped"] .full { display: none; }
+  .mini { display: none; align-items: center; gap: 8px; color: var(--quiet); }
+  article[data-state="sent"] .mini, article[data-state="skipped"] .mini { display: flex; }
+  .empty { color: var(--quiet); border: 1px dashed var(--rule); border-radius: 14px; padding: 18px; text-align: center; }
+  footer { margin-top: 28px; text-align: center; color: var(--quiet); font-size: 12px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Replies</h1>
+    <div class="tally" id="tally">0 / 0</div>
+  </header>
+  <div class="meter" aria-hidden="true"><span id="bar"></span></div>
+  <p class="note" id="note"></p>
+  <ol id="list"></ol>
+  <footer>Nothing is sent until you post it.</footer>
+</main>
+<script type="application/json" id="queue-json">{"run_id":"blank","pulled_at":"","picks":[]}</script>
+<script>
+(function () {
+  var slot = document.getElementById("queue-json");
+  var payload = JSON.parse(slot.textContent);
+  var memory = "reply-queue:" + (payload.run_id || "blank") + ":";
+  var host = document.getElementById("list");
+  var site = "https://x.com";
+  var composer = "intent/post";
+  var rows = (payload.picks || payload.items || []).slice();
+  rows.sort(function (left, right) {
+    return Date.parse(right.created_at || 0) - Date.parse(left.created_at || 0);
+  });
+
+  function load(name) {
+    try { return localStorage.getItem(memory + name); } catch (err) { return null; }
+  }
+  function save(name, value) {
+    try {
+      if (value == null) localStorage.removeItem(memory + name);
+      else localStorage.setItem(memory + name, value);
+    } catch (err) {}
+  }
+  function make(tag, className, text) {
+    var el = document.createElement(tag);
+    if (className) el.className = className;
+    if (text != null) el.textContent = text;
+    return el;
+  }
+  function age(iso) {
+    var then = Date.parse(iso);
+    var elapsed = Date.now() - then;
+    var mins = Math.floor(elapsed / 60000);
+    if (mins < 1) return "0m";
+    if (mins < 60) return mins + "m";
+    var hours = Math.floor(mins / 60);
+    if (hours < 24) return hours + "h";
+    return Math.floor(hours / 24) + "d";
+  }
+  function compact(n) {
+    if (n == null) return "";
+    if (n < 1000) return String(n);
+    var digits = (n / 1000).toFixed(n >= 10000 ? 0 : 1);
+    return digits.replace(/\.0$/, "") + "k";
+  }
+  function composerHref(id, text) {
+    var replyTo = "in_reply_to";
+    return site + "/" + composer + "?" + replyTo + "=" + encodeURIComponent(id) + "&text=" + encodeURIComponent(text);
+  }
+
+  var cards = [];
+  function paint() {
+    var done = cards.filter(function (card) { return card.getAttribute("data-state"); }).length;
+    document.getElementById("tally").textContent = done + " / " + cards.length;
+    var width = cards.length ? (done / cards.length) * 100 : 0;
+    document.getElementById("bar").style.width = width + "%";
+  }
+
+  rows.forEach(function (item) {
+    var card = make("li");
+    card.setAttribute("data-state", load("state:" + item.id) || "");
+    var full = make("div", "full");
+    var who = make("div", "who");
+    var face = make("div", "face", (item.author || "?").slice(0, 1).toUpperCase());
+    if (item.avatar_data) {
+      var img = make("img");
+      img.alt = "";
+      img.src = item.avatar_data;
+      face.textContent = "";
+      face.appendChild(img);
+    }
+    who.appendChild(face);
+    var idline = make("div");
+    var link = make("a", null, item.name || item.author);
+    link.href = site + "/" + item.author;
+    link.target = "_blank";
+    link.rel = "noopener";
+    idline.appendChild(link);
+    if (item.circle) idline.appendChild(make("span", "pill", "Circle"));
+    var bits = "@" + item.author + " · " + age(item.created_at);
+    if (item.followers != null) bits += " · " + compact(item.followers);
+    idline.appendChild(make("div", "meta", bits));
+    who.appendChild(idline);
+    full.appendChild(who);
+    full.appendChild(make("p", "body", item.text || ""));
+    var shots = (item.media || []).filter(function (shot) { return shot && shot.data; }).slice(0, 4);
+    if (shots.length) {
+      var grid = make("div", "shots" + (shots.length > 1 ? " pair" : ""));
+      shots.forEach(function (shot) {
+        var pic = make("img");
+        pic.alt = shot.alt || "";
+        pic.src = shot.data;
+        grid.appendChild(pic);
+      });
+      full.appendChild(grid);
+    }
+    var metrics = item.metrics || {};
+    var counts = make("div", "counts");
+    counts.appendChild(make("span", null, compact(metrics.like_count || 0) + " likes"));
+    counts.appendChild(make("span", null, compact(metrics.reply_count || 0) + " replies"));
+    var open = make("a", null, "View post");
+    open.href = item.url || link.href;
+    open.target = "_blank";
+    open.rel = "noopener";
+    counts.appendChild(open);
+    full.appendChild(counts);
+
+    var box = make("textarea");
+    box.setAttribute("aria-label", "Reply to @" + item.author);
+    box.value = load("text:" + item.id) || item.draft || "";
+    var field = make("label");
+    field.appendChild(box);
+    full.appendChild(field);
+
+    var row = make("div", "row");
+    var count = make("span", "n");
+    var skip = make("button", null, "Skip");
+    var copy = make("button", null, "Copy");
+    var go = make("a", "go", "Reply on X");
+    go.target = "_blank";
+    go.rel = "noopener";
+    row.appendChild(count);
+    row.appendChild(skip);
+    row.appendChild(copy);
+    row.appendChild(go);
+    full.appendChild(row);
+
+    var mini = make("div", "mini");
+    var tag = make("span");
+    var undo = make("button", null, "Undo");
+    mini.appendChild(tag);
+    mini.appendChild(make("span", null, "@" + item.author));
+    mini.appendChild(undo);
+
+    function grow() {
+      box.style.height = "auto";
+      box.style.height = box.scrollHeight + "px";
+    }
+    function sync() {
+      var len = box.value.length;
+      count.textContent = String(len);
+      count.classList.toggle("warn", len > 200);
+      go.href = composerHref(item.id, box.value);
+      grow();
+    }
+    function mark(state) {
+      save("state:" + item.id, state || null);
+      card.setAttribute("data-state", state || "");
+      tag.textContent = state === "sent" ? "Sent" : state === "skipped" ? "Skipped" : "";
+      paint();
+    }
+    function flashCopied() {
+      var label = copy;
+      label.textContent = "Copied";
+      window.setTimeout(function () { label.textContent = "Copy"; }, 1200);
+    }
+    box.addEventListener("input", function () {
+      save("text:" + item.id, box.value === item.draft ? null : box.value);
+      sync();
+    });
+    copy.addEventListener("click", function () {
+      var clip = navigator.clipboard;
+      if (clip && clip.writeText) clip.writeText(box.value).then(flashCopied);
+      else { box.select(); flashCopied(); }
+    });
+    go.addEventListener("click", function () { window.setTimeout(function () { mark("sent"); }, 300); });
+    skip.addEventListener("click", function () { mark("skipped"); });
+    undo.addEventListener("click", function () { mark(""); });
+
+    card.appendChild(full);
+    card.appendChild(mini);
+    var placed = card;
+    host.appendChild(placed);
+    sync();
+    cards.push(placed);
+    mark(load("state:" + item.id) || "");
+  });
+
+  if (!rows.length) host.appendChild(make("p", "empty", "No post in this window cleared the bar."));
+  var stamp = payload.updated || payload.pulled_at;
+  var lead = document.getElementById("note");
+  lead.textContent = rows.length + " drafts, newest first" + (stamp ? ". Updated " + stamp + "." : ".");
+  paint();
+})();
+</script>
+</body>
+</html>

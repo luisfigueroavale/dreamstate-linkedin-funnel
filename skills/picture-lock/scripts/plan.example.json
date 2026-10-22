@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "base": "cut.mp4",
+  "fps": "30/1",
+  "sources": {
+    "main": "raw/take.mov"
+  },
+  "ranges": [
+    { "source": "main", "start": 4.0, "end": 12.5 },
+    { "source": "main", "start": 20.0, "end": 28.25 }
+  ],
+  "layout": {
+    "cam": [0.62, 0.62, 0.34, 0.34]
+  },
+  "output": {
+    "name": "locked-cut"
+  },
+  "loudness": {
+    "i": -14,
+    "tp": -1.5
+  },
+  "music": null,
+  "events": [
+    {
+      "id": "cap1",
+      "kind": "captions",
+      "at": 0,
+      "dur": 16.2,
+      "cue": "kept line",
+      "props": {
+        "mode": "full",
+        "fixes": {},
+        "drop": ["um"],
+        "drop_at": []
+      }
+    },
+    {
+      "id": "num1",
+      "kind": "number",
+      "at": 1.2,
+      "dur": 3.5,
+      "cue": "forty replies",
+      "source": "spoken on the take",
+      "props": {
+        "value": "40",
+        "label": "replies",
+        "anchor": "top-left"
+      }
+    },
+    {
+      "id": "z01",
+      "kind": "zoom",
+      "at": 6.0,
+      "dur": 2.4,
+      "cue": "look here",
+      "scale": 1.12,
+      "focus": [0.8, 0.8],
+      "ease": 0
+    }
+  ]
+}

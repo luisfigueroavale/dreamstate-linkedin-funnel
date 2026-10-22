@@ -1,0 +1,21 @@
+/* Face-frame title. Shadows do the separation. Scale is em so it follows the type size. */
+.metal-title {
+  display: inline-block;
+  padding-right: 0.08em;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.075em;
+  white-space: nowrap;
+  background-image: linear-gradient(#ffffff 14.5%, #b3b9c2 85.5%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  filter:
+    drop-shadow(0 0.01em 0.015em rgba(0, 0, 0, 0.45))
+    drop-shadow(0 0.02em 0.115em rgba(0, 0, 0, 0.6));
+}
+
+.metal-title--soft {
+  background-image: linear-gradient(#f8f8f8 14.5%, #cfcfcf 85.5%);
+  filter: drop-shadow(0 0.02em 0.115em #000);
+}
