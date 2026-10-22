@@ -166,15 +166,7 @@ When a piece goes live, set its status to Published on the board and on the brie
 
 On the brief, write the public links, any reply the tools returned, any signup they can show, how long the week took, which rows won, and what they chose to make next. Do not open a second log.
 
-Fetch each id before you run it.
-
-`visibility.analytics_query` reads a stored snapshot. It does not refresh. When that snapshot says a refresh is required, call `visibility.analytics_refresh` with `platform`, `account_id` from `senders.social_accounts.list`, and `metric_scope` of `account`, `post`, or `audience`. Scope `post` also needs `provider_post_id`. 0 credits. Do not send dry_run. Use smoke_test. Read `freshness.state`. `unsupported` means nothing was fetched.
-
-`visibility.linkedin.comments.refresh` needs a `delivery_id`. 0 credits. Articles and newsletters return 422. It does not publish a comment. Read the rows with `visibility.linkedin_post_notifications_list`: `delivery_id` from `social.content.article_deliveries_list`, optional `limit` at most 100, no paging. A busy post stops at 100. Do not send dry_run.
-
-`social.content.post_feedback_record` appends a note (`artifact_id`, `feedback_text`). It does not change the post. The bare id `post_feedback_record` is not a capability. Boolean flags go to `visibility.content.feedback.record`: `artifact_id`, `artifact_version`, and the booleans `accepted_first_try`, `user_edited`, `published`. 0 credits. A stale version returns 409. Re-read the artifact. Do not guess a version and retry.
-
-`social.content.unschedule` takes `expected_revision` and `artifact_id`. It pulls an armed send that has not started. It is not `social.content.unplan`. It does not retract a post that is already live.
+The close calls are in `docs/week-spread.md`. Fetch each id before you run it. Re-read the artifact. Do not guess a version and retry.
 
 ## Hand-off
 
