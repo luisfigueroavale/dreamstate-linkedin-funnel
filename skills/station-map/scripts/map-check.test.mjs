@@ -3,6 +3,7 @@ import { spawnSync } from "node:child_process";
 import { mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
+// local
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 import { checkMap, estimateTextBox } from "./map-check.mjs";

@@ -1,4 +1,5 @@
 import { readFileSync } from "node:fs";
+// local
 import path from "node:path";
 
 const root = path.resolve(import.meta.dirname, "..");

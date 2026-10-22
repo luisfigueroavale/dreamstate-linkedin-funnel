@@ -8,7 +8,8 @@
     "capture": "node scripts/capture-motion.mjs",
     "fit": "node scripts/fit-check.mjs",
     "skills": "node scripts/check-skills.mjs",
-    "check": "node scripts/check-skills.mjs && node scripts/fit-check.mjs"
+    "test": "node --test skills/station-map/scripts/map-check.test.mjs",
+    "check": "node scripts/check-skills.mjs && node --test skills/station-map/scripts/map-check.test.mjs && node scripts/fit-check.mjs"
   },
   "dependencies": {
     "playwright": "^1.49.0"

@@ -144,15 +144,7 @@ Never send a reply that invents an anecdote, a customer story, or a number. Neve
 
 ## Lint
 
-A failing draft does not go on the page. Fix it first.
-
-- Empty text fails. Over 200 characters fails. More than one line break fails.
-- An em dash or an en dash fails. A link fails. A hashtag fails.
-- Openers that fail at the start of the line: spot on, well said, nice post, awesome post, amazing, 100%, this, so true, love, great.
-- Banned words, plus any word the owner added in `brand.local/voice.md`: game changer, delve, crucial, unlock, seamless, streamlines, leverages, orchestrates.
-- Stock shapes that fail: a fake secret, a "whole story" frame, a "real X is" frame, "actual work", a sink-in slogan, a hits-different slogan, and a colon that introduces the lesson (including a "biggest change for me" colon and a "what cut it" colon).
-- Product brags fail: we shipped, our product, our platform, our tool. The company name fails unless this is the one receipt exception above.
-- Each taste block is a pattern plus a why, learned from skips. A match fails.
+Run `node scripts/queue-lint.mjs work/x-reply-queue/<YYYY-MM-DD>-<HHMM>z.json --profile x` before the page is written. Lengths, line breaks, openers, banned words, stock shapes, and product brags are `scripts/queue-rules.json`. Read that file's `review` list and fix those shapes before you run the command. A non-zero exit means do not write the page. Exit 0 stamps `lint` as `pass`. Do not set that field yourself. Copy the stamped JSON into the page, including `lint`. The page renders no cards without it. Add words they never use under `## Banned` in `brand.local/voice.md`, or as `banned_words` on the run. A company name fails except the one receipt exception above, and never past 1 reply in 10. A null company skips that check. Each taste block is a pattern plus a why, learned from skips. A match fails.
 
 `references/queue.html` is the page. Copy it to `work/x-reply-queue/<run-id>.html` and replace the JSON marker. The payload's `picks` array is what the page renders (`items` still renders if present). Put the note time in `updated` or `pulled_at`. The page is one column. It sorts newest first. Each card shows the name, the handle, the text, likes, replies, follower count, and a circle chip when `circle` is true. An avatar or a post image renders only from bytes already in the payload. The reply box grows with the text. The count warns over 200. Skip, Copy, and Reply on X (the composer opens with the text filled in and the card marks done). Undo brings it back. Edits and skip or done marks stay in the browser. The footer says nothing is sent until the owner posts it.
 

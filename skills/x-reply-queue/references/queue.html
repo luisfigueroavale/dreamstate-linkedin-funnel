@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-desk="replies">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" data-page="replies">
+<meta name="viewport" content="initial-scale=1, width=device-width">
 <title>Reply queue</title>
 <style>
   :root {
@@ -95,6 +95,10 @@
   var host = document.getElementById("list");
   var site = "https://x.com";
   var composer = "intent/post";
+  if (payload.lint !== "pass") {
+    host.textContent = "Lint did not pass. No cards.";
+    return;
+  }
   var rows = (payload.picks || payload.items || []).slice();
   rows.sort(function (left, right) {
     return Date.parse(right.created_at || 0) - Date.parse(left.created_at || 0);

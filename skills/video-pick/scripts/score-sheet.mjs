@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
  * Score a sheet the owner already filled.
+ * What rank and depth compute: skills/video-pick/references/score-sheet.md
  * No socket, no host, no key.
  *
  *   node skills/video-pick/scripts/score-sheet.mjs rank --sheet sheet.json --out dir
@@ -12,6 +13,7 @@
  */
 
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
+// local
 import path from "node:path";
 
 const STOP = new Set(

@@ -1,18 +1,9 @@
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+// local
 import path from "node:path";
 
 const root = path.resolve(import.meta.dirname, "..");
 const strict = process.argv.includes("--strict");
-
-const CONTENT = [
-  "context-intake", "pillar-map", "week-spread", "week-board", "source-notes",
-  "cross-cut", "opening-line", "linkedin-draft", "x-draft", "x-week", "x-scan",
-  "x-essay", "essay-to-linkedin", "letter-draft", "essay-draft", "record-script",
-  "video-blurb", "thumb-patterns", "title-pair", "video-pick", "video-hold",
-  "comment-queue", "x-reply-queue", "magnet-build", "magnet-send",
-  "frame-build", "thumb-frame", "station-map", "step-motion",
-  "post-path", "warm-cadence", "inbox-desk", "thread-reply",
-];
 
 const VISUAL = [
   "frame-build", "frame-review", "station-map", "stage-build",
@@ -24,6 +15,22 @@ const QUESTIONS = [
   "Are they the reason the company sells, and does that not scale?",
   "Would they rather build their own distribution than hand it to a ghostwriter or agency?",
 ];
+
+function referencedScripts(text) {
+  const found = new Set();
+  for (const match of text.matchAll(/`((?:skills\/[a-z0-9-]+\/)?scripts\/[^`\s]+\.(?:mjs|js|py))(?![a-z0-9])/g)) {
+    found.add(match[1].replace(/^\.\//, ""));
+  }
+  for (const match of text.matchAll(/\bskills\/[a-z0-9-]+\/scripts\/[A-Za-z0-9_./-]+\.(?:mjs|js|py)(?![a-z0-9])/g)) {
+    found.add(match[0]);
+  }
+  return found;
+}
+
+function matchesTerm(text, term) {
+  const escaped = term.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`(?<![a-z0-9])${escaped}(?![a-z0-9])`).test(text);
+}
 
 function bannedTerms() {
   const file = path.join(root, ".banned-terms.local");
@@ -67,8 +74,8 @@ for (const name of folders) {
   const match = text.match(/^name:\s*(\S+)\s*$/m);
   if (!match || match[1] !== name) bad(`${name}: frontmatter name mismatch`);
   if (!text.includes("docs/skill-frame.md")) bad(`${name}: missing docs/skill-frame.md`);
-  if (CONTENT.includes(name) && !text.includes("docs/skill-frame.md")) {
-    bad(`${name}: content skill does not follow the skill frame`);
+  for (const rel of referencedScripts(text)) {
+    if (!existsSync(path.join(root, rel))) bad(`${name}: missing script ${rel}`);
   }
   if (VISUAL.includes(name) && !text.includes("DeskTimeline") && !text.includes("__seek")) {
     bad(`${name}: motion is not the JavaScript timeline`);
@@ -109,7 +116,7 @@ if (terms === null || terms.length === 0) {
   for (const file of walk(root)) {
     if (!/\.(md|js|mjs|css|html|json|py)$/.test(file)) continue;
     const text = readFileSync(file, "utf8").toLowerCase();
-    if (lowered.some((term) => text.includes(term))) {
+    if (lowered.some((term) => matchesTerm(text, term))) {
       bad(`${path.relative(root, file)} matches .banned-terms.local`);
     }
   }

@@ -27,7 +27,7 @@ Cards do not stack. Overlap fails. A gap under 1 second warns. A spotlight, the 
 
 Zoom scale outside 1.05 to 2.5 fails. A zoom under 1.2 seconds warns. With `layout.cam` as `[x, y, w, h]` fractions, a zoom that shows more than 2 percent and less than 98 percent of that box fails. The box stays wholly inside the zoom or wholly outside it. The visible region is a square whose side is one divided by the scale, with its top-left at each focus coordinate times one minus that side. Omitted focus is the center of the frame. `ease` is stored and not gated. Use 0 when they asked for a hard punch.
 
-A card or spotlight whose footprint meets the camera box fails when the overlap area is over 0.002. Footprints sit in a 4 percent margin (76/1920 wide, 76/1080 tall), then the kind's default anchor, unless the event sets `anchor` or `offset`. A still `width` is design pixels on a 1920-wide frame and changes that footprint. Caption glyphs and full-frame beats are outside this test. You still watch the mouth.
+A card or spotlight whose footprint meets the camera box fails. The overlap cutoff and the frame margin are printed by `node skills/picture-lock/scripts/lock-check.mjs --help`. Footprints use that margin, then the kind's default anchor, unless the event sets `anchor` or `offset`. A still `width` is design pixels on a 1920-wide frame and changes that footprint. Caption glyphs and full-frame beats are outside this test. You still watch the mouth.
 
 Duration outside the band warns. It does not fail the run.
 
@@ -68,6 +68,16 @@ A grade, only when they ask, needs the offset of graded time zero on the ungrade
 A noise print needs silence of at least 0.8 seconds at -55 dB or quieter. Keep the sample 0.15 seconds inside the detected edges. No such stretch means stop. Leave out a denoise that invents texture, and leave out a per-frame loudness ride. Those limits are not in the checker. If a denoise adds delay, remove that delay or the mouth drifts. Cuts use the same frame rounding as the picture so the join stays lined up.
 
 Music only when the plan names a file the owner may use. `music: null` means none. Sections, gain, and fade are mix notes. The checker does not test the right, and it does not measure ducking.
+
+## Motion and sound
+
+Scan a labelled frame every 10 seconds. The label is the card or caption that should be on screen at that second. A missing label, or a label over the mouth, fails the review even when the checker exits 0.
+
+Interludes last 1 to 4 seconds. An interlude is a held frame or a short bridge between two cards. Past 4 seconds the cut looks paused. Under 1 second the next card has not landed.
+
+Motion style is soft. Ease in and ease out. Do not snap a zoom or a card unless the plan sets `ease` to 0 because they asked for a hard punch.
+
+At most one sound effect per hit. A hit is one visual event that earns a sound. Do not stack two effects on the same appearance. Space hits at least 1.5 seconds apart. The checker warns when they sit closer. This script does not mix the effect. It checks the path and the gap.
 
 ## After the numbers
 

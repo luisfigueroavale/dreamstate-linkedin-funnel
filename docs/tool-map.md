@@ -24,7 +24,7 @@ Legend:
 | `sequence.sequences.step_options` | plugin | The step ids you may use. Do not invent a step. |
 | `sequence.sequences.activate_audience` | plugin, catalog | Starts sending. Owner yes. `max_live_sends` in params when the schema lists it. |
 | `sequence.sequences.resume` | plugin | Resume. Owner yes. Same send rule. |
-| `workflow.workflows.activate` | plugin | Activate a workflow. Owner yes if it sends or spends. |
+| `workflow.workflows.activate` | plugin, catalog | Always owner yes and `approved: true`. No dry_run (smoke_test, then live). Required `workflow_id` and `expected_version_id` (the published version, not the draft). Optional `max_credits`; required on live when an autonomous trigger is present (resend the preview's `required_caps.max_credits`). Does not enroll. |
 | `tables.profile_watcher.preview` | catalog | Free read of up to 10 person-profile URLs. No LinkedIn call. |
 | `tables.profile_watcher.create` | catalog | Store a daily profile watcher. Needs `preview_hash` and `approved: true`. Owner yes. The create call does not write engager rows. Later runs spend up to `watcher_max_credits`. |
 | `tables.profile_watcher.resume` | catalog | Restart that watcher after a fresh preview. Owner yes. |
@@ -49,7 +49,7 @@ Legend:
 | `social.visuals.render_preview` | catalog | Page count and size. Does not render. |
 | `social.visuals.render_start` | catalog | Queue PNG or PDF. Scale is 1 or 2. Pass the `scope_hash` from the preview. |
 | `social.visuals.render_get` | catalog | Render status. File ids for `social.visuals.file_get` or `social.visuals.download_url`, which that contract names. Fetch those two before use. |
-| `visibility.linkedin.engagement_harvest` | catalog | Required `worksheet_id`, `linkedin_account_id` (from `senders.linkedin_accounts.list`), `post_id`. Dry run is allowed and costs 0. Live needs yes. Does not message anyone. |
+| `visibility.linkedin.engagement_harvest` | catalog | Required `worksheet_id`, `linkedin_account_id` (from `senders.linkedin_accounts.list`), `post_id`. Dry run is allowed and costs 0. Live needs door-level approval and the owner's yes. Does not message anyone. |
 | `visibility.linkedin.engagement_status` | catalog | State of that harvest. |
 | `visibility.linkedin.engagement_engagers` | catalog | People already collected. Local read. |
 | `unibox.inbox.unified_list` | catalog | Stored conversations. Use tab `needs_action` for a bounded slice. |
@@ -84,11 +84,11 @@ Legend:
 | `social.content.article_create` | No cover field. Props include `title`, `funnel_stage`, `campaign_id`, `label_ids`. Cannot schedule. |
 | `social.content.article_create_schedule` | Draft article plus artifact. `scheduled_date` omitted or null. A date is refused. |
 | `social.content.article_update` | Required `article_id`, `expected_revision`, `title`, `body_json`. Title and body on every call. |
-| `social.content.article_delivery_create` | Union of shapes. Two of them publish. Owner yes. LinkedIn `publish_directly: true` is rejected. |
-| `social.posts.comment_publish` | 2 credits. Posts immediately, no preview. LinkedIn: `account_id`, `target_post_urn`, `body`, `consequence` `public_comment`. |
+| `social.content.article_delivery_create` | Union of shapes. Two of them publish. Owner yes and on the yes-list. LinkedIn `publish_directly: true` is rejected. |
+| `social.posts.comment_publish` | 2 credits. dry_run previews. Live repeats `quote_hash` with `max_credits` 2. Required `channel` `"linkedin"`, `account_id`, `target_post_urn`, `body` (1–3000), `consequence` `"public_comment"`. Runs only from an approved durable run step, or 409 `durable_run_step_required`. Owner yes on that exact body. Do not retry when outcome is unknown. |
 | `social.engagement.comment` | Preview when `approved` is omitted or the mode is smoke_test. Live posts only with `approved: true` and `idempotency_key`. Required `account_id`, `post_social_id`, `body`. The bare id `engagement.comment` is not a capability. |
 | `social.linkedin_posts.comments_list` | Required `account_id`, `post_id`. Free external read. dry_run executes live. |
-| `social.feeds.create` | Repeating source that can spend later. Required `table_id`, `kind`, `cadence`, `stored_max_credits`. Owner yes. |
+| `social.feeds.create` | 0 credits. dry_run first. Live needs `approved: true` because it is a recurring trigger. Required `table_id`, `kind` (`watched_accounts` or `keyword`), `cadence` (`hourly`, `daily`, or `weekly`), `stored_max_credits` (1–10000). Pass `account_urls` or `keyword`, never both. |
 | `social.outreach.keyword_dm_sends.list` | Required `artifact_id`. Read what a keyword rule already sent. |
 | `social.content.post_feedback_record` | Required `artifact_id`, `feedback_text`. Appends a note. The bare id `post_feedback_record` is not a capability. |
 | `sequence.sequences.copy_preview` | Required `sequence_id`. Free read of which tokens resolve. |
@@ -96,7 +96,7 @@ Legend:
 | `visibility.radar.inspiration_linkedin_list` | Free read. dry_run executes live. |
 | `visibility.radar.inspiration_x_list` | Free read. dry_run executes live. |
 | `visibility.analytics_query` | Free read of a stored snapshot. Does not refresh. |
-| `visibility.linkedin.followers_import` | Required `worksheet_id`, `linkedin_account_id`, `target_provider_id`. dry_run supported. 0 credits. |
+| `visibility.linkedin.followers_import` | Required `worksheet_id`, `linkedin_account_id`, `target_provider_id`. 0 credits. dry_run first. Live needs door-level approval. Writes local worksheet rows only and never contacts followers. |
 | `visibility.linkedin.comments.refresh` | Required `delivery_id`. 0 credits. Articles and newsletters return 422. Not a comment publish. |
 | `knowledge.vault.ingest` | Required `title`, `markdown`. Always creates a new note. A blank idempotency key is refused. Not for Company Context pages. |
 | `tables.table_sources.attach` | 0 credits. Reversible. Required `table_id`. `source_column_id` may be null. Pass `binding_spec` or `binding`, not both. `source_id` only when editing an existing source. Spending happens on `tables.table_sources.run`, not here. |
@@ -117,6 +117,8 @@ These are not `tools_run` targets. `tools_get` returns not found. Resolve them w
 | `column.ai_fit_score` | Fit column. One numeric score, 0–100. |
 | `source.account_posts_linkedin_profile` | Source definition for posts on a LinkedIn profile. |
 | `source.linkedin_posts_search` | Source definition for a LinkedIn post search. |
+| `source.account_posts_youtube` | Source definition for posts on a YouTube channel. |
+| `source.x_posts_search` | Source definition for an X post search. |
 
 ## Do not call
 

@@ -35,4 +35,4 @@ A meeting on the calendar is `integrations.calendar.events_create`. It emails ev
 
 ## Comments you might leave on other people's posts
 
-`comment-queue` and `x-reply-queue` write a local queue. You post them, or you say yes on that exact text. `social.engagement.comment` previews until `approved` is true. `social.posts.comment_publish` costs 2 credits and posts immediately. Both wait for yes. Never call `sequence.linkedin.auto_engagements.replace` or `sequence.x.auto_engagements.replace`.
+`comment-queue` and `x-reply-queue` write a local queue. You post them, or you say yes on that exact text. `social.engagement.comment` previews until `approved` is true. `social.posts.comment_publish` is 2 credits. dry_run previews; live repeats `quote_hash` with `max_credits` 2. Required `channel` `"linkedin"`, `account_id`, `target_post_urn`, `body`, and `consequence` `"public_comment"`. It runs only from an approved durable run step, or the call returns 409 `durable_run_step_required`. Owner yes on that exact body. Both wait for yes. Never call `sequence.linkedin.auto_engagements.replace` or `sequence.x.auto_engagements.replace`.

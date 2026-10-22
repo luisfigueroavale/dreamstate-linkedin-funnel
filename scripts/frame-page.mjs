@@ -1,6 +1,8 @@
 import { chromium } from "playwright";
 import { existsSync, readFileSync } from "node:fs";
+// local
 import path from "node:path";
+// local
 import { pathToFileURL } from "node:url";
 
 export const root = path.resolve(import.meta.dirname, "..");

@@ -11,7 +11,7 @@ The owner posts the comment, or says yes on that exact text. A yes on different 
 
 `source.account_posts_linkedin_profile` and `source.linkedin_posts_search` are definition ids, not `tools_run` ids. Resolve them with `tables.executable_definitions.list_resolved`. Bind with `tables.table_sources.attach`: `table_id`, `source_column_id` (nullable), and either `binding_spec` or `binding`, never both. Pass `source_id` only when editing. Attach is 0 credits and reversible. `tables.table_sources.run` is what spends. When that schema lists `max_rows`, it belongs in `params`. Dry-run the run when the mode exists, show the quote, wait, then live with `quote_hash`, `max_credits`, and a new `idempotency_key`.
 
-`social.feeds.create` (`table_id`, `kind`, `cadence`, `stored_max_credits`) stores a repeating source that can spend later. Owner yes. Do not pass both `account_urls` and `keyword`.
+`social.feeds.create` is 0 credits. dry_run first. Live needs `approved: true` because it is a recurring trigger. Required `table_id`, `kind` (`watched_accounts` or `keyword`), `cadence` (`hourly`, `daily`, or `weekly`), and `stored_max_credits`. Pass `account_urls` or `keyword`, never both.
 
 `visibility.radar.inspiration_linkedin_list` is a free read. `dry_run` executes the read.
 
@@ -23,7 +23,7 @@ The owner posts the comment, or says yes on that exact text. A yes on different 
 
 To comment, `social.engagement.comment`: omit `approved`, or use smoke_test, to preview. Live posts only with `approved: true`, an `idempotency_key`, and yes on that exact text. Required `account_id`, `post_social_id` (a composite id, not an activity URN), and `body` (1–4000). Zero credits, and it still counts on the sender's daily quota.
 
-`social.posts.comment_publish` is the other call: 2 credits, it posts immediately, and it has no preview. Owner yes. When the schema still names them, LinkedIn uses `account_id`, `target_post_urn`, `body`, and `consequence` `public_comment`. Do not use that call to fill the queue.
+`social.posts.comment_publish` is the other call. It is 2 credits. dry_run previews; live repeats `quote_hash` with `max_credits` 2. Required `channel` `"linkedin"`, `account_id`, `target_post_urn`, `body` (1–3000), and `consequence` `"public_comment"`. It runs only from an approved durable run step, or the call returns 409 `durable_run_step_required`. Owner yes on that exact body. Do not retry when the outcome is unknown. Do not use that call to fill the queue.
 
 `social.engagement.react`: `account_id`, `post_social_id`, optional `comment_id`, `reaction` defaulting to like. No dry_run. smoke_test previews. Live needs `approved: true`, an `idempotency_key`, and yes on that reaction. It also counts on the daily quota. Do not react unless they named that reaction.
 
@@ -117,31 +117,7 @@ Taste to test, then replace from their verdicts: prefer a concrete practice, a t
 
 ## Lint
 
-The page build stops when a draft fails. Name each failure, fix those drafts, and build again.
-
-Per draft, fail on: an empty body; more than 200 characters; fewer than 6 words; more than 70 words; two blank lines in a row; more than 4 paragraphs; two sentences with no blank line between them; a paragraph over 35 words; an em dash, an en dash, or a spaced hyphen; a link; a hashtag; a pitch; a generic opener; a banned word; a stock line; a number of 4 digits or more with no thousands separator. Years from 1900 through 2099 are exempt. The separator defaults to a comma. Company name in more than 1 comment in 10 fails. A null company name skips that check. A pitch includes DM me. Also let's connect. Also check out. Also link in. Also book a call. Also a booking link. Also happy to help, happy to chat, or happy to connect.
-
-Fail an opener that is Spot on. Or Well said. Or nailed it. Or powerful. Or absolutely. Or totally agree. Or awesome. Or amazing. Or nice one. Or nice post. Or 100%. Or So true. Or Love this. Or Great post. Or Couldn't agree more. Or Thanks for sharing. Or This resonates. Or Insightful. Or love it. Or love that.
-
-Banned words, any ending: delve, unlock, seamless, orchestrates, leverages, streamlines, crucial, elevate, empower, testament, thrilled, game changer, insightful, resonates, invaluable, paramount, synergy. Add words they never use.
-
-Fail a stock line: let that sink in. Also hits different. Also key takeaway. Also food for thought. Also at the end of the day. Also a must-read. Also it's not just about. Also here's the thing. Also what nobody tells you. Also nobody talks about. Also great breakdown. Also the whole story. Also a grade that points at "the part" or "the one" they would keep. Also congrats tied to massive, huge, or insane.
-
-A batch can still read like a bot when every single comment passes. Fail the batch on any of these:
-
-- The same two-word opening on more than one comment.
-- Five or more cards, and over 60 percent of them share one shape of 2 or more paragraphs. A batch of single lines is fine.
-- Over 30 percent of the cards run past 45 words.
-- Questions on more cards than max(2, 0.4 times the batch). That is the "at most 4 in 10" cap.
-- With 5 or more cards, a laugh, "lol", ":)", or "tbh" on more than 60 percent. Hold that texture to about half the batch, never all of it.
-- With 5 or more cards, first person (I, my, we, our) on fewer than half.
-- The company name past the 1-in-10 cap.
-- Two drafts on one card that share a move. Batch checks run separately on the first-draft column and the second-draft column, because only one of them is posted.
-- The same 6-word sequence in two different comments.
-- The same 6-word sequence inside a run file from the past 14 days. Public activity pages make a repeat obvious, so write a fresh line.
-- Stories on more than about 4 in 10 are a warning, not a hard stop. The aim is 2 to 4 in 10.
-
-Also reject these batch shapes: one template on nearly every card (a verdict line, then a blank line, then a receipt); grading the post instead of speaking to the person who wrote it; the same few receipts, about 3 to 5, on repeat; a tidy mini post where their real comments are one line; zero personal moments, or a story on every card; a slogan or a compliment where a take should be ("Congrats, that's massive" is the shape, not a line to reuse); credentials nobody asked for (years, age, team size, a stack tour); a copywriter idiom where they would use a plain verb.
+Run `node scripts/queue-lint.mjs work/comment-queue/<YYYY-MM-DD>-<HHMM>z.json` before the page is written. The profile is linkedin. Lengths, openers, banned words, pitches, stock lines, and batch rules are `scripts/queue-rules.json`. Read that file's `review` list and fix those shapes before you run the command. The command does not detect them. A non-zero exit means do not write the page. Exit 0 stamps `lint` as `pass`. Do not set that field yourself. The page renders no cards unless the payload carries that stamp. Add words they never use under `## Banned` in `brand.local/voice.md`, or as `banned_words` on the run. A null `company` skips the company-name check. The older 450-character ceiling does not raise the 200-character stop.
 
 ## Save and hand over
 
@@ -151,4 +127,4 @@ Fill `skills/comment-queue/queue.html`. One column. Freshest post first. Each ca
 
 Handover in two lines. Give the count. Name the 2 or 3 that will go stale first, and tell them to do those before the rest.
 
-A live post of one card is only `social.engagement.comment` after yes on that exact body, using the composite `post_social_id`. Preview by omitting `approved` or by smoke_test. Do not switch to `social.posts.comment_publish` unless they asked for that immediate 2-credit post and said yes, knowing it has no preview.
+A live post of one card is only `social.engagement.comment` after yes on that exact body, using the composite `post_social_id`. Preview by omitting `approved` or by smoke_test. Do not switch to `social.posts.comment_publish` unless they asked for that call and said yes on that exact body. That call is 2 credits, dry_run previews, and live repeats `quote_hash` with `max_credits` 2 from an approved durable run step.

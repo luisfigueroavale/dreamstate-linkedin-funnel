@@ -52,7 +52,9 @@ const KINDS = {
 
 const HELP = `Usage: node skills/picture-lock/scripts/lock-check.mjs <plan.json> [--transcript name=path] [--words-out words.json] [--srt captions.srt] [--media out.mp4] [--silence 0.5]
 
-Checks the plan and, with --media, the encoded file. See the header comment for fail versus warn.`;
+Checks the plan and, with --media, the encoded file. See the header comment for fail versus warn.
+
+Thresholds: a card or spotlight fails when its footprint overlaps the camera box by more than 0.002 of the frame. Footprints are inset by a margin of 76/1920 of the width and 76/1080 of the height before the kind's default anchor.`;
 
 function roundHalfEven(n) {
   const sign = n < 0 ? -1 : 1;

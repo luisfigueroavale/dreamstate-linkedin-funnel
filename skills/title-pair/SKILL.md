@@ -11,7 +11,7 @@ Before any number that would be public, read the Proof page. A figure that is no
 
 A number inside a title stays packaging until the owner can show that number in the video. Do not invent a metric. Do not pass another channel's result off as this owner's. Do not force a three-way comparison unless the video itself is a comparison. Set both titles before any outline exists. That outline then has to keep the promise those titles made.
 
-Outliers, only from evidence they supply or from a read that returns posts. Take what you actually hold, in this order:
+Outliers, only from evidence they supply or from a read that returns posts. Before hand-typed counts, resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`. It is a definition id, not a `tools_run` id. Attach with `tables.table_sources.attach`, then run `tables.table_sources.run` only after the quote and the owner's yes. If that definition is not resolved, they type the counts. Take what you actually hold, in this order:
 
 1. Outlier scores and trend views they already pasted, including a set that spans several channels. Do not assume a browser ranking plugin is installed.
 2. A hand pass over the niche for the last three to six months, or that same read. This desk does not call a video-host API.

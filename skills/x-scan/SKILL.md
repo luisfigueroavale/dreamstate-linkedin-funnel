@@ -31,9 +31,11 @@ The tool's order is not an engagement ranking. Sort the set you hold. In the bro
 
 There is no paid command-line client and no third-party search product in this skill. Use the radar read or files they supplied. Prefer a saved file under `vault/sources/` before you pay to pull the same posts again, and label the capture date on every saved number.
 
-A paid Dreamstate read waits for a quote and a yes. Say the price before the call. If you need the open web, `visibility.research.web_search` is 2 credits and refuses dry_run. Required `query`. Quote the `cost_policy` price, wait for yes, then live with `max_credits` 2 and an `idempotency_key`. A linked page they did not paste is `visibility.research.urls_fetch`: 1 credit, refuses dry_run, required `urls`, then live with `max_credits` 1 and an `idempotency_key` after the same yes. A quote is not a yes. Ids are in `docs/tool-map.md` and `docs/sources.md`.
+`source.x_posts_search` is a definition id, not a `tools_run` id. Resolve it with `tables.executable_definitions.list_resolved`, attach with `tables.table_sources.attach`, and run `tables.table_sources.run` only after the quote and the owner's yes. Use that before you treat a hand count as the only source.
 
-`tables.x_post_engagers.run` is who touched one post. It needs `account_id` and `max_rows` (1–500). Take `account_id` from `senders.social_accounts.list`. Modes are smoke_test and live. Do not send dry_run: that request runs live. Owner yes before live. It is not a LinkedIn harvest. It is not this scan. Do not call `visibility.linkedin.engagement_harvest` to answer an X question.
+A paid open-web read waits for a quote and a yes. Call prices and modes: `docs/calls.md`. Required `query` on `visibility.research.web_search` and `urls` on `visibility.research.urls_fetch`. A quote is not a yes. No yes means you do not run the call.
+
+`tables.x_post_engagers.run` is who touched one post. It needs `account_id` from `senders.social_accounts.list` and `max_rows` (1–500). Call prices and modes: `docs/calls.md`. It is not a LinkedIn harvest and it is not this scan. Do not call `visibility.linkedin.engagement_harvest` to answer an X question.
 
 If a call fails, stop. Report the error the tool returned. Do not loop on `whoami`. Do not start a monitor.
 
@@ -75,7 +77,7 @@ On a refresh, read the file again immediately before you write. Keep their addit
 
 ## Keep it
 
-This skill does not schedule, publish, reply, send a DM, follow, or like. Do not call `sequence.x.auto_engagements.replace`. A repeating refresh is not a loop you start here. If they later want one, that call is `social.feeds.create` (`table_id`, `kind`, `cadence`, `stored_max_credits`). It can spend on a later run and needs its own yes.
+This skill does not schedule, publish, reply, send a DM, follow, or like. Do not call `sequence.x.auto_engagements.replace`. A repeating refresh is not a loop you start here. If they later want one, that call is `social.feeds.create`. dry_run first. Live needs `approved: true` because it is a recurring trigger. Required `table_id`, `kind`, `cadence`, and `stored_max_credits`. Pass `account_urls` or `keyword`, never both.
 
 When they want the scan kept, write the brief to `vault/notes/<date>-x-<topic>.md`. Put the untouched response in `vault/sources/<date>-x-<topic>/` and do not edit that raw file in place. Label the query and the capture time on both. Do not add the scan to `vault/board.md`. Do not paste credentials or a large raw payload into the chat. A fact about the owner that belongs on a Company Context page goes through `context-intake`, and only after they ask. A hole in the evidence stays in the brief.
 

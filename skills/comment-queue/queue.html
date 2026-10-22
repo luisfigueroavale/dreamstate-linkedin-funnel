@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-desk="comments">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" data-page="comments">
+<meta name="viewport" content="initial-scale=1, width=device-width">
 <title>Comment queue</title>
 <style>
   :root { color-scheme: light dark; }
@@ -77,6 +77,14 @@
     return Date.parse(right.created_at || 0) - Date.parse(left.created_at || 0);
   });
   var stack = document.querySelector("#stack");
+  if (pack.lint !== "pass") {
+    var blocked = document.createElement("p");
+    blocked.className = "meta";
+    blocked.textContent = "Lint did not pass. No cards.";
+    stack.appendChild(blocked);
+    document.querySelector("#progress").textContent = "Lint did not pass. No cards.";
+    return;
+  }
   var closed = 0;
   if (!rows.length) {
     var empty = document.createElement("p");

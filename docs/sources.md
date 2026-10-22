@@ -20,17 +20,13 @@ A claim in a post, a picture, a title, or a reply needs a source you can point a
 
 ## Paid reads
 
-`visibility.research.web_search` costs 2 credits and refuses dry_run. Required `query`. Quote the `cost_policy` price, wait for yes, then live with `max_credits` 2 and an `idempotency_key`.
-
-`visibility.research.urls_fetch` costs 1 credit and refuses dry_run. Required `urls`. Live uses `max_credits` 1 and an `idempotency_key`.
-
-Cheapest first: a file already in `vault/sources/`, then a page they named, then one of those two calls.
+Prices and modes for `visibility.research.web_search` and `visibility.research.urls_fetch` are in [calls.md](calls.md). Cheapest first: a file already in `vault/sources/`, then a page they named, then one of those two calls.
 
 ## Feeds are definitions
 
-`source.account_posts_linkedin_profile` and `source.linkedin_posts_search` are catalog definition ids. `tools_get` does not find them as capabilities. Resolve with `tables.executable_definitions.list_resolved`. Bind with `tables.table_sources.attach`: `table_id` required, `source_column_id` nullable, `binding_spec` or `binding` but not both, and `source_id` only when you are editing. That attach costs 0 and is reversible. `tables.table_sources.run` is the call that spends.
+`source.account_posts_linkedin_profile`, `source.linkedin_posts_search`, `source.account_posts_youtube`, and `source.x_posts_search` are catalog definition ids. `tools_get` does not find them as capabilities. Resolve with `tables.executable_definitions.list_resolved`. Bind with `tables.table_sources.attach`: `table_id` required, `source_column_id` nullable, `binding_spec` or `binding` but not both, and `source_id` only when you are editing. That attach costs 0 and is reversible. `tables.table_sources.run` is the call that spends. Run it only after the quote and the owner's yes.
 
-`social.feeds.create` stores a repeating source (`table_id`, `kind`, `cadence`, `stored_max_credits`) that can spend later. Owner yes. Do not pass both `account_urls` and `keyword`.
+`social.feeds.create` is 0 credits. dry_run first. Live needs `approved: true` because it is a recurring trigger. Required `table_id`, `kind` (`watched_accounts` or `keyword`), `cadence` (`hourly`, `daily`, or `weekly`), and `stored_max_credits`. Pass `account_urls` or `keyword`, never both.
 
 `visibility.radar.inspiration_linkedin_list` and `visibility.radar.inspiration_x_list` are free reads. Sending dry_run executes the read.
 

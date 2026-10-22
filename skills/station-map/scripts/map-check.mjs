@@ -5,7 +5,9 @@
  * estimateTextBox is a draft width for a layout pass. Measure glyphs on the page.
  */
 import { readFileSync } from "node:fs";
+// local
 import path from "node:path";
+// local
 import { pathToFileURL } from "node:url";
 
 export const MARKS = Object.freeze([
@@ -446,8 +448,8 @@ export function checkMap(map, options = {}) {
     if (toBox && boundaryDistance(Number(last[0]), Number(last[1]), toBox) > gap) {
       fail(faults, "binding", edge.id, "The end sits on the destination card's current box.");
     }
-    for (let i = 0; i < points.length - 1; i++) {
-      const seg = pair(points, i);
+    for (let at = 0; at < points.length - 1; at++) {
+      const seg = pair(points, at);
       if (!seg || seg.some((pt) => pt.some((n) => !Number.isFinite(n)))) {
         fail(faults, "binding", edge.id, "Connector points are pairs of numbers.");
         continue;

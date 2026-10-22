@@ -1,21 +1,25 @@
-/* Face-frame title. Shadows do the separation. Scale is em so it follows the type size. */
+/* Face-frame title. The fill runs the whole em box, 0% to 100%, so a
+   different face does not slide the color row. Tracking is -0.03em,
+   three percent of the em. End padding is 0.12em so the clip box
+   clears the last stem. The contact blur is 2.5% of the em. The lift
+   is a 4.5% offset and a 9% blur in a blue-black, not a pure black halo. */
 .metal-title {
   display: inline-block;
-  padding-right: 0.08em;
-  line-height: 1;
+  padding-inline-end: 0.12em;
+  line-height: 0.92;
   font-weight: 700;
-  letter-spacing: -0.075em;
+  letter-spacing: -0.03em;
   white-space: nowrap;
-  background-image: linear-gradient(#ffffff 14.5%, #b3b9c2 85.5%);
+  background-image: linear-gradient(#eef3f8 0%, #6d7886 100%);
   background-clip: text;
   color: transparent;
   -webkit-background-clip: text;
   filter:
-    drop-shadow(0 0.01em 0.015em rgba(0, 0, 0, 0.45))
-    drop-shadow(0 0.02em 0.115em rgba(0, 0, 0, 0.6));
+    drop-shadow(0 0.008em 0.025em rgba(0, 0, 0, 0.55))
+    drop-shadow(0 0.045em 0.09em rgba(10, 16, 24, 0.5));
 }
 
 .metal-title--soft {
-  background-image: linear-gradient(#f8f8f8 14.5%, #cfcfcf 85.5%);
-  filter: drop-shadow(0 0.02em 0.115em #000);
+  background-image: linear-gradient(#f7f4ef 0%, #a39e96 100%);
+  filter: drop-shadow(0 0.03em 0.07em rgba(0, 0, 0, 0.7));
 }
