@@ -1,0 +1,14 @@
+node_modules/
+work/
+output/
+brand.local/
+audience.local/
+vault/voice/*
+!vault/voice/README.md
+vault/sources/*
+!vault/sources/README.md
+.DS_Store
+*.log
+.playwright/
+.banned-terms.local
+pictures/**/export/

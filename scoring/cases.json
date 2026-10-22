@@ -1,0 +1,184 @@
+[
+  {
+    "name": "both sides pass and the required answer is yes",
+    "row": {
+      "company_fit": 82,
+      "person_fit": 76,
+      "company_verdict": "pass",
+      "person_verdict": "pass",
+      "company_evidence": ["The row describes an operating company."],
+      "person_evidence": ["The row names the founder as the writer."],
+      "unknowns": [],
+      "engagement": "liked",
+      "qualifying_test": [
+        {
+          "question": "Would a customer recommend them by name tomorrow?",
+          "required": true,
+          "answer": "yes",
+          "evidence": "A public quote names them."
+        }
+      ]
+    },
+    "expected": { "decision": "pass", "company_verdict": "pass", "person_verdict": "pass" }
+  },
+  {
+    "name": "a required unknown holds",
+    "row": {
+      "company_fit": 80,
+      "person_fit": 80,
+      "company_verdict": "pass",
+      "person_verdict": "pass",
+      "company_evidence": ["Operating company."],
+      "person_evidence": ["Founder."],
+      "unknowns": ["No source for the recommendation question."],
+      "engagement": "",
+      "qualifying_test": [
+        {
+          "question": "Would a customer recommend them by name tomorrow?",
+          "required": true,
+          "answer": "unknown",
+          "evidence": ""
+        }
+      ]
+    },
+    "expected": { "decision": "hold", "company_verdict": "pass", "person_verdict": "unsure" }
+  },
+  {
+    "name": "a required no with evidence stops the person",
+    "row": {
+      "company_fit": 88,
+      "person_fit": 90,
+      "company_verdict": "pass",
+      "person_verdict": "pass",
+      "company_evidence": ["Operating company."],
+      "person_evidence": ["Founder."],
+      "unknowns": [],
+      "engagement": "",
+      "qualifying_test": [
+        {
+          "question": "Would they rather build their own distribution than hand it to a ghostwriter or agency?",
+          "required": true,
+          "answer": "no",
+          "evidence": "The row says they hired an agency to post for them."
+        }
+      ]
+    },
+    "expected": { "decision": "stop", "company_verdict": "pass", "person_verdict": "fail" }
+  },
+  {
+    "name": "a company fail stops even when the test is yes",
+    "row": {
+      "company_fit": 0,
+      "person_fit": 84,
+      "company_verdict": "fail",
+      "person_verdict": "pass",
+      "company_evidence": ["The row is a consumer shop with no operating team."],
+      "person_evidence": ["Founder."],
+      "unknowns": [],
+      "engagement": "commented",
+      "qualifying_test": [
+        {
+          "question": "Are they the reason the company sells, and does that not scale?",
+          "required": true,
+          "answer": "yes",
+          "evidence": "The row says buyers ask for them by name and delivery is the founder."
+        }
+      ]
+    },
+    "expected": { "decision": "stop", "company_verdict": "fail", "person_verdict": "pass" }
+  },
+  {
+    "name": "a no without evidence holds",
+    "row": {
+      "company_fit": 77,
+      "person_fit": 77,
+      "company_verdict": "pass",
+      "person_verdict": "pass",
+      "company_evidence": ["Operating company."],
+      "person_evidence": ["Founder."],
+      "unknowns": ["The no has no cell behind it."],
+      "engagement": "",
+      "qualifying_test": [
+        {
+          "question": "Would a customer recommend them by name tomorrow?",
+          "required": true,
+          "answer": "no",
+          "evidence": ""
+        }
+      ]
+    },
+    "expected": { "decision": "hold", "company_verdict": "pass", "person_verdict": "unsure" }
+  },
+  {
+    "name": "a like does not flip a no",
+    "row": {
+      "company_fit": 81,
+      "person_fit": 81,
+      "company_verdict": "pass",
+      "person_verdict": "pass",
+      "company_evidence": ["Operating company."],
+      "person_evidence": ["Founder."],
+      "unknowns": [],
+      "engagement": "liked",
+      "qualifying_test": [
+        {
+          "question": "Would they rather build their own distribution than hand it to a ghostwriter or agency?",
+          "required": true,
+          "answer": "no",
+          "evidence": "The row says they want the writing done for them."
+        }
+      ]
+    },
+    "expected": { "decision": "stop", "company_verdict": "pass", "person_verdict": "fail" }
+  },
+  {
+    "name": "a company fail with no evidence holds",
+    "row": {
+      "company_fit": 0,
+      "person_fit": 79,
+      "company_verdict": "fail",
+      "person_verdict": "pass",
+      "company_evidence": [],
+      "person_evidence": ["Founder."],
+      "unknowns": ["No company cell supports the fail."],
+      "engagement": "",
+      "qualifying_test": [
+        {
+          "question": "Would a customer recommend them by name tomorrow?",
+          "required": true,
+          "answer": "yes",
+          "evidence": "A quote names them."
+        }
+      ]
+    },
+    "expected": { "decision": "hold", "company_verdict": "unsure", "person_verdict": "pass" }
+  },
+  {
+    "name": "a question that is not required does not fail the row",
+    "row": {
+      "company_fit": 73,
+      "person_fit": 73,
+      "company_verdict": "pass",
+      "person_verdict": "pass",
+      "company_evidence": ["Operating company."],
+      "person_evidence": ["Founder."],
+      "unknowns": [],
+      "engagement": "",
+      "qualifying_test": [
+        {
+          "question": "Would a customer recommend them by name tomorrow?",
+          "required": true,
+          "answer": "yes",
+          "evidence": "A quote names them."
+        },
+        {
+          "question": "Are they the reason the company sells, and does that not scale?",
+          "required": false,
+          "answer": "no",
+          "evidence": "A teammate also sells."
+        }
+      ]
+    },
+    "expected": { "decision": "pass", "company_verdict": "pass", "person_verdict": "pass" }
+  }
+]

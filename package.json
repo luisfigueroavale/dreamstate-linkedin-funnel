@@ -1,0 +1,16 @@
+{
+  "name": "dreamstate-linkedin-funnel",
+  "private": true,
+  "type": "module",
+  "description": "Local desk for a LinkedIn funnel that runs on Dreamstate.",
+  "scripts": {
+    "still": "node scripts/render-still.mjs",
+    "capture": "node scripts/capture-motion.mjs",
+    "fit": "node scripts/fit-check.mjs",
+    "skills": "node scripts/check-skills.mjs",
+    "check": "node scripts/check-skills.mjs && node scripts/fit-check.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}

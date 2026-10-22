@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Engager fit decision",
+  "description": "Local contract for one row. Company and person stay apart. The qualifying test is the person side. 70 in the example cases is not a market default.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "company_fit",
+    "person_fit",
+    "company_verdict",
+    "person_verdict",
+    "decision",
+    "qualifying_test",
+    "company_evidence",
+    "person_evidence",
+    "unknowns"
+  ],
+  "properties": {
+    "company_fit": { "type": ["number", "null"] },
+    "person_fit": { "type": ["number", "null"] },
+    "company_verdict": { "enum": ["pass", "fail", "unsure"] },
+    "person_verdict": { "enum": ["pass", "fail", "unsure"] },
+    "decision": { "enum": ["pass", "hold", "stop"] },
+    "qualifying_test": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["question", "required", "answer", "evidence"],
+        "properties": {
+          "question": { "type": "string" },
+          "required": { "type": "boolean" },
+          "answer": { "enum": ["yes", "no", "unknown"] },
+          "evidence": { "type": "string" }
+        }
+      }
+    },
+    "company_evidence": { "type": "array", "items": { "type": "string" } },
+    "person_evidence": { "type": "array", "items": { "type": "string" } },
+    "unknowns": { "type": "array", "items": { "type": "string" } }
+  }
+}

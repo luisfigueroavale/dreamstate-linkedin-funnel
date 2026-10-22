@@ -1,0 +1,117 @@
+/*
+  Layout and color only. Motion is pictures/timeline.js.
+  No transition and no keyframes. A plate may start at opacity 0
+  so the first paint does not flash. JavaScript overwrites it.
+
+  Fallback colors are a preview stand-in for a blank checkout.
+  They are not the brand. Owner values come from brand.local/tokens.css.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: none !important;
+  animation: none !important;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--color-bg, #f3f1ec);
+  color: var(--color-fg, #1c1917);
+  font-family: var(--font-body, Georgia, serif);
+}
+
+body.portrait,
+body.slide {
+  width: 1080px;
+  height: 1350px;
+}
+
+body.thumb {
+  width: 1280px;
+  height: 720px;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: var(--space-safe, 72px);
+  background: var(--color-bg, #f3f1ec);
+  color: var(--color-fg, #1c1917);
+}
+
+.kicker,
+.plate,
+.cta,
+.example-mark,
+.slide-no,
+.promise {
+  opacity: 0;
+}
+
+.kicker {
+  margin: 0 0 28px;
+  font-family: var(--font-display, Georgia, serif);
+  font-size: var(--size-kicker, 22px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted, #5c574e);
+}
+
+.plates {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-block, 22px);
+}
+
+.plate {
+  background: var(--color-surface, #fffdf8);
+  border: 1px solid var(--color-line, #d6d1c7);
+  padding: var(--space-tight, 14px) 28px 22px;
+}
+
+.plate h2,
+.promise,
+.cta {
+  margin: 0;
+  font-family: var(--font-display, Georgia, serif);
+  font-weight: normal;
+  font-size: var(--size-title, 40px);
+  line-height: 1.15;
+}
+
+.plate p,
+.slide-body {
+  margin: 8px 0 0;
+  font-size: var(--size-body, 26px);
+  line-height: 1.35;
+}
+
+.num,
+.slide-no,
+.example-mark {
+  font-size: var(--size-small, 18px);
+  color: var(--color-muted, #5c574e);
+}
+
+.cta {
+  position: absolute;
+  left: var(--space-safe, 72px);
+  right: var(--space-safe, 72px);
+  bottom: 140px;
+}
+
+.example-mark,
+.slide-no {
+  position: absolute;
+  left: var(--space-safe, 72px);
+  bottom: 72px;
+  margin: 0;
+}
