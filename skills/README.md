@@ -25,14 +25,14 @@ Before a skill drafts or designs, it reads `brand/AGENTS.md`. Before it writes f
 | `x-essay` | Write a long X article from the owner's letter, framework, or vault notes, with pictures only where they explain a claim. Use when they want a long X piece. It does not publish. |
 | `essay-to-linkedin` | Adapt a finished essay into a LinkedIn article draft and a short share post, keeping the claims. Use after x-essay. It does not upload or publish. |
 | `letter-draft` | Write one letter or newsletter issue with a single takeaway from sourced material. Use for the long written piece in a week. It does not send email. |
-| `essay-draft` | Turn a sourced idea into an article with an argument, examples from the source, and a claim list. Use for a long piece that is not an X article. It does not publish. |
+| `essay-draft` | Write a long document with one argument, examples that stay inside the source, and a claim list the owner can check. Use when the piece is not an X essay and not a LinkedIn article. It does not publish. |
 | `frame-build` | Build one portrait, carousel slide, or thumbnail as HTML and CSS, with motion in a JavaScript timeline. Use when a piece needs a picture. It does not publish. |
 | `frame-review` | Review a rendered frame at full size and phone width, and a motion filmstrip when one exists. Use after frame-build. The owner is the last reviewer. |
 | `station-map` | Draw a process as numbered HTML plates in reading order, with connectors that do not cross. Use for a flow, a funnel, or a system map. It does not publish. |
 | `stage-build` | Build a small staged scene in HTML and CSS, with labels as real text, then capture it. Use when the idea is a place or a line of stations. It does not use a 3D library. |
 | `record-script` | Write a script the owner can record, with a viewer promise, sourced beats, and a payoff that the footage will actually show. Use before filming. It does not generate footage. |
 | `video-blurb` | Write the description, links, and chapters from the final transcript the owner supplied. Use after the cut exists. It does not invent timestamps. |
-| `thumb-frame` | Design a thumbnail whose promise matches the script, as HTML at the thumb size. Use after the title is chosen. It does not generate a face. |
+| `thumb-frame` | Compose the thumbnail in HTML at the thumb size so the title and the picture make the same promise. Use after the title is chosen. It does not generate a face. |
 | `thumb-patterns` | Note repeating thumbnail patterns in a set the owner pasted or a tool returned, and brief directions. Use before thumb-frame. It does not treat the set as a market law. |
 | `title-pair` | Draft two titles from the script, each claim marked sourced or unsupported. Use before a title is chosen. It does not invent performance. |
 | `video-pick` | Decide whether an idea is worth recording, using only evidence the owner can support. Use before record-script. It does not call a video-host API. |

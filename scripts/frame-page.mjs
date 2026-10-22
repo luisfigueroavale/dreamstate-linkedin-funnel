@@ -40,6 +40,7 @@ export async function openFrame(htmlPath, scale = 1) {
     deviceScaleFactor: scale,
   });
   await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "load" });
+  await page.evaluate(() => document.fonts.ready);
 
   const local = path.join(root, "brand.local", "tokens.css");
   if (existsSync(local) && tokensFilled(readFileSync(local, "utf8"))) {

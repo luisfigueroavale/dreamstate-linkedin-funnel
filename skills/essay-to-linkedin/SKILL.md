@@ -3,26 +3,6 @@ name: essay-to-linkedin
 description: "Adapt a finished essay into a LinkedIn article draft and a short share post, keeping the claims. Use after x-essay. It does not upload or publish."
 ---
 
-## Reader
+Follow `docs/skill-frame.md`.
 
-Read `audience/AGENTS.md`. Use `audience.local/ideal-follower.md` as the reader. The buyer is the Ideal Customer page in Company Context, not this file. If the local file is missing or `Status: blank`, stop and ask. Do not guess who the reader is.
-
-## First
-
-Read `brand/AGENTS.md` and follow its read order. Drafting needs `brand.local/identity.md` and `brand.local/voice.md` filled. Missing, empty, or `Status: blank` means stop and ask the owner. Do not guess identity, voice, or proof.
-
-## Last
-
-Run `brand/taste.md` on the result. Fix a miss you can fix without inventing a fact. Name any miss that needs the owner. Only then hand it over.
-
-# Adapt the essay
-
-Keep the argument and the sourced lines. Cut for the feed only in the share post, which follows `linkedin-draft`. Do not add a result the essay did not have.
-
-Cover art is a `frame-build` still. Do not guess an article pixel size. `tools_get` `social.content.article_create` and use the cover field only if the schema has one. Until that fetch succeeds, leave the cover as a local PNG and say the article tool was not called.
-
-Write a local folder `work/article/<slug>/` with the markdown, the cover path, and the share post. `work/` is gitignored.
-
-## Done
-
-The folder path and which Dreamstate ids, if any, came back from a call.
+Rebuild the cover at 16:9 for the article. Keep the portrait for the feed. Switch the link to `utm_source=linkedin` and the same weekly campaign. The share post points at the article and puts the URL in the comment under the post. Call `social.content.article_enabled_get` first (no params). If the flag is off, the other article calls 404. Stop. `social.content.article_create` has no cover field. To carry a body, use `article_create_schedule` with `scheduled_date` omitted or null (a date is refused), then `article_update` (`article_id`, `expected_revision`, `title`, and `body_json`; title and body are both required on every call), then `article_delivery_create` only after yes, because two of its shapes publish. LinkedIn `publish_directly: true` is rejected.

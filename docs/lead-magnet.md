@@ -17,21 +17,23 @@ This repo can be that file. Do not stuff your Company Context into the copy you 
 
 ## Link
 
-Create the short link with `social.content.tracking_link_create` after `tools_get`. Pass the real destination. The call can attach `artifact_id` when the link belongs to a post. It does not post the link.
+Look up the destination first with `social.content.tracking_links_lookup` (`urls`). Then `social.content.tracking_link_create` with `destination_url` and the week's `utm`. Optional: `artifact_id`, `platform`, `custom_slug`, `og`. The call does not post the link.
 
-Read it back with `social.content.tracking_link_get`. Report `short_url` and `destination_url` from that read. Clicks, if you report them, come from fields the get call returns, such as `first_click_at`. Do not invent a click count. If the schema has no count, say the count is unknown.
+The DM body uses that full destination URL plus UTM. It does not use `short_url`. One unique URL per post, so a repeated link is not treated as already delivered.
 
-Put the same destination through `social.content.tracking_links_lookup` only after you fetch that id. It was a search hit, not a full contract, so treat it as to-check.
+Read the row back with `social.content.tracking_link_get`. Clicks, if you report them, come from fields that call returns, such as `first_click_at`. Do not invent a click count. If the schema has no count, say the count is unknown.
 
 ## Delivery
 
 Default: do not arm an automatic DM.
 
-1. `social.outreach.keyword_dm_rules.list` on the artifact.
-2. Show the owner the full next set. A replace deletes any rule you leave out.
-3. Keep `dm_enabled` false, and keep public replies off, until the owner accepts that exact text. Accepting an enabled rule means later commenters who use the keyword are messaged without a fresh yes. Say that in the ask.
-4. The live `social.outreach.keyword_dm_rules.replace` sends `expected_revision` from the artifact read. A stale revision is refused. Re-read. Do not retry the old body.
-5. For a single comment, prefer `social.comments.reply` plus a drafted DM, and wait for yes on those two texts. `social.comments.approve` is what posts the public reply.
+1. `social.outreach.keyword_dm_rules.list` (`artifact_id`) before any replace.
+2. Show the owner the full next set. `keyword_dm_rules.replace` deletes any rule you leave out. Include typo variants in `keywords` (1–20).
+3. `comment_reply_not_connected` is the public line for someone who must connect first. `comment_reply_sent` is the line after the file has gone out.
+4. Keep `dm_enabled` false, and keep public replies off, until the owner accepts that exact text. An enabled rule messages later commenters who use the keyword, with no fresh yes. Say that in the ask. Post text, the CTA, and the keyword have to match before you arm it.
+5. The live replace sends `expected_revision` from the artifact read. A stale revision is refused. Re-read. Do not retry the old body. Leave pacing at the account's own spacing. Do not tighten it, and do not invent a spacing call.
+6. Afterward, `social.outreach.keyword_dm_sends.list` (`artifact_id`) is how you see what went out.
+7. For a single comment, prefer `social.comments.reply` plus a drafted DM, and wait for yes on those two texts. `social.comments.approve` posts the public reply (`action_id`, `content_hash`, `approved: true`).
 
 If a post draws more comments than you will answer one by one, say so and ask whether the public reply should carry the link instead of a DM. Still your yes. Do not scrape the comment list in a tight loop. `social.comments.queue_list` is a paged read. Use the cursor it returns.
 

@@ -4,7 +4,7 @@ Two different tools. Do not swap them.
 
 ## People on one post
 
-`visibility.linkedin.engagement_harvest` collects reactions and commenters for one LinkedIn post into a worksheet you name. Dry run, show the quote, wait for a yes, then live. Read progress with `visibility.linkedin.engagement_status` and people with `visibility.linkedin.engagement_engagers`. The harvest does not send messages and does not change the post.
+`visibility.linkedin.engagement_harvest` collects reactions and commenters for one LinkedIn post into a worksheet you name. Required: `worksheet_id`, `linkedin_account_id` from `senders.linkedin_accounts.list`, and `post_id`. Dry run is allowed and costs 0. Show that quote, wait for a yes, then live. Read progress with `visibility.linkedin.engagement_status` and people with `visibility.linkedin.engagement_engagers`. The harvest does not send messages and does not change the post.
 
 Run it on posts you published, inside a window you name. Do not page the whole history because a column is empty.
 
@@ -22,4 +22,4 @@ Score them with the fit gate before anyone writes a message. The person side use
 
 `knowledge.engagement.people_engaged_n_times` counts email and meetings. Do not use it as a LinkedIn engager list.
 
-`tables.x_post_engagers.run` is to-check. Team docs say it calls X even at 0 credits. It is not this LinkedIn harvest. Do not call it to avoid the LinkedIn one.
+`tables.x_post_engagers.run` needs `account_id` and `max_rows`. Modes are smoke_test and live. Do not send dry_run: that request runs live. Owner yes before live. It calls X. It is not this LinkedIn harvest.

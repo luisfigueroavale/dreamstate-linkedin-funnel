@@ -3,28 +3,6 @@ name: thread-reply
 description: "Draft one reply in an existing thread for the owner to send. Use for LinkedIn or email threads already open. It does not start a new sequence."
 ---
 
-## Reader
+Follow `docs/skill-frame.md`.
 
-Read `audience/AGENTS.md`. Use `audience.local/ideal-follower.md` as the reader. The buyer is the Ideal Customer page in Company Context, not this file. If the local file is missing or `Status: blank`, stop and ask. Do not guess who the reader is.
-
-## First
-
-Read `brand/AGENTS.md` and follow its read order. Drafting needs `brand.local/identity.md` and `brand.local/voice.md` filled. Missing, empty, or `Status: blank` means stop and ask the owner. Do not guess identity, voice, or proof.
-
-## Last
-
-Run `brand/taste.md` on the result. Fix a miss you can fix without inventing a fact. Name any miss that needs the owner. Only then hand it over.
-
-# Draft the reply
-
-Read the thread both ways. Classify the last inbound message from its words: interested, question, objection, not now, wrong person, referral, unsubscribe, or unclear. Quote the line that decided it.
-
-Confirm sequence stop state is stopped before you offer a send. Active or unknown: say so and do not offer a send. The plugin field name is `sequence_stop_state`. If the read does not return it, say the stop state is unknown.
-
-Answer their last message. Usually under 240 characters. One next step. No meeting push unless they asked. Match their language. Do not paste a model suggestion as if it were theirs.
-
-Save with `unibox.inbox.reply_draft_edit` after `tools_get`. Show channel, account, recipient, and the final text. Send only if they yes that text, via `unibox.context.thread_reply_send`.
-
-## Done
-
-The classification, the stop state, and the draft text. Sent or not sent.
+Route the last inbound line, then stop. Resource request: the link and one question. Compliment or a new connection: thanks, plus what they are working on. Qualified prospect: answer, then offer a call as a question. Weaker fit: answer, then a self-serve path. Customer: help, and no meeting push unless they asked. Nothing to answer: no reply. Support: acknowledge it, ask which step failed, and do not ship a fix. Pitch: no reply unless they asked. A note about an event, a show, a partnership, payment, the law, or a private matter waits for the owner. Voice stays under about 240 characters, answers the last message, offers one next step, matches their language, and carries no calendar link unless they asked. `sequence_stop_state` must read stopped before you offer a send. Save with `unibox.inbox.reply_draft_edit`: `conversation_id`, `expected_revision` from `unibox.inbox.reply_drafts_list` (to-check until fetched), `content` `{body, attachments, voice}`, `name`, and `labels` (array, may be empty). Send with `unibox.context.thread_reply_send` only after yes on that text: `content.body` required, `attachments` default `[]`, `voice` null unless audio, `client_request_id` a new UUID, `max_live_sends` 1. A reply on your own post is `social.comments.approve` (`action_id`, 64-hex `content_hash`, `approved: true`) after `social.comments.reply`. A clock time uses `scheduled_at`. `integrations.calendar.events_create` emails every attendee (`connection_id`, `title`, `start_at`, `end_at`). Owner yes first. Do not invent `calendar.events_*`.

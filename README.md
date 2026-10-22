@@ -45,7 +45,7 @@ It will not post, comment, send a DM, enroll a sequence, launch a campaign, spen
    npm run check
    ```
 
-   Look at `pictures/examples/gate/export/`. The PNG is the last frame of the JavaScript timeline. The MP4 is that same timeline. The GIF restarts on the empty stage.
+   Look at `pictures/examples/gate/export/`. The PNG is the last frame of the JavaScript timeline. The MP4 is that same timeline. The GIF opens on an empty stage, so a loop returns there.
 8. Stop. Nothing has been posted. The next real piece of work is one idea in the vault, not a send.
 
 The longer path is [docs/getting-started.md](docs/getting-started.md).
@@ -72,7 +72,7 @@ After something is published, the agent can collect people who reacted or commen
 
 ## Names you never want in the repo
 
-Put them in `.banned-terms.local`, one name per line. Blank lines and lines that start with `#` are ignored. Git does not track the file. `npm run check` scans the repo for those names when the file is present, and skips that scan when the file is missing.
+Put them in `.banned-terms.local`, one name per line. Blank lines and lines that start with `#` are ignored. Git does not track the file. `npm run check` scans the repo for those names when the file is present. When the file is missing it prints `BANNED-TERM SCAN SKIPPED` and continues. `npm run skills -- --strict` fails in that case.
 
 ## Local tools
 

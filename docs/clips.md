@@ -21,8 +21,12 @@ Skills, in the order a short usually needs:
 | `video-hold` | Package the folder. Do not upload. |
 | `step-motion` | A process drawn in HTML. Motion is the JavaScript timeline. Capture with `scripts/capture-motion.mjs`. The still is the last seek. |
 
-If ffmpeg is missing, stop and say so. Do not substitute a cloud encoder.
+When ffmpeg is not installed, stop and tell the owner. Do not switch to a cloud encoder.
 
-Captions use an SRT whose cues match the audio you kept. System fonts only. Do not vendor a font. Do not add background boxes behind every word unless the owner asks.
+Captions use an SRT whose cues match the audio you kept. Fonts come from files listed in `brand.local/assets/README.md`. If that list is empty, say the burn is using the system face. Do not vendor a font. Do not add background boxes behind every word unless the owner asks.
+
+`brand.local` is required for titles and overlays. A cut that only trims picture and sound does not need it. Loudness target for `picture-lock`, `long-cut`, and `clip-audio` is -14 LUFS integrated and -1.5 dBTP.
+
+`talk-cut` drops silence at -45 dB, with a minimum gap of 600 ms, 60 ms of pad before the word and 150 ms after, 30 ms audio fades, CRF 18, and AAC at 192k. Check with `ffprobe` and `loudnorm`.
 
 A still of the speaker, if you need one, is a frame from their footage, not a generated portrait.

@@ -22,9 +22,9 @@ Gates sit on `tools_run`, not inside `params`: `mode`, `max_credits`, `idempoten
 
 `max_rows` belongs in `params` of `tables.columns.run` and `tables.table_sources.run` when that schema lists it. `max_live_sends` belongs in `params` of an external-send sequence capability when that schema lists it, and it must cover at least the dry-run recipient count.
 
-A write, a credit spend, or an external effect starts as `mode: "dry_run"`. Show the row count, the credit estimate, and `quote_hash`. Then wait. The live call repeats that `quote_hash`, sets `max_credits` to the dry run's ceiling, and sends a new `idempotency_key`. `max_credits` is 0 only when the quote is 0. A quote on a refused live call is a price, not permission to retry.
+A write, a credit spend, or an external effect starts as `mode: "dry_run"` when that mode exists. Show the row count, the credit estimate, and `quote_hash`. Then wait. The live call repeats that `quote_hash`, sets `max_credits` to the dry run's ceiling, and sends a new `idempotency_key`. `max_credits` is 0 only when the quote is 0. A quote on a refused live call is a price, not permission to retry.
 
-A free read that does not support `dry_run` runs as `live`. Say that it was a read.
+When the fetched contract refuses `dry_run`, do not send that mode. `visibility.research.web_search` is 2 credits and `visibility.research.urls_fetch` is 1. Quote `cost_policy`, wait, then live with `max_credits` at that price and an `idempotency_key`. A free read that does not support `dry_run` runs as `live`. Say that it was a read. `tables.x_post_engagers.run` is one of these: a dry_run request executes live, so do not send it, and wait for yes before the live call.
 
 Set `approved: true` only after the owner has said yes, and only when the call needs it: a paid run above 25 rows, a quote or refusal that says `approval_required`, a live external send above the server's recipient threshold, or a run that turns on a recurring trigger. Send the same `quote_hash`.
 
@@ -32,7 +32,7 @@ Set `approved: true` only after the owner has said yes, and only when the call n
 
 Nothing posts, comments, sends a DM, enrolls, launches, spends, or deletes without the owner's yes on that exact item. A yes on different text, media, audience, or schedule is a new yes.
 
-These still need that yes when the credit price is 0, because they arm a later send or a recurring spend: `social.content.schedule`, `social.content.approve` when the owner has not approved that version, `social.comments.approve`, `unibox.context.thread_reply_send`, `social.outreach.keyword_dm_rules.replace` with any send or public reply turned on, `tables.profile_watcher.create`, `tables.profile_watcher.resume`, `tables.auto_run.set`, `sequence.sequences.activate_audience`, `sequence.sequences.resume`.
+These still need that yes when the credit price is 0, because they arm a later send, email an invite, or start a recurring spend: `social.content.schedule`, `social.content.approve` when the owner has not approved that version, `social.comments.approve`, `social.engagement.comment` with `approved: true`, `social.posts.comment_publish`, `unibox.context.thread_reply_send`, `social.outreach.keyword_dm_rules.replace` with any send or public reply turned on, `integrations.calendar.events_create`, `social.feeds.create`, `tables.profile_watcher.create`, `tables.profile_watcher.resume`, `tables.auto_run.set`, `sequence.sequences.activate_audience`, `sequence.sequences.resume`.
 
 Do not call `social.content.auto_publish_set` or `social.content.approval.authorize_publish`.
 

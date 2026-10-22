@@ -3,24 +3,6 @@ name: comment-queue
 description: "Draft comments the owner can post on other people's LinkedIn posts, as a local queue. Use when they want replies drafted. It never publishes."
 ---
 
-## Reader
+Follow `docs/skill-frame.md`.
 
-Read `audience/AGENTS.md`. Use `audience.local/ideal-follower.md` as the reader. The buyer is the Ideal Customer page in Company Context, not this file. If the local file is missing or `Status: blank`, stop and ask. Do not guess who the reader is.
-
-## First
-
-Read `brand/AGENTS.md` and follow its read order. Drafting needs `brand.local/identity.md` and `brand.local/voice.md` filled. Missing, empty, or `Status: blank` means stop and ask the owner. Do not guess identity, voice, or proof.
-
-## Last
-
-Run `brand/taste.md` on the result. Fix a miss you can fix without inventing a fact. Name any miss that needs the owner. Only then hand it over.
-
-# Queue comments
-
-The watchlist is a file the owner maintains in `vault/sources/` (gitignored) or a list they paste. Do not scrape. For each post, draft one comment only when `brand.local/identity.md` gives you a real receipt to add. Otherwise skip and say why.
-
-Write `work/comment-queue.html` with the post URL, the draft, and a blank for what they actually posted. They post it. Do not call `social.posts.comment_publish` (to-check). A comment on the owner's own post is `social.comments.reply` (preview only) and still needs a yes before `social.comments.approve`.
-
-## Done
-
-How many drafts, how many skips, and the queue path.
+Fetch, score, pick, thread, then learn. The owner posts the comment, or says yes on that exact text. Never call `sequence.linkedin.auto_engagements.replace`. `source.account_posts_linkedin_profile` and `source.linkedin_posts_search` are definition ids, not `tools_run` ids. Resolve them with `tables.executable_definitions.list_resolved`. Bind with `tables.table_sources.attach` only after `tools_get` (those attach arguments are to-check). `social.feeds.create` stores a repeating source that can spend later (`table_id`, `kind`, `cadence`, `stored_max_credits`). Owner yes. `visibility.radar.inspiration_linkedin_list` is a free read. `social.linkedin_posts.comments_list` needs `account_id` and `post_id` (`social.linkedin_posts.get` is to-check until fetched). To comment, `social.engagement.comment`: omit `approved`, or use smoke_test, to preview; live posts only with `approved: true` and an `idempotency_key` after yes. Required `account_id`, `post_social_id` (a composite id, not an activity URN), and `body` (1–4000). Zero credits, and it still counts on the sender's daily quota. `social.posts.comment_publish` is the other call: 2 credits, it posts immediately, and it has no preview. Lint a draft at 200 characters. Take a bounded batch, newest first, and skip a post that has no receipt. When the owner edits a draft, write the rule into voice, not their sentence.

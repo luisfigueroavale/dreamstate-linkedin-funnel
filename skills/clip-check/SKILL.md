@@ -3,12 +3,6 @@ name: clip-check
 description: "Probe an export for duration, audio, and caption timing. Use before calling a video done. It does not approve publishing."
 ---
 
-# Check the export
+Follow `docs/skill-frame.md`.
 
-`ffprobe` the file. Report duration, size, codec, and whether audio is present. If an SRT exists, confirm the last cue ends before the file ends. Spot a frame at the start, the middle, and the end with ffmpeg. Say if a frame is unexpectedly black.
-
-Do not say the piece passed taste. That is `brand/taste.md`, and it still needs a person when the check is visual.
-
-## Done
-
-The probe fields and any fault.
+Probe before you call the file done. Duration matches the edit list. Audio is present. Integrated loudness is near -14 LUFS and true peak is at or under -1.5 dBTP. Caption cues sit on the words. Frame size is the native size. The first second does not fade to black by accident. Use `ffprobe`. A pass here is not permission to publish.

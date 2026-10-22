@@ -8,7 +8,7 @@ Use this shape. Fetch the schema every time. [tool-map.md](tool-map.md) says whi
 2. `tools_get` with the exact `capability_id`. Read `required_fields`, `cost_policy`, and `execution_mode_contract`.
 3. `tools_run`.
 
-A free read that cannot dry-run uses `mode: "live"` and changes nothing. Say so.
+A free read that cannot dry-run uses `mode: "live"` and changes nothing. Say so. A paid read that refuses dry_run (`visibility.research.web_search` at 2 credits, `visibility.research.urls_fetch` at 1) is quoted from `cost_policy`, then run live after yes, with `max_credits` at that price and an `idempotency_key`. Do not send `dry_run` to those ids. `tables.x_post_engagers.run` treats a dry_run request as a live read of X. Do not send that mode.
 
 ## Paid or outward
 

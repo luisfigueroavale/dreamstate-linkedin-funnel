@@ -2,6 +2,7 @@ import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 
 const root = path.resolve(import.meta.dirname, "..");
+const strict = process.argv.includes("--strict");
 
 const CONTENT = [
   "context-intake", "pillar-map", "week-spread", "week-board", "source-notes",
@@ -54,13 +55,20 @@ const skillRoot = path.join(root, "skills");
 const folders = readdirSync(skillRoot).filter((name) => statSync(path.join(skillRoot, name)).isDirectory());
 if (folders.length !== 50) bad(`expected 50 skills, found ${folders.length}`);
 
+const framePath = path.join(root, "docs/skill-frame.md");
+const frame = readFileSync(framePath, "utf8");
+for (const needle of ["audience/AGENTS.md", "brand/AGENTS.md", "brand/taste.md", "required unknown"]) {
+  if (!frame.includes(needle)) bad(`docs/skill-frame.md is missing ${needle}`);
+}
+
 for (const name of folders) {
   const file = path.join(skillRoot, name, "SKILL.md");
   const text = readFileSync(file, "utf8");
   const match = text.match(/^name:\s*(\S+)\s*$/m);
   if (!match || match[1] !== name) bad(`${name}: frontmatter name mismatch`);
-  if (CONTENT.includes(name) && !text.includes("audience/AGENTS.md")) {
-    bad(`${name}: missing audience/AGENTS.md`);
+  if (!text.includes("docs/skill-frame.md")) bad(`${name}: missing docs/skill-frame.md`);
+  if (CONTENT.includes(name) && !text.includes("docs/skill-frame.md")) {
+    bad(`${name}: content skill does not follow the skill frame`);
   }
   if (VISUAL.includes(name) && !text.includes("DeskTimeline") && !text.includes("__seek")) {
     bad(`${name}: motion is not the JavaScript timeline`);
@@ -93,10 +101,9 @@ if (!scene.includes("DeskTimeline") || /@keyframes|transition\s*:/.test(scene)) 
 }
 
 const terms = bannedTerms();
-if (terms === null) {
-  console.log("Banned-term check skipped. .banned-terms.local is missing.");
-} else if (terms.length === 0) {
-  console.log("Banned-term check skipped. .banned-terms.local has no terms.");
+if (terms === null || terms.length === 0) {
+  console.log("BANNED-TERM SCAN SKIPPED");
+  if (strict) bad("strict: .banned-terms.local is missing or empty");
 } else {
   const lowered = terms.map((term) => term.toLowerCase());
   for (const file of walk(root)) {

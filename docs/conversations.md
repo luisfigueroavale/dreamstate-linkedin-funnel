@@ -27,10 +27,12 @@ Fallback copy is required on every step that uses a row field. Empty fields must
 
 `inbox-desk` lists `needs_action`. `thread-reply` drafts one reply. Read the thread both ways. Classify the last inbound message from its words. Confirm the sequence stop state is stopped before you offer a send. If it is active or unknown, say so and do not offer a send.
 
-The draft answers their last message, usually under 240 characters, one next step, no meeting push unless they asked, in their language. Show channel, account, recipient, and the final text. Save with `unibox.inbox.reply_draft_edit`. Send with `unibox.context.thread_reply_send` only after yes.
+The draft answers their last message, usually under 240 characters, one next step, no meeting push unless they asked, in their language. Show channel, account, recipient, and the final text. Save with `unibox.inbox.reply_draft_edit` (`expected_revision`, `name`, `labels`, and `content` with `body`). Send with `unibox.context.thread_reply_send` only after yes: `content.body`, a new `client_request_id`, and `max_live_sends` 1.
 
-`unibox.inbox.analyze` costs 1 credit on the team price list. Dry run first if the fetched schema allows it. Do not analyze a pile of threads to look busy.
+`unibox.inbox.analyze` is 1 credit on the verified price list. Its arguments are to-check until `tools_get`. Dry run only if that schema allows it. Do not analyze a pile of threads to look busy.
+
+A meeting on the calendar is `integrations.calendar.events_create`. It emails every attendee. Owner yes first. Do not invent `calendar.events_*`.
 
 ## Comments you might leave on other people's posts
 
-`comment-queue` and `x-reply-queue` write a local queue. You post them. This desk does not call a comment-publish action. That id is to-check, and a public comment is a yes even when you do call it later.
+`comment-queue` and `x-reply-queue` write a local queue. You post them, or you say yes on that exact text. `social.engagement.comment` previews until `approved` is true. `social.posts.comment_publish` costs 2 credits and posts immediately. Both wait for yes. Never call `sequence.linkedin.auto_engagements.replace` or `sequence.x.auto_engagements.replace`.

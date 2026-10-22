@@ -10,7 +10,7 @@ The ideal follower is the reader of the posts. The ideal customer is the buyer. 
 
 1. This file.
 2. `audience.local/ideal-follower.md` before a draft, a title, a script, a picture's words, a score, or a qualification.
-3. The Ideal Customer page in Company Context when the work is about buying, fit of a company, or an offer. That page is not a substitute for the follower file.
+3. The Ideal Customer page in Company Context when the work is about buying, fit of a company, or an offer. The buyer page does not replace the follower file.
 
 ## Required
 

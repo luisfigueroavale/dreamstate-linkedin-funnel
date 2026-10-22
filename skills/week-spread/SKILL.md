@@ -3,28 +3,6 @@ name: week-spread
 description: "Turn one sourced idea into a brief and the pieces the owner asked for: script, letter, X, LinkedIn, picture. Use for the week's set. It does not schedule or publish."
 ---
 
-## Reader
+Follow `docs/skill-frame.md`.
 
-Read `audience/AGENTS.md`. Use `audience.local/ideal-follower.md` as the reader. The buyer is the Ideal Customer page in Company Context, not this file. If the local file is missing or `Status: blank`, stop and ask. Do not guess who the reader is.
-
-## First
-
-Read `brand/AGENTS.md` and follow its read order. Drafting needs `brand.local/identity.md` and `brand.local/voice.md` filled. Missing, empty, or `Status: blank` means stop and ask the owner. Do not guess identity, voice, or proof.
-
-## Last
-
-Run `brand/taste.md` on the result. Fix a miss you can fix without inventing a fact. Name any miss that needs the owner. Only then hand it over.
-
-# Spread one idea
-
-Read `docs/week-spread.md`. Run `vault-find`. Copy `vault/week/brief.md` to `vault/week/<date>.md`.
-
-The idea needs a source path or a Company Context revision. No source, stop. Proof lines must already be allowed by `brand.local/identity.md`.
-
-Order: brief, then `record-script` if they are filming, then the pieces they named (`letter-draft`, `x-draft`, `linkedin-draft`, `frame-build`). Each piece links the brief. Skip pieces they did not ask for.
-
-Do not call `social.content.plan` here. That is `week-board`, and only after they ask.
-
-## Done
-
-The brief path and the path of each piece. State that nothing was scheduled.
+Nine stages. Enter where the work already sits: 0 the owner picks the idea, 1 brief, 2 board, 3 record, 4 package the file, 5 drafts, 6 schedule, 7 convert, 8 close. The live recording is the trunk. Three roots grow from it: the file (reach, a native upload), the argument (the letter first, then the X essay, the lesson, and a signup resource post), and lines taken from the transcript (later idea posts). The day map, UTM, and link placement are in `docs/week-spread.md`. One LinkedIn post a day. The letter exists before any piece that reuses its argument. Video URLs stay full https. On LinkedIn the URL goes in the comment under the post, and the post tells the reader to look there. Stage 7 is `post-path`, `magnet-send`, `warm-cadence`, or `thread-reply`, not a profile watcher. Stage 8 reads `visibility.analytics_query`, calls `visibility.linkedin.comments.refresh` when you have a `delivery_id`, logs `social.content.post_feedback_record`, and uses `social.content.unschedule` only to pull an armed send that has not started.
