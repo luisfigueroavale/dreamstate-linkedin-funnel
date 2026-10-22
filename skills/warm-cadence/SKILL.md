@@ -9,7 +9,7 @@ A sequence is a new conversation, even with one recipient; cadenced outreach; or
 
 Take only rows that passed both scores. A required unknown is a hold and is not enrolled. Hold is not sent. `tables.profile_watcher` and the fit column do not enroll anyone. Use a reviewed cohort. In-thread rows stay out unless the owner names them. Exclusions, suppression, prior-contact rules, and tags stay out.
 
-Start with buyer fit and the exact public context. Match what they did. Keep the copy evidence-based, adaptable, and short. Do not time it, and do not make a rate claim. Use three steps or fewer. Do not add a questionnaire.
+Start with buyer fit and the exact public context. Match what they did. Keep the copy evidence-based, adaptable, and short. Add no deadline or timing claim, and do not make a rate claim. Use three steps or fewer. Do not add a questionnaire.
 
 Use the post's words for the topic, the comment's actual point, one experience you stand behind, and whether that problem is their work. A relevant question beats a like. Allow a file ask or product weighing only if it is true. Do not write a reaction-only observation. Waiting or a public follow-up can be right. Do not say you saw a like. Ask one question. Do not make an offer. Do not add a calendar link unless they asked to meet. Do not add a side pitch off the file handoff.
 
