@@ -13,7 +13,7 @@ Beside each path, classify: written by the owner, a speech transcript, a ghostwr
 
 Several samples when that writing has them. One is tentative, not a universal style. Name file count, types, and what they cannot prove. Observe openings, endings, rhythm, specificity, vocabulary, punctuation, paragraph length, and argument shape. A short quote needs a path.
 
-Write into existing `brand.local/voice.md` sections. A cross-sample pattern is a rule. A one-setting choice keeps that label. Do not hard-code a dialect, slang quota, CTA frequency, numeric separator, or hook length unless samples repeat it. Struck words go under Banned words.
+Write into existing `brand.local/voice.md` sections. A cross-sample pattern is a rule. Keep an irregular habit samples show. Do not hard-code a dialect, slang quota, CTA frequency, numeric separator, or hook length unless samples repeat it. Struck words go under Banned words.
 
 Calibration draft only when asked. Read `audience.local/ideal-follower.md` first. Stop if missing or blank. Use a source they supplied and marked public. A private sample may inform rules and stay out of the passage. Add no unstated fact. Put it in `work/voice-sample.md`. File the offered line, the kept line, and only rules the edit supports. Do not mark an imitation approved. Leave `Status: blank` until they say the rules are theirs. Show the guide before treating it as filled.
 

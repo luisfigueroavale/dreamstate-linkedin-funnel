@@ -109,7 +109,7 @@ On a two-draft card the moves differ, one of the two is a single line, and the f
 
 Write it the way they type on a phone. Cut the setup, the summary, and any word that only sounds smart. Start from what caught them. If the line would fit any other post, if it grades the post, or if it sounds like a tip, write it again.
 
-Defaults until a measured shape replaces them: one line, between 6 and 30 words, and the batch is mostly single lines. A second short paragraph is only an honest opening plus an opinion, or a reaction plus one detail from their own work. A numbered list is only for steps that answer the post's question. Two or more sentences get a blank line between them. Ask only when they would actually want the reply. Cap questions at 4 in 10.
+Defaults until a measured shape replaces them: one line, between 6 and 30 words, and the batch is mostly single lines. A second short paragraph is only an honest opening plus an opinion, or a reaction plus one detail from their own work. A numbered list is only for steps that answer the post's question. Two or more sentences get a blank line between them. Ask only when they would actually want the reply. Cap questions at 4 in 10. About half the batch may use a laugh, an emoji, lowercase, or odd punctuation. Never the whole batch.
 
 Lint every draft at 200 characters before it can reach the page. Also refuse a draft over 70 words. The older ceiling of 450 characters ("1 point, not a mini post") does not raise this 200-character stop.
 

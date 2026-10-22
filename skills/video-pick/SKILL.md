@@ -5,7 +5,7 @@ description: "Decide the next video before anyone records: three gates, a scorec
 
 Follow `docs/skill-frame.md`.
 
-No recording until three gates pass. The owner picks. Gate 1 compares the idea with the channel median they supply. Gate 2 keeps an outside structure only at 3× or more, from 3 or more channels, across 2 or more niches, inside 90 days, in evidence they provided, and not worn at home. Gate 3 is the first minute. The ledger is the day after, three days, a week, and four weeks (28 days). Studio click-through and retention only. Never write zero. If a path needs an API key, drop it.
+No recording until three gates pass. Gate 1 compares the idea with the channel median they supply. Gate 2 keeps an outside structure only at 3× or more, from 3 or more channels, across 2 or more niches, inside 90 days, in evidence they provided, and not worn at home. Gate 3 is the first minute. The ledger is the day after, three days, a week, and four weeks (28 days). Studio click-through and retention only. Never write zero. If a path needs an API key, drop it.
 
 | Gate | Question | Evidence | Hand over | Who decides |
 |---|---|---|---|---|
@@ -22,7 +22,7 @@ No recording until three gates pass. The owner picks. Gate 1 compares the idea w
 4. `vault/notes/pillars.md` and `vault/notes/funnel-stages.md`.
 5. A recent wave note, for example from `x-scan`.
 
-Before gate 1, write the niche in one line: who the audience is and the outcome they pay for. Run `brand/taste.md` before you hand over the slate or the script.
+A wave is a product, method, or release moving this week. Before gate 1, write the niche in one line: who pays, and the paid outcome. Run `brand/taste.md` before you hand over the slate or the script.
 
 ## Evidence
 

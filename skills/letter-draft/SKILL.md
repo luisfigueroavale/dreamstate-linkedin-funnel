@@ -15,7 +15,7 @@ Name the guest whose experience you use. Opinion and evidence: separate sentence
 
 Subject and preview promise what the issue delivers. Do not invent urgency. Preview promises what the subject did not already say.
 
-Link labels name the destination. Source or opened page is the one the sentence describes. Every link: `utm_source=newsletter` and the brief's weekly campaign slug. Blank slug: ask. Video URLs stay full https.
+Link labels name the destination. Open that page with `visibility.research.urls_fetch` before the sentence uses it. Every link: `utm_source=newsletter` and the brief's weekly campaign slug. Blank slug: ask. Video URLs stay full https.
 
 Paragraphs add information. Keep the owner's distinctive phrasing. Cut transitions that only announce the next move, and generic lessons the source did not earn.
 

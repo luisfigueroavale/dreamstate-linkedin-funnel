@@ -29,11 +29,11 @@ Samples: `vault/voice/`. Raw material: `vault/sources/`. Commit neither. Also ig
 
 6. Leave an unknown empty. Invent no stand-in. Local files hold what the owner typed, not proof of a life fact or a business claim. A claim waits for their file or a Company Context page that names its source.
 
-7. Collect only blocking gaps: name, language, who the posts are for, content goal, and source files on hand.
+7. Collect only blocking gaps: name, language, who the posts are for, content goal, and source files on hand. Time zone, posting days, and channel wait until they ask for a dated plan. Does not schedule.
 
 8. Capture starts at `vault/intake/interview.md`. If missing, recreate headings and leave answers empty. Do not seed identity, proof, voice, hooks, or topics from an example. Leave `vault/notes/hooks.md` and `vault/notes/pillars.md`. Pillars wait for `pillar-map`. Do not rename files in `skills/`, `brand/`, or `audience/`.
 
-9. Lasting buyer, proof, and voice go on Company Context. Each page needs `source_url` or `provenance_note`. `context-intake` writes them. Do not call `knowledge.brain.context.compose_pages` here. Later: dry_run, owner yes, live with `quote_hash`, `max_credits`, `idempotency_key`. Do not call `knowledge.vault.ingest` for those pages. This skill does not post, send, or spend.
+9. Lasting buyer, proof, and voice go on Company Context. Each page needs `source_url` or `provenance_note`. `context-intake` writes them. Do not call `knowledge.brain.context.compose_pages` here. Do not call `knowledge.vault.ingest` for those pages.
 
 10. No second database. Company Context plus the local vault. Refuse another database, views, or a parent page in another product. No config for one. Do not copy an id from a sample, another workspace, or a search result. If pages already hold their words, leave them.
 

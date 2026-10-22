@@ -79,6 +79,10 @@ Motion style is soft. Ease in and ease out. Do not snap a zoom or a card unless 
 
 At most one sound effect per hit. A hit is one visual event that earns a sound. Do not stack two effects on the same appearance. Space hits at least 1.5 seconds apart. The checker warns when they sit closer. This script does not mix the effect. It checks the path and the gap.
 
+## Card limits
+
+One full-frame idea card in any 30 seconds. One chapter card in any 45 seconds. A phrase card is one to six spoken words, not a sentence. A list card is three to six items they said. Do not repeat a label the picture already shows large. Break the pattern about every 30 seconds. On a vertical frame, keep cards out of the top 10 percent and the bottom 22 percent. A full-frame idea card cuts in hard. A spotlight label must not cover the evidence. Cut a graphic that only repeats the screen, including a card that only echoes the captions. Record what the owner kept or changed so the next edit starts from that note.
+
 ## After the numbers
 
 Look and listen once. The exit code does not prove a card is readable, clear of the face, or faithful to the words, and it does not prove a zoom landed on the thing in the line. A spotlight sits on what they named. A card must not assert something the picture does not show. A hit plays only where something appears. No swell across a cut where nothing happens. Open a frame before you place type, and measure `layout.cam` from that frame.
