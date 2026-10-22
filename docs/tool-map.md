@@ -130,11 +130,7 @@ These are not `tools_run` targets. `tools_get` returns not found. Resolve them w
 
 ## To-check
 
-Search, then `tools_get`. Do not call these from memory.
-
-| Look up | Why it is open |
-|---|---|
-| `column.ai` | `tools_get` returned not found on 2026-10-22. Do not invent an open-text column type. |
+`column.ai` does not exist; use `column.ai_fit_score` as `binding_spec.definition_id`.
 
 ## Reads that are not sends
 

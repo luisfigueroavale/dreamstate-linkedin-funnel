@@ -5,29 +5,29 @@ description: "Write a script the owner can record, with a viewer promise, source
 
 Follow `docs/skill-frame.md`.
 
-Only after `video-pick` passes three gates. Keep gate 3 opening minute unless owner rewrites it. Words and shot list. Not rendered or published video. Do not generate footage.
+Start after `video-pick` passes three gates. Keep gate 3 opening minute unless owner rewrites it. Deliver words and shot list. Do not render, publish, or generate footage.
 
-Read named source through. Article: read the article. Walk today's real workflow. Read `brand.local/voice.md` and any sample it names. Viewer: reader in `audience.local/ideal-follower.md`. Missing file or `Status: blank`: stop, ask.
+Read the named source and the article. Walk today's real workflow. Read `brand.local/voice.md` and named samples. Viewer is the reader in `audience.local/ideal-follower.md`. If missing or `Status: blank`, stop and ask.
 
-End state: will know and can do when video stops. Form: read-aloud script, outline, shot list. Same order.
+Say what they will know and can do when it stops. Order a read-aloud script, outline, and shot list.
 
-1. Promise. Say end state in opening.
-2. Context: what they need before the next step.
-3. Ordered demonstration. No click: plain explanation, workflow order.
-4. Limits. What this will not do, where it fails.
-5. Result. Payoff recording can show.
-6. Next action. One later move.
+1. Promise the end state first.
+2. Give the context they need next.
+3. Demonstrate in order, plainly with no click.
+4. State what this will not do and where it fails.
+5. Show a recordable payoff.
+6. Name one next action.
 
-`title-pair` writes titles. Chosen title claim: promise.
+`title-pair` writes titles. That claim is the promise.
 
-Beats: spoken copy, visual, source. Sentences. Transition names next picture. Visual: screen, gesture, object in frame. Source: file, page, walked step. No source, no beat.
+Each beat states spoken copy, visual, and source. Transition names the next picture. Visual is a screen, gesture, or object in frame. Source is file, page, or walked step. No source means no beat.
 
-Prerequisites before step needing them. Setup friction, own beat: login, sample file, permission, first-run dialog.
+Put prerequisites before the step. Give setup friction its own beat: login, sample file, permission, first-run dialog.
 
-Show real output if present. Name opened file or screen. Label screen and placeholder proposed. Feature that does not work: never described as shown. Unrun step stays unshown.
+Show real output if present. Name the file or screen. Label proposed screen and placeholder. Never describe a broken feature as shown. Unrun step stays unshown.
 
-Match requested runtime. Read spoken lines aloud. Cut a line you cannot finish in one breath. Time, then trim or restore beats to fit. Add no lines to fill the clock. On-screen beats in brackets.
+Match the requested runtime. Read spoken lines aloud. Cut a line you cannot finish in one breath. Time it, then trim or restore. Add no lines to fill the clock. Bracket on-screen beats.
 
-Write confirmed form. Return script, shot list, missing assets. Shot list: bracket, visual, source, in hand. Missing: screen, file, number, clip words name and you lack. List it. Speak number only when source or walk returned it.
+Write that form. Return script, shot list, and missing assets. Name bracket, visual, source, and in hand. List a missing screen, file, number, or clip. Speak a number only when source or walk returned it.
 
-`video-blurb` starts with final-cut transcript in hand. Chapters wait for it. `thumb-frame` after title. Picture: promise video can show. Run `brand/taste.md` before owner sees pages. Nothing was recorded.
+`video-blurb` and chapters wait for the final-cut transcript. `thumb-frame` follows title. Promise only what the video can show. Run `brand/taste.md` before owner sees pages. Nothing was recorded.

@@ -71,11 +71,11 @@ Music only when the plan names a file the owner may use. `music: null` means non
 
 ## Motion and sound
 
-Scan a labelled frame every 10 seconds. The label is the card or caption that should be on screen at that second. A missing label, or a label over the mouth, fails the review even when the checker exits 0.
+Scan one frame every 10 seconds and label that frame with its timestamp. Sixteen frames fill one sheet. Then read positions from frames that carry a 10 percent grid. A missing label, or a label over the mouth, fails the review even when the checker exits 0.
 
-Interludes last 1 to 4 seconds. An interlude is a held frame or a short bridge between two cards. Past 4 seconds the cut looks paused. Under 1 second the next card has not landed.
+An interlude is a full-frame flat card with centred type for the one idea or number the piece hangs on. Cut that card in hard. It lasts 1 to 4 seconds. Past 4 seconds the cut looks paused. Under 1 second the next card has not landed.
 
-Motion style is soft. Ease in and ease out. Do not snap a zoom or a card unless the plan sets `ease` to 0 because they asked for a hard punch.
+Reframes and zooms are hard cuts. Set `ease` to 0. Do not ramp a zoom. Keep the scale between 1.1 and 1.3, about every 2 to 3 seconds. Soft motion is only for a type entrance: the words rise out of a blur, with no spring and no bounce.
 
 At most one sound effect per hit. A hit is one visual event that earns a sound. Do not stack two effects on the same appearance. Space hits at least 1.5 seconds apart. The checker warns when they sit closer. This script does not mix the effect. It checks the path and the gap.
 

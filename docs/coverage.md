@@ -6,34 +6,34 @@ Words are whitespace-separated tokens in `SKILL.md` after the frontmatter, plus 
 
 A row is one source rule. The tool cell is the Dreamstate capability or definition id this desk uses for that rule, `local` when the work stays in a file or script on this desk, or `none` when the rule is a writing limit. Mapped means this desk states the rule. A gap means this desk does not perform it. When the rule is kept and the old call has no Dreamstate replacement, the tool cell still says `gap: Dreamstate can't do this`.
 
-`column.ai` is still to-check. Do not call it.
+`column.ai` does not exist; use `column.ai_fit_score` as `binding_spec.definition_id`.
 
 ## Index
 
 | Skill | Neutral id | Source words | Our words | Mapped | Gaps | 8-gram |
 |---|---|---:|---:|---:|---:|---:|
 | `desk-setup` | `src-workspace-layout` | 451 | 550 | 52 | 20 | 0 |
-| `workspace-check` | `src-desk-health` | 216 | 350 | 22 | 20 | 0 |
+| `workspace-check` | `src-desk-health` | 216 | 350 | 26 | 16 | 0 |
 | `context-intake` | `src-context-capture` | 319 | 597 | 35 | 15 | 0 |
 | `voice-card` | `src-voice-sample` | 289 | 399 | 24 | 5 | 0 |
 | `local-brand` | `src-brand-kit` | 433 | 630 | 64 | 6 | 0 |
 | `frame-review` | `src-brand-check` | 345 | 594 | 33 | 3 | 0 |
 | `vault-find` | `src-local-search` | 235 | 258 | 16 | 12 | 0 |
 | `pillar-map` | `src-pillar-plan` | 394 | 626 | 40 | 8 | 0 |
-| `week-spread` | `src-week-cascade` | 2408 | 2415 | 123 | 8 | 0 |
+| `week-spread` | `src-week-cascade` | 2408 | 2419 | 124 | 7 | 0 |
 | `week-board` | `src-week-posts` | 412 | 652 | 31 | 3 | 0 |
 | `source-notes` | `src-source-research` | 165 | 299 | 37 | 0 | 0 |
-| `cross-cut` | `src-repurpose` | 254 | 383 | 21 | 3 | 0 |
+| `cross-cut` | `src-repurpose` | 254 | 398 | 22 | 2 | 0 |
 | `opening-line` | `src-hook-line` | 675 | 850 | 82 | 4 | 0 |
-| `linkedin-draft` | `src-linkedin-copy` | 535 | 797 | 44 | 4 | 0 |
+| `linkedin-draft` | `src-linkedin-copy` | 535 | 797 | 45 | 3 | 0 |
 | `x-draft` | `src-x-copy` | 165 | 299 | 17 | 3 | 0 |
 | `x-week` | `src-x-plan` | 1005 | 1370 | 56 | 7 | 0 |
-| `x-scan` | `src-x-research` | 2621 | 2062 | 65 | 16 | 0 |
+| `x-scan` | `src-x-research` | 2621 | 2062 | 66 | 15 | 0 |
 | `x-essay` | `src-x-essay` | 741 | 910 | 71 | 1 | 0 |
 | `essay-to-linkedin` | `src-essay-adapt` | 1131 | 1467 | 139 | 16 | 0 |
 | `letter-draft` | `src-letter` | 172 | 260 | 17 | 0 | 0 |
 | `essay-draft` | `src-long-essay` | 167 | 290 | 17 | 0 | 0 |
-| `frame-build` | `src-frame-design` | 658 | 898 | 46 | 3 | 0 |
+| `frame-build` | `src-frame-design` | 658 | 900 | 46 | 3 | 0 |
 | `station-map` | `src-flow-map` | 1399 | 1212 | 65 | 15 | 0 |
 | `stage-build` | `src-stage-scene` | 904 | 561 | 35 | 18 | 0 |
 | `record-script` | `src-video-script` | 157 | 300 | 41 | 1 | 0 |
@@ -45,7 +45,7 @@ A row is one source rule. The tool cell is the Dreamstate capability or definiti
 | `video-hold` | `src-video-publish` | 173 | 444 | 14 | 1 | 0 |
 | `release-reel` | `src-release-reel` | 197 | 344 | 18 | 2 | 0 |
 | `long-cut` | `src-long-cut` | 1070 | 1026 | 44 | 1 | 0 |
-| `picture-lock` | `src-picture-lock` | 3817 | 2122 | 102 | 26 | 0 |
+| `picture-lock` | `src-picture-lock` | 3817 | 2159 | 104 | 24 | 0 |
 | `footage-pass` | `src-footage-pass` | 177 | 282 | 52 | 0 | 0 |
 | `talk-cut` | `src-talk-cut` | 1189 | 1422 | 47 | 0 | 0 |
 | `clip-select` | `src-clip-select` | 162 | 240 | 37 | 0 | 0 |
@@ -54,15 +54,15 @@ A row is one source rule. The tool cell is the Dreamstate capability or definiti
 | `clip-assemble` | `src-clip-assemble` | 151 | 213 | 14 | 0 | 0 |
 | `clip-check` | `src-clip-check` | 224 | 280 | 42 | 0 | 0 |
 | `step-motion` | `src-step-motion` | 175 | 326 | 16 | 3 | 0 |
-| `comment-queue` | `src-comment-queue` | 4103 | 2609 | 126 | 26 | 0 |
-| `x-reply-queue` | `src-reply-queue` | 3276 | 4779 | 143 | 11 | 0 |
-| `post-path` | `src-post-path` | 448 | 699 | 67 | 17 | 0 |
+| `comment-queue` | `src-comment-queue` | 4103 | 2626 | 126 | 26 | 0 |
+| `x-reply-queue` | `src-reply-queue` | 3276 | 4796 | 143 | 11 | 0 |
+| `post-path` | `src-post-path` | 448 | 700 | 67 | 17 | 0 |
 | `inbox-desk` | `src-inbox` | 225 | 415 | 20 | 1 | 0 |
 | `thread-reply` | `src-thread-reply` | 1530 | 1697 | 58 | 1 | 0 |
 | `warm-cadence` | `src-sequence` | 285 | 550 | 45 | 7 | 0 |
 | `magnet-build` | `src-magnet-build` | 268 | 448 | 49 | 2 | 0 |
-| `magnet-send` | `src-magnet-send` | 1789 | 1800 | 55 | 17 | 0 |
-| **Total** | | **41475** | **46489** | **2744** | **337** | **0** |
+| `magnet-send` | `src-magnet-send` | 1789 | 1800 | 56 | 16 | 0 |
+| **Total** | | **41475** | **46582** | **2755** | **326** | **0** |
 
 ## desk-setup
 
@@ -156,7 +156,7 @@ Neutral id: `src-desk-health`. Source words: 216. Our words: 350. 8-gram overlap
 | R05 | Resolve the workspace with the identity call before any hosted step | Opening: whoami first, and ask which one if several are listed | whoami |
 | R06 | If access is blocked, repeat that guidance before any resource | Opening: if whoami says this workspace cannot be used, repeat it and stop | whoami |
 | R07 | Use only real public person-profile urls the owner gave | Preview block: no invented url | none |
-| R08 | Look for a watcher already stored before proposing another | Preview block: tools_search then tools_get a confirmed read, else do not create | tools_search |
+| R08 | Look for a watcher already stored before proposing another | Preview block: tools_get tables.profile_watcher.get (table_id) before another watcher; live read; if none is stored, do not create | tables.profile_watcher.get |
 | R09 | Preview the profiles they asked for | Preview block: run the preview | tables.profile_watcher.preview |
 | R10 | Record the per-cycle credit ceiling from that preview | Preview block: record watcher_max_credits for one cycle | tables.profile_watcher.preview |
 | R11 | Report the schedule that preview returns | Report its cadence, lookback, and coverage | tables.profile_watcher.preview |
@@ -166,7 +166,7 @@ Neutral id: `src-desk-health`. Source words: 216. Our words: 350. 8-gram overlap
 | R15 | Keep the returned hash with that configuration | Preview block: the preview returns preview_hash | tables.profile_watcher.preview |
 | R16 | A changed url or cap needs a fresh preview and the new hash | Preview block: changed url or cap means a new preview and hash | tables.profile_watcher.preview |
 | R17 | Prepare fit rules from the offer and the buyer notes already on file | Fit block: qualify from Ideal Customer and the follower file, and read audience/AGENTS.md first | local |
-| R18 | A fit definition, a model run, and auto-run are three later actions with separate scope and cost | Fit block: do not call columns.add, columns.run, preview_cost, or auto_run.set | none |
+| R18 | A fit definition, a model run, and auto-run are three later actions with separate scope and cost | Fit block: do not call columns.add, columns.update, columns.run, preview_cost, auto_run.set, or executables.save; each is a later scope and cost | none |
 | R19 | Use answers already collected and do not restart an interview | Preview block: no interview, and stop if the follower file is blank or Ideal Customer is empty | none |
 | R20 | Hand back the workspace, the resources you inspected, the preview, and the next step | Name the active workspace in chat and report the preview fields | whoami |
 | R21 | Stay inside the yes already given | Close: no public react or calendar invite without a later yes | none |
@@ -177,18 +177,18 @@ Neutral id: `src-desk-health`. Source words: 216. Our words: 350. 8-gram overlap
 | G04 | The schedule is daily at 07:00 UTC | gap: that clock is not in the catalog | gap: Dreamstate can't do this |
 | G05 | The lookback is a rolling 7-day window | gap: that window is not in the catalog | gap: Dreamstate can't do this |
 | G06 | Creation starts the first collection run immediately | gap: the create call does not write engager rows, and this skill does not create | gap: Dreamstate can't do this |
-| G07 | Pause the watcher, and a pause keeps rows already collected | gap: no pause id is in the tool map | gap: Dreamstate can't do this |
-| G08 | After create, open a web url and read the table with get, describe, and a small query | gap: those ids are not in the tool map, and this skill does not create | gap: Dreamstate can't do this |
+| R23 | Pause the watcher, and a pause keeps rows already collected | Do not activate: tables.profile_watcher.pause (table_id) keeps collected rows | tables.profile_watcher.pause |
+| R24 | After create, open a web url and read the table with get, describe, and a small query | Before another watcher, tools_get tables.profile_watcher.get (table_id). Live. This skill does not create, and it does not open a web url | tables.profile_watcher.get |
 | G09 | Pass a display name, a profiles json argument, a max-credits flag, and a stable request id | gap: those argument names are not in the tool map | gap: Dreamstate can't do this |
 | G10 | Click through an app form whose screen hides the per-refresh price | gap: this desk uses the fetched contract, and the ceiling is the preview number | gap: Dreamstate can't do this |
 | G11 | Install and sign in with the source command line | gap: that program is not used; if whoami fails, stop | gap: third-party CLI |
 | G12 | Store installation ids in the source ignored config directory | gap: the name and any id stay in chat | gap: kit path |
 | G13 | Add one open-text fit column with a bundled output schema | gap: that column type was not found, and this skill does not add columns | gap: Dreamstate can't do this |
 | G14 | Tie the prompt to person fields, company fields, profile links, post links, and reaction kinds | gap: a later bind uses only keys a worksheet read returned | gap: Dreamstate can't do this |
-| G15 | Revise the column with an update command | gap: no column-update id is confirmed | gap: Dreamstate can't do this |
+| R25 | Revise the column with an update command | Qualify block: tables.columns.update (column_id, expected_updated_at) is a later call with its own scope and cost; this skill does not run it | tables.columns.update |
 | G16 | Require two boolean disqualifiers to be false, and keep three named fit views | gap: the gate is two scores from 0 to 100 on the written pass line and exclusions | gap: Dreamstate can't do this |
 | G17 | Install the alternate three-table workflow | gap: do not open a second database | gap: second database |
-| G18 | Publish the rubric as a reusable function for several tables | gap: no publish id is confirmed, and this skill does not add the fit columns | gap: Dreamstate can't do this |
+| R26 | Publish the rubric as a reusable function for several tables | Qualify block: tables.executables.save (binding_spec, label, table_id) stores the binding and does not run the column; live needs approved true; this skill does not call it | tables.executables.save |
 | G19 | Run the conversation playbook: review the cohort and the message, start sequences, and use the inbox | gap: this skill does not enroll, draft, or send | gap: Dreamstate can't do this |
 | G20 | Named helper procedures that sit beside this start skill | gap: do not name them, and do not activate a watcher | gap: third-party CLI |
 
@@ -497,7 +497,7 @@ Neutral id: `src-pillar-plan`. Source words: 394. Our words: 626. 8-gram overlap
 
 ## week-spread
 
-Neutral id: `src-week-cascade`. Source words: 2408. Our words: 2415. 8-gram overlap: 0.
+Neutral id: `src-week-cascade`. Source words: 2408. Our words: 2419. 8-gram overlap: 0.
 
 | # | Source rule | Our rule | Tool |
 |---|---|---|---|
@@ -593,7 +593,7 @@ Neutral id: `src-week-cascade`. Source words: 2408. Our words: 2415. 8-gram over
 | R83 | Keep one LinkedIn post a day, and let an idea post take an open day rather than a second slot | Stage 6: it never becomes a second post on a day that already has one | local |
 | R84 | A view count does not finish the week; an engager becomes a signal | Stage 7: a view count does not finish the week; an engager becomes a signal, and people who fit become a conversation | none |
 | R85 | Collect the engagers and score company and person apart | Stage 7: post-path collects the engagers and scores company and person apart | none |
-| G07 | Collect people who touched a post by storing a watcher on profiles you already named | gap: that watcher does not harvest a post | gap: Dreamstate can't do this |
+| R123 | Collect people who touched a post by storing a watcher on profiles you already named | Stage 7: tables.profile_watcher.create stores the watcher after yes and does not write post rows; post-path collects engagers with visibility.linkedin.engagement_harvest | tables.profile_watcher.create |
 | R86 | Someone who comments the keyword on the resource post gets the resource and nothing else | Stage 7: magnet-send | none |
 | R87 | People who pass both scores can get a capped sequence that stops when they reply and asks what they are working on, not in the same step as the file | Stage 7: warm-cadence | none |
 | R88 | Draft replies and let the owner send | Stage 7: thread-reply drafts; the owner sends | none |
@@ -720,7 +720,7 @@ Neutral id: `src-source-research`. Source words: 165. Our words: 299. 8-gram ove
 
 ## cross-cut
 
-Neutral id: `src-repurpose`. Source words: 254. Our words: 383. 8-gram overlap: 0.
+Neutral id: `src-repurpose`. Source words: 254. Our words: 398. 8-gram overlap: 0.
 
 | # | Source rule | Our rule | Tool |
 |---|---|---|---|
@@ -747,7 +747,7 @@ Neutral id: `src-repurpose`. Source words: 254. Our words: 383. 8-gram overlap: 
 | R19 | Stop at the count they asked for, and only what the source supports | Stop at the count they asked for (procedure) | none |
 | R20 | If the source supports fewer pieces, deliver that smaller count and explain the shortfall | Deliver that smaller count and explain the shortfall (procedure) | none |
 | R21 | Outside the copy, include a compact map from source to piece | One line per piece, with the point, the section or timestamp, the pillar, the funnel job, and the format; on a week, add that map to `vault/week/<date>.md` (procedure) | local |
-| G03 | Save cards only inside the asked scope, at the configured destination, after checking a card is not already there | gap: this skill does not create cards; a draft is stored only when asked, and then by `linkedin-draft` | gap: Dreamstate can't do this |
+| R22 | Save cards only inside the asked scope, at the configured destination, after checking a card is not already there | When they ask to store a piece, social.content.artifact_create saves that draft and does not post | social.content.artifact_create |
 
 ## opening-line
 
@@ -895,7 +895,7 @@ Neutral id: `src-linkedin-copy`. Source words: 535. Our words: 797. 8-gram overl
 | R42 | Check for an existing card before creating another | An existing stored draft is read with `social.content.artifact_get` and not created again (procedure) | social.content.artifact_get |
 | R43 | Store a draft only when they ask | `social.content.artifact_create` only when they ask to store it; one artifact; when the idea is for LinkedIn and X, put both channels in `platform_payloads` (procedure) | social.content.artifact_create |
 | R44 | Saving a draft does not schedule it or publish it | Saving a draft does not schedule; do not call `social.content.schedule`; say that nothing was sent (procedure) | none |
-| G04 | On a requested save, follow the card schema and the content template, set status to creating, and fetch the configured destination | gap: the working copy is `vault/posts`; a stored draft is created only when they ask | gap: Dreamstate can't do this |
+| R45 | On a requested save, follow the card schema and the content template, set status to creating, and fetch the configured destination | social.content.artifact_create only when they ask; one artifact; both channels in platform_payloads when the idea is for LinkedIn and X; the working copy stays vault/posts | social.content.artifact_create |
 
 ## x-draft
 
@@ -1065,7 +1065,7 @@ Neutral id: `src-x-research`. Source words: 2621. Our words: 2062. 8-gram overla
 | R63 | The local script labels capture time as explicit or file modification time, scores this file only, and does not treat a missing view count as zero | What to do with the set: run python3 skills/x-scan/scripts/hold_median.py with --fetched-at; without that flag the script labels file mtime; scope is this file only; a missing view stays empty | local |
 | R64 | Likes, bookmarks, replies, reposts, quotes, and views stay distinct; public field aliases are accepted; a missing key stays null | What to do with the set: hold_median.py keeps those six metrics distinct, accepts public aliases, and leaves a missing key empty | local |
 | R65 | An address can be built from the handle and the id; age is the views-per-day divisor; the longer of text, full_text, or body is kept | What to do with the set: hold_median.py builds https://x.com/<handle>/status/<id> when those parts exist, divides views by age in days, and keeps the longer of text, full_text, or body | local |
-| G01 | A billed retrieval route through a workspace account that is already connected | gap: that client is not in this skill; pasted posts, the browser, and visibility.radar.inspiration_x_list replace it | gap: Dreamstate can't do this |
+| R66 | A billed retrieval route through a workspace account that is already connected | source.x_posts_search is a definition id: resolve with tables.executable_definitions.list_resolved, attach with tables.table_sources.attach, and run tables.table_sources.run only after the quote and the owner's yes | source.x_posts_search |
 | G02 | A separate semantic finder, with every cited post confirmed back at the source, and a chat plan that does not pay for retrieval | gap: there is no separate semantic index; an open-web confirmation is visibility.research.web_search at 2 credits after a quote and a yes | gap: Dreamstate can't do this |
 | G03 | A credit line that names an outside repository, a person, and a commit | gap: that outside credit was not carried | gap: outside credit stays out |
 | G04 | Store the working list in a hosted table, a notes database, or a private config file | gap: the list is a local vault file and is not created in another workspace | gap: no second workspace store |
@@ -1373,7 +1373,7 @@ Neutral id: `src-long-essay`. Source words: 167. Our words: 290. 8-gram overlap:
 
 ## frame-build
 
-Neutral id: `src-frame-design`. Source words: 658. Our words: 898. 8-gram overlap: 0.
+Neutral id: `src-frame-design`. Source words: 658. Our words: 900. 8-gram overlap: 0.
 
 | # | Source rule | Our rule | Tool |
 |---|---|---|---|
@@ -2322,7 +2322,7 @@ Neutral id: `src-long-cut`. Source words: 1070. Our words: 1026. 8-gram overlap:
 
 ## picture-lock
 
-Neutral id: `src-picture-lock`. Source words: 3817. Our words: 2122. 8-gram overlap: 0.
+Neutral id: `src-picture-lock`. Source words: 3817. Our words: 2159. 8-gram overlap: 0.
 
 | # | Source rule | Our rule | Tool |
 |---|---|---|---|
@@ -2412,10 +2412,10 @@ Neutral id: `src-picture-lock`. Source words: 3817. Our words: 2122. 8-gram over
 | R84 | Look once for a readable card, a clear face, words that match, a spotlight on the named thing, no false claim, a hit only where something appears, and a zoom that landed. The exit code does not prove any of that | After the numbers — the exit code does not prove a card is readable, clear of the face, or faithful to the words | none |
 | R85 | No swell across a cut where nothing happens. Open a frame before you place type, and measure the camera box from that frame | After the numbers — no swell across a cut where nothing happens; measure `layout.cam` from that frame | none |
 | R86 | One pass. A real fail stops the job. Run the check skill. Keep the project and the list beside the export. Do not upload | After the numbers — one pass; a real fail stops the job; run `clip-check`; do not upload | local |
-| R87 | A full-frame idea card lasts 1 to 4 seconds. Past 4 seconds the cut looks paused. Under 1 second the next card has not landed | Motion and sound — interludes last 1 to 4 seconds | none |
+| R87 | A full-frame idea card lasts 1 to 4 seconds. Past 4 seconds the cut looks paused. Under 1 second the next card has not landed | Motion and sound — an interlude is a full-frame flat card with centred type for the one idea or number the piece hangs on, cut in hard, lasting 1 to 4 seconds | none |
 | R88 | At most one sound effect on a hit. Do not stack two effects on the same appearance | Motion and sound — at most one sound effect per hit | none |
-| R89 | Motion style is soft: ease in and ease out. Do not snap a zoom or a card unless the plan sets ease to 0 because they asked for a hard punch | Motion and sound — motion style is soft | none |
-| R90 | Scan a labelled frame every 10 seconds. The label is the card or caption that should be on screen. A missing label, or a label over the mouth, fails the review even when the checker exits 0 | Motion and sound — scan a labelled frame every 10 seconds | none |
+| R89 | A zoom or a reframe arrives as a cut, not a ramp. Soft motion is reserved for type coming in | Motion and sound — reframes and zooms are hard cuts with ease at 0 and no zoom ramp; scale stays between 1.1 and 1.3 about every 2 to 3 seconds; soft motion is only a type entrance, words rising out of a blur, with no spring and no bounce | none |
+| R90 | Scan a labelled frame every 10 seconds. The label is the card or caption that should be on screen. A missing label, or a label over the mouth, fails the review even when the checker exits 0 | Motion and sound — scan one frame every 10 seconds and label that frame with its timestamp; sixteen frames fill one sheet; then read positions from frames that carry a 10 percent grid; a missing label, or a label over the mouth, fails the review even when the checker exits 0 | none |
 | G01 | Keep rebuilding until the still sheet is clean, at most 3 passes, then report what remains | gap: do not roll another render to chase a clean sheet | gap: this skill stops after one pass |
 | G02 | Do not pause to ask between stages unless the content choice is genuinely ambiguous | gap: consent still requires a yes before a spend, a schedule, or a send | gap: consent still requires a yes |
 | G03 | A separate treatment skill decides the edit, and a description skill takes the chapter cards as its chapter list | gap: this pass does not chain those jobs | gap: this pass does not chain those jobs |
@@ -2435,8 +2435,8 @@ Neutral id: `src-picture-lock`. Source words: 3817. Our words: 2122. 8-gram over
 | G17 | Treat a filename prefix as the signal that ranges no longer apply | gap: a null ranges pointer is the signal, not a filename prefix | gap: a filename prefix is not the signal |
 | G18 | Write chapter lines only when a graphic field equals title | gap: chapter lines are not exported from a title field | gap: chapter lines are not exported from a title field |
 | G19 | The other builder's quality factor, audio bitrate, and color tags | gap: those encode tags are not set here | gap: those encode tags are not set here |
-| G20 | A tiled contact sheet every 10 seconds, a 10 percent grid, and a dump of frames for each event | gap: those sheets, that grid, and those dumps are not produced | gap: those sheets are not produced |
-| G21 | Draft the hook, the reframes, and the spoken lists automatically, including highlight length, reframe scales around 1.1 to 1.3, a hard cut with no ramp, and a thousands separator | gap: the plan is written by hand | gap: the plan is written by hand |
+| R103 | A tiled contact sheet every 10 seconds, a 10 percent grid, and a dump of frames for each event | Motion and sound — one frame every 10 seconds, labelled with its timestamp, sixteen to a sheet, then a 10 percent grid for positions. An event dump is not produced | none |
+| R104 | Draft the hook, the reframes, and the spoken lists automatically, including highlight length, reframe scales around 1.1 to 1.3, a hard cut with no ramp, and a thousands separator | Motion and sound — the reframe cadence is a hard cut, ease at 0, scale from 1.1 to 1.3, about every 2 to 3 seconds. Hooks and spoken lists stay written by hand | none |
 | G22 | Retarget the design space to 1920 by 1080 or 1080 by 1920 | gap: frame size stays the native size of the cut | gap: frame size stays the native size |
 | G23 | Teaching-density multipliers 0.7 and 1.5, a title-safe middle 80 percent, and an automatic flip of a low spotlight label | gap: those multipliers and that flip are not applied | gap: those multipliers and that flip are not applied |
 | G24 | A 33-point cube, the sample raster size, and the per-channel polynomial | gap: the checker writes no cube | gap: the checker writes no cube |
@@ -2798,7 +2798,7 @@ Neutral id: `src-step-motion`. Source words: 175. Our words: 326. 8-gram overlap
 
 ## comment-queue
 
-Neutral id: `src-comment-queue`. Source words: 4103. Our words: 2609. 8-gram overlap: 0.
+Neutral id: `src-comment-queue`. Source words: 4103. Our words: 2626. 8-gram overlap: 0.
 
 | # | Source rule | Our rule | Tool |
 |---|---|---|---|
@@ -2925,7 +2925,7 @@ Neutral id: `src-comment-queue`. Source words: 4103. Our words: 2609. 8-gram ove
 | R121 | The combined control copies the line, opens that post in a new tab, and marks the card finished. Skip asks for a reason in a single tap | ## Save and hand over — Copy and open puts the text on the clipboard, opens the post in a new tab, and marks the card finished. Skip asks why, in one tap | local |
 | R122 | Edits and marks stay in the browser | ## Save and hand over — Edits and marks stay in that browser | local |
 | R123 | The footer says nothing is sent until the owner posts it or says yes on that exact text | ## Save and hand over — Footer line: nothing is sent until the owner posts it, or says yes on that exact text | none |
-| R124 | Do not download or embed remote images. No text from the read means no card | ## Save and hand over — Do not download remote images and do not embed them. No text from the read means no card | none |
+| R124 | The source card embeds remote pictures | Our change: do not download remote images and do not embed them. No text from the read means no card | none |
 | R125 | Handover in two lines: the count, and the 2 or 3 that will go stale first | ## Save and hand over — Handover in two lines. Give the count. Name the 2 or 3 that will go stale first | none |
 | R126 | A live post of one card is the engagement comment call after yes on that body. The 2-credit publish call only if they asked for that immediate post | ## Save and hand over — A live post of one card is only social.engagement.comment after yes on that exact body. Do not switch to social.posts.comment_publish unless they asked for that call and said yes on that exact body. That call is 2 credits, dry_run previews, and live repeats quote_hash with max_credits 2 from an approved durable run step | social.engagement.comment |
 | G01 | Sample comments kept as voice examples | gap: example lines were not copied | gap: sample sentences are not stored |
@@ -2957,7 +2957,7 @@ Neutral id: `src-comment-queue`. Source words: 4103. Our words: 2609. 8-gram ove
 
 ## x-reply-queue
 
-Neutral id: `src-reply-queue`. Source words: 3276. Our words: 4779. 8-gram overlap: 0.
+Neutral id: `src-reply-queue`. Source words: 3276. Our words: 4796. 8-gram overlap: 0.
 
 | # | Source rule | Our rule | Tool |
 |---|---|---|---|
@@ -3118,7 +3118,7 @@ Neutral id: `src-reply-queue`. Source words: 3276. Our words: 4779. 8-gram overl
 
 ## post-path
 
-Neutral id: `src-post-path`. Source words: 448. Our words: 699. 8-gram overlap: 0.
+Neutral id: `src-post-path`. Source words: 448. Our words: 700. 8-gram overlap: 0.
 
 | # | Source rule | Our rule | Tool |
 |---|---|---|---|
@@ -3185,7 +3185,7 @@ Neutral id: `src-post-path`. Source words: 448. Our words: 699. 8-gram overlap: 
 | R58 | If the reasons fail the local cases, change the rubric and dry-run again before a wider run | (body) — If npm run fit fails, rewrite and dry-run again. Do not widen the audience to hide a bad rubric | tables.columns.run |
 | R59 | Both scores must clear the owner's line, with evidence on every required question | (body) — Both scores must clear it. Every required question needs evidence | none |
 | R60 | No engagement bonus turns a fail into a pass | (body) — No bonus turns a fail into a pass | none |
-| R61 | Batches you can read are enough until the sample holds | (body) — Do not widen the audience to hide a bad rubric | none |
+| R61 | Batches you can read are enough until the sample holds | (body) — Bounded batches you can read are enough until that sample holds. Auto-run is the later step | tables.auto_run.set |
 | R62 | Auto-run is separate from the harvest and the watcher, with its own cap, after you read what the columns depend on | (body) — tables.auto_run.set is a standing spend. Owner yes, then approved true. Named score columns run when rows arrive, inside max_credits_per_run. Separate from the harvest and the watcher | tables.auto_run.set |
 | R63 | A required field that is still empty stays a hold | (body) — An empty required field stays a hold | none |
 | R64 | Editing the rubric leaves stored cells as they are. Read them before a forced rerun | A rubric edit leaves stored cells until a later run | tables.columns.run |
@@ -3333,7 +3333,7 @@ Neutral id: `src-sequence`. Source words: 285. Our words: 550. 8-gram overlap: 0
 | R24 | Keep the source post where it is known, and keep the source profile on the row. | opening: Keep source post and profile. | none |
 | R25 | For recovery, preview only the failed or deferred rows. | opening: Recovery: preview failed or deferred rows. | none |
 | R26 | Reconcile what the provider already did before any retry. | opening: Reconcile provider outcomes before retry. | none |
-| R27 | Pause, resume, retirement, and capacity recovery are different. Discover each one before you act. | opening: Discover pause, resume, retirement, and capacity recovery separately. sequence.sequences.resume is resume only (owner yes, same send rule, max_live_sends in params when listed), not pause, retirement, or capacity recovery. | sequence.sequences.resume |
+| R27 | Pause, resume, retirement, and capacity recovery are different. Discover each one before you act. | opening: sequence.sequences.resume is resume only (owner yes, same send rule, max_live_sends in params when listed), not pause, retirement, or capacity recovery | sequence.sequences.resume |
 | R28 | Return counts, why rows were held, the actual state, and the budget. A deep link only when the call returned one. | opening: Return counts, held reasons, state, budget. Deep link only if returned. | none |
 | R29 | The note fits what that person did. Samples can be reshaped. They are not timed copy, and they are not a claim about a rate. | opening: Match what they did. Evidence-based, adaptable, short, not timed, not a rate claim. | none |
 | R30 | Someone who asked for the file gets the file first. Fit is not a condition of that handoff. Do not start a sequence in that same step. | opening: File request: magnet-send, file first. Fit does not condition handoff. Do not activate in the same step as delivering the file. | none |
@@ -3480,7 +3480,7 @@ Neutral id: `src-magnet-send`. Source words: 1789. Our words: 1800. 8-gram overl
 | R54 | If quota enforcement is unavailable, stop. Do not build a side path that performs the same writes. Tell the owner. | opening: If quota enforcement is unavailable, stop. Do not build a side path that does the same writes. Tell the owner. | none |
 | R55 | When a run fails, read the run and its events. Take the error text from the last event. Do not invent a field the fetched schema does not have. | opening: On failure, read runs_get and runs_events. Take the error from the last event. Do not invent a field the schema lacks. | runs_get |
 | R56 | Also store display name, a first-name column, profile address, comment body, degree, state, enrollment id, reply text, last check, and a note. | gap: columns stay the ones the sheet already has | gap: no fixed import column list |
-| G01 | Clone a running hosted workflow, including its manifest, and import the helper again. | gap: this desk does not clone a hosted recipe bundle | gap: Dreamstate can't do this |
+| R57 | Clone a running hosted workflow, including its manifest, and import the helper again. | not needed (keyword DM rules) | social.outreach.keyword_dm_rules.replace |
 | G02 | The recipe file must import that helper or the client will not bundle it. | gap: there is no recipe bundle step | gap: Dreamstate can't do this |
 | G03 | A syntax check of the bundle is the gate before apply. | gap: the gate here is the local spec checker, not a bundle syntax check | gap: node syntax check is not this gate |
 | G04 | Apply the recipe file with approval and a credit cap of 1. | gap: recipe-file apply is not a call on this desk | gap: Dreamstate can't do this |

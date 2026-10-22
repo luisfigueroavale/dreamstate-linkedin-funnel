@@ -25,10 +25,10 @@ Preview scope and row variables: at least 3 rows, including one thin row, via `s
 
 Before activation, inspect preview and sending scope. Draft or paused enrollments may stay pending. Active may deliver after enrollment. Enrollment is not dispatch. No lifetime ceiling. `max_live_sends` in params covers at least dry-run recipient count, not authorization. Inspect bounces. Invent no bounce count.
 
-Activation ask names both `max_new_enrollments_per_day` and `max_live_sends`. `sequence.sequences.activate_audience` is a separate yes on that audience and text and starts sending. Authorized scope, fetched gates. Dry_run if offered. Show recipient count, credit estimate, `quote_hash`. Live repeats hash, `max_credits` at dry-run ceiling, new `idempotency_key`. No second start. Never `sequence.linkedin.auto_engagements.replace` or `sequence.x.auto_engagements.replace`.
+The ask names both `max_new_enrollments_per_day` and `max_live_sends`. `sequence.sequences.activate_audience` is a separate yes on that audience and text and starts sending. Stay in scope and fetched gates. Use dry_run if offered. Show recipient count, credit estimate, `quote_hash`. Live repeats the hash, sets `max_credits` at the dry-run ceiling with new `idempotency_key`. Do not restart. Never call `sequence.linkedin.auto_engagements.replace` or `sequence.x.auto_engagements.replace`.
 
 Record enrollment id, variant, run id. Events and counts: search, then `tools_get`. Invent no id. Keep the named sender. A missing identity stays unnamed. Count delivered, replies, qualified talks, and opportunities apart. Keep source post and profile. Signups and meetings differ from opportunities and revenue. Ungiven numbers stay unknown.
 
-Recovery: preview failed or deferred rows, reconcile provider outcomes before retry. Discover pause, resume, retirement, and capacity recovery separately. `sequence.sequences.resume` is resume only (owner yes, same send rule, `max_live_sends` in params when listed), not pause, retirement, or capacity recovery.
+Recovery: preview failed or deferred rows, reconcile provider outcomes before retry. `sequence.sequences.resume` is resume only (owner yes, same send rule, `max_live_sends` in params when listed), not pause, retirement, or capacity recovery.
 
 Return counts, held reasons, state, budget. Deep link only if returned.

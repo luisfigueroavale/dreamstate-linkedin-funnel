@@ -5,9 +5,9 @@ description: "Write one letter or newsletter issue with a single takeaway from s
 
 Follow `docs/skill-frame.md`.
 
-Write this issue before posts that reuse the argument. Read `brand.local/voice.md`, owner files in `vault/voice/`, `audience.local/ideal-follower.md`, week brief, offer pages `brand.local/identity.md` names. Read every supplied source start to finish. Missing or still blank voice or reader file: stop. One useful idea and its promise to this reader. Other ideas wait for a later issue.
+Write this issue before posts that reuse the argument. Read `brand.local/voice.md`, owner files in `vault/voice/`, `audience.local/ideal-follower.md`, week brief, offer pages `brand.local/identity.md` names. Read every supplied source start to finish. Missing or blank voice or reader file: stop. One useful idea and its promise to this reader. Other ideas wait for a later issue.
 
-Earlier editions set the recurring format. This draft must not become house style.
+Earlier editions set the format. This draft must not become house style.
 
 Four moves, in order: opening observation, explanation or a worked example, practical application, one next step. Explanation keeps the source's sequence. Heading only when it helps the reader. No heading without a sourced sentence under it.
 
@@ -15,7 +15,7 @@ Name the guest whose experience you use. Opinion and evidence: separate sentence
 
 Subject and preview promise what the issue delivers. Do not invent urgency. Preview promises what the subject did not already say.
 
-Link labels name the destination. Open that page with `visibility.research.urls_fetch` before the sentence uses it. Every link: `utm_source=newsletter` and the brief's weekly campaign slug. Blank slug: ask. Video URLs stay full https.
+Link labels name the destination. Open that page with `visibility.research.urls_fetch` per `docs/calls.md` before the sentence uses it. Every link: `utm_source=newsletter` and the brief's weekly campaign slug. Blank slug: ask. Video URLs stay full https.
 
 Paragraphs add information. Keep the owner's distinctive phrasing. Cut transitions that only announce the next move, and generic lessons the source did not earn.
 

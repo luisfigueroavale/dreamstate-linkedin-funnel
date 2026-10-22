@@ -11,7 +11,7 @@ From brief: who reads it, takeaway, lines that must appear, pixel size, next act
 
 Little copy can carry the idea. Teaching frame: labels person can follow. Each plate: state label, fact true at that step, up to three lines under name. Number plates. One nameplate style. Fewer, larger plates. Overflow: cut line or add slide. Do not shrink type to fit.
 
-Headline, earned points, attribution post needs. Keep post lines as written. Smoother wording is rewrite: leave it out. Whole post does not go on frame. Keep sequence, figures, and limits that change line's meaning. No figure unless already in post's source. No screenshot you lack.
+Post needs headline, earned points, and attribution. Keep post lines as written. Smoother wording is a rewrite. Leave it out. Whole post stays off the frame. Keep sequence, figures, and limits that change a line's meaning. Add no figure the source lacks. Skip a screenshot you lack.
 
 Instructional plate: what to do, or fact reader can act on. Start with verb. Name object: folder, command, weekday. describing-only line does not belong. Quotation, editorial line, and proper name keep their grammar.
 
@@ -19,7 +19,7 @@ Sizes from `docs/picture-rules.md` unless `brand.local/style.md` filled that row
 
 Import `brand/tokens.css` so names resolve. Owner values: `brand.local/tokens.css`. `DeskTimeline.previewStandIn` fills preview colors while tokens stay unset, so checkout can render. Do not hand preview stand-in to owner. choice here stays in this file, not new brand rule. Do not add logo, signature, palette, decorative footer, or call to action brief did not supply.
 
-Spacing, hierarchy, true relationships do the work. No diagram inside quotation. Do not stamp same card per slide. Real HTML text, not flattened image or path. Labels stay apart. Connectors do not cross or cover type. Enough contrast to follow. Vertical rail, left-to-right row. If connectors cross, new layout, render again. Process: editable plates or SVG here. Owner product screenshot stays whole. Owner photo can sit unchanged. Do not generate a face. No third-party logo, photo, illustration. Font: file asset README lists. Do not fetch font into this repo. After load, confirm face is on screen.
+Spacing, hierarchy, true relationships do the work. Ban diagrams inside quotations. Do not stamp card per slide. Use HTML text, not flat image or path. Labels stay apart. Connectors do not cross or cover type. Keep contrast to follow. Use vertical rail or left-to-right row. If connectors cross, make layout and render again. Draw process plates or SVG. Owner product screenshot stays whole. Owner photo can sit unchanged. Do not generate face. Ban third-party logo, photo, or illustration. Use font asset README lists. Do not fetch font into repo. After load, confirm face is on screen.
 
 Carousel: 5 to 12 slides. Stay at 7 unless brief gives reason in range: hook, problem, idea's frame, slide per step, close. One job per slide. Continuous sequence. Footer shows slide number. Portrait: `pictures/frames/portrait.html`. Slide: `pictures/frames/carousel-slide.html`, one file per slide. Thumbnail: `pictures/frames/thumb.html`. Replace shell copy. Next step only when brief has one worth taking. Giveaway: connect line, comment keyword you will reply to. Else ask them to save it. Do not invent deadline or how many already joined.
 
@@ -29,6 +29,6 @@ Motion: JavaScript timeline in the HTML. `pictures/timeline.js` exposes `DeskTim
 
 Keep HTML in named folder, or with that post's pictures. Save editable HTML beside `export/`. Thumbnail, and any frame profile image will cover: type inside safe inset. Check that crop.
 
-Inspect 1080px PNG, 390px-wide file. Thumbnail also 1280×720. Check words, hierarchy, clipping, contrast, connector collisions, missing assets, every slide, sequence. Moving piece: filmstrip. At 0 seconds parts absent. At 2.3 seconds picture complete. Hold ends match. Repair worst fault once. Prefer hierarchy, line breaks, spacing, crop. Decoration only after. Render again. Look at pixels. Markup is not review. script exit of 0 is not review. If render cannot run, or you cannot see pixels, return HTML, name missed step. Do not call file rendered or inspected.
+Inspect 1080px PNG and 390px. Check thumbnail 1280×720. Check words, hierarchy, clipping, contrast, connector collisions, missing assets, slides, sequence. Read filmstrip. At 0 seconds parts are absent. At 2.3 seconds picture completes. Hold ends match. Repair fault once. Prefer hierarchy, line breaks, spacing, crop. Add decoration only after. Render again. Look at pixels. Markup is not review. Script exit of 0 is not review. If render cannot run, or you cannot see pixels, return HTML and name missed step. Do not call file rendered or inspected.
 
 State reached: HTML ready, render not run; prompt exists and is not picture; rendered, not looked at; or rendered and inspected. Run `brand/taste.md` before owner sees it. Return editable HTML, export, pixel size, and any limit hit. Does not edit shared brand files. Do not publish.

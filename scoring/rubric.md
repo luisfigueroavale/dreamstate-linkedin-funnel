@@ -6,7 +6,7 @@ Read `audience/AGENTS.md` before you score. The company rubric comes from the Id
 
 ## Scores
 
-Each side is a `column.ai_fit_score` column. The cell's number is `fit_score.score`, from 0 to 100. Do not ask `column.ai` for the integer.
+Each side is a `column.ai_fit_score` column. The cell's number is `fit_score.score`, from 0 to 100. `column.ai` does not exist; use `column.ai_fit_score` as `binding_spec.definition_id`.
 
 A Required fail that the row's evidence supports scores 0 on that side. Missing evidence stays unsure. Unsure is not 0.
 

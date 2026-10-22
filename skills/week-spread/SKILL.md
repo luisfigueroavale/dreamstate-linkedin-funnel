@@ -154,7 +154,7 @@ To pull an armed send back, use the unschedule call in stage 8. It does not retr
 
 A view count does not finish the week. An engager becomes a signal. The people who fit become a conversation.
 
-Stage 7 is `post-path`, then `magnet-send`, `warm-cadence`, or `thread-reply`. It is not a profile watcher. That watcher stores person URLs you already named. It does not harvest people who touched a post. `post-path` collects the engagers with `visibility.linkedin.engagement_harvest` and scores company and person apart.
+Stage 7 is `post-path`, then `magnet-send`, `warm-cadence`, or `thread-reply`. A watcher on profiles they already named is `tables.profile_watcher.create` (`profile_urls`, `preview_hash`, `approved: true`, `table_id`) after yes. That call stores the watcher and does not write post rows. `post-path` collects the engagers with `visibility.linkedin.engagement_harvest` and scores company and person apart.
 
 Someone who comments the keyword on the resource post gets the resource and nothing else, through `magnet-send`. People who pass both scores can get a warm sequence from `warm-cadence`: capped, stopped when they reply, asking what they are working on. Do not start that sequence in the same step as sending the file. Replies are drafted in `thread-reply`. The owner sends. For an objection, send the chapter that meets it. Use a full https URL and open it on that chapter with `&t=<seconds>s`.
 
