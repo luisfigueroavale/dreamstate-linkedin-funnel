@@ -5,18 +5,18 @@ description: "Write one letter or newsletter issue with a single takeaway from s
 
 Follow `docs/skill-frame.md`.
 
-Write this issue before posts that reuse the argument. Read `brand.local/voice.md`, samples in `vault/voice/` when the owner has put files there, `audience.local/ideal-follower.md`, the week brief, and the offer pages `brand.local/identity.md` names. Read every supplied source from start to finish. Stop when voice or the reader file is missing or still blank. Carry one useful idea. State the promise that idea makes to this reader. Leave every other idea for a later issue.
+Write this issue before posts that reuse the argument. Read `brand.local/voice.md`, owner files in `vault/voice/`, `audience.local/ideal-follower.md`, week brief, offer pages `brand.local/identity.md` names. Read every supplied source start to finish. Missing or still blank voice or reader file: stop. One useful idea and its promise to this reader. Other ideas wait for a later issue.
 
-Earlier editions set the recurring format. One draft must not become the house style.
+Earlier editions set the recurring format. This draft must not become house style.
 
-Use four moves, in order: an opening observation, the explanation or a worked example, a practical application, and one next step. Inside the explanation, keep the source's own sequence. Add a heading only when it helps the reader. Remove a heading that has no sourced sentence under it.
+Four moves, in order: opening observation, explanation or a worked example, practical application, one next step. Explanation keeps the source's sequence. Heading only when it helps the reader. No heading without a sourced sentence under it.
 
-Name the guest whose experience you use. Put opinion and evidence in separate sentences. A metric names the population, the period, and the source. If any of those three is unknown, keep the number out of the body. Name a missing quote or fact in the source list, outside the body.
+Name the guest whose experience you use. Opinion and evidence: separate sentences. A metric names population, period, and source. Unknown among those three: number stays out of the body. Missing quote or fact: source list, outside the body.
 
-The subject and the preview are promises the issue delivers. Do not invent urgency. The preview has to promise something the subject did not already say.
+Subject and preview promise what the issue delivers. Do not invent urgency. Preview promises what the subject did not already say.
 
-Give each link a label that names the destination. Use an address from the source, or from a page you opened, and confirm that page is the one the sentence describes. On every link, set `utm_source=newsletter` and the weekly campaign slug from the brief. Ask if the slug is blank. Video URLs stay full https.
+Link labels name the destination. Source or opened page is the one the sentence describes. Every link: `utm_source=newsletter` and the brief's weekly campaign slug. Blank slug: ask. Video URLs stay full https.
 
-Each paragraph has to add information. Keep the owner's distinctive phrasing. Cut a transition that only announces the next move, and cut a generic lesson the source did not earn.
+Paragraphs add information. Keep the owner's distinctive phrasing. Cut transitions that only announce the next move, and generic lessons the source did not earn.
 
-Return the subject, the preview, a body ready to paste, and a short source list outside the body. The list names each source, each link you confirmed, and each gap. Use `cross-cut` only when they ask for other formats. Treat the finished issue as a draft until the owner sends it. Do not send email. The issue is one file. Do not create a database or a second board to store it.
+Return subject, preview, paste-ready body, outside list: each source, confirmed link, gap. `cross-cut` only if they ask for other formats. Draft until the owner sends it. Do not send email. One file. No database or second board to store it.
