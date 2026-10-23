@@ -11,6 +11,7 @@
 import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 // local
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 const root = path.resolve(import.meta.dirname, "..");
 const rules = JSON.parse(readFileSync(path.join(root, "scripts/queue-rules.json"), "utf8"));
@@ -82,13 +83,20 @@ function companyName(pack) {
   return String(name).trim();
 }
 
+export function bannedWordsFrom(text) {
+  const chunk = String(text).split(/^##\s+Banned(?:\s+words)?\s*$/im)[1];
+  if (!chunk) return [];
+  return chunk
+    .split(/^##\s+/m)[0]
+    .split(/\r?\n/)
+    .map((line) => line.replace(/^[-*]\s*/, "").trim())
+    .filter((line) => line && !line.startsWith("#") && line.length < 40);
+}
+
 function voiceBans() {
   const file = path.join(root, "brand.local/voice.md");
   try {
-    const text = readFileSync(file, "utf8");
-    const chunk = text.split(/^##\s+Banned\s*$/im)[1];
-    if (!chunk) return [];
-    return chunk.split(/^##\s+/m)[0].split(/\r?\n/).map((line) => line.replace(/^[-*]\s*/, "").trim()).filter((line) => line && !line.startsWith("#") && line.length < 40);
+    return bannedWordsFrom(readFileSync(file, "utf8"));
   } catch {
     return [];
   }
@@ -305,4 +313,10 @@ function main() {
   console.log(`lint pass (${name}).`);
 }
 
-main();
+function directRun() {
+  const entry = process.argv[1];
+  if (!entry) return false;
+  return import.meta.url === pathToFileURL(path.resolve(entry)).href;
+}
+
+if (directRun()) main();
