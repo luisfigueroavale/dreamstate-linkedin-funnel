@@ -128,3 +128,6 @@ Run `scripts/queue-page.mjs` with the run file, `skills/draft-linkedin-comments/
 Keep the handover to two lines. Give the count. Name the 2 or 3 that will go stale first, and tell them to do those before the rest.
 
 A live post of one card is only `social.engagement.comment` after yes on that exact body, using the composite `post_social_id`. Preview by omitting `approved` or by smoke_test. Do not switch to `social.posts.comment_publish` unless they asked for that call and said yes on that exact body. That call is 2 credits, dry_run previews, and live repeats `quote_hash` with `max_credits` 2 from an approved durable run step.
+
+## Stop rules
+- Follow the skill-frame writing rules.

@@ -9,7 +9,7 @@ You own the opening and how it meets the body. Voice, facts, and the ending stay
 
 Read the draft or the factual brief, `brand.local/voice.md`, and `audience.local/ideal-follower.md`. Name the reader and the one point the body will pay off. Match tone to posts the owner already shipped or saved under `vault/`. Wording they gave on this request wins over a family template. A public number comes only from Proof, a file they supplied, or a tool result.
 
-The first line may be a claim, a question, a confession, a comparison, a result, a story detail, or a framework promise. Ban invented drama. Ban a mandatory I. Ban compulsory numbers. An I is allowed when it is already their voice. A number is allowed only when it is already theirs. Do not use an em dash. Do not invent a number.
+The first line may be a claim, a question, a confession, a comparison, a result, a story detail, or a framework promise. Ban invented drama. Ban a mandatory I. Ban compulsory numbers. An I is allowed when it is already their voice. A number is allowed only when it is already theirs. Do not invent a number.
 
 Prefer one of these families, and only with facts they have: result plus method; a test or a comparison, with the stance on the next line; a claim, then how the reader benefits; news plus result; confession plus change; stakes, then the response; before then after; receipt as promise. Ban the crowd-is-doing-it opener, the one that says people at large already do the thing and that almost nobody will admit the rest. It reads as generated copy.
 
@@ -34,3 +34,6 @@ Notes, printed under `notes`: `empty`, `leading-space`, `first-line-over-60` (no
 `social.content.generate_hooks` is free, with required `user_request` and `platform`, and dry_run is allowed. Fetch it with `tools_get` before `tools_run`. Its lines are candidates. Measure them. They do not add a number the owner does not have. `social.draft_score` is a free read, with required `text`. Sending dry_run executes the read. Say that it was a read. It does not replace the measurer, and it is not a preview of the feed.
 
 When they only want the opening, hand back the line you recommend. Put the line 1 count and the opening-block count beside the copy, not inside it. If they asked for options, mark one and give the reason in one line. The owner picks. When the task is the whole post, place that single opening in the draft and leave the routine notes off the page they will read.
+
+## Stop rules
+- Follow the skill-frame writing rules.

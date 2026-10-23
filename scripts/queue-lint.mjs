@@ -93,12 +93,18 @@ export function bannedWordsFrom(text) {
     .filter((line) => line && !line.startsWith("#") && line.length < 40);
 }
 
-function voiceBans() {
+export function bansFor(stock, voiceText, packWords) {
+  const voice = voiceText ? bannedWordsFrom(voiceText) : [];
+  const extra = Array.isArray(packWords) ? packWords : [];
+  return [...(stock || []), ...voice, ...extra];
+}
+
+function voiceText() {
   const file = path.join(root, "brand.local/voice.md");
   try {
-    return bannedWordsFrom(readFileSync(file, "utf8"));
+    return readFileSync(file, "utf8");
   } catch {
-    return [];
+    return "";
   }
 }
 
@@ -276,7 +282,7 @@ function main() {
   const file = path.resolve(argv[0]);
   const { name, profile } = profileOf(file, process.argv.slice(2));
   const pack = JSON.parse(readFileSync(file, "utf8"));
-  const bans = [...(profile.banned || []), ...voiceBans(), ...(Array.isArray(pack.banned_words) ? pack.banned_words : [])];
+  const bans = bansFor(profile.banned, voiceText(), pack.banned_words);
   const company = companyName(pack);
   const fails = [];
   const warns = [];

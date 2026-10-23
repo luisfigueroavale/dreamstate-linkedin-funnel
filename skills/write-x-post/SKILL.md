@@ -18,3 +18,6 @@ The link and the attribution sit beside the claim they support. The owner's site
 When they care about an exact fit, check the current limit for that account and that format, including how a link is counted. A plain character count is only an approximation of composer weighting. Use the composer, or a counter that applies the same weighting, when you have one.
 
 Deliver paste-ready copy. Source notes stay outside that copy. A picture, if they asked, is `design-post-graphic`. Store the copy only if they ask: `tools_get`, then `social.content.artifact_create`. Drafting does not publish and does not start reply automation. Do not schedule, do not approve, and do not call `sequence.x.auto_engagements.replace`.
+
+## Stop rules
+- Follow the skill-frame writing rules.

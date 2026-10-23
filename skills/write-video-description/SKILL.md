@@ -14,3 +14,6 @@ Include a resource when it helps this video. Each one has a URL you opened and a
 When the cut exists, take chapter starts from it. Keep the order the cut has, and name each stretch for what it shows. Where a script time exists, set the cut's start beside it. When a cut has moved that moment, keep the cut's time and record the script time as stale. Do not invent a timestamp or a view count.
 
 Hand over the description ready to paste, then the chapters. Also return a separate list of every link or time still open. A link you have not opened, or that has no URL, belongs on that list. On a script with no cut, that list says the times are provisional. A title belongs to `write-video-titles`. An upload belongs to `publish-youtube-video`. This skill does not upload.
+
+## Stop rules
+- Follow the skill-frame writing rules.

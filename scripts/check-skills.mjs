@@ -64,9 +64,34 @@ if (folders.length !== 50) bad(`expected 50 skills, found ${folders.length}`);
 
 const framePath = path.join(root, "docs/skill-frame.md");
 const frame = readFileSync(framePath, "utf8");
-for (const needle of ["audience/AGENTS.md", "brand/AGENTS.md", "brand/taste.md", "required unknown"]) {
+for (const needle of ["audience/AGENTS.md", "brand/AGENTS.md", "brand/taste.md", "required unknown", "queue-rules.json", "no em dash"]) {
   if (!frame.includes(needle)) bad(`docs/skill-frame.md is missing ${needle}`);
 }
+
+const WRITING = [
+  "adapt-essay-for-linkedin",
+  "choose-next-video",
+  "draft-linkedin-comments",
+  "draft-thread-reply",
+  "draft-warm-followups",
+  "draft-x-replies",
+  "find-x-angles",
+  "make-lead-magnet",
+  "plan-content-week",
+  "plan-x-week",
+  "score-post-engagers",
+  "send-lead-magnet",
+  "split-long-source",
+  "write-linkedin-post",
+  "write-long-essay",
+  "write-newsletter-issue",
+  "write-opening-lines",
+  "write-video-description",
+  "write-video-script",
+  "write-video-titles",
+  "write-x-article",
+  "write-x-post",
+];
 
 for (const name of folders) {
   const file = path.join(skillRoot, name, "SKILL.md");
@@ -83,6 +108,18 @@ for (const name of folders) {
   if ((name === "score-post-engagers" || name === "draft-warm-followups") && !/required unknown/i.test(text)) {
     bad(`${name}: qualifying test is missing`);
   }
+  if (WRITING.includes(name) && !text.includes("Follow the skill-frame writing rules.")) {
+    bad(`${name}: missing the skill-frame writing rules`);
+  }
+}
+
+const emDash = "\u2014";
+for (const file of walk(root)) {
+  const rel = path.relative(root, file);
+  const skillText = rel.startsWith(`skills${path.sep}`) && /\.(md|html|json|txt)$/.test(file);
+  const fixture = rel.startsWith(`scripts${path.sep}fixtures${path.sep}`);
+  if (!skillText && !fixture) continue;
+  if (readFileSync(file, "utf8").includes(emDash)) bad(`${rel} contains an em dash`);
 }
 
 for (const rel of ["brand/identity.md", "brand/voice.md", "brand/style.md", "audience/ideal-follower.md"]) {

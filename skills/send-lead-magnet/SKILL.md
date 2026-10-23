@@ -38,3 +38,6 @@ Private messages are the default. If you will not answer one by one, if there ar
 After a live pass, verify with `social.outreach.keyword_dm_sends.list` (`artifact_id`). A public line counts only once it is visible on the post. After a rule change, wait until one later pass finishes. A preview alone does not prove the repeating path. If the asking comment is gone after the file was verified, there is no public line. Mark that person done.
 
 On a failed pass, an uncertain public write on a busy post ends the pass on purpose. Keep public lines behind file messages. Reconcile by reading each thread. Reset a row that never posted and clear its saved intent. A scheduled pass fails when a tick calls a date constructor or the clock. Read the ISO text. The local checker reads that text without those calls and does not send. A large enrollment read that is cut short forces the campaign check to refuse. If quota enforcement is unavailable, stop. Do not build a side path that does the same writes. Tell the owner. On a failure, read `runs_get` and `runs_events`. Take the error from the last event. Do not invent a field the schema lacks.
+
+## Stop rules
+- Follow the skill-frame writing rules.

@@ -24,4 +24,4 @@ If more than one account can post and the owner did not pick, ask. Do not guess.
 
 ## What the writer will not invent
 
-A customer name, a revenue figure, a "most people" claim, a hashtag stack, an em dash. The Dreamstate `linkedin-posts` skill is the craft reference for LinkedIn shape: about 210 characters before the fold, a close that asks or questions, lists with `1.` or `•`. Fetch that skill with `skills_get` if the workspace copy may differ. This repo's consent rules still win.
+A customer name, a revenue figure, a "most people" claim, or a hashtag stack. Follow the writing rules in `docs/skill-frame.md`. The Dreamstate `linkedin-posts` skill is the craft reference for LinkedIn shape: about 210 characters before the fold, a close that asks or questions, lists with `1.` or `•`. Fetch that skill with `skills_get` if the workspace copy may differ. This repo's consent rules still win.

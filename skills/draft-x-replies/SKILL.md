@@ -125,8 +125,7 @@ Read `brand/AGENTS.md`, `brand.local/`, `references/verdicts.md`, and `taste.jso
 
 A reply is one thought to a peer: usually one or two short sentences, 70 to 160 characters, and never over 200. Say it with contractions and plain words, in the texture already in `brand.local/voice.md` (how they laugh, whether they use emoji, lowercase, the words they use for people). Do not write a windup sentence, a punchline sentence, or a triad of parallel beats. One receipt is enough. Do not pile a story, a number, and a lesson into the same line, and do not show off a number nobody asked for. At most one question, and only after a concrete line. The question is short, and the poster could answer it from experience.
 
-Do not open with a compliment or use one as padding. Do not add a link, a hashtag, or a product plug. When they have named the company, that name appears only when it is the receipt itself, and in at most one reply out of ten. If they have not named it, there is no name check. Do not use an em dash or an en dash.
-
+Do not open with a compliment or use one as padding. Do not add a link, a hashtag, or a product plug. When they have named the company, that name appears only when it is the receipt itself, and in at most one reply out of ten. If they have not named it, there is no name check.
 Set `angle` to one of these seven names. `receipt`: the line is work they already do. `gap`: the post left out the piece they know. `tried`: they followed that advice, or they dropped it. `method`: the post never shows the how, and they have one. `ask`: a short question sits after a concrete line. `pushback`: their own work gives them a reason to disagree. `joke`: the post is funny and they can add a true detail.
 
 Starting tastes, kept until verdicts replace them:
@@ -165,3 +164,6 @@ When the whole pass has zero sent replies, log a missed window. Do not treat tho
 Write what that comparison teaches into `references/verdicts.md` before drafting again. A pattern seen twice becomes a voice rule in `brand.local/voice.md`. An edit they make becomes a voice rule, not a stored copy of their sentence. Their edits are the strongest signal in the ledger.
 
 Own posts are `write-x-post` and `plan-x-week`. A niche scan is `find-x-angles`. LinkedIn comments are `draft-linkedin-comments`.
+
+## Stop rules
+- Follow the skill-frame writing rules.

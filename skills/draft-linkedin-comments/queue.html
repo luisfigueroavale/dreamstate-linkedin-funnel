@@ -162,7 +162,7 @@
       if (variant.ref) {
         var src = document.createElement("p");
         src.className = "from";
-        src.textContent = "Source " + variant.ref + (variant.ref_source ? " — " + variant.ref_source : "");
+        src.textContent = "Source " + variant.ref + (variant.ref_source ? ": " + variant.ref_source : "");
         block.appendChild(src);
       }
       var bar = document.createElement("div");
@@ -247,7 +247,7 @@
       if (!card.classList.contains("is-closed")) closed += 1;
       card.classList.add("is-closed");
       summary.textContent = "";
-      summary.appendChild(document.createTextNode((item.name || "Post") + " — " + label + " "));
+      summary.appendChild(document.createTextNode((item.name || "Post") + ": " + label + " "));
       var back = document.createElement("button");
       back.type = "button";
       back.textContent = "Undo";

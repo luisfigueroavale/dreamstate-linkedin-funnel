@@ -25,3 +25,9 @@ Graphics are HTML and CSS. Motion is a JavaScript `DeskTimeline` that drives HTM
 ## Facts
 
 Do not invent a metric, a face, or a connection. Dreamstate plus local tools only. Ids and arguments are in `docs/tool-map.md`.
+
+## Writing
+
+Drafted copy uses no em dash. That covers posts, comments, replies, DMs, newsletters, scripts, titles, descriptions, and articles. Use a period, a comma, or and. Comments and replies also use no en dash.
+
+Stock banned words are the `banned` lists in `scripts/queue-rules.json`. Words under `## Banned words` in `brand.local/voice.md` add to the list for that run. They do not replace it. A writing skill does not copy either list. Its stop rule is: Follow the skill-frame writing rules.

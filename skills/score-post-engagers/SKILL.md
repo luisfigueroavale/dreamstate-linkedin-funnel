@@ -20,3 +20,6 @@ Ask goes to `send-lead-magnet` first. Do not block the file on the score, and do
 Comments on the owner's post come from `social.comments.queue_list`. Trust an empty queue only after `visibility.linkedin.comments.refresh` (`delivery_id`). Articles and newsletters return 422. `visibility.linkedin_post_notifications_list` takes `delivery_id` from `social.content.article_deliveries_list`, `limit` max 100, no paging. Preview with `social.comments.reply`. `social.comments.approve` after yes on that text: `action_id`, a 64-hex `content_hash`, and `approved: true`. If the effect is unknown, read the run and do not resend.
 
 `visibility.analytics_query` reads a stored snapshot and does not refresh it. Do not write zero. `visibility.analytics_refresh` needs `platform`, `account_id` from `senders.social_accounts.list`, and `metric_scope` `account`, `post`, or `audience`. Post scope needs `provider_post_id`. Carry source, post, and event ids forward. A repeating monitor is `workflow.workflows.activate`. It always needs the owner's yes and `approved: true`. No dry_run. smoke_test, then live. Required `workflow_id` and `expected_version_id` (the published version, not the draft). `max_credits` is optional, and required on live when an autonomous trigger exists. It does not enroll.
+
+## Stop rules
+- Follow the skill-frame writing rules.

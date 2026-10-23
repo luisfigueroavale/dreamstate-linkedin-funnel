@@ -20,3 +20,6 @@ Link labels name the destination. Open that page with `visibility.research.urls_
 Paragraphs add information. Keep the owner's distinctive phrasing. Cut transitions that only announce the next move, and cut generic lessons the source did not earn.
 
 Return the subject, the preview, the paste-ready body, and the outside list: each source, each confirmed link, and each gap. Use `split-long-source` only if they ask for other formats. Keep it a draft until the owner sends it. Do not send email. Use one file. Do not add a database or a second board to store it.
+
+## Stop rules
+- Follow the skill-frame writing rules.

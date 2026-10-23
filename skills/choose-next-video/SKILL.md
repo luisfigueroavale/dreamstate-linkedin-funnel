@@ -131,7 +131,7 @@ The week-out pace is the calibration column. Views per day are views divided by 
 
 ## Rules
 
-The owner picks the idea and the packaging. No number without a source. Ratios come from this sheet. Results come from cleared Proof. Never record on a failed gate. Raw numbers stay in `vault/sources/<date>-<slug>/` with `origin.md`. The synthesis is `vault/notes/video/<date>-<slug>.md`. Lessons live in the ledger and the packaging library. Use numerals in what you hand them. Do not use em dashes in that copy. `plan-content-week` is the weekly caller when the recording is the trunk and the idea is not chosen yet.
+The owner picks the idea and the packaging. No number without a source. Ratios come from this sheet. Results come from cleared Proof. Never record on a failed gate. Raw numbers stay in `vault/sources/<date>-<slug>/` with `origin.md`. The synthesis is `vault/notes/video/<date>-<slug>.md`. Lessons live in the ledger and the packaging library. Use numerals in what you hand them. `plan-content-week` is the weekly caller when the recording is the trunk and the idea is not chosen yet.
 
 An outlier needs at least 5 peers of similar age and length, or the ratio is not evidence. Drop livestreams, anything under four minutes, and off-audience topics. Note a sponsor. Bands under 2×, 2–5×, 5–10×, and over 10× are labels. The 3× cut sits inside 2–5×.
 
@@ -146,3 +146,6 @@ Do not set a key, port a client, or build a watch or still url from an id. A pas
 ## Deliver
 
 Which gate ran, whether it passed, and the reason. For gate 1, the slate and the evidence. For gate 2, the titles, the still directions, and the donors. For gate 3, the script one beat at a time. The path of the research note, the sheet, and the ledger if it changed. Which gate is next, and what the owner still has to supply.
+
+## Stop rules
+- Follow the skill-frame writing rules.

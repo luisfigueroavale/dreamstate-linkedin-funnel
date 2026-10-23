@@ -19,7 +19,7 @@ An own-post reply is not an inbox send. Preview with `social.comments.reply`. Af
 
 ## How it should sound
 
-Answer the last message, including any constraint or stack they named. While a buyer stays in the thread, answer what they just said and ask which setup part comes next. Describe the product only after they ask. Everyday words, precise nouns, the owner's informal rhythm. Do not set a slang quota. Put each link on its own line. Do not add a sign-off. Do not use an em dash. Use a period, a comma, or and. End plainly. Do not add a chirpy goodbye.
+Answer the last message, including any constraint or stack they named. While a buyer stays in the thread, answer what they just said and ask which setup part comes next. Describe the product only after they ask. Everyday words, precise nouns, the owner's informal rhythm. Do not set a slang quota. Put each link on its own line. Do not add a sign-off. End plainly. Do not add a chirpy goodbye.
 
 A requested repo, recording, or link goes in that same message. Hand the file over while fit is still open. Fit is not a toll on the file. Hand over a linked page with one casual line. Do not inventory the page.
 
@@ -90,3 +90,6 @@ The morning list shows each interested or still-unanswered thread as a name, one
 A profile or company read only to personalize is paid. Quote first. Run only after yes. Prefer a page or file already in hand. Call prices and modes are in `docs/calls.md`. The skill arguments are `query` on `visibility.research.web_search` and `urls` on `visibility.research.urls_fetch`.
 
 If the owner rewrites or rejects a draft, record the general rule in `brand.local/voice.md`, without names or message text. Store kept wording under `vault/voice/`. `derive-voice-rules` fills a thin voice file from those pairs. Do not import another person's voice.
+
+## Stop rules
+- Follow the skill-frame writing rules.
