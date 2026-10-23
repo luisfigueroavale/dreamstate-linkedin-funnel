@@ -20,9 +20,9 @@ Build an evidence brief from primary sources, with implications and open questio
 
 3. Do not search to relocate it (`references/sources.md`).
 
-4. Call (`references/calls.md`).
+4. Call `whoami` before the first spend (`references/calls.md`).
 
-5. Call (`references/calls.md`).
+5. Call `tools_get` before `tools_run` (`references/calls.md`).
 
 6. Use with `visibility.research.web_search` (`references/calls.md`).
 
@@ -34,9 +34,9 @@ Build an evidence brief from primary sources, with implications and open questio
 
 10. If that path is taken, add a slug (`references/file.md`).
 
-11. Record (`references/file.md`).
+11. Record the path in `vault/sources/README.md` (`references/file.md`).
 
-12. Every (`references/file.md`).
+12. Put every gap under Open (`references/file.md`).
 
 13. Send owner facts through `collect-owner-context` only (`references/file.md`).
 ## Dreamstate tools

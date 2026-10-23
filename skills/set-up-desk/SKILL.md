@@ -20,19 +20,19 @@ Install the Dreamstate plugin, confirm the workspace, and create the local folde
 
 3. Read with `AGENTS.md` and `README.md` (`references/read.md`).
 
-4. Look (`references/copy.md`).
+4. Look at `brand.local/`, `audience.local/`, `vault/`, and `.gitignore` (`references/copy.md`).
 
-5. Copy (`references/copy.md`).
+5. Copy `brand/` to `brand.local/` and `audience/` to `audience.local/` only if absent (`references/copy.md`).
 
-6. Update (`references/ignore.md`).
+6. Update `.gitignore`, and add a missing line and remove none (`references/ignore.md`).
 
 7. Leave an unknown empty (`references/gaps.md`). Do not invent a stand-in.
 
 8. Collect only blocking gaps (`references/gaps.md`). This step does not schedule.
 
-9. Start (`references/intake.md`).
+9. Start capture at `vault/intake/interview.md` (`references/intake.md`).
 
-10. Leave (`references/context.md`).
+10. Leave Company Context pages to `collect-owner-context` (`references/context.md`).
 
 11. Search with local file tools (`references/search.md`).
 

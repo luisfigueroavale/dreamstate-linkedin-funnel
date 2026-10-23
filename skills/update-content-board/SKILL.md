@@ -16,15 +16,15 @@ Place a week's pieces on the local board from the owner's dates, time zone, and 
 
 1. Treat `vault/board.md` as the only board (`references/board.md`).
 
-2. Read (`references/sources.md`).
+2. Read Proof, the notes, the week brief, and words marked public or approved (`references/sources.md`).
 
 3. Place the week from the dates, time zone, channel, and cadence they named (`references/cadence.md`).
 
-4. Do (`references/pieces.md`).
+4. Give each piece one pillar, one topic, one subtopic, and one funnel job (`references/pieces.md`).
 
 5. That day is not a publish (`references/file.md`).
 
-6. Do not call `social.content.plan` yet (`references/remote.md`).
+6. Store the piece with `social.content.artifact_create` only when they ask, after `tools_get`, and do not call `social.content.plan` yet (`references/remote.md`).
 
 7. If no artifact exists, the brief holds the day (`references/remote.md`).
 

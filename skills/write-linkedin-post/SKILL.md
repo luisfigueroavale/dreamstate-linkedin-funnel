@@ -18,19 +18,19 @@ Draft or revise one LinkedIn post from the vault, the brand files, and allowed p
 
 2. The reader is `audience.local/ideal-follower.md` (`references/read.md`).
 
-3. Get (`references/read.md`).
+3. Read lines they wrote in `vault/voice/` and `vault/sources/`, and get approval before a personal story that is not already public (`references/read.md`).
 
-4. Make (`references/draft.md`).
+4. Make one useful point and name its source, the reader, and the funnel job (`references/draft.md`).
 
-5. Let (`references/draft.md`).
+5. Let the material pick the shape and keep it (`references/draft.md`).
 
 6. The body has to carry it (`references/draft.md`).
 
-7. Remove (`references/draft.md`).
+7. Remove a line that adds no information, then read the opening, the first line of each paragraph, and the ending as one argument (`references/draft.md`).
 
 8. Each one has to match the file it came from, and that file has to be cleared for public use (`references/draft.md`).
 
-9. Write (`references/file.md`).
+9. Write the draft to `vault/posts/<slug>.md` with the fields in `vault/fields.md`, and leave `publish_date` empty (`references/file.md`).
 
 10. Hand them the comment as text (`references/file.md`). Do not publish it.
 
@@ -38,7 +38,7 @@ Draft or revise one LinkedIn post from the vault, the brand files, and allowed p
 
 12. Read an existing stored draft with `social.content.artifact_get` and do not create another (`references/store.md`).
 
-13. Store with `social.content.artifact_create` (`references/store.md`).
+13. Store one artifact with `social.content.artifact_create` only when they ask, after `tools_get` (`references/store.md`).
 
 14. Say that nothing was sent (`references/store.md`).
 ## Dreamstate tools

@@ -21,13 +21,13 @@ Draft a local queue of comments on other people's LinkedIn posts. Follow `docs/s
 
 2. If `work/draft-linkedin-comments/` already has a run, start from the newest file (`references/learn.md`).
 
-3. Ask (`references/cadence.md`).
+3. Ask when their audience is on LinkedIn and set the window (`references/cadence.md`).
 
 4. Run with `source.account_posts_linkedin_profile` and `source.linkedin_posts_search` and `tables.executable_definitions.list_resolved` (`references/calls.md`).
 
 5. Bind sources with `tables.table_sources.attach`, then dry-run `tables.table_sources.run` and go live only after yes (`references/calls.md`, `references/fetch.md`).
 
-6. Fetch (`references/fetch.md`).
+6. Fetch the window, flag the hits, and retry a failure (`references/fetch.md`).
 
 7. Read with `visibility.radar.inspiration_linkedin_list` (`references/calls.md`). Do not send dry_run.
 
@@ -49,11 +49,11 @@ Draft a local queue of comments on other people's LinkedIn posts. Follow `docs/s
 
 16. Save the run and render the page with `scripts/queue-page.mjs` (`references/page.md`).
 
-17. Hand (`references/page.md`).
+17. Hand over two lines, and name the 2 or 3 that will go stale first (`references/page.md`).
 
-18. Post with `social.engagement.comment` (`references/calls.md`).
+18. Post one card with `social.engagement.comment` only after yes on that exact body (`references/calls.md`).
 
-19. Use with `social.posts.comment_publish` (`references/calls.md`).
+19. Use `social.posts.comment_publish` only when they asked for that call and said yes on that exact body (`references/calls.md`).
 
 20. React with `social.engagement.react` only when they named that reaction (`references/calls.md`).
 
@@ -62,10 +62,10 @@ Draft a local queue of comments on other people's LinkedIn posts. Follow `docs/s
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 4 | `tables.executable_definitions.list_resolved` | live | no |
+| 4 | `tables.executable_definitions.list_resolved` | read | no |
 | 4 | `source.account_posts_linkedin_profile` | definition id | no |
 | 4 | `source.linkedin_posts_search` | definition id | no |
-| 5 | `tables.table_sources.attach` | read | no |
+| 5 | `tables.table_sources.attach` | write | no |
 | 5 | `tables.table_sources.run` | dry_run, then live | yes |
 | 7 | `visibility.radar.inspiration_linkedin_list` | read | no |
 | 8 | `senders.linkedin_accounts.list` | read | no |

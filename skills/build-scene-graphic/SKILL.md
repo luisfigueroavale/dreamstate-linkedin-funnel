@@ -16,9 +16,9 @@ Build a small staged scene in HTML and CSS, with labels as real text, then captu
 
 ## Steps
 
-1. Offer (`references/brief.md`).
+1. Offer three metaphors when the brief is open, one line each, and wait, and they pick (`references/brief.md`).
 
-2. State (`references/brief.md`).
+2. State the reading order, and say what comes in, what each station does to it, and what leaves (`references/brief.md`).
 
 3. Set color from filled `brand.local` tokens (`references/tokens.md`). Headline text uses `--headline-gradient` when that token is set, and `--color-accent` when it is not.
 
@@ -28,15 +28,15 @@ Build a small staged scene in HTML and CSS, with labels as real text, then captu
 
 6. Time the build in reading order (`references/timing.md`). Capture starts at `__seek(0)`.
 
-7. Use (`references/collab.md`).
+7. Use only branding the owner supplied for a collab (`references/collab.md`).
 
-8. Capture (`references/capture.md`).
+8. Capture the MP4 and the GIF with `scripts/capture-motion.mjs` (`references/capture.md`).
 
-9. Write (`references/capture.md`).
+9. Write the still with `scripts/render-still.mjs` (`references/capture.md`).
 
-10. Inspect (`references/inspect.md`).
+10. Inspect the full-size still and the phone width (`references/inspect.md`).
 
-11. Deliver (`references/deliver.md`).
+11. Deliver the still, the MP4, the GIF, and the editable folder (`references/deliver.md`).
 ## Dreamstate tools
 
 None. Local files only.

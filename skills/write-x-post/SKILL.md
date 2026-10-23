@@ -27,11 +27,11 @@ Follow `docs/skill-frame.md`.
 
 6. Place the link and the attribution beside the claim they support (`references/links.md`).
 
-7. Check (`references/length.md`).
+7. Check the current limit when they care about an exact fit (`references/length.md`).
 
 8. Deliver paste-ready copy (`references/deliver.md`). Source notes stay outside that copy.
 
-9. Hand (`references/deliver.md`).
+9. Hand a picture, if they asked, to `design-post-graphic` (`references/deliver.md`).
 
 10. Call with `social.content.artifact_create` (`references/deliver.md`).
 ## Dreamstate tools

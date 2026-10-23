@@ -18,7 +18,7 @@ Save interviews, notes, and writing the owner supplies, then file only the lines
 
 2. Leave every other answer blank (`references/read.md`).
 
-3. Save (`references/sources.md`).
+3. Save exact material in a new dated folder under `vault/sources/` (`references/sources.md`).
 
 4. File positioning, the reader, and the buyer on the pages the evidence supports (`references/pages.md`).
 
@@ -32,9 +32,9 @@ Save interviews, notes, and writing the owner supplies, then file only the lines
 
 9. Live repeats `quote_hash` only after the yes matches (`references/gates.md`).
 
-10. Poll (`references/compose.md`).
+10. Poll `runs_get` on a run id (`references/compose.md`).
 
-11. Name (`references/report.md`).
+11. Name changed pages with id and revision, and each local path (`references/report.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |

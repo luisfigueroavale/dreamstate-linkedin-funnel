@@ -17,7 +17,7 @@ Follow `docs/skill-frame.md`.
 
 1. If the voice file or the reader file is missing or blank, stop (`references/read.md`).
 
-2. Read (`references/read.md`).
+2. Read every supplied source from start to finish (`references/read.md`).
 
 3. Other ideas wait for a later issue (`references/shape.md`).
 
@@ -25,7 +25,7 @@ Follow `docs/skill-frame.md`.
 
 5. Open with `visibility.research.urls_fetch` (`references/links.md`).
 
-6. Return (`references/return.md`).
+6. Return the subject, the preview, the paste-ready body, and the outside list (`references/return.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |

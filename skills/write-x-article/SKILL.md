@@ -19,9 +19,9 @@ Write or revise a long X article, or the short post for a new video, from a sour
 
 ## Steps
 
-1. Read (`references/brief.md`).
+1. Read the source, the Proof page, and the brand, audience, and vault notes (`references/brief.md`).
 
-2. Write (`references/brief.md`).
+2. Write the brief before any sentence (`references/brief.md`).
 
 3. Open a supplied URL with `visibility.research.urls_fetch` after `tools_get` (`references/fetch.md`). A paste needs no fetch.
 
@@ -31,13 +31,13 @@ Write or revise a long X article, or the short post for a new video, from a sour
 
 6. Write the short post that goes with a new video (`references/video-post.md`).
 
-7. Record (`references/edit.md`).
+7. Record a hand edit as a rule in `brand.local/voice.md` (`references/edit.md`).
 
-8. Fetch with `social.content.artifact_create` (`references/hand-back.md`).
+8. Fetch `social.content.artifact_create` with `tools_get` when they ask to store the video post (`references/hand-back.md`).
 
 9. Save one draft with `social.content.artifact_create` (`references/hand-back.md`). That save does not publish.
 
-10. Check (`references/hand-back.md`).
+10. Check five things, then hand the draft and the picture files to the owner (`references/hand-back.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |

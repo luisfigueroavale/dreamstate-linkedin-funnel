@@ -16,7 +16,7 @@ Run `brand/taste.md` before the owner sees the work. The preview stand-in in `pi
 
 ## Consent
 
-Nothing posts, comments, sends a DM, enrolls, launches, spends, schedules, or deletes without the owner's yes on that exact item. Every tool is fetched with `tools_get` before it runs. The fetched schema wins over this repo. When that mode exists, dry_run first, then live with `quote_hash`, `max_credits`, and `idempotency_key`. A refused quote is a price, not a yes. Some reads refuse dry_run and run live if you send that mode. The skill names those.
+Nothing posts, comments, sends a DM, enrolls, launches, spends, schedules, or deletes without the owner's yes on that exact item. Every tool is fetched with `tools_get` before `tools_run`. The fetched schema wins over this repo. When that mode exists, dry_run first, then live with `quote_hash`, `max_credits`, and `idempotency_key`. A refused quote is a price, not a yes. Some reads refuse dry_run and run live if you send that mode. The skill names those.
 
 ## Pictures
 

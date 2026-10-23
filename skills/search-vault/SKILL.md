@@ -17,13 +17,13 @@ Follow `docs/skill-frame.md`.
 
 1. Start at `vault/README.md` (`references/search.md`).
 
-2. Read (`references/search.md`).
+2. Read the whole file behind every hit before you rely on it (`references/search.md`).
 
 3. Treat a page marked `Status: blank`, an empty note, and a template prompt as unanswered prompts (`references/blanks.md`).
 
-4. Search (`references/scope.md`).
+4. Search the files in the checkout you have open (`references/scope.md`).
 
-5. Add (`references/accept.md`).
+5. Add one line to `vault/notes/concepts.md` after the owner accepts a piece (`references/accept.md`).
 ## Dreamstate tools
 
 None. Local files only.

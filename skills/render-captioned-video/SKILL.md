@@ -15,11 +15,11 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. Read (`references/plan.md`).
+1. Read the installed tool's help before you invent flags (`references/plan.md`).
 
 2. Confirm the files are on this disk before a long encode (`references/plan.md`). Leave every recording untouched.
 
-3. Read (`references/plan.md`).
+3. Read `skills/render-captioned-video/scripts/plan.example.json` (`references/plan.md`).
 
 4. Derive output time from each keep (`references/clock.md`). Do not keep a second clock by hand.
 
@@ -29,7 +29,7 @@ Follow `docs/skill-frame.md`.
 
 7. Level the encoded file (`references/level.md`). Measure the file you encoded.
 
-8. Run (`references/plan.md`).
+8. Run `node skills/render-captioned-video/scripts/lock-check.mjs plan.json` (`references/plan.md`).
 
 9. Review motion, sound, and card limits (`references/motion.md`).
 

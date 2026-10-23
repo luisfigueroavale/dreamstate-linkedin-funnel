@@ -18,21 +18,21 @@ Make a LinkedIn article the owner can review from the finished essay. Follow `do
 
 2. The schema just fetched wins (`references/calls.md`).
 
-3. Read (`references/read.md`).
+3. Read the finished essay, the newest picture set, the HTML for each figure, the figure list, and the Proof page (`references/read.md`).
 
 4. When the finished essay is a remote page, open it with `visibility.research.urls_fetch` (`references/remote.md`).
 
-5. Keep (`references/edit.md`).
+5. Keep the title, the argument, the section sequence, the examples, the links, the figures, and the voice (`references/edit.md`).
 
-6. Change (`references/edit.md`).
+6. Change a sentence only when LinkedIn's article editor would make the essay's version worse (`references/edit.md`).
 
-7. Keep (`references/figures.md`).
+7. Keep each figure where the essay put it (`references/figures.md`).
 
-8. Build (`references/cover.md`).
+8. Build the article cover at 16:9 (`references/cover.md`).
 
-9. Make (`references/pack.md`).
+9. Make the file pack at `vault/posts/<slug>-linkedin/` (`references/pack.md`).
 
-10. Write (`references/share.md`).
+10. Write the short description and the share post (`references/share.md`).
 
 11. Call `social.content.article_enabled_get` (`references/calls.md`).
 
@@ -40,15 +40,15 @@ Make a LinkedIn article the owner can review from the finished essay. Follow `do
 
 13. Update with `social.content.article_update` (`references/calls.md`).
 
-14. Call with `social.content.article_delivery_create` (`references/calls.md`).
+14. Call `social.content.article_delivery_create` only after a yes on that article (`references/calls.md`).
 
-15. Store with `social.content.artifact_create` (`references/calls.md`).
+15. Store the share post with `social.content.artifact_create` only when the owner asks (`references/calls.md`).
 
-16. Call with `social.posts.comment_publish` (`references/calls.md`).
+16. Call `social.posts.comment_publish` only after a yes on that exact body (`references/calls.md`).
 
-17. Call with `social.engagement.comment` (`references/calls.md`).
+17. Call `social.engagement.comment` only after a yes on that comment text (`references/calls.md`).
 
-18. Save (`references/board.md`).
+18. Save the LinkedIn line on `vault/board.md` only after the owner asks (`references/board.md`).
 
 19. Hand over the folder and say that nothing was uploaded (`references/pack.md`).
 ## Dreamstate tools

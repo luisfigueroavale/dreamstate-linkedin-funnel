@@ -20,25 +20,25 @@ List inbox threads that need a person and hand them to a reply draft. Follow `do
 
 1. Ids are in `docs/tool-map.md` (`references/scope.md`).
 
-2. Call (`references/scope.md`).
+2. Call `tools_get` before `tools_run`, and the fetched schema wins (`references/scope.md`).
 
 3. List with `unibox.inbox.unified_list` (`references/list.md`).
 
-4. Read (`references/read.md`).
+4. Read the whole thread before a classification or a draft (`references/read.md`).
 
 5. dry_run, then live with `quote_hash`, `max_credits`, and an `idempotency_key` (`references/read.md`).
 
 6. Resolve with `senders.linkedin_accounts.list` and `senders.social_accounts.list` (`references/linkedin.md`).
 
-7. Hand (`references/reply.md`).
+7. Hand one thread to `draft-thread-reply`, and do not send (`references/reply.md`).
 
-8. Show (`references/changes.md`).
+8. Show the real count and the scope before a label edit, an archive, or a bulk change (`references/changes.md`).
 
 9. On a timeout, read the returned message and the run with `runs_get` (`references/changes.md`).
 
-10. Hand (`references/changes.md`).
+10. Hand a public comment on a post to `draft-linkedin-comments` (`references/changes.md`).
 
-11. Report (`references/report.md`).
+11. Report only the slice you opened (`references/report.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |

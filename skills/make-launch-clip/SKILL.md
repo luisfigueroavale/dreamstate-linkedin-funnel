@@ -12,9 +12,9 @@ Cut a short launch piece from a beat list and assets the owner already has. Foll
 - It does not generate footage or a face, and it does not upload.
 
 ## Steps
-1. Read (`references/brief.md`).
+1. Read the product brief and how the feature actually behaves (`references/brief.md`).
 
-2. Set (`references/brief.md`).
+2. Set the audience, the runtime, the aspect, the one message, and the output (`references/brief.md`).
 
 3. Write the beat sheet (`references/beats.md`). The spoken line has to be true of the feature on that screen.
 
@@ -28,11 +28,11 @@ Cut a short launch piece from a beat list and assets the owner already has. Foll
 
 8. Render with `scripts/capture-motion.mjs` (`references/render.md`).
 
-9. Run (`references/render.md`).
+9. Run `check-short-export` on the file (`references/render.md`).
 
-10. Confirm (`references/render.md`).
+10. Confirm codec and that the file plays (`references/render.md`).
 
-11. Deliver (`references/deliver.md`).
+11. Deliver the video, the editable HTML, the script, asset credits (file, source, license), and what you actually checked (`references/deliver.md`).
 
 12. A cut does not need `brand.local` (`references/deliver.md`).
 ## Dreamstate tools

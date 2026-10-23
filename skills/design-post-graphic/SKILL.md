@@ -15,21 +15,21 @@ Build one portrait, carousel slide, or thumbnail as HTML and CSS, with motion in
 
 ## Steps
 
-1. Read (`references/brief.md`).
+1. Read the brief, the post, and `docs/picture-rules.md` (`references/brief.md`).
 
 2. Stop if a required file is missing or blank (`references/brief.md`).
 
-3. Write (`references/brief.md`).
+3. Write three HTML-comment notes before drawing (`references/brief.md`).
 
 4. Build the plates from the post and the brief (`references/plates.md`).
 
-5. Take (`references/sizes.md`).
+5. Take sizes from `docs/picture-rules.md` (`references/sizes.md`).
 
-6. Import (`references/tokens.md`).
+6. Import `brand/tokens.css` and use owner values in `brand.local/tokens.css` (`references/tokens.md`).
 
 7. Lay out the frame in HTML and CSS (`references/layout.md`).
 
-8. Write (`references/files.md`).
+8. Write the portrait, slide, or thumbnail file (`references/files.md`).
 
 9. Drive motion with `DeskTimeline` (`references/motion.md`). Capture calls `__seek`.
 
@@ -49,9 +49,9 @@ Build one portrait, carousel slide, or thumbnail as HTML and CSS, with motion in
 
 17. Read with `social.visuals.file_get` and `social.visuals.download_url` (`references/render.md`).
 
-18. Inspect (`references/inspect.md`).
+18. Inspect the 1080px PNG, the 390px view, and the thumbnail at 1280×720 (`references/inspect.md`).
 
-19. Run (`references/inspect.md`).
+19. Run `brand/taste.md` before the owner sees it (`references/inspect.md`).
 
 20. State what you reached and hand back the HTML (`references/inspect.md`).
 ## Dreamstate tools

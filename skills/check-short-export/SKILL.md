@@ -12,13 +12,13 @@ Check a finished export before you call the file done. Follow `docs/skill-frame.
 - Not for approving a publish.
 
 ## Steps
-1. No (`references/hold.md`).
+1. Hold the encoded file, the source, and the edit list (`references/hold.md`).
 
 2. Hear every join (`references/checks.md`).
 
-3. Check (`references/checks.md`).
+3. Check captions against the words you hear (`references/checks.md`).
 
-4. Check (`references/checks.md`).
+4. Check the cue and the payoff with the audio playing (`references/checks.md`).
 
 5. Leave intended overlays and crops out before a quality score (`references/checks.md`).
 
@@ -26,11 +26,11 @@ Check a finished export before you call the file done. Follow `docs/skill-frame.
 
 7. Decode the whole file (`references/checks.md`).
 
-8. Play (`references/checks.md`).
+8. Play it in their player if it is on this machine (`references/checks.md`).
 
 9. Play the whole story (`references/checks.md`). Allow no duplicate take and no gap you cannot explain.
 
-10. Run (`references/probe.md`).
+10. Run `ffprobe` on the encoded file (`references/probe.md`).
 
 11. Align frames on shared timestamps (`references/probe.md`).
 

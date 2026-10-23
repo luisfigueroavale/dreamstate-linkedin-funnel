@@ -14,9 +14,9 @@ Score one finished frame for clarity, identity, and export quality. Follow `docs
 
 ## Steps
 
-1. Read (`references/look.md`).
+1. Read the brief and the post this frame came from (`references/look.md`).
 
-2. Read (`references/look.md`).
+2. Read filled files in `brand.local/` that the piece actually uses (`references/look.md`).
 
 3. A description of it is not the review (`references/look.md`).
 

@@ -20,7 +20,7 @@ Package a finished video and publish it on the connected YouTube account after a
 
 3. Read with `social.channels_list` (`references/account.md`).
 
-4. Store with `social.content.artifact_create` (`references/draft.md`).
+4. Store the draft with `social.content.artifact_create` when they ask (`references/draft.md`).
 
 5. Upload with `social.content.media_upload_url` (`references/upload.md`).
 
@@ -28,7 +28,7 @@ Package a finished video and publish it on the connected YouTube account after a
 
 7. Use with `social.content.artifact_list` (`references/upload.md`).
 
-8. Get (`references/yes.md`).
+8. Get the owner's yes on that exact video, title, description, and privacy (`references/yes.md`).
 
 9. Re with `social.channels_list` (`references/account.md`).
 
@@ -38,7 +38,7 @@ Package a finished video and publish it on the connected YouTube account after a
 
 12. Read with `social.content.artifact_get` (`references/publish.md`).
 
-13. Run with `social.content.delivery_publish` (`references/publish.md`).
+13. Run `social.content.delivery_publish` as dry_run and keep `approved_publish_hash`, and after yes, send the live call with `trigger` `explicit` and that hash (`references/publish.md`).
 
 14. Change an unpublished draft with `social.content.artifact_update` (`references/change.md`).
 

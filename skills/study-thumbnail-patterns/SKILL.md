@@ -20,7 +20,7 @@ Note repeating thumbnail patterns in a set, and brief directions. Follow `docs/s
 
 2. Attach with `tables.table_sources.attach` (`references/source.md`).
 
-3. Run with `tables.table_sources.run` (`references/source.md`).
+3. Run `tables.table_sources.run` only after the quote and the owner's yes (`references/source.md`).
 
 4. When that definition is not resolved, use the set the owner pasted or a tool response they supplied (`references/source.md`, `references/set.md`).
 
@@ -35,8 +35,8 @@ Note repeating thumbnail patterns in a set, and brief directions. Follow `docs/s
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 1 | `tables.executable_definitions.list_resolved` | live | no |
-| 2 | `tables.table_sources.attach` | read | no |
+| 1 | `tables.executable_definitions.list_resolved` | read | no |
+| 2 | `tables.table_sources.attach` | write | no |
 | 3 | `tables.table_sources.run` | dry_run, then live | yes |
 
 

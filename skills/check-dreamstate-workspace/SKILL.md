@@ -26,7 +26,7 @@ Confirm the active Dreamstate workspace before a write or a spend. Follow `docs/
 
 5. On a timeout, call `runs_get` (`references/watcher.md`). Do not start a second watcher.
 
-6. Read (`references/qualify.md`).
+6. Qualify from Ideal Customer and the follower file, and read `audience/AGENTS.md` first (`references/qualify.md`).
 
 7. Do not call `sequence.sequences.activate_audience`, `sequence.sequences.resume`, or `workflow.workflows.activate` (`references/later.md`).
 ## Dreamstate tools

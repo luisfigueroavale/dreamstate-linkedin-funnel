@@ -16,13 +16,13 @@ Burn a cue-timed HTML overlay onto a short without covering the speaker or the c
 ## Steps
 1. Stop if a required file is blank (`references/plan.md`).
 
-2. Scout (`references/plan.md`).
+2. Scout the finished cut for a number, a comparison, a step, a label, or a supporting image (`references/plan.md`).
 
 3. Record each plan row (`references/cues.md`).
 
 4. When a cue is spoken twice, name which occurrence (`references/cues.md`).
 
-5. Keep (`references/regions.md`).
+5. Keep captions, the face, and the graphic in distinct regions (`references/regions.md`).
 
 6. Burn with ffmpeg (`references/burn.md`). Motion is `DeskTimeline`, and capture steps `__seek`.
 

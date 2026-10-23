@@ -21,7 +21,7 @@ Follow `docs/skill-frame.md`.
 
 1. Read with `AGENTS.md` (`references/read.md`).
 
-2. Read (`references/read.md`).
+2. Read `audience/AGENTS.md` and `audience.local/ideal-follower.md` when fit matters (`references/read.md`).
 
 3. If more than one workspace is listed, ask which, and stop (`references/read.md`).
 
@@ -41,17 +41,17 @@ Follow `docs/skill-frame.md`.
 
 11. Preview with `social.comments.reply` (`references/own-post.md`).
 
-12. Call with `social.comments.approve` (`references/own-post.md`).
+12. Call `social.comments.approve` after yes (`references/own-post.md`).
 
-13. Read (`references/send.md`).
+13. Read `sequence_stop_state` before a send is offered (`references/send.md`).
 
-14. Send with `unibox.context.thread_reply_send` (`references/send.md`).
+14. Send with `unibox.context.thread_reply_send` after yes on that text, and call `tools_get` first (`references/send.md`).
 
-15. Create with `integrations.calendar.events_create` (`references/calendar.md`).
+15. Create the meeting with `integrations.calendar.events_create` after owner yes (`references/calendar.md`).
 
-16. Quote with `visibility.research.web_search` and `visibility.research.urls_fetch` (`references/research.md`).
+16. Quote `visibility.research.web_search` and `visibility.research.urls_fetch` before a paid read, and run only after yes (`references/research.md`).
 
-17. Hand (`references/handover.md`).
+17. Hand over the route and the draft (`references/handover.md`).
 
 18. Record a rewrite in `brand.local/voice.md` (`references/voice.md`).
 ## Dreamstate tools

@@ -15,7 +15,7 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. Read (`references/listen.md`).
+1. Read the full transcript and listen to the candidate ranges (`references/listen.md`).
 
 2. Inspect each candidate range (`references/listen.md`).
 

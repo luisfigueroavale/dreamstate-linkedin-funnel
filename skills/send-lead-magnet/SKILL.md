@@ -24,7 +24,7 @@ Prepare a tracked link and the reply that delivers a giveaway. Follow `docs/skil
 
 4. Keep `dm_enabled` false until the owner says yes on that exact text (`references/rules.md`).
 
-5. Run (`references/checks.md`).
+5. Run `node skills/send-lead-magnet/scripts/check-delivery.mjs` before showing it (`references/checks.md`).
 
 6. Decide who is asking (`references/ask.md`). Match a whole-word keyword, plus the typo list.
 
@@ -44,7 +44,7 @@ Prepare a tracked link and the reply that delivers a giveaway. Follow `docs/skil
 
 14. Find threads with `unibox.inbox.unified_list` (`references/inbox.md`). Draft with `draft-thread-reply`.
 
-15. Keep private messages as the default (`references/public.md`).
+15. Keep private messages as the default, and a public link on that post needs a yes (`references/public.md`).
 
 16. After a live pass, verify with `social.outreach.keyword_dm_sends.list` (`references/verify.md`).
 

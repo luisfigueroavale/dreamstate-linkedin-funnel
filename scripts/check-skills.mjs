@@ -2,6 +2,7 @@ import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 // local
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 const root = path.resolve(import.meta.dirname, "..");
 const strict = process.argv.includes("--strict");
@@ -135,7 +136,7 @@ for (const file of walk(root)) {
   if (skillText || fixture) flagEmDash(rel);
 }
 
-const DOOR_FREE = new Set([
+export const DOOR_FREE = new Set([
   "whoami", "runs_get", "runs_events", "runs_list", "runs_cancel", "tools_search",
   "packs_list", "packs_get", "packs_route", "skills_list", "skills_get",
 ]);
@@ -147,6 +148,7 @@ const EXTRA_FREE = new Set([
 ]);
 const PAID_RUN = new Set(["tables.columns.run", "tables.table_sources.run"]);
 const ACTION_TOKEN = new Set(["send", "publish", "enroll", "schedule", "approve", "delete"]);
+const MODE_WORD = new Set(["read", "live", "dry_run", "smoke_test", "preview", "write", "quote"]);
 
 function idTokens(id) {
   return String(id).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
@@ -160,21 +162,28 @@ function yesText(use) {
 function paidText(use) {
   return /\bpaid\b/i.test(use) || /\b[1-9]\d*\s+credits?\b/.test(use);
 }
-function isFreeRead(id, use) {
+export function useBody(use) {
+  return String(use || "").replace(/^(?:plugin|catalog|to-check)(?:\s*,\s*(?:plugin|catalog|to-check))*\s+/i, "");
+}
+export function isFreeRead(id, use) {
+  const text = String(use || "");
   if (DOOR_FREE.has(id) || EXTRA_FREE.has(id)) return true;
-  if (hasAction(id) || yesText(use) || paidText(use) || /posts a public/i.test(use)) return false;
-  if (/free read|free external read|local read|free people or company|(?:^|\.\s+)Free\.|\bRead only\b/i.test(use)) return true;
-  if (/\b0 credits\b|costs 0/i.test(use)) return true;
-  if (/^(Read|List|Counts|State of|People already|Stored conversations|Comments waiting|The step ids|Price an unsaved|Page count)/i.test(use)) return true;
+  if (/\.list_resolved$/.test(id)) return true;
+  if (/\breversible\b/i.test(text)) return false;
+  if (hasAction(id) || yesText(text) || paidText(text) || /posts a public/i.test(text)) return false;
+  const body = useBody(text);
+  if (/free read|free external read|local read|free people or company|(?:^|\.\s+)Free\.|\bRead only\b/i.test(body)) return true;
+  if (/\b0 credits\b|costs 0/i.test(body)) return true;
+  if (/^(Read|List|Counts|State of|People already|Stored conversations|Comments waiting|The step ids|Price an unsaved)\b/i.test(body)) return true;
+  if (/^Page count\b/i.test(text)) return true;
   if (/(\.(get|list)|_(get|list))$/.test(id)) return true;
   return false;
 }
-function parseToolMap() {
-  const text = readFileSync(path.join(root, "docs/tool-map.md"), "utf8");
+export function parseToolMap(text) {
   const uses = new Map();
   const definitions = new Set();
   let inDef = false;
-  for (const line of text.split(/\n/)) {
+  for (const line of String(text).split(/\n/)) {
     if (/^## Definition ids/.test(line)) {
       inDef = true;
       continue;
@@ -188,10 +197,9 @@ function parseToolMap() {
     if (inDef) definitions.add(id);
     else if (!uses.has(id)) uses.set(id, cells.slice(1).join(" "));
   }
-  if (uses.size < 40) bad("docs/tool-map.md did not parse");
   return { uses, definitions };
 }
-function rowSide(mode) {
+export function rowSide(mode) {
   const value = mode.toLowerCase();
   if (value.includes("never") || value.includes("not this")) return "never";
   if (value.includes("definition") || value.includes("not tools_run")) return "definition";
@@ -213,7 +221,7 @@ function previewYes(id, use) {
 function outwardYes(id, use) {
   return sends(id, use) || yesText(use) || paidText(use) || PAID_RUN.has(id) || /posts a public/i.test(use);
 }
-function expectedNeed(id, mode, use) {
+export function expectedNeed(id, mode, use) {
   if (id === "tools_get" || id === "tools_run" || rowSide(mode) === "never") return "forbid";
   if (rowSide(mode) === "definition" || id.startsWith("source.") || id.startsWith("column.")) return "no";
   if (isFreeRead(id, use)) return "no";
@@ -222,9 +230,91 @@ function expectedNeed(id, mode, use) {
   if (side === "combined" || side === "outward") return outwardYes(id, use) ? "yes" : "no";
   return "no";
 }
+function refusesDry(use) {
+  return /refus(?:es|ed)\s+dry_run|no\s+dry_run|dry_run\s+unsupported|no\s+real\s+dry_run/i.test(use);
+}
+export function listedModes(id, use, definitions = new Set()) {
+  if (definitions.has(id) || id.startsWith("source.") || id.startsWith("column.")) return new Set(["definition id"]);
+  if (!use) return new Set(["read"]);
+  if (/\breversible\b/i.test(use)) return new Set(["write"]);
+  if (isFreeRead(id, use)) {
+    const modes = new Set(["read"]);
+    if (/use smoke_test/i.test(use)) modes.add("smoke_test");
+    return modes;
+  }
+  const modes = new Set();
+  const named = String(use).match(/modes\s+([a-z_]+)\s+and\s+([a-z_]+)/i);
+  if (named) {
+    modes.add(named[1].toLowerCase());
+    modes.add(named[2].toLowerCase());
+  }
+  if (/smoke_test/i.test(use)) modes.add("smoke_test");
+  if (/preview when|preview one|smoke_test to preview/i.test(use)) modes.add("preview");
+  if (/\bdry[_\s]run\b/i.test(use) && !refusesDry(use) && !/dry_run executes|dry_run request runs live/i.test(use)) {
+    modes.add("dry_run");
+  }
+  if (/(?:^|[.]\s+)Live\b|\blive (?:with|needs|sends|posts|repeats)\b|\bthen live\b/i.test(use)) modes.add("live");
+  if (modes.has("dry_run") && /dry.run first|dry_run, then|dry run, then/i.test(use)) modes.add("live");
+  if (modes.size === 0) {
+    if (/add a column|does not run/i.test(use)) modes.add("write");
+    else modes.add("live");
+  }
+  if (modes.has("live") && !refusesDry(use) && !/dry_run executes|dry_run request runs live/i.test(use)) {
+    modes.add("dry_run");
+  }
+  return modes;
+}
+export function modeTokens(mode) {
+  const value = String(mode || "").trim().toLowerCase();
+  if (value === "definition id") return ["definition id"];
+  return value.split(/[^a-z_]+/).filter((token) => MODE_WORD.has(token));
+}
+export function modeAllowed(mode, allowed) {
+  const tokens = modeTokens(mode);
+  return tokens.length > 0 && tokens.every((token) => allowed.has(token));
+}
+export function rowErrors(id, mode, need, use, definitions = new Set()) {
+  const errors = [];
+  const allowed = listedModes(id, use, definitions);
+  if (!modeAllowed(mode, allowed)) {
+    errors.push(`${id} mode ${mode} is not a mode docs/tool-map.md lists`);
+  }
+  if (isFreeRead(id, use) && !(mode === "read" && need === "no") && !(mode === "smoke_test" && need === "no" && allowed.has("smoke_test"))) {
+    errors.push(`${id} is a free read and must be read | no`);
+  }
+  const expected = expectedNeed(id, mode, use);
+  if (expected === "yes" && need !== "yes") errors.push(`${id} ${mode} needs yes`);
+  if (expected === "no" && need !== "no") errors.push(`${id} ${mode} is free and must say no`);
+  return errors;
+}
+export function compareRows(rows, useFor, definitions = new Set()) {
+  const byId = new Map();
+  for (const row of rows) {
+    if (!byId.has(row.id)) byId.set(row.id, []);
+    byId.get(row.id).push(row);
+  }
+  const errors = [];
+  for (const [id, list] of byId) {
+    const needs = new Set(list.map((row) => row.need));
+    if (needs.size < 2) continue;
+    const use = useFor(id) || "";
+    const allowed = listedModes(id, use, definitions);
+    const split = list.every((row) => {
+      if (!modeAllowed(row.mode, allowed)) return false;
+      const side = rowSide(row.mode);
+      if (row.need === "no") return side === "preview";
+      if (row.need === "yes") return side === "outward" || side === "combined";
+      return false;
+    });
+    if (!split) errors.push(`${id} disagrees across skills regardless of mode`);
+  }
+  return errors;
+}
 
-const { uses: toolUses, definitions } = parseToolMap();
+const { uses: toolUses, definitions } = parseToolMap(readFileSync(path.join(root, "docs/tool-map.md"), "utf8"));
+if (toolUses.size < 40) bad("docs/tool-map.md did not parse");
 const seenMode = new Map();
+const seenRows = [];
 for (const name of folders) {
   const text = readFileSync(path.join(skillRoot, name, "SKILL.md"), "utf8");
   for (const line of text.split(/\n/)) {
@@ -240,20 +330,18 @@ for (const name of folders) {
     const expected = expectedNeed(id, mode, use);
     if (expected === "forbid") bad(`${name}: ${id} ${mode} is not a tool row`);
     if (need !== "yes" && need !== "no") bad(`${name}: ${id} Needs yes is ${need}`);
-    if (isFreeRead(id, use) && (mode !== "read" || need !== "no")) {
-      bad(`${name}: ${id} is a free read and must be read | no`);
-    }
+    for (const message of rowErrors(id, mode, need, use, definitions)) bad(`${name}: ${message}`);
     if ((definitions.has(id) || id.startsWith("source.") || id.startsWith("column.")) && mode !== "definition id") {
       bad(`${name}: ${id} must be definition id | no`);
     }
-    if (expected === "yes" && need !== "yes") bad(`${name}: ${id} ${mode} needs yes`);
-    if (expected === "no" && need !== "no") bad(`${name}: ${id} ${mode} is free and must say no`);
     const key = `${id}\0${mode}`;
     const prior = seenMode.get(key);
     if (prior && prior !== need) bad(`${id} ${mode} is ${prior} in one skill and ${need} in ${name}`);
     seenMode.set(key, need);
+    seenRows.push({ name, id, mode, need });
   }
 }
+for (const message of compareRows(seenRows, (id) => toolUses.get(id) || "", definitions)) bad(message);
 
 for (const rel of ["brand/identity.md", "brand/voice.md", "brand/style.md", "audience/ideal-follower.md"]) {
   const text = readFileSync(path.join(root, rel), "utf8");

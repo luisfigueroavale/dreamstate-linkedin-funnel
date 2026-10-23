@@ -21,27 +21,27 @@ Shape a long recording as a designed opener plus the screen recording. Follow `d
 
 2. Plan graphic beats from the transcript when graphics cover the whole file (`references/shape.md`).
 
-3. Transcribe (`references/transcript.md`).
+3. Transcribe with a time on every word (`references/transcript.md`).
 
-4. Inspect (`references/transcript.md`).
+4. Inspect the recording, the transcript, the frame rate, and the audio (`references/transcript.md`).
 
 5. Write the source-range list (`references/transcript.md`).
 
-6. Build (`references/opener.md`).
+6. Build the opener with real pictures and short phrase captions (`references/opener.md`).
 
-7. Hold (`references/opener.md`).
+7. Hold one calm system through the opener (`references/opener.md`).
 
 8. Build that opener as `DeskTimeline` (`references/build.md`). Capture calls `__seek`.
 
 9. Cut the screen-recording body by source range only (`references/body.md`).
 
-10. Set (`references/body.md`).
+10. Set the mix by ear against the words, then measure the export (`references/body.md`).
 
-11. Assemble (`references/build.md`).
+11. Assemble the rendered opener, the cut body, and the close (`references/build.md`).
 
-12. Encode (`references/build.md`).
+12. Encode H.264 video and AAC audio at the recording frame rate (`references/build.md`).
 
-13. Keep (`references/build.md`).
+13. Keep the editable scene, the cut list, and the check notes beside the file (`references/build.md`).
 ## Dreamstate tools
 
 None. Local files only.

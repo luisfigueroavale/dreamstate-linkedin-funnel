@@ -18,9 +18,9 @@ Set or revise the owner's visual identity, token values, and graphic rules from 
 
 2. Write only values the owner supplied (`references/identity.md`).
 
-3. Offer (`references/identity.md`).
+3. Offer a direction only when they asked for design work, and leave `Status: blank` until that yes (`references/identity.md`).
 
-4. Put (`references/tokens.md`).
+4. Put visual rules in `brand.local/style.md` and exact values in `brand.local/tokens.css` (`references/tokens.md`).
 
 5. Those names include `--color-accent-2` and `--headline-gradient` (`references/tokens.md`).
 
@@ -28,9 +28,9 @@ Set or revise the owner's visual identity, token values, and graphic rules from 
 
 7. Before a token change, list consumers and say which renders are stale (`references/consumers.md`).
 
-8. Run (`references/check.md`).
+8. Run `npm run check`, and render through `scripts/frame-page.mjs` (`references/check.md`).
 
-9. Hand (`references/check.md`).
+9. Hand back the files you changed, and any path that still has the old value (`references/check.md`).
 ## Dreamstate tools
 
 None. Local files only.

@@ -22,7 +22,7 @@ After a post is live, collect engagers, score company and person apart, and draf
 
 4. Do not start another watcher (`references/harvest.md`).
 
-5. Stop (`references/rubric.md`).
+5. Stop and run `collect-owner-context` when Ideal Customer is empty, and stop if `audience.local/ideal-follower.md` is missing or blank (`references/rubric.md`).
 
 6. Add with `column.ai_fit_score` and `tables.columns.add` (`references/rubric.md`).
 
@@ -34,9 +34,9 @@ After a post is live, collect engagers, score company and person apart, and draf
 
 10. Poll `runs_get` (`references/fit.md`). If `npm run fit` fails, rewrite and dry-run again.
 
-11. Set with `tables.auto_run.set` (`references/fit.md`).
+11. Set standing runs with `tables.auto_run.set` after owner yes (`references/fit.md`).
 
-12. Hand (`references/next.md`).
+12. Hand a file ask to `send-lead-magnet` first (`references/next.md`).
 
 13. Read with `social.comments.queue_list` (`references/comments.md`).
 
@@ -44,7 +44,7 @@ After a post is live, collect engagers, score company and person apart, and draf
 
 15. Preview with `social.comments.reply` (`references/comments.md`).
 
-16. Approve with `social.comments.approve` (`references/comments.md`).
+16. Approve with `social.comments.approve` after yes on that text (`references/comments.md`).
 
 17. Read with `visibility.analytics_query` (`references/analytics.md`).
 

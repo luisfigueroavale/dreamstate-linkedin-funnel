@@ -18,7 +18,7 @@ Build a short draft sequence for people who already fit, with a daily cap and fa
 
 2. A required unknown is a hold and is not enrolled (`references/cohort.md`).
 
-3. Write (`references/copy.md`).
+3. Write three steps or fewer from what they did, and ask one question (`references/copy.md`).
 
 4. Take with `sequence.sequences.step_options` (`references/sequence.md`).
 
@@ -30,15 +30,15 @@ Build a short draft sequence for people who already fit, with a daily cap and fa
 
 8. Preview with `sequence.sequences.copy_preview` (`references/preview.md`).
 
-9. Name (`references/activate.md`).
+9. Name both `max_new_enrollments_per_day` and `max_live_sends` in the ask (`references/activate.md`).
 
 10. Activate with `sequence.sequences.activate_audience` (`references/activate.md`).
 
-11. Record (`references/record.md`).
+11. Record the enrollment id, the variant, and the run id (`references/record.md`).
 
 12. Do not invent an id (`references/record.md`).
 
-13. Resume with `sequence.sequences.resume` (`references/recover.md`).
+13. Resume with `sequence.sequences.resume` only after owner yes (`references/recover.md`).
 
 14. Return the counts, the held reasons, the state, and the budget (`references/record.md`).
 ## Dreamstate tools

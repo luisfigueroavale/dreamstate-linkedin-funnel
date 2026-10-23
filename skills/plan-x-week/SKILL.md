@@ -22,17 +22,17 @@ Plan X posts with the owner for the next 7 days from three lanes. Follow `docs/s
 
 1. If it returns two or more workspaces, ask which and stop (`references/calls.md`).
 
-2. Call (`references/calls.md`).
+2. Call `tools_get` before every `tools_run`, and the fetched schema wins (`references/calls.md`).
 
-3. Read (`references/window.md`).
+3. Read every `vault/week/*-x-verdicts.md`, oldest first (`references/window.md`).
 
 4. Call with `social.content.artifact_list` (`references/window.md`).
 
-5. Search (`references/window.md`).
+5. Search the vault with `search-vault` (`references/window.md`).
 
 6. Call `visibility.analytics_query` (`references/pattern.md`).
 
-7. Build (`references/lane-a.md`).
+7. Build lane A from one LinkedIn piece (`references/lane-a.md`).
 
 8. Read posts they can show with `visibility.radar.inspiration_x_list` (`references/lane-b.md`).
 
@@ -42,7 +42,7 @@ Plan X posts with the owner for the next 7 days from three lanes. Follow `docs/s
 
 11. Call with `visibility.research.web_search` (`references/news.md`).
 
-12. Ask (`references/lane-c.md`).
+12. Ask once what is launching for lane C (`references/lane-c.md`).
 
 13. When they only want today, write one post and skip the slate (`references/today.md`, `references/write.md`).
 
@@ -50,17 +50,17 @@ Plan X posts with the owner for the next 7 days from three lanes. Follow `docs/s
 
 15. After they pick, draft those posts (`references/write.md`).
 
-16. Save (`references/save.md`).
+16. Save each post as `vault/posts/<slug>.md` (`references/save.md`).
 
-17. Call with `social.content.artifact_create` (`references/save.md`).
+17. Call `social.content.artifact_create` when they ask to store a pick (`references/save.md`).
 
-18. Call with `social.content.plan` (`references/save.md`).
+18. Call `social.content.plan` only when they asked for the day mark (`references/save.md`).
 
 19. Call `social.content.schedule` only after yes on that text, that media, and that time (`references/save.md`).
 
 20. Call with `social.content.approve` (`references/save.md`).
 
-21. Append (`references/verdicts.md`).
+21. Append rows to `vault/week/<date>-x-verdicts.md` (`references/verdicts.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |

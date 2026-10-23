@@ -17,23 +17,23 @@ Follow `docs/skill-frame.md`.
 
 1. Start from a sourced idea (`references/read.md`).
 
-2. Read (`references/read.md`).
+2. Read the filled reader file (`audience.local/ideal-follower.md`), the voice file (`brand.local/voice.md`), and the whole primary source they named, not an excerpt, before any sentence (`references/read.md`).
 
-3. Name (`references/argument.md`).
+3. Name the question the reader is actually asking, and the answer this piece can support (`references/argument.md`).
 
 4. Make one argument (`references/argument.md`).
 
 5. Map the argument before drafting (`references/argument.md`).
 
-6. Check (`references/argument.md`).
+6. Check the source behind each claim before drafting (`references/argument.md`).
 
-7. Draft (`references/draft.md`).
+7. Draft so each section promises something concrete (`references/draft.md`).
 
-8. Edit (`references/edit.md`).
+8. Edit for logical order, repetition, and absolutes the source does not support (`references/edit.md`).
 
-9. Return (`references/return.md`).
+9. Return a title, an optional second title, the full draft, and source notes that sit outside the copy (`references/return.md`).
 
-10. Save (`references/return.md`).
+10. Save the file they asked for (`references/return.md`).
 ## Dreamstate tools
 
 None. Local files only.
