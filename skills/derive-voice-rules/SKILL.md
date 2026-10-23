@@ -14,7 +14,7 @@ Derive voice rules from the owner's own samples and edits. Follow `docs/skill-fr
 
 ## Steps
 
-1. If the voice file is missing, copy `brand/voice.md` to `brand.local/voice.md` (`references/read.md`).
+1. Read `brand.local/identity.md`, `brand.local/voice.md`, and `vault/voice/`, and if the voice file is missing, copy `brand/voice.md` to `brand.local/voice.md` (`references/read.md`).
 
 2. Save a new sample in `vault/voice/` under its filename (`references/samples.md`).
 
@@ -24,9 +24,9 @@ Derive voice rules from the owner's own samples and edits. Follow `docs/skill-fr
 
 5. Write into existing `brand.local/voice.md` sections (`references/write.md`).
 
-6. Write a calibration draft only when asked (`references/calibrate.md`).
+6. Write a calibration draft only when asked, and read `audience.local/ideal-follower.md` first (`references/calibrate.md`).
 
-7. Hand back the guide (`references/empty.md`).
+7. Hand back the guide, and do not post, send, or spend (`references/empty.md`).
 ## Dreamstate tools
 
 None. Local files only.

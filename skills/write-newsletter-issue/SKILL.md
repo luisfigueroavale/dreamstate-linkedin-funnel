@@ -15,15 +15,15 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. If the voice file or the reader file is missing or blank, stop (`references/read.md`).
+1. Read `brand.local/voice.md`, the owner files in `vault/voice/`, `audience.local/ideal-follower.md`, the week brief, and the offer pages `brand.local/identity.md` names, and stop if the voice file or the reader file is missing or blank (`references/read.md`).
 
 2. Read every supplied source from start to finish (`references/read.md`).
 
-3. Other ideas wait for a later issue (`references/shape.md`).
+3. Keep one useful idea and its promise to this reader, and leave other ideas for a later issue (`references/shape.md`).
 
 4. Draft four moves, in order (`references/shape.md`).
 
-5. Open with `visibility.research.urls_fetch` (`references/links.md`).
+5. Open that page with `visibility.research.urls_fetch` per `docs/calls.md` before the sentence uses it (`references/links.md`).
 
 6. Return the subject, the preview, the paste-ready body, and the outside list (`references/return.md`).
 ## Dreamstate tools

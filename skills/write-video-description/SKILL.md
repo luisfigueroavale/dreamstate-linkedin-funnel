@@ -14,7 +14,7 @@ Write a paste-ready description, links, and chapters from the finished cut or a 
 
 ## Steps
 
-1. Read the promise on the brief and the offer links the owner already wrote (`references/opener.md`).
+1. Start from the finished cut, or from a transcript that already carries times, and read the promise on the brief and the offer links the owner already wrote (`references/opener.md`).
 
 2. Write the opener as one sentence of no more than about 16 words (`references/opener.md`).
 

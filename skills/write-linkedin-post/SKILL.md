@@ -16,7 +16,7 @@ Draft or revise one LinkedIn post from the vault, the brand files, and allowed p
 
 1. Read the Proof page, Tone of Voice, `brand.local/voice.md`, the pillar, funnel, concept, and hook notes, and the post file (`references/read.md`).
 
-2. The reader is `audience.local/ideal-follower.md` (`references/read.md`).
+2. Read the whole source named in the post's `source` field, and treat `audience.local/ideal-follower.md` as the reader (`references/read.md`).
 
 3. Read lines they wrote in `vault/voice/` and `vault/sources/`, and get approval before a personal story that is not already public (`references/read.md`).
 
@@ -24,17 +24,17 @@ Draft or revise one LinkedIn post from the vault, the brand files, and allowed p
 
 5. Let the material pick the shape and keep it (`references/draft.md`).
 
-6. The body has to carry it (`references/draft.md`).
+6. Write the opening with `write-opening-lines`, and make the body carry it (`references/draft.md`).
 
 7. Remove a line that adds no information, then read the opening, the first line of each paragraph, and the ending as one argument (`references/draft.md`).
 
-8. Each one has to match the file it came from, and that file has to be cleared for public use (`references/draft.md`).
+8. Verify facts, quotes, dates, and numbers, and make each one match the file it came from once that file is cleared for public use (`references/draft.md`).
 
 9. Write the draft to `vault/posts/<slug>.md` with the fields in `vault/fields.md`, and leave `publish_date` empty (`references/file.md`).
 
 10. Hand them the comment as text (`references/file.md`). Do not publish it.
 
-11. Call `whoami` before a store (`references/store.md`).
+11. Call `whoami` before a store, and if more than one workspace is listed, stop until they name one (`references/store.md`).
 
 12. Read an existing stored draft with `social.content.artifact_get` and do not create another (`references/store.md`).
 

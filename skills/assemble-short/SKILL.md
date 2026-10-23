@@ -33,7 +33,7 @@ Follow `docs/skill-frame.md`.
 
 9. Use `add-short-overlay` only when a graphic earns the moment (`references/order.md`).
 
-10. Run `check-short-export` (`references/order.md`).
+10. Run `check-short-export` after captions and any overlay (`references/order.md`).
 
 11. Compare each name, number, and unit with the recording, by hand (`references/order.md`).
 

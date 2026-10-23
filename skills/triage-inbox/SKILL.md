@@ -18,17 +18,17 @@ List inbox threads that need a person and hand them to a reply draft. Follow `do
 
 ## Steps
 
-1. Ids are in `docs/tool-map.md` (`references/scope.md`).
+1. Stay on the account and the thread the owner named, and take ids from `docs/tool-map.md` (`references/scope.md`).
 
 2. Call `tools_get` before `tools_run`, and the fetched schema wins (`references/scope.md`).
 
-3. List with `unibox.inbox.unified_list` (`references/list.md`).
+3. List threads with `unibox.inbox.unified_list` (`references/list.md`).
 
 4. Read the whole thread before a classification or a draft (`references/read.md`).
 
-5. dry_run, then live with `quote_hash`, `max_credits`, and an `idempotency_key` (`references/read.md`).
+5. Review one thread with `unibox.inbox.analyze` as dry_run, then live with `quote_hash`, `max_credits`, and an `idempotency_key` (`references/read.md`).
 
-6. Resolve with `senders.linkedin_accounts.list` and `senders.social_accounts.list` (`references/linkedin.md`).
+6. Resolve accounts with `senders.linkedin_accounts.list` and `senders.social_accounts.list` (`references/linkedin.md`).
 
 7. Hand one thread to `draft-thread-reply`, and do not send (`references/reply.md`).
 

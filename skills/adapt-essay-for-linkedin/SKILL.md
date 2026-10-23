@@ -16,7 +16,7 @@ Make a LinkedIn article the owner can review from the finished essay. Follow `do
 
 1. Call `whoami` before the first write (`references/calls.md`).
 
-2. The schema just fetched wins (`references/calls.md`).
+2. Call `tools_get` before every `tools_run`, and let the schema just fetched win (`references/calls.md`).
 
 3. Read the finished essay, the newest picture set, the HTML for each figure, the figure list, and the Proof page (`references/read.md`).
 
@@ -34,11 +34,11 @@ Make a LinkedIn article the owner can review from the finished essay. Follow `do
 
 10. Write the short description and the share post (`references/share.md`).
 
-11. Call `social.content.article_enabled_get` (`references/calls.md`).
+11. Call `social.content.article_enabled_get` first, because it takes no params (`references/calls.md`).
 
 12. Draft the article with `social.content.article_create_schedule` only after the owner asks for a saved draft (`references/calls.md`).
 
-13. Update with `social.content.article_update` (`references/calls.md`).
+13. Update that draft with `social.content.article_update` (`references/calls.md`).
 
 14. Call `social.content.article_delivery_create` only after a yes on that article (`references/calls.md`).
 

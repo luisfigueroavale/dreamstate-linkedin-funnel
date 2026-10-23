@@ -26,13 +26,13 @@ Write the words and the shot list the owner can record. Follow `docs/skill-frame
 
 7. Write the outline in `references/outline.md`. Promise the end state first.
 
-8. Write each beat in `references/beats.md`.
+8. Write each beat in `references/beats.md`, because no source means no beat.
 
 9. Match the requested runtime (`references/time.md`). Time it, then trim or restore.
 
-10. Name the bracket, the visual, and the source (`references/deliver.md`).
+10. Return the script and the shot list, and name the bracket, the visual, and the source (`references/deliver.md`).
 
-11. Run `brand/taste.md` before the owner sees the pages (`references/deliver.md`).
+11. Run `brand/taste.md` before the owner sees the pages, and say that nothing was recorded (`references/deliver.md`).
 ## Dreamstate tools
 None. Local files only.
 

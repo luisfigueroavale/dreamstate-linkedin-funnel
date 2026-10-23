@@ -14,15 +14,15 @@ Set or revise the owner's visual identity, token values, and graphic rules from 
 
 ## Steps
 
-1. A missing file, an empty line, or `Status: blank` means ask (`references/files.md`).
+1. Read the root `AGENTS.md` and `brand/AGENTS.md` before you set a value, and ask when a file is missing, a line is empty, or the file says `Status: blank` (`references/files.md`).
 
-2. Write only values the owner supplied (`references/identity.md`).
+2. Record intent in `brand.local/identity.md`, and write only values the owner supplied (`references/identity.md`).
 
 3. Offer a direction only when they asked for design work, and leave `Status: blank` until that yes (`references/identity.md`).
 
 4. Put visual rules in `brand.local/style.md` and exact values in `brand.local/tokens.css` (`references/tokens.md`).
 
-5. Those names include `--color-accent-2` and `--headline-gradient` (`references/tokens.md`).
+5. Use the gradient for headline text when the owner set it and `--color-accent` when that value is still unset, and those names include `--color-accent-2` and `--headline-gradient` (`references/tokens.md`).
 
 6. File licensed assets under `brand.local/assets/` (`references/assets.md`). Do not vendor fonts.
 

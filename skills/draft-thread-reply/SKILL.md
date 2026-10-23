@@ -19,11 +19,11 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. Read with `AGENTS.md` (`references/read.md`).
+1. Read `AGENTS.md`, then the filled files `brand/AGENTS.md` points at (`references/read.md`).
 
 2. Read `audience/AGENTS.md` and `audience.local/ideal-follower.md` when fit matters (`references/read.md`).
 
-3. If more than one workspace is listed, ask which, and stop (`references/read.md`).
+3. Call `whoami` before the first write or spend, and if more than one workspace is listed, ask which and stop (`references/read.md`).
 
 4. Open the thread in `docs/conversations.md` (`references/route.md`).
 
@@ -35,17 +35,17 @@ Follow `docs/skill-frame.md`.
 
 8. Call `tools_get` before `tools_run` on `unibox.inbox.analyze` (`references/analyze.md`). Not a way to look busy.
 
-9. Read with `unibox.inbox.reply_drafts_list` (`references/save.md`).
+9. Read `unibox.inbox.reply_drafts_list` with no dry_run (`references/save.md`).
 
-10. Save with `unibox.inbox.reply_draft_edit` (`references/save.md`).
+10. Save the draft with `unibox.inbox.reply_draft_edit`, and say nothing was sent (`references/save.md`).
 
-11. Preview with `social.comments.reply` (`references/own-post.md`).
+11. Preview `social.comments.reply` for an own-post reply (`references/own-post.md`).
 
 12. Call `social.comments.approve` after yes (`references/own-post.md`).
 
 13. Read `sequence_stop_state` before a send is offered (`references/send.md`).
 
-14. Send with `unibox.context.thread_reply_send` after yes on that text, and call `tools_get` first (`references/send.md`).
+14. Send that text with `unibox.context.thread_reply_send` after yes on that text, and call `tools_get` first (`references/send.md`).
 
 15. Create the meeting with `integrations.calendar.events_create` after owner yes (`references/calendar.md`).
 

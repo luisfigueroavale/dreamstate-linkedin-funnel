@@ -2,7 +2,17 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import path from "node:path";
-import { compareRows, isFreeRead, listedModes, parseToolMap, rowErrors } from "./check-skills.mjs";
+import {
+  clauseMissing,
+  compareRows,
+  conditionClauses,
+  isFreeRead,
+  listedModes,
+  neverStepErrors,
+  parseToolMap,
+  rowErrors,
+  stepShapeErrors,
+} from "./check-skills.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const { uses, definitions } = parseToolMap(readFileSync(path.join(root, "docs/tool-map.md"), "utf8"));
@@ -52,6 +62,58 @@ test("plugin Read cells and ids ending in list_resolved are free reads", () => {
   assert.deepEqual(rowErrors(id, "read", "no", use, definitions), []);
   const live = rowErrors(id, "live", "no", use, definitions);
   assert.ok(live.some((error) => /free read/.test(error) || /not a mode/.test(error)));
+});
+
+test("a step cannot name a never-call id unless the sentence starts with Do not or Never", () => {
+  const banned = ["sequence.x.auto_engagements.replace"];
+  const called = neverStepErrors(
+    "14. Do with `sequence.x.auto_engagements.replace` (`references/keep.md`).",
+    banned,
+  );
+  assert.ok(called.some((error) => error.includes("sequence.x.auto_engagements.replace")));
+  assert.deepEqual(
+    neverStepErrors(
+      "14. Do not schedule, publish, or reply, and never call `sequence.x.auto_engagements.replace` (`references/keep.md`).",
+      banned,
+    ),
+    [],
+  );
+  assert.ok(
+    neverStepErrors("8. Leave `tables.x_post_engagers.run` out of this scan.", ["tables.x_post_engagers.run"]).length > 0,
+  );
+  assert.deepEqual(
+    neverStepErrors("8. Do not call `tables.x_post_engagers.run` in this scan.", ["tables.x_post_engagers.run"]),
+    [],
+  );
+  assert.deepEqual(neverStepErrors("6. Add two `column.ai_fit_score` columns.", ["column.ai"]), []);
+});
+
+test("a step needs five words and cannot be a verb-with fragment", () => {
+  const clipped = stepShapeErrors("9. Re with `social.channels_list` (`references/account.md`).");
+  assert.ok(clipped.some((error) => /fewer than 5 words/.test(error)));
+  assert.ok(clipped.some((error) => /verb-with fragment/.test(error)));
+  assert.ok(stepShapeErrors("7. Else with `tables.columns.add` (`references/draft.md`).").some((error) => /verb-with/.test(error)));
+  assert.deepEqual(
+    stepShapeErrors("9. Re-read the channel row with `social.channels_list` (`references/account.md`)."),
+    [],
+  );
+});
+
+test("if, only, when, at least, and after owner yes clauses are found when dropped", () => {
+  const ask = conditionClauses(
+    "10. Call `tools_get`, then `social.content.artifact_create`, only if they ask to store the copy (`references/deliver.md`).",
+  );
+  const askClause = ask.find((clause) => /only if they ask to store the copy/i.test(clause));
+  assert.ok(askClause);
+  assert.equal(clauseMissing(askClause, "Call `tools_get`, then `social.content.artifact_create`, only if they ask to store the copy."), false);
+  assert.equal(clauseMissing(askClause, "Call `social.content.artifact_create`."), true);
+
+  const rows = conditionClauses("8. Preview at least 3 rows, including one thin row, with `sequence.sequences.copy_preview`.");
+  assert.ok(rows.some((clause) => /at least 3 rows, including one thin row/i.test(clause)));
+  const yes = conditionClauses("11. Set standing runs with `tables.auto_run.set` after owner yes.");
+  assert.ok(yes.some((clause) => /after owner yes/i.test(clause)));
+  const open = conditionClauses("6. Use `visibility.research.web_search` when local files leave the question open.");
+  assert.ok(open.some((clause) => /when local files leave the question open/i.test(clause)));
 });
 
 test("a reversible 0-credit attach is write | no", () => {

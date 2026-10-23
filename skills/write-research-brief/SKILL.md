@@ -14,25 +14,25 @@ Build an evidence brief from primary sources, with implications and open questio
 - Owner facts go through `collect-owner-context` only.
 
 ## Steps
-1. A blank reader file stops the brief (`references/question.md`).
+1. Write the question, the audience, the time window, and the decision first, and stop the brief when the reader file is blank (`references/question.md`).
 
 2. Use the cheapest source first (`references/sources.md`).
 
-3. Do not search to relocate it (`references/sources.md`).
+3. If you already have only the URL, fetch it, and do not search to relocate it (`references/sources.md`).
 
 4. Call `whoami` before the first spend (`references/calls.md`).
 
 5. Call `tools_get` before `tools_run` (`references/calls.md`).
 
-6. Use with `visibility.research.web_search` (`references/calls.md`).
+6. Use `visibility.research.web_search` when local files leave the question open (`references/calls.md`).
 
-7. Use with `visibility.research.urls_fetch` (`references/calls.md`).
+7. Use `visibility.research.urls_fetch` for a known URL (`references/calls.md`).
 
 8. Do not attach or run `source.account_posts_linkedin_profile` or `source.linkedin_posts_search` (`references/calls.md`).
 
 9. Write each evidence row (`references/rows.md`). Cite a vault file, a named page, or this call's figure, with the capability id.
 
-10. If that path is taken, add a slug (`references/file.md`).
+10. Write `vault/sources/<date>-brief.md`, and if that path is taken, add a slug (`references/file.md`).
 
 11. Record the path in `vault/sources/README.md` (`references/file.md`).
 

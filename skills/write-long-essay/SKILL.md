@@ -21,7 +21,7 @@ Follow `docs/skill-frame.md`.
 
 3. Name the question the reader is actually asking, and the answer this piece can support (`references/argument.md`).
 
-4. Make one argument (`references/argument.md`).
+4. Make one argument and keep the essay on that argument (`references/argument.md`).
 
 5. Map the argument before drafting (`references/argument.md`).
 

@@ -95,6 +95,67 @@ const WRITING = [
   "write-x-post",
 ];
 
+export function stepLines(text) {
+  const section = text.match(/^## Steps\s*\n([\s\S]*?)(?=^## )/m);
+  if (!section) return [];
+  return section[1].split("\n").map((line) => line.trim()).filter((line) => /^\d+\.\s/.test(line));
+}
+
+export function neverCallIds(text) {
+  const line = text.match(/^Never call:\s*(.+)$/m);
+  if (!line) return [];
+  return [...line[1].matchAll(/`([^`]+)`/g)].map((match) => match[1]);
+}
+
+export function mentionsId(sentence, id) {
+  const escaped = String(id).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp("`?" + escaped + "`?(?!\\.[A-Za-z0-9_])(?![A-Za-z0-9_])").test(sentence);
+}
+
+export function neverStepErrors(stepLine, ids) {
+  const body = String(stepLine).replace(/^\d+\.\s*/, "");
+  const sentences = body.split(/(?<=[.!?])\s+(?=[A-Z])/);
+  const errors = [];
+  for (const sentence of sentences) {
+    if (/^(Do not|Never)\b/.test(sentence)) continue;
+    for (const id of ids) {
+      if (mentionsId(sentence, id)) errors.push(`${id} is on the Never call line`);
+    }
+  }
+  return errors;
+}
+
+export function stepShapeErrors(stepLine) {
+  const errors = [];
+  const line = String(stepLine).trim();
+  const body = line.replace(/^\d+\.\s*/, "").trim();
+  const words = body.split(/\s+/).filter(Boolean);
+  if (words.length < 5) errors.push("step has fewer than 5 words");
+  if (/^\d+\. \w+ with `/.test(line)) errors.push("step is a verb-with fragment");
+  return errors;
+}
+
+export function conditionClauses(stepText) {
+  const body = String(stepText)
+    .replace(/^\d+\.\s*/, "")
+    .replace(/\(`references\/[^`]+`\)/g, " ");
+  const clauses = [];
+  for (const sentence of body.split(/(?<=[.!?])\s+/)) {
+    const pattern = /\b(?:after owner yes|at least|only|when|if)\b/gi;
+    let match;
+    while ((match = pattern.exec(sentence))) {
+      const clause = sentence.slice(match.index).replace(/\s+/g, " ").trim().replace(/[.,;:]+$/, "");
+      if (clause) clauses.push(clause);
+    }
+  }
+  return clauses;
+}
+
+export function clauseMissing(clause, haystack) {
+  const norm = (value) => String(value).replace(/\s+/g, " ").trim().toLowerCase();
+  return !norm(haystack).includes(norm(clause));
+}
+
 for (const name of folders) {
   const file = path.join(skillRoot, name, "SKILL.md");
   const text = readFileSync(file, "utf8");
@@ -112,6 +173,11 @@ for (const name of folders) {
   }
   if (WRITING.includes(name) && !text.includes("Follow the skill-frame writing rules.")) {
     bad(`${name}: missing the skill-frame writing rules`);
+  }
+  const bannedIds = neverCallIds(text);
+  for (const line of stepLines(text)) {
+    for (const message of stepShapeErrors(line)) bad(`${name}: ${message}: ${line}`);
+    for (const message of neverStepErrors(line, bannedIds)) bad(`${name}: ${message}: ${line}`);
   }
 }
 

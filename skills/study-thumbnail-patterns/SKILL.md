@@ -16,21 +16,21 @@ Note repeating thumbnail patterns in a set, and brief directions. Follow `docs/s
 
 ## Steps
 
-1. It is a definition id, not a `tools_run` id (`references/source.md`).
+1. Resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`, which is a definition id, not a `tools_run` id (`references/source.md`).
 
-2. Attach with `tables.table_sources.attach` (`references/source.md`).
+2. Attach that definition with `tables.table_sources.attach` (`references/source.md`).
 
 3. Run `tables.table_sources.run` only after the quote and the owner's yes (`references/source.md`).
 
 4. When that definition is not resolved, use the set the owner pasted or a tool response they supplied (`references/source.md`, `references/set.md`).
 
-5. Judge at 1280×720 and at 320×180 (`references/still.md`).
+5. Note text, face or UI, numeral size, colour, and the first eye-hit on each still, and judge at 1280×720 and at 320×180 (`references/still.md`).
 
 6. Split overused from useful (`references/patterns.md`).
 
 7. Keep colour from `brand.local` (`references/concepts.md`). Stop if that file is blank or missing.
 
-8. The owner picks before a frame is built (`references/concepts.md`).
+8. Write four to six concepts for `design-video-thumbnail`, and let the owner pick before a frame is built (`references/concepts.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |

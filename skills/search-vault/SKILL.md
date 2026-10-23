@@ -15,7 +15,7 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. Start at `vault/README.md` (`references/search.md`).
+1. Search this checkout's `vault/` before a draft and before a claim about the owner's prior work, and start at `vault/README.md` (`references/search.md`).
 
 2. Read the whole file behind every hit before you rely on it (`references/search.md`).
 

@@ -16,7 +16,7 @@ Define pillars, topics, and subtopics, and map each topic to a funnel job. Follo
 
 1. Read `audience/AGENTS.md`, then `audience.local/ideal-follower.md`, and stop if that file is missing or still says `Status: blank` (`references/read.md`).
 
-2. Stop if it is missing or blank (`references/read.md`).
+2. Read `brand.local/identity.md`, and stop if it is missing or blank (`references/read.md`).
 
 3. Read `vault/notes/funnel-stages.md` and `vault/notes/pillars.md` before you add a line (`references/read.md`).
 

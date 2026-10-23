@@ -19,7 +19,7 @@ Follow `docs/skill-frame.md`.
 
 2. Confirm the files are on this disk before a long encode (`references/plan.md`). Leave every recording untouched.
 
-3. Read `skills/render-captioned-video/scripts/plan.example.json` (`references/plan.md`).
+3. Read the plan shape in `skills/render-captioned-video/scripts/plan.example.json` (`references/plan.md`).
 
 4. Derive output time from each keep (`references/clock.md`). Do not keep a second clock by hand.
 
@@ -35,7 +35,7 @@ Follow `docs/skill-frame.md`.
 
 10. Look and listen once (`references/after.md`).
 
-11. Run `check-short-export` (`references/after.md`).
+11. Run `check-short-export`, and keep the project and the list next to the export (`references/after.md`).
 ## Dreamstate tools
 
 None. Local files only.

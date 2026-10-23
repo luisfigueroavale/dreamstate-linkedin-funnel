@@ -14,23 +14,23 @@ Save interviews, notes, and writing the owner supplies, then file only the lines
 
 ## Steps
 
-1. There is no `context/` tree (`references/read.md`).
+1. Read `AGENTS.md`, the company docs, the interview, and `vault/sources/`, because there is no `context/` tree (`references/read.md`).
 
-2. Leave every other answer blank (`references/read.md`).
+2. Ask only blank interview lines this task needs, and leave every other answer blank (`references/read.md`).
 
-3. Save exact material in a new dated folder under `vault/sources/` (`references/sources.md`).
+3. Save exact material in a new dated folder under `vault/sources/`, and do not commit (`references/sources.md`).
 
 4. File positioning, the reader, and the buyer on the pages the evidence supports (`references/pages.md`).
 
-5. If it exists, leave it (`references/pages.md`).
+5. Add Product Information only if that page is missing, and if it exists, leave it (`references/pages.md`).
 
 6. File accepted samples in `vault/voice/` and supplied visual values (`references/voice.md`). Do not draw a face.
 
-7. Call `whoami` before the first write (`references/compose.md`).
+7. Call `whoami` before the first write, and if more than one workspace is listed, ask which one and stop (`references/compose.md`).
 
-8. Compose with `knowledge.brain.context.compose_pages` (`references/compose.md`).
+8. Compose the pages with `knowledge.brain.context.compose_pages` after `tools_get`, and let the schema win (`references/compose.md`).
 
-9. Live repeats `quote_hash` only after the yes matches (`references/gates.md`).
+9. Run `tools_run` with `dry_run` first, and on live repeat `quote_hash` only after the yes matches (`references/gates.md`).
 
 10. Poll `runs_get` on a run id (`references/compose.md`).
 

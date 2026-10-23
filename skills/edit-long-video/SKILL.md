@@ -17,7 +17,7 @@ Shape a long recording as a designed opener plus the screen recording. Follow `d
 
 ## Steps
 
-1. This brief and this footage choose the treatment (`references/shape.md`).
+1. Make one finished file from the recording they gave you, and let this brief and this footage choose the treatment (`references/shape.md`).
 
 2. Plan graphic beats from the transcript when graphics cover the whole file (`references/shape.md`).
 

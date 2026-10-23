@@ -21,15 +21,15 @@ Follow `docs/skill-frame.md`.
 
 1. Read `vault/notes/channel-ledger.md` when it exists, and create it on the first ledger pass (`references/read-first.md`).
 
-2. Read Proof, `audience.local/ideal-follower.md`, `brand.local/identity.md`, the pillar note, the funnel note, and a recent wave note (`references/read-first.md`).
+2. Read Proof, `audience.local/ideal-follower.md`, `brand.local/identity.md`, the pillar note, the funnel note, and a recent wave note, and stop if the follower file or the identity file is missing or `Status: blank` (`references/read-first.md`).
 
 3. Write the niche in one line before gate 1 (`references/read-first.md`).
 
 4. Run `brand/taste.md` before you hand over the slate or the script.
 
-5. It is a definition id, not a `tools_run` id (`references/measure.md`).
+5. Resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`, which is a definition id, not a `tools_run` id (`references/measure.md`).
 
-6. Attach with `tables.table_sources.attach` (`references/measure.md`).
+6. Attach that definition with `tables.table_sources.attach` (`references/measure.md`).
 
 7. Run `tables.table_sources.run` only after the quote and the owner's yes (`references/measure.md`).
 

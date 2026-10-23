@@ -20,33 +20,33 @@ Plan X posts with the owner for the next 7 days from three lanes. Follow `docs/s
 
 ## Steps
 
-1. If it returns two or more workspaces, ask which and stop (`references/calls.md`).
+1. Call `whoami` before the first write or the first spend, and if it returns two or more workspaces, ask which and stop (`references/calls.md`).
 
 2. Call `tools_get` before every `tools_run`, and the fetched schema wins (`references/calls.md`).
 
 3. Read every `vault/week/*-x-verdicts.md`, oldest first (`references/window.md`).
 
-4. Call with `social.content.artifact_list` (`references/window.md`).
+4. Call `social.content.artifact_list` for the window (`references/window.md`).
 
 5. Search the vault with `search-vault` (`references/window.md`).
 
-6. Call `visibility.analytics_query` (`references/pattern.md`).
+6. Call `visibility.analytics_query` after `tools_get`, and read the stored snapshot (`references/pattern.md`).
 
 7. Build lane A from one LinkedIn piece (`references/lane-a.md`).
 
-8. Read posts they can show with `visibility.radar.inspiration_x_list` (`references/lane-b.md`).
+8. Read posts they can show, from a paste or from `visibility.radar.inspiration_x_list` (`references/lane-b.md`).
 
-9. A quote and the owner's yes come before the run (`references/lane-b.md`).
+9. Follow `find-x-angles` for `source.x_posts_search`, and get a quote and the owner's yes before the run (`references/lane-b.md`).
 
 10. Call `visibility.research.urls_fetch` before a news claim enters the slate (`references/news.md`).
 
-11. Call with `visibility.research.web_search` (`references/news.md`).
+11. Call `visibility.research.web_search` when that page is not in hand (`references/news.md`).
 
 12. Ask once what is launching for lane C (`references/lane-c.md`).
 
 13. When they only want today, write one post and skip the slate (`references/today.md`, `references/write.md`).
 
-14. The first line follows `references/write.md` (`references/slate.md`).
+14. Otherwise slate about 1.5 times the slots, and take the first line from `references/write.md` (`references/slate.md`).
 
 15. After they pick, draft those posts (`references/write.md`).
 
@@ -58,7 +58,7 @@ Plan X posts with the owner for the next 7 days from three lanes. Follow `docs/s
 
 19. Call `social.content.schedule` only after yes on that text, that media, and that time (`references/save.md`).
 
-20. Call with `social.content.approve` (`references/save.md`).
+20. Call `social.content.approve` on that version (`references/save.md`).
 
 21. Append rows to `vault/week/<date>-x-verdicts.md` (`references/verdicts.md`).
 ## Dreamstate tools

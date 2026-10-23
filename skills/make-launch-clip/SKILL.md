@@ -18,7 +18,7 @@ Cut a short launch piece from a beat list and assets the owner already has. Foll
 
 3. Write the beat sheet (`references/beats.md`). The spoken line has to be true of the feature on that screen.
 
-4. Read with `DeskTimeline.install` (`references/motion.md`).
+4. Read `pictures/timeline.js` and `scripts/capture-motion.mjs` before you build, because `DeskTimeline.install` sets `__seek` (`references/motion.md`).
 
 5. Drop the prebuilt scene library and the automatic uploader (`references/drops.md`).
 
@@ -26,7 +26,7 @@ Cut a short launch piece from a beat list and assets the owner already has. Foll
 
 7. Inspect type, timing, and audio (`references/render.md`).
 
-8. Render with `scripts/capture-motion.mjs` (`references/render.md`).
+8. Render the whole piece with `scripts/capture-motion.mjs`, which seeks `__seek` (`references/render.md`).
 
 9. Run `check-short-export` on the file (`references/render.md`).
 
@@ -34,7 +34,7 @@ Cut a short launch piece from a beat list and assets the owner already has. Foll
 
 11. Deliver the video, the editable HTML, the script, asset credits (file, source, license), and what you actually checked (`references/deliver.md`).
 
-12. A cut does not need `brand.local` (`references/deliver.md`).
+12. Read `brand.local` before you draw a title or an overlay, because a cut does not need `brand.local` (`references/deliver.md`).
 ## Dreamstate tools
 None. Local files only.
 

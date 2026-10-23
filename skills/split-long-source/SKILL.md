@@ -14,7 +14,7 @@ Split one long source into separate pieces and picture briefs that keep its fact
 
 ## Steps
 
-1. If it is not already in `vault/sources/`, preserve it with `collect-owner-context` first (`references/source.md`).
+1. Read the whole source before a cut, and if it is not already in `vault/sources/`, preserve it with `collect-owner-context` first (`references/source.md`).
 
 2. Read `vault/notes/pillars.md` and the offer in `brand.local/identity.md` (`references/source.md`).
 

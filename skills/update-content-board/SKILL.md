@@ -14,23 +14,23 @@ Place a week's pieces on the local board from the owner's dates, time zone, and 
 
 ## Steps
 
-1. Treat `vault/board.md` as the only board (`references/board.md`).
+1. Treat `vault/board.md` as the only board, and leave `publish_date` empty until the piece is actually out (`references/board.md`).
 
 2. Read Proof, the notes, the week brief, and words marked public or approved (`references/sources.md`).
 
 3. Place the week from the dates, time zone, channel, and cadence they named (`references/cadence.md`).
 
-4. Give each piece one pillar, one topic, one subtopic, and one funnel job (`references/pieces.md`).
+4. Give each piece one pillar, one topic, one subtopic, and one funnel job, and do not mint a pillar, a topic, or a job to fill an empty day (`references/pieces.md`).
 
-5. That day is not a publish (`references/file.md`).
+5. File the draft and record the planned day on the week brief, because that day is not a publish (`references/file.md`).
 
 6. Store the piece with `social.content.artifact_create` only when they ask, after `tools_get`, and do not call `social.content.plan` yet (`references/remote.md`).
 
-7. If no artifact exists, the brief holds the day (`references/remote.md`).
+7. Set `planned_for` with `social.content.plan` on an artifact that already exists, and if no artifact exists, the brief holds the day (`references/remote.md`).
 
-8. Schedule with `social.content.schedule` only after yes (`references/remote.md`).
+8. Schedule that piece with `social.content.schedule` only after yes (`references/remote.md`).
 
-9. Approve with `social.content.approve` only after a yes on that version (`references/remote.md`).
+9. Approve that version with `social.content.approve` only after a yes on that version (`references/remote.md`).
 
 10. Pull an armed send that has not started with `social.content.unschedule` (`references/remote.md`).
 

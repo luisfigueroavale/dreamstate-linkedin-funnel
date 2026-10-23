@@ -14,7 +14,7 @@ Animate a process as HTML plates and capture MP4 and GIF with the repo scripts. 
 - It does not publish.
 
 ## Steps
-1. Decoration is not an explanation (`references/plan.md`).
+1. Read the concept and the reader, because decoration is not an explanation (`references/plan.md`).
 
 2. Plan each scene first (`references/plan.md`).
 
@@ -22,7 +22,7 @@ Animate a process as HTML plates and capture MP4 and GIF with the repo scripts. 
 
 4. Write motion as a `DeskTimeline` in the HTML page (`references/motion.md`). CSS does not animate or transition.
 
-5. Run `scripts/capture-motion.mjs` (`references/motion.md`). It calls `__seek`.
+5. Run `scripts/capture-motion.mjs`, which calls `__seek`, and headline text uses `--headline-gradient` when that token is set and `--color-accent` when it is not, and `--color-accent-2` is the second accent (`references/motion.md`).
 
 6. Run a low-cost preview before the full encode (`references/capture.md`).
 
@@ -34,7 +34,7 @@ Animate a process as HTML plates and capture MP4 and GIF with the repo scripts. 
 
 10. Run `check-short-export` where it applies (`references/deliver.md`).
 
-11. Call the piece rendered only when `export/motion.mp4` and `export/motion.gif` both exist and the GIF is under 5 MB (`references/deliver.md`).
+11. Deliver the editable source and the rendered file, and call the piece rendered only when `export/motion.mp4` and `export/motion.gif` both exist and the GIF is under 5 MB (`references/deliver.md`).
 ## Dreamstate tools
 None. Local files only.
 

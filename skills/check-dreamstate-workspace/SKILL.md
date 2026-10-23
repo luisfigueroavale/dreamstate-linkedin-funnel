@@ -20,9 +20,9 @@ Confirm the active Dreamstate workspace before a write or a spend. Follow `docs/
 
 2. Read `senders.linkedin_accounts.list`, `social.channels_list`, and `senders.social_accounts.list` (`references/accounts.md`).
 
-3. Preview only public person-profile URLs the owner gave (`references/preview.md`).
+3. Call `tools_get` on `tables.profile_watcher.preview` before `tools_run`, and preview only public person-profile URLs the owner gave (`references/preview.md`).
 
-4. Live, and if none is stored, do not create (`references/watcher.md`).
+4. Call `tools_get` on `tables.profile_watcher.get` before another watcher, keep that call live, and if none is stored, do not create (`references/watcher.md`).
 
 5. On a timeout, call `runs_get` (`references/watcher.md`). Do not start a second watcher.
 

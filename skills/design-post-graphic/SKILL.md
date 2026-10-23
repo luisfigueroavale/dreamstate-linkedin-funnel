@@ -17,7 +17,7 @@ Build one portrait, carousel slide, or thumbnail as HTML and CSS, with motion in
 
 1. Read the brief, the post, and `docs/picture-rules.md` (`references/brief.md`).
 
-2. Stop if a required file is missing or blank (`references/brief.md`).
+2. Read `brand/AGENTS.md`, then the filled `brand.local/` files, and stop if a required file is missing or blank (`references/brief.md`).
 
 3. Write three HTML-comment notes before drawing (`references/brief.md`).
 
@@ -39,15 +39,15 @@ Build one portrait, carousel slide, or thumbnail as HTML and CSS, with motion in
 
 12. Call `whoami` before writing (`references/render.md`).
 
-13. Store with `social.visuals.source_create` (`references/render.md`).
+13. Store the page with `social.visuals.source_create` (`references/render.md`).
 
-14. Fetch with `social.visuals.render_preview` (`references/render.md`).
+14. Fetch `social.visuals.render_preview` with `tools_get` (`references/render.md`).
 
-15. Fetch with `social.visuals.render_start` (`references/render.md`).
+15. Fetch `social.visuals.render_start` with `tools_get`, and pass `scope_hash` (`references/render.md`).
 
-16. Fetch with `social.visuals.render_get` (`references/render.md`).
+16. Fetch `social.visuals.render_get` with `tools_get` (`references/render.md`).
 
-17. Read with `social.visuals.file_get` and `social.visuals.download_url` (`references/render.md`).
+17. Read the bytes with `social.visuals.file_get` or `social.visuals.download_url` (`references/render.md`).
 
 18. Inspect the 1080px PNG, the 390px view, and the thumbnail at 1280×720 (`references/inspect.md`).
 

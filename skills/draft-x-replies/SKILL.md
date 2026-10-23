@@ -17,13 +17,13 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. Stop while one is `Status: blank` (`references/lists.md`).
+1. Fill blank list files with the owner before the first drafts, and stop while one is `Status: blank` (`references/lists.md`).
 
-2. Fetch with `senders.social_accounts.list` (`references/calls.md`).
+2. Fetch `senders.social_accounts.list` with `tools_get` before `tools_run`, and let the fetched schema win (`references/calls.md`).
 
 3. Ask when their targets are online (`references/cadence.md`).
 
-4. Read with `visibility.radar.inspiration_x_list` (`references/enter.md`).
+4. Read candidates with `visibility.radar.inspiration_x_list` (`references/enter.md`).
 
 5. Score the posts that clear the gates (`references/score.md`).
 
@@ -35,7 +35,7 @@ Follow `docs/skill-frame.md`.
 
 9. Write one reply per post (`references/draft.md`).
 
-10. Lint the run (`references/page.md`).
+10. Lint the run with `node scripts/queue-lint.mjs` before the page is written (`references/page.md`).
 
 11. Render the page only after lint exits 0 (`references/page.md`).
 
@@ -43,7 +43,7 @@ Follow `docs/skill-frame.md`.
 
 13. Post one reply with `social.engagement.comment` only when the fetched contract allows that exact text (`references/calls.md`). Otherwise the owner posts the draft.
 
-14. Preview a reaction with `social.engagement.react` only when the contract covers this account (`references/calls.md`).
+14. Preview a reaction with `social.engagement.react` only when the contract covers this account, because live needs yes on that reaction (`references/calls.md`).
 
 15. Judge sent replies before the next fetch (`references/learn.md`).
 ## Dreamstate tools

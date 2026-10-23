@@ -29,7 +29,7 @@ Draw a process as numbered HTML plates in reading order, with connectors that do
 
 7. Place one mark per card (`references/marks.md`).
 
-8. Stop when those files are blank (`references/marks.md`).
+8. Take colors from filled `brand.local` tokens, and stop when those files are blank (`references/marks.md`).
 
 9. Bind both ends of each connector (`references/connectors.md`).
 

@@ -16,7 +16,7 @@ Compose the thumbnail in HTML at the thumb size so the title and the picture mak
 
 ## Steps
 
-1. Read the video, the reader, the title, and `brand.local` (`references/idea.md`).
+1. Read the video, the reader, the title, and `brand.local`, and stop if a required brand file is blank (`references/idea.md`).
 
 2. Settle on one concrete idea the video can fulfill (`references/idea.md`).
 
@@ -32,7 +32,7 @@ Compose the thumbnail in HTML at the thumb size so the title and the picture mak
 
 8. Copy `pictures/frames/thumb.html` and import `brand/tokens.css` (`references/build.md`).
 
-9. Load `pictures/timeline.js` and register a `DeskTimeline` so the page exposes `__seek` (`references/build.md`).
+9. Load `pictures/timeline.js`, register a `DeskTimeline`, and install it so the page exposes `__seek`, because capture calls `__seek` (`references/build.md`).
 
 10. Inspect 1280×720 and 320×180 (`references/inspect.md`).
 

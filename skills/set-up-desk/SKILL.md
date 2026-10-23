@@ -14,11 +14,11 @@ Install the Dreamstate plugin, confirm the workspace, and create the local folde
 
 ## Steps
 
-1. Stop if it does not show dreamstate (`references/plugin.md`).
+1. Confirm the plugin with `skills_list`, and stop if it does not show dreamstate (`references/plugin.md`).
 
-2. Confirm the workspace with `whoami` (`references/plugin.md`).
+2. Confirm the workspace with `whoami`, and stop if it is not one named workspace (`references/plugin.md`).
 
-3. Read with `AGENTS.md` and `README.md` (`references/read.md`).
+3. Read `AGENTS.md`, `README.md`, `skills/README.md`, `brand/AGENTS.md`, and `audience/AGENTS.md` (`references/read.md`).
 
 4. Look at `brand.local/`, `audience.local/`, `vault/`, and `.gitignore` (`references/copy.md`).
 

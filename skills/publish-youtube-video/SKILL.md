@@ -14,29 +14,29 @@ Package a finished video and publish it on the connected YouTube account after a
 
 ## Steps
 
-1. Ask if one is missing (`references/package.md`).
+1. Read the finished file, the title, the description, the thumbnail, and any privacy, schedule, or time zone they named, and ask if one is missing (`references/package.md`).
 
-2. Read with `senders.social_accounts.list` (`references/account.md`). Stop if no YouTube account is connected.
+2. Read the account with `senders.social_accounts.list`, and stop if no YouTube account is connected (`references/account.md`).
 
-3. Read with `social.channels_list` (`references/account.md`).
+3. Read the channel with `social.channels_list`, because both reads are live and neither accepts dry_run (`references/account.md`).
 
 4. Store the draft with `social.content.artifact_create` when they ask (`references/draft.md`).
 
-5. Upload with `social.content.media_upload_url` (`references/upload.md`).
+5. Upload the one video with `social.content.media_upload_url` (`references/upload.md`).
 
 6. Finish that upload with `social.content.media_uploaded` (`references/upload.md`). That pair does not publish.
 
-7. Use with `social.content.artifact_list` (`references/upload.md`).
+7. Read an unclear create with `social.content.artifact_get`, and use `social.content.artifact_list` when the id is unknown (`references/upload.md`).
 
 8. Get the owner's yes on that exact video, title, description, and privacy (`references/yes.md`).
 
-9. Re with `social.channels_list` (`references/account.md`).
+9. Re-read the channel row with `social.channels_list` (`references/account.md`).
 
-10. Approve with `social.content.approve` (`references/publish.md`).
+10. Approve that video with `social.content.approve` (`references/publish.md`).
 
-11. Arm the time with `social.content.schedule` (`references/publish.md`).
+11. Arm the time with `social.content.schedule`, and if they named a time and no time zone, ask first (`references/publish.md`).
 
-12. Read with `social.content.artifact_get` (`references/publish.md`).
+12. Read the delivery id with `social.content.artifact_get` (`references/publish.md`).
 
 13. Run `social.content.delivery_publish` as dry_run and keep `approved_publish_hash`, and after yes, send the live call with `trigger` `explicit` and that hash (`references/publish.md`).
 

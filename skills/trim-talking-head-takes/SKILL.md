@@ -16,7 +16,7 @@ Build one clean long-form picture from the raw recordings, and add nothing they 
 
 ## Steps
 
-1. Deliver a single named MP4 in the recording's `edit` folder (`references/job.md`).
+1. Deliver a single named MP4 in the recording's `edit` folder, and leave every source recording untouched (`references/job.md`).
 
 2. Ask only if you cannot infer the order, or which material should stay (`references/job.md`).
 
@@ -40,7 +40,7 @@ Build one clean long-form picture from the raw recordings, and add nothing they 
 
 12. Mark the manual drops (`references/drops.md`).
 
-13. Write `plan.json` (`references/plan.md`).
+13. Write `plan.json` with sources in order, windows to keep, and output settings (`references/plan.md`).
 
 14. Stop before encode when a failure mode matches (`references/failures.md`).
 
@@ -50,7 +50,7 @@ Build one clean long-form picture from the raw recordings, and add nothing they 
 
 17. Render the plan with `skills/trim-talking-head-takes/scripts/render_plan.py` (`references/render.md`).
 
-18. Check with `edl.json` (`references/check.md`).
+18. Check joins on the output timeline from `edl.json` (`references/check.md`).
 
 19. Report the file and how QA finished (`references/report.md`).
 ## Dreamstate tools

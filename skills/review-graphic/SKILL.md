@@ -18,13 +18,13 @@ Score one finished frame for clarity, identity, and export quality. Follow `docs
 
 2. Read filled files in `brand.local/` that the piece actually uses (`references/look.md`).
 
-3. A description of it is not the review (`references/look.md`).
+3. Look at the rendered file at full size, then at 390px, because a description of it is not the review (`references/look.md`).
 
 4. Write five scores in words (`references/scores.md`). Do not give a numeric score unless a rubric exists.
 
-5. Headline text uses `--headline-gradient` when that token is set, and `--color-accent` when it is not (`references/scores.md`).
+5. Match identity to rules that are written down, and headline text uses `--headline-gradient` when that token is set, and `--color-accent` when it is not (`references/scores.md`).
 
-6. Review the frames `__seek` returns (`references/motion.md`). The timeline is `DeskTimeline`.
+6. Review the frames `__seek` returns, including the last one, on the `DeskTimeline`, and treat that last frame as the still (`references/motion.md`).
 
 7. State the evidence label (`references/report.md`). Open on the verdict and on what you could not inspect.
 

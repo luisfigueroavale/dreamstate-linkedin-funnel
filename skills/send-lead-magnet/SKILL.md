@@ -16,13 +16,13 @@ Prepare a tracked link and the reply that delivers a giveaway. Follow `docs/skil
 
 ## Steps
 
-1. Call `whoami` before the first write, and call `tools_get` before every `tools_run` (`references/setup.md`).
+1. Use one live post, one file, and one destination, call `whoami` before the first write, and call `tools_get` before every `tools_run` (`references/setup.md`).
 
-2. The body carries the full destination URL plus UTM and never `short_url` (`references/link.md`).
+2. Follow the shared procedure in `docs/lead-magnet.md`, and put the full destination URL plus UTM in the body, never `short_url` (`references/link.md`).
 
 3. Call `social.content.tracking_links_lookup`, then `social.content.tracking_link_create` and `social.content.tracking_link_get` (`references/link.md`).
 
-4. Keep `dm_enabled` false until the owner says yes on that exact text (`references/rules.md`).
+4. Call `social.outreach.keyword_dm_rules.list` before `keyword_dm_rules.replace`, and keep `dm_enabled` false until the owner says yes on that exact text (`references/rules.md`).
 
 5. Run `node skills/send-lead-magnet/scripts/check-delivery.mjs` before showing it (`references/checks.md`).
 
@@ -30,19 +30,19 @@ Prepare a tracked link and the reply that delivers a giveaway. Follow `docs/skil
 
 7. Run the duplicate guard (`references/duplicate.md`). Nobody gets the file twice.
 
-8. Add a receipt column with `tables.columns.add` after `tools_get` (`references/send.md`).
+8. Send the file message first, read it back, then send the public line, and add a receipt column with `tables.columns.add` after `tools_get` (`references/send.md`).
 
-9. Do not guess a name (`references/copy.md`).
+9. Shape the message from a real first name or a neutral stand-in, and do not guess a name (`references/copy.md`).
 
-10. Read with `senders.linkedin_accounts.list` (`references/pace.md`).
+10. Read `senders.linkedin_accounts.list` and keep that account's own spacing (`references/pace.md`).
 
 11. Run one pass inside the caps in `references/pass.md`. Start each pass by reading comments.
 
-12. Call with `social.linkedin_posts.get` (`references/one.md`).
+12. Call `social.linkedin_posts.get` for a short post link, and for one comment use `social.comments.reply` and `social.comments.approve` (`references/one.md`).
 
 13. Before a new file message to a first-degree person, check other campaigns (`references/campaign.md`).
 
-14. Find threads with `unibox.inbox.unified_list` (`references/inbox.md`). Draft with `draft-thread-reply`.
+14. Find threads with `unibox.inbox.unified_list` since the post went live, and draft them with `draft-thread-reply` (`references/inbox.md`).
 
 15. Keep private messages as the default, and a public link on that post needs a yes (`references/public.md`).
 

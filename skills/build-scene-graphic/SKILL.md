@@ -24,7 +24,7 @@ Build a small staged scene in HTML and CSS, with labels as real text, then captu
 
 4. Build fewer, bigger stations (`references/stage.md`). Keep every actor in view.
 
-5. Build the scene with `DeskTimeline` (`references/motion.md`).
+5. Build the scene with `DeskTimeline`, then `scripts/capture-motion.mjs`, and call `DeskTimeline.install` so the page exposes `__seek` (`references/motion.md`).
 
 6. Time the build in reading order (`references/timing.md`). Capture starts at `__seek(0)`.
 

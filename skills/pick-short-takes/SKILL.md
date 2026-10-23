@@ -21,7 +21,7 @@ Follow `docs/skill-frame.md`.
 
 3. For each beat record the source file, in-point, out-point, and why that range (`references/beats.md`).
 
-4. That list is the EDL (`references/time.md`).
+4. Build the list from source time, because that list is the EDL (`references/time.md`).
 
 5. Play every join in context (`references/joins.md`).
 ## Dreamstate tools

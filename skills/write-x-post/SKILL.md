@@ -15,15 +15,15 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. The reader is `audience.local/ideal-follower.md` (`references/read.md`).
+1. Read the brief, `vault/notes/`, and the post file, and treat `audience.local/ideal-follower.md` as the reader (`references/read.md`).
 
-2. A missing or blank voice file still allows a neutral draft, and you say the draft does not match their voice (`references/read.md`).
+2. Match their vocabulary and their rhythm from `brand.local/voice.md` and the samples in `vault/voice/`, and when the voice file is missing or blank, still write a neutral draft and say the draft does not match their voice (`references/read.md`).
 
-3. A blank identity file still stops you (`references/read.md`).
+3. Take proof only from what `brand.local/identity.md` clears, because a blank identity file still stops you (`references/read.md`).
 
-4. Keep it short (`references/shape.md`).
+4. Keep the post short (`references/shape.md`).
 
-5. A thread only when the explanation needs several distinct steps (`references/shape.md`).
+5. Write one post when one post can finish the idea, and use a thread only when the explanation needs several distinct steps (`references/shape.md`).
 
 6. Place the link and the attribution beside the claim they support (`references/links.md`).
 
@@ -33,7 +33,7 @@ Follow `docs/skill-frame.md`.
 
 9. Hand a picture, if they asked, to `design-post-graphic` (`references/deliver.md`).
 
-10. Call with `social.content.artifact_create` (`references/deliver.md`).
+10. Call `tools_get`, then `social.content.artifact_create`, only if they ask to store the copy (`references/deliver.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |

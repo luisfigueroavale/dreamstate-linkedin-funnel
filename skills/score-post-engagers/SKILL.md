@@ -14,23 +14,23 @@ After a post is live, collect engagers, score company and person apart, and draf
 
 ## Steps
 
-1. Keep with `social.content.artifact_get` (`references/harvest.md`).
+1. Keep the live post id and read the artifact with `social.content.artifact_get` (`references/harvest.md`).
 
-2. Dry run costs 0 credits, and a live run needs yes (`references/harvest.md`).
+2. Run the harvest with `visibility.linkedin.engagement_harvest`, where a dry run costs 0 credits and a live run needs yes (`references/harvest.md`).
 
 3. Read `visibility.linkedin.engagement_status` and `visibility.linkedin.engagement_engagers` (`references/harvest.md`).
 
-4. Do not start another watcher (`references/harvest.md`).
+4. On timeout, call `runs_get` on the same `idempotency_key`, and do not start another watcher (`references/harvest.md`).
 
 5. Stop and run `collect-owner-context` when Ideal Customer is empty, and stop if `audience.local/ideal-follower.md` is missing or blank (`references/rubric.md`).
 
-6. Add with `column.ai_fit_score` and `tables.columns.add` (`references/rubric.md`).
+6. Add two `column.ai_fit_score` columns with `tables.columns.add` after `tools_search` and `tools_get` (`references/rubric.md`).
 
 7. Look up a later gap with `visibility.research.web_search` or `visibility.research.urls_fetch` (`references/rubric.md`).
 
-8. Hold is not enrolled or sent (`references/rubric.md`).
+8. Treat a required unknown as a hold, not a no and not a yes, and do not enroll or send that hold (`references/rubric.md`).
 
-9. Dry-run `tables.columns.run` (`references/fit.md`). Then live, `max_rows` in params.
+9. Dry-run `tables.columns.run` on one row you can judge, then go live with `max_rows` in params (`references/fit.md`).
 
 10. Poll `runs_get` (`references/fit.md`). If `npm run fit` fails, rewrite and dry-run again.
 
@@ -38,19 +38,19 @@ After a post is live, collect engagers, score company and person apart, and draf
 
 12. Hand a file ask to `send-lead-magnet` first (`references/next.md`).
 
-13. Read with `social.comments.queue_list` (`references/comments.md`).
+13. Read comments with `social.comments.queue_list`, and trust an empty queue only after `visibility.linkedin.comments.refresh` (`references/comments.md`).
 
-14. Read with `visibility.linkedin_post_notifications_list` and `social.content.article_deliveries_list` (`references/comments.md`).
+14. Read notifications with `visibility.linkedin_post_notifications_list` after `social.content.article_deliveries_list` (`references/comments.md`).
 
-15. Preview with `social.comments.reply` (`references/comments.md`).
+15. Preview the reply with `social.comments.reply` (`references/comments.md`).
 
-16. Approve with `social.comments.approve` after yes on that text (`references/comments.md`).
+16. Approve that reply with `social.comments.approve` after yes on that text (`references/comments.md`).
 
-17. Read with `visibility.analytics_query` (`references/analytics.md`).
+17. Read a stored snapshot with `visibility.analytics_query`, and do not write zero (`references/analytics.md`).
 
 18. Refresh metrics with `visibility.analytics_refresh` (`references/analytics.md`).
 
-19. It always needs the owner's yes and `approved: true` (`references/analytics.md`).
+19. Activate a repeating monitor with `workflow.workflows.activate`, which always needs the owner's yes and `approved: true` (`references/analytics.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |

@@ -15,7 +15,7 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. Measure first (`references/measure.md`).
+1. Measure first, and record sample rate, channel count, loudness, and peaks (`references/measure.md`).
 
 2. Listen to the original (`references/measure.md`).
 

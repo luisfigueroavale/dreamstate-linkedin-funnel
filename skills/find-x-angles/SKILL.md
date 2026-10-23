@@ -24,13 +24,13 @@ Turn pasted posts, or a Dreamstate read that returns them, into sourced angles. 
 
 4. Keep a pasted post a lookup, and start discovery with two or three queries inside the last 7 days (`references/width.md`).
 
-5. Read with `visibility.radar.inspiration_x_list` (`references/read.md`).
+5. Read cheapest first, then call `visibility.radar.inspiration_x_list`, and call `tools_get` before `tools_run` (`references/read.md`).
 
 6. Resolve `source.x_posts_search` with `tables.executable_definitions.list_resolved`, then attach with `tables.table_sources.attach`, and run `tables.table_sources.run` only after the quote and the owner's yes (`references/sources.md`).
 
 7. Wait for a quote and a yes before `visibility.research.web_search` or `visibility.research.urls_fetch` (`references/sources.md`).
 
-8. Leave `tables.x_post_engagers.run` and `visibility.linkedin.engagement_harvest` out of this scan (`references/sources.md`).
+8. Do not call `tables.x_post_engagers.run` or `visibility.linkedin.engagement_harvest` in this scan (`references/sources.md`).
 
 9. If a call fails, stop (`references/sources.md`). Do not loop on `whoami`, and do not start a monitor.
 
@@ -42,7 +42,7 @@ Turn pasted posts, or a Dreamstate read that returns them, into sourced angles. 
 
 13. Write watch rows only from posts you opened and names the owner chose (`references/watch.md`).
 
-14. Do with `sequence.x.auto_engagements.replace` (`references/keep.md`).
+14. Do not schedule, publish, reply, send a DM, follow, or like, and never call `sequence.x.auto_engagements.replace` (`references/keep.md`).
 
 15. When they want the scan kept, write `vault/notes/<date>-x-<topic>.md` (`references/keep.md`).
 
