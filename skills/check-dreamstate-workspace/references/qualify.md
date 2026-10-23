@@ -6,4 +6,3 @@ Do not call these, and keep scope and cost apart: `tables.columns.add` (definiti
 
 `column.ai` does not exist; use `column.ai_fit_score` as `binding_spec.definition_id`. Bind only keys a worksheet read returned.
 
-Do not call `visibility.research.web_search` or `visibility.research.urls_fetch` to fill a blank.

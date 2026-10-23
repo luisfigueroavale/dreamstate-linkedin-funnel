@@ -26,4 +26,3 @@ Leave `Status: blank` until that yes, then set `Status: filled` and show them th
 
 The adopted lines in that file are the record.
 
-Do not copy another creator's identity.

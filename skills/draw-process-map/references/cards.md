@@ -10,7 +10,7 @@ A skill is a rounded card for judgment. Its band contrasts with the step band. C
 
 A decision is a short question in a diamond with labeled exits and an explicit hold or retry. The question sits inside the diamond. A retry returns to the station that repeats. Hold is a station of its own.
 
-A result can use large type with unit, population, and date. Use the large number only when that number is already in the source. A signal with no number stays a small event card.
+A result can use large type with unit, population, and date. A signal with no number stays a small event card.
 
 Grouping is alignment or a light container. Share an edge when the stations belong together. The container is a quiet outline.
 

@@ -6,4 +6,4 @@ Given the SRT and the transcript, the checker fails a cue whose words are not in
 
 Keeping 70 to 85 percent of the words is review only. Emphasis size and hero layout are not gates. With an SRT and no transcript, times are checked and the word match is reported as skipped.
 
-Fonts come from files listed in `brand.local/assets/README.md`. If that list is empty, say the burn falls back to the system face. Do not vendor a font. No box behind every word unless they ask. `brand.local` is required for titles and overlays, not for the cuts themselves.
+Fonts come from files listed in `brand.local/assets/README.md`. If that list is empty, say the burn falls back to the system face. `brand.local` is required for titles and overlays, not for the cuts themselves.

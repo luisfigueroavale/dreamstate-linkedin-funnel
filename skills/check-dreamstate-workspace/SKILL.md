@@ -34,32 +34,32 @@ Confirm the active Dreamstate workspace before a write or a spend. Follow `docs/
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 1 | `whoami` | live | no |
-| 2 | `senders.linkedin_accounts.list` | live | no |
-| 2 | `social.channels_list` | live | no |
-| 2 | `senders.social_accounts.list` | live | no |
+| 1 | `whoami` | live | yes |
+| 2 | `senders.linkedin_accounts.list` | live | yes |
+| 2 | `social.channels_list` | live | yes |
+| 2 | `senders.social_accounts.list` | live | yes |
 | 3 | `tools_get` | read | no |
-| 3 | `tools_run` | live | no |
-| 3 | `tables.profile_watcher.preview` | live | no |
+| 3 | `tools_run` | live | yes |
+| 3 | `tables.profile_watcher.preview` | live | yes |
 | 4 | `tools_get` | read | no |
-| 4 | `tables.profile_watcher.get` | live | no |
-| 5 | `runs_get` | live | no |
-| - | `senders.identities.inbox_scope_get` | never | no |
-| - | `tables.profile_watcher.create` | never | yes |
-| - | `tables.profile_watcher.resume` | never | yes |
-| - | `visibility.linkedin.engagement_harvest` | never | no |
-| - | `tables.x_post_engagers.run` | live | no |
-| - | `tables.columns.add` | never | no |
-| - | `tables.columns.update` | never | no |
-| - | `tables.columns.run` | never | no |
-| - | `tables.table_runs.preview_cost` | never | no |
-| - | `tables.auto_run.set` | never | yes |
-| - | `tables.executables.save` | never | yes |
-| - | `visibility.research.web_search` | never | no |
-| - | `visibility.research.urls_fetch` | never | no |
-| - | `sequence.sequences.activate_audience` | never | no |
-| - | `sequence.sequences.resume` | never | no |
-| - | `workflow.workflows.activate` | never | no |
+| 4 | `tables.profile_watcher.get` | live | yes |
+| 5 | `runs_get` | live | yes |
+| - | `senders.identities.inbox_scope_get` | never | n/a |
+| - | `tables.profile_watcher.create` | never | n/a |
+| - | `tables.profile_watcher.resume` | never | n/a |
+| - | `visibility.linkedin.engagement_harvest` | never | n/a |
+| - | `tables.x_post_engagers.run` | live | yes |
+| - | `tables.columns.add` | never | n/a |
+| - | `tables.columns.update` | never | n/a |
+| - | `tables.columns.run` | never | n/a |
+| - | `tables.table_runs.preview_cost` | never | n/a |
+| - | `tables.auto_run.set` | never | n/a |
+| - | `tables.executables.save` | never | n/a |
+| - | `visibility.research.web_search` | never | n/a |
+| - | `visibility.research.urls_fetch` | never | n/a |
+| - | `sequence.sequences.activate_audience` | never | n/a |
+| - | `sequence.sequences.resume` | never | n/a |
+| - | `workflow.workflows.activate` | never | n/a |
 
 ## Stop rules
 

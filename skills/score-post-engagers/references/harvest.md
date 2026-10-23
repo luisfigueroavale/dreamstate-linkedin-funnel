@@ -10,8 +10,6 @@ If several accounts are connected, ask which one published, and wait.
 
 Dry run costs 0 credits.
 
-Live run needs yes.
-
 Read `visibility.linkedin.engagement_status` and `visibility.linkedin.engagement_engagers`.
 
 It is not `tables.profile_watcher` or `tables.x_post_engagers.run`.
@@ -45,8 +43,6 @@ Do not create one here.
 Do not add another collector for these profiles.
 
 On timeout, call `runs_get` on the same `idempotency_key`.
-
-Do not start another watcher.
 
 Report the status, the offer address, and the counts captured, passed, and held.
 

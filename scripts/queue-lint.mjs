@@ -264,9 +264,24 @@ function sameMove(pack) {
   return fails;
 }
 
-function profileOf(file, argv) {
+const X_FOLDERS = new Set([
+  "draft-x-replies",
+  "write-x-post",
+  "write-x-article",
+  "find-x-angles",
+  "plan-x-week",
+]);
+
+function xQueuePath(file) {
+  return String(file).split(/[\\/]/).some((part) => {
+    if (X_FOLDERS.has(part)) return true;
+    return part.includes("x-reply") || part.includes("x-replies");
+  });
+}
+
+export function profileOf(file, argv) {
   const flag = argv.indexOf("--profile");
-  const name = flag >= 0 ? argv[flag + 1] : file.includes("x-reply") ? "x" : "linkedin";
+  const name = flag >= 0 ? argv[flag + 1] : xQueuePath(file) ? "x" : "linkedin";
   const profile = rules[name];
   if (!profile) throw new Error(`unknown profile ${name}`);
   return { name, profile };

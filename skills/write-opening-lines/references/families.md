@@ -1,6 +1,6 @@
 # Families
 
-The first line may be a claim, a question, a confession, a comparison, a result, a story detail, or a framework promise. Ban invented drama. Ban a mandatory I. Ban compulsory numbers. An I is allowed when it is already their voice. A number is allowed only when it is already theirs. Do not invent a number.
+The first line may be a claim, a question, a confession, a comparison, a result, a story detail, or a framework promise. Ban invented drama. Ban compulsory numbers. An I is allowed when it is already their voice. A number is allowed only when it is already theirs.
 
 Prefer one of these families, and only with facts they have: result plus method; a test or a comparison, with the stance on the next line; a claim, then how the reader benefits; news plus result; confession plus change; stakes, then the response; before then after; receipt as promise.
 

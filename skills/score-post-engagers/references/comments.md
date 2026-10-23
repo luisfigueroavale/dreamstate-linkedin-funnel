@@ -12,4 +12,3 @@ Preview with `social.comments.reply`.
 
 `social.comments.approve` after yes on that text: `action_id`, a 64-hex `content_hash`, and `approved: true`.
 
-If the effect is unknown, read the run and do not resend.

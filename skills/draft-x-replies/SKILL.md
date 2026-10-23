@@ -52,15 +52,15 @@ Follow `docs/skill-frame.md`.
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 2 | `tools_get` | read | no |
-| 2 | `tools_run` | live | no |
-| 2 | `senders.social_accounts.list` | live | no |
+| 2 | `tools_run` | live | yes |
+| 2 | `senders.social_accounts.list` | live | yes |
 | 4 | `tools_get` | read | no |
-| 4 | `tools_run` | live | no |
-| 4 | `visibility.radar.inspiration_x_list` | live | no |
+| 4 | `tools_run` | live | yes |
+| 4 | `visibility.radar.inspiration_x_list` | live | yes |
 | 7 | `tools_get` | read | no |
 | 7 | `tools_run` | smoke_test | no |
 | 7 | `tools_run` | live | yes |
-| 7 | `tables.x_post_engagers.run` | smoke_test | no |
+| 7 | `tables.x_post_engagers.run` | smoke_test | yes |
 | 7 | `tables.x_post_engagers.run` | live | yes |
 | 13 | `tools_get` | read | no |
 | 13 | `tools_run` | smoke_test | no |
@@ -70,9 +70,9 @@ Follow `docs/skill-frame.md`.
 | 14 | `tools_get` | read | no |
 | 14 | `tools_run` | smoke_test | no |
 | 14 | `tools_run` | live | yes |
-| 14 | `social.engagement.react` | smoke_test | no |
+| 14 | `social.engagement.react` | smoke_test | yes |
 | 14 | `social.engagement.react` | live | yes |
-| - | `sequence.x.auto_engagements.replace` | never | no |
+| - | `sequence.x.auto_engagements.replace` | never | n/a |
 
 ## Stop rules
 

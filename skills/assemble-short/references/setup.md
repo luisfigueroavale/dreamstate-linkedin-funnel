@@ -10,6 +10,3 @@ Settle routine choices the request already implies.
 
 Keep the message the brief already states.
 
-Cuts do not need `brand.local`.
-
-Overlays and titles do.

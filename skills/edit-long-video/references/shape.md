@@ -1,6 +1,6 @@
 # Shape
 
-Make one finished file from the recording they gave you. This brief and this footage choose the treatment. A direction for this recording outranks a preset saved from an earlier job.
+Make one finished file from the recording they gave you. A direction for this recording outranks a preset saved from an earlier job.
 
 The usual shape is a designed opener of the speaker, then the screen recording.
 

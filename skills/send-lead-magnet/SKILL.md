@@ -56,9 +56,9 @@ Prepare a tracked link and the reply that delivers a giveaway. Follow `docs/skil
 |---|---|---|---|
 | 1 | `whoami` | read | no |
 | 1 | `tools_get` | read | no |
-| 1 | `tools_run` | live | no |
-| 3 | `social.content.tracking_links_lookup` | live | no |
-| 3 | `social.content.tracking_link_create` | live | no |
+| 1 | `tools_run` | live | yes |
+| 3 | `social.content.tracking_links_lookup` | live | yes |
+| 3 | `social.content.tracking_link_create` | live | yes |
 | 3 | `social.content.tracking_link_get` | read | no |
 | 4 | `social.outreach.keyword_dm_rules.list` | read | no |
 | 4 | `keyword_dm_rules.replace` | live | yes |
@@ -67,9 +67,9 @@ Prepare a tracked link and the reply that delivers a giveaway. Follow `docs/skil
 | 8 | `tools_get` | read | no |
 | 10 | `senders.linkedin_accounts.list` | read | no |
 | 11 | `social.comments.queue_list` | read | no |
-| 11 | `social.linkedin_posts.comments_list` | live | no |
+| 11 | `social.linkedin_posts.comments_list` | live | yes |
 | 11 | `social.outreach.keyword_dm_sends.list` | read | no |
-| 12 | `social.linkedin_posts.get` | live | no |
+| 12 | `social.linkedin_posts.get` | live | yes |
 | 12 | `social.comments.reply` | live | yes |
 | 12 | `social.comments.approve` | live | yes |
 | 13 | `tools_get` | read | no |

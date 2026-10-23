@@ -8,6 +8,6 @@ Use the shortest explanation that is still complete. Two sentences and one pictu
 
 Say that missing piece, such as context the draft never received. Do not replace it with a general complaint that the piece lacked a point. Each section keeps the job you gave it. Leave out an example, a script, or a side topic they already cut, even when it still feels relevant.
 
-Separate what they demonstrated from what they only propose. A number comes only from the Proof page. Keep each time window in its own claim. A reference piece is craft only. Study how it makes the stakes plain, and how a picture holds a fact. Do not take its stories, its numbers, or its lines.
+Separate what they demonstrated from what they only propose. Keep each time window in its own claim. A reference piece is craft only. Study how it makes the stakes plain, and how a picture holds a fact. Do not take its stories, its numbers, or its lines.
 
-Use numerals. Do not use a hashtag or generic machine phrasing. A link on their own site uses `utm_source=x` and `utm_campaign` set to the weekly slug on the brief. Every other link stays clean.
+Use numerals. A link on their own site uses `utm_source=x` and `utm_campaign` set to the weekly slug on the brief. Every other link stays clean.

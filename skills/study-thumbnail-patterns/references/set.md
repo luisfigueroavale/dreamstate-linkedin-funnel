@@ -1,6 +1,6 @@
 # Set
 
-The set is not a market law. A catalog from someone else's tool niche or sales motion does not transfer.
+A catalog from someone else's tool niche or sales motion does not transfer.
 
 When the paste includes counts, use the outlier test in `write-video-titles`. A ratio the set does not contain stays unknown.
 

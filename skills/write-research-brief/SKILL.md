@@ -53,8 +53,8 @@ Build an evidence brief from primary sources, with implications and open questio
 | 7 | `tools_get` | read | no |
 | 7 | `tools_run` | live | yes |
 | 7 | `visibility.research.urls_fetch` | live | yes |
-| 8 | `source.account_posts_linkedin_profile` | never | no |
-| 8 | `source.linkedin_posts_search` | never | no |
+| 8 | `source.account_posts_linkedin_profile` | never | n/a |
+| 8 | `source.linkedin_posts_search` | never | n/a |
 
 ## Stop rules
 - Follow the skill-frame writing rules.

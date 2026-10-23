@@ -24,6 +24,6 @@ Skip, Copy, and Reply on X (the composer opens with the text filled in and the c
 
 The footer says nothing is sent until the owner posts it.
 
-Before rendering, re-read the same handles and refresh counts, text, name, and followers. A post the new read no longer returns is dropped. Do not invent a metric to fill a hole.
+Before rendering, re-read the same handles and refresh counts, text, name, and followers. A post the new read no longer returns is dropped.
 
 Save the run as `work/draft-x-replies/<YYYY-MM-DD>-<HHMM>z.json`. Include an id, the time it was pulled, the start of the window, how many handles were in play, how many candidates survived, the picks (each with its angle, its why, and its draft), and a short list of near misses.

@@ -6,10 +6,10 @@ For captions, check names, numbers, short words, cue timing, line breaks, and cr
 
 For motion, check the cue and the payoff with the audio playing. The fact lands with the speech. Watch the overlaps.
 
-For the image, align the source and the output frames. Leave intended overlays and crops out before a quality score.
+For the image, align the source and the output frames.
 
-For audio, listen at a matched level. Check peaks, channel layout, integrated loudness near -14 LUFS, and a true-peak ceiling of -1.5 dBTP.
+For audio, listen at a matched level.
 
 For playback, decode the whole file. Play it in their player if it is on this machine.
 
-For pacing, play the whole story. Allow no duplicate take and no gap you cannot explain.
+For pacing, play the whole story.

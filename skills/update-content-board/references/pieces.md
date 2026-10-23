@@ -16,11 +16,7 @@ When that note is still empty, name the gap and point at `map-content-pillars`.
 
 Do not fill it here.
 
-Do not mint a pillar, a topic, or a job to fill an empty day.
-
 When material is missing, finish the pieces that have a source and list the gap.
-
-Do not add posts just to reach a number.
 
 The letter exists before posts that reuse it.
 

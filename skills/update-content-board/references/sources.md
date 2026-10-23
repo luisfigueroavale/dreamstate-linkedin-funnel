@@ -12,8 +12,6 @@ Proof stays on the Proof page.
 
 The post's `proof` field only names lines from that page.
 
-Do not invent a conversion figure.
-
 If that history or performance note is missing, say so.
 
 Do not call a topic unused while the record is missing.

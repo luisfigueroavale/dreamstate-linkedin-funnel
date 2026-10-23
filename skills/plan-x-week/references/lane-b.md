@@ -8,6 +8,6 @@ If that note is empty, say so and keep only a post that matches the filled reade
 
 Follow the resolve, attach, and run path in `find-x-angles` for `source.x_posts_search`, with a quote and the owner's yes before the run.
 
-Record the url, the author, the date, and any count the paste or the tool actually returned. A missing field stays missing. Do not invent reach.
+Record the url, the author, the date, and any count the paste or the tool actually returned.
 
-The angle has to be their receipt, their disagreement, or their method. Do not copy the post. Do not pass another person's number or story off as the owner's.
+The angle has to be their receipt, their disagreement, or their method.

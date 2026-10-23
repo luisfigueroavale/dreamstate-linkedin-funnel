@@ -4,7 +4,7 @@ Build a picture the owner can still edit. Read the brief, the post, and `docs/pi
 
 Write for the person in `audience.local/ideal-follower.md`. Claims come from the post and the Company Context pages `brand.local/identity.md` names. A logo, photo, or icon needs `brand.local/assets/README.md` plus the file the README allows.
 
-If a required file is missing or blank, stop and ask. Do not guess a color, a font, or a claim. The template has no approved kit.
+If a required file is missing or blank, stop and ask.
 
 From the brief, take who reads it, the takeaway, the lines that must appear, the pixel size, and the next action when one exists. The relationship is one claim, a sequence, a comparison, a hierarchy, evidence, or a look back.
 

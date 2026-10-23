@@ -8,8 +8,6 @@ A piece not written yet stays under Idea.
 
 The planned day is recorded on the week brief (`vault/week/<date>.md`, copied from `vault/week/brief.md`).
 
-That day is not a publish.
-
 For each piece, report the day or undated, the pillar, the topic, the funnel job, and the vault path, plus anything still waiting on the owner.
 
 If a tool call returned an artifact id, report that id.

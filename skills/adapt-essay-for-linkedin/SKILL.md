@@ -62,8 +62,8 @@ Make a LinkedIn article the owner can review from the finished essay. Follow `do
 | 4 | `tools_run` | live | yes |
 | 4 | `visibility.research.urls_fetch` | live | yes |
 | 11 | `tools_get` | read | no |
-| 11 | `tools_run` | live | no |
-| 11 | `social.content.article_enabled_get` | live | no |
+| 11 | `tools_run` | live | yes |
+| 11 | `social.content.article_enabled_get` | live | yes |
 | 12 | `tools_get` | read | no |
 | 12 | `tools_run` | live | yes |
 | 12 | `social.content.article_create_schedule` | live | yes |
@@ -86,7 +86,7 @@ Make a LinkedIn article the owner can review from the finished essay. Follow `do
 | 17 | `tools_run` | live | yes |
 | 17 | `social.engagement.comment` | preview | yes |
 | 17 | `social.engagement.comment` | live | yes |
-| - | `social.content.article_create` | never | no |
+| - | `social.content.article_create` | never | n/a |
 
 ## Stop rules
 

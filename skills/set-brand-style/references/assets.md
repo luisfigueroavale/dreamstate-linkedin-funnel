@@ -8,8 +8,6 @@ Do not install example assets as defaults.
 
 `pictures/examples` is not a starter kit.
 
-Do not vendor fonts.
-
 Fonts are files the owner listed in that README.
 
 Otherwise say the system face is the fallback.

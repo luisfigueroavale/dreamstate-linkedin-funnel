@@ -50,24 +50,24 @@ Package a finished video and publish it on the connected YouTube account after a
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 2 | `senders.social_accounts.list` | live, no dry_run | no |
-| 3, 9 | `social.channels_list` | live, no dry_run | no |
-| 4 | `social.content.artifact_create` | live | no |
-| 5 | `social.content.media_upload_url` | live | no |
+| 2 | `senders.social_accounts.list` | live, no dry_run | yes |
+| 3, 9 | `social.channels_list` | live, no dry_run | yes |
+| 4 | `social.content.artifact_create` | live | yes |
+| 5 | `social.content.media_upload_url` | live | yes |
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 6 | `social.content.media_uploaded` | live | no |
-| 7 | `social.content.artifact_list` | live | no |
-| 7, 12 | `social.content.artifact_get` | live, no dry_run | no |
-| 10 | `social.content.approve` | live | no |
+| 6 | `social.content.media_uploaded` | live | yes |
+| 7 | `social.content.artifact_list` | live | yes |
+| 7, 12 | `social.content.artifact_get` | live, no dry_run | yes |
+| 10 | `social.content.approve` | live | Owner yes |
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 11 | `social.content.schedule` | live | no |
+| 11 | `social.content.schedule` | live | Owner yes |
 | 13 | `social.content.delivery_publish` | dry_run, then live | yes |
-| 14 | `social.content.artifact_update` | live | no |
-| 15 | `social.content.replacement_create` | live | no |
+| 14 | `social.content.artifact_update` | live | yes |
+| 15 | `social.content.replacement_create` | live | yes |
 
 ## Stop rules
 

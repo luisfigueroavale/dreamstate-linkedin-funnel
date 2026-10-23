@@ -8,7 +8,7 @@ Resolve the two definition ids, attach, and only then run, after yes. Run one se
 
 Drop anything they already commented on. Drop anything the previous run already showed. Dedupe on share id: a repost can carry a new urn and still point at the original url.
 
-Niche rows, when lanes exist, need fit of at least 2. Drop niche hits flagged `promo`, `politics`, `hiring`, or `non_english`. `niche_min_reactions` starts at 15. Include people only. Never include the owner. Never include a profile already watched.
+Niche rows, when lanes exist, need fit of at least 2. Drop niche hits flagged `promo`, `politics`, `hiring`, or `non_english`. `niche_min_reactions` starts at 15. Include people only.
 
 Mark flags on watchlist hits rather than silently deleting them: `comment_gate`, `hiring`, `politics`, `promo`, `milestone`, `link_only`, `non_english`.
 
@@ -18,4 +18,4 @@ Mark flags on watchlist hits rather than silently deleting them: `comment_gate`,
 
 One bad profile does not end the run. One bad thread read does not end the run. One bad refresh does not end the run. Write the miss on `errors` and name it in the summary. `rate_limit_exceeded` ("Capacity is busy"): back off, then retry, with never more than 5 calls in parallel.
 
-On a paid read, `provider_outcome_unknown` gets a single retry. `provider_response_error` goes to a second pass, done 1 at a time. Weekends are flakier. If reading their own comments fails, continue. You lose feedback and the already-commented check, and you do not pretend those reads succeeded. Stop before a call that would pass the credit ceiling.
+On a paid read, `provider_outcome_unknown` gets a single retry. `provider_response_error` goes to a second pass, done 1 at a time. Weekends are flakier. If reading their own comments fails, continue. You lose feedback and the already-commented check, and you do not pretend those reads succeeded.

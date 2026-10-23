@@ -8,8 +8,6 @@ Work from the brief and the files already here.
 
 Ask only when a missing fact would change the point.
 
-Do not invent a milestone, an anecdote, a customer quote, a revenue figure, or a line about what most people do.
-
 Posts already in this repo are examples, not proof.
 
 There is no separate formats file.
@@ -25,8 +23,6 @@ Evidence when the point is a claim.
 A comparison when the reader is choosing.
 
 The opening is `write-opening-lines`.
-
-The body has to carry it.
 
 Prefer a concrete observation they made.
 
@@ -45,8 +41,6 @@ Keep an explanation or a qualification the reader needs.
 Read the opening, the first line of each paragraph, and the ending as one argument.
 
 Verify facts, quotes, dates, and numbers.
-
-Each one has to match the file it came from, and that file has to be cleared for public use.
 
 Keep a reported result, a target, and an example in separate sentences.
 

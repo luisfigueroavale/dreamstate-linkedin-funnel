@@ -1,10 +1,10 @@
 # Rules
 
-The owner picks the idea and the packaging. No number without a source. Ratios come from this sheet. Results come from cleared Proof.
+Ratios come from this sheet. Results come from cleared Proof.
 
-Never record on a failed gate. Raw numbers stay in `vault/sources/<date>-<slug>/` with `origin.md`. The synthesis is `vault/notes/video/<date>-<slug>.md`.
+Raw numbers stay in `vault/sources/<date>-<slug>/` with `origin.md`. The synthesis is `vault/notes/video/<date>-<slug>.md`.
 
-Lessons live in the ledger and the packaging library. Use numerals in what you hand them.
+Lessons live in the ledger and the packaging library.
 
 `plan-content-week` is the weekly caller when the recording is the trunk and the idea is not chosen yet.
 

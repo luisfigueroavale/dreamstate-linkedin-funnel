@@ -42,6 +42,3 @@ Do not hang another reply on the same failure story.
 
 Drafts under posts 15 to 60 minutes old are the ones that actually get sent. Drafts under posts older than 3 hours mostly do not.
 
-Never send a reply that invents an anecdote, a customer story, or a number. Never present someone else's result as the owner's, and never claim a tool they have not used.
-
-Never pitch, never drop a booking link, never say DM me, and never say check out the product.

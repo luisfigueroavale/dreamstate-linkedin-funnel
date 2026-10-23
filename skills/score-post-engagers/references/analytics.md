@@ -2,8 +2,6 @@
 
 `visibility.analytics_query` reads a stored snapshot and does not refresh it.
 
-Do not write zero.
-
 `visibility.analytics_refresh` needs `platform`, `account_id` from `senders.social_accounts.list`, and `metric_scope` `account`, `post`, or `audience`.
 
 Post scope needs `provider_post_id`.
@@ -11,8 +9,6 @@ Post scope needs `provider_post_id`.
 Carry source, post, and event ids forward.
 
 A repeating monitor is `workflow.workflows.activate`.
-
-It always needs the owner's yes and `approved: true`.
 
 No dry_run.
 
@@ -22,4 +18,3 @@ Required `workflow_id` and `expected_version_id` (the published version, not the
 
 `max_credits` is optional, and required on live when an autonomous trigger exists.
 
-It does not enroll.

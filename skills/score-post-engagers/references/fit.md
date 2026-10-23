@@ -6,13 +6,9 @@ Show prompt, cells, credits, and `quote_hash`.
 
 A dry run of `tables.columns.run` prices the run; it does not prove the fit judgment.
 
-Then live, `max_rows` in params.
-
 Include a fit, a company fail, a person fail, and an empty required field.
 
 Poll `runs_get`.
-
-If `npm run fit` fails, rewrite and dry-run again.
 
 Do not widen the audience to hide a bad rubric.
 
@@ -27,8 +23,6 @@ Both scores must clear it.
 Every required question needs evidence.
 
 No bonus turns a fail into a pass.
-
-A pass is not a yes to send.
 
 `tables.auto_run.set` is a standing spend.
 

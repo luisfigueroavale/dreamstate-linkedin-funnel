@@ -16,4 +16,4 @@ Acoustic detection will not see every editorial transition. Mark these yourself:
 
 Also mark the gaps silence cannot see: a screen search, a spoken transition marker, a failed restart, a setup phrase said twice.
 
-Finish every manual drop on a whole word. Keep a screen change when the viewer needs it to know where the next explanation happens.
+Keep a screen change when the viewer needs it to know where the next explanation happens.

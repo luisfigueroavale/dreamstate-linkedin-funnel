@@ -50,11 +50,11 @@ Write or revise a long X article, or the short post for a new video, from a sour
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| - | `social.content.schedule` | never | no |
-| - | `social.content.approve` | never | no |
-| - | `social.content.article_create` | never | no |
-| - | `social.content.article_create_schedule` | never | no |
-| - | `social.content.article_delivery_create` | never | no |
+| - | `social.content.schedule` | never | n/a |
+| - | `social.content.approve` | never | n/a |
+| - | `social.content.article_create` | never | n/a |
+| - | `social.content.article_create_schedule` | never | n/a |
+| - | `social.content.article_delivery_create` | never | n/a |
 
 ## Stop rules
 

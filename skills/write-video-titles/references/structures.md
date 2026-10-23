@@ -4,8 +4,6 @@ Before a structure enters the pair, it has to clear the outside-niche test. That
 
 Keep the structure only when evidence they provided shows at least 3× from three or more channels in two or more niches, and the home niche has not already worn that shape out.
 
-If the evidence is missing, label the structure a hypothesis and do not treat it as validated.
-
 Take the shape. Leave their sentences behind.
 
 Visible test. A trial the viewer can watch, or a question that asks for a verdict. The video runs the test and shows the verdict.
@@ -22,4 +20,3 @@ Exact figure. A precise figure, where a rounded one would be weaker. Only when t
 
 Reversal. A capability stated, then why the outcome still fails. A problem set up for a new viewer.
 
-Skip the shape that treats a topic as if it had gone unsaid. If the buyer is a founder, leave job-ladder titles out.

@@ -63,14 +63,14 @@ It points at the stage skills and orders one week from a sourced idea. Follow `d
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 7 | `visibility.radar.inspiration_linkedin_list` | live | no |
-| 8 | `visibility.radar.inspiration_x_list` | live | no |
-| 10 | `social.content.plan` | live | no |
+| 7 | `visibility.radar.inspiration_linkedin_list` | live | yes |
+| 8 | `visibility.radar.inspiration_x_list` | live | yes |
+| 10 | `social.content.plan` | live | yes |
 | 14 | `social.content.schedule` | live | yes |
 | 15 | `social.content.approve` | live | yes |
 | 17 | `tables.profile_watcher.create` | live | yes |
-| 18 | `visibility.linkedin.engagement_harvest` | live | no |
-| 21 | `whoami` | live | no |
+| 18 | `visibility.linkedin.engagement_harvest` | live | yes |
+| 21 | `whoami` | live | yes |
 | 22 | `tools_get` | read | no |
 | 22 | `tools_run` | live | yes |
 

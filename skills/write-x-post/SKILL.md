@@ -41,7 +41,7 @@ Follow `docs/skill-frame.md`.
 |---|---|---|---|
 | 10 | `tools_get` | read | no |
 | 10 | `social.content.artifact_create` | live | yes |
-| - | `sequence.x.auto_engagements.replace` | never | no |
+| - | `sequence.x.auto_engagements.replace` | never | n/a |
 
 ## Stop rules
 

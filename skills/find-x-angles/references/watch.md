@@ -1,6 +1,6 @@
 # Watchlist
 
-When they want accounts to watch and posts worth a reply, keep one local file they choose. Default `vault/notes/x-watch.md` for accounts and `vault/notes/x-queue.md` for posts. Do not create that list in another workspace.
+When they want accounts to watch and posts worth a reply, keep one local file they choose. Default `vault/notes/x-watch.md` for accounts and `vault/notes/x-queue.md` for posts.
 
 Key an account row by the handle in lowercase, with `@` removed. On that row record the name, the follower count you were shown, the pillar you would file them under, and whether the cohort is a peer or a specialist. Put a reply you actually opened in its own field, with that reply's url.
 
@@ -18,10 +18,10 @@ A one-line acknowledgement was seen. It is not proof of a real exchange. No repl
 
 A row on the list is not a follow, and it is not a sign they will buy.
 
-The list comes from posts you opened and from names the owner chose. Do not import a list you found elsewhere. Do not follow anyone. Check a handle against a live account before you trust an old spelling.
+The list comes from posts you opened and from names the owner chose. Check a handle against a live account before you trust an old spelling.
 
 Rank a queue row by fit, a point the owner can back up, freshness, and room for a useful reply. Do not call a small sample the whole niche.
 
-On a refresh, read the file again immediately before you write. Keep their additions, exclusions, priorities, notes, and finished statuses. A row they removed stays out. Update by the key so an old copy cannot put the row back. Write only rows you reviewed. Do not overwrite their status or their notes.
+On a refresh, read the file again immediately before you write. Keep their additions, exclusions, priorities, notes, and finished statuses. A row they removed stays out. Update by the key so an old copy cannot put the row back. Write only rows you reviewed.
 
-Read the file back and check the counts. Flag media or a thread you did not open before a reply that depends on it. State the reads and the price before you run them. Reply text, if they want it, goes to `draft-x-replies`. This skill does not write that reply.
+Read the file back and check the counts. Flag media or a thread you did not open before a reply that depends on it. State the reads and the price before you run them. Reply text, if they want it, goes to `draft-x-replies`.

@@ -2,8 +2,6 @@
 
 Use the dates, time zone, channel, and cadence they named.
 
-Do not assume four posts.
-
 Do not pin the work to a standing set of weekdays.
 
 A dated plan needs a time zone and a cadence.

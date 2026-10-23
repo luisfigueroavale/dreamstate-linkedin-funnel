@@ -11,4 +11,4 @@
 | 5 | Thumbnail | `design-video-thumbnail` | Both sizes that skill names |
 | 6 | Hand off | `publish-youtube-video` | That skill publishes after a yes on that exact video |
 
-`publish-youtube-video` publishes on the connected YouTube account. Packaging is not that yes. Privacy stays private until they name otherwise. Do not copy a connection from another project. This desk does not ship a transcription service.
+`publish-youtube-video` publishes on the connected YouTube account.

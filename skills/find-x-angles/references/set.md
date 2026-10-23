@@ -10,4 +10,4 @@ Read a reply before you infer the mood from a count.
 
 Likes, bookmarks, replies, and reposts stay separate. Quotes stay separate when the tool returns them. A missing view count is unknown. Do not write zero in its place. A zero the tool returned stays zero, and it is still not proof the post reached nobody.
 
-Do not divide another metric by views when views are missing or that returned zero. Followers, when a paste or a tool returned them, are context beside age. Do not invent either.
+Followers, when a paste or a tool returned them, are context beside age. Do not invent either.

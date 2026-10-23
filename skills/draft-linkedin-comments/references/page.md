@@ -10,6 +10,6 @@ Run `scripts/queue-page.mjs` with the run file, `skills/draft-linkedin-comments/
 
 Controls are Skip, then Copy, then a control labeled Copy & open. That last control puts the text on the clipboard, opens the post in a new tab, and marks the card done. Skip asks why, in one tap. Edits and marks stay in that browser.
 
-Footer line: nothing is sent until the owner posts it, or says yes on that exact text. Do not download remote images and do not embed them. No text from the read means no card.
+Footer line: nothing is sent until the owner posts it, or says yes on that exact text.
 
 Keep the handover to two lines. Give the count. Name the 2 or 3 that will go stale first, and tell them to do those before the rest.

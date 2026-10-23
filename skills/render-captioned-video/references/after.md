@@ -6,4 +6,4 @@ A card must not assert something the picture does not show.
 
 A hit plays only where something appears. No swell across a cut where nothing happens. Open a frame before you place type, and measure `layout.cam` from that frame.
 
-Run `check-short-export`. Keep the project and the list next to the export. One pass. A real fail stops the job. Report it. Do not roll another render to chase a clean sheet. Do not upload.
+Run `check-short-export`. Keep the project and the list next to the export. One pass. Report it. Do not upload.

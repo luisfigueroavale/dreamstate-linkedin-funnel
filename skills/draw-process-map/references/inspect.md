@@ -8,6 +8,6 @@ At phone width, 390px, check the hierarchy. Read every field on the full-size fr
 
 When more than one map shares a page, prefix every id so a binding cannot hit the wrong card. For a complex map, keep a short edge list beside the HTML.
 
-Record what you measured, what you looked at, and what you could not open. A JSON parse, or a script that exits 0, is not a visual review. Keep the previous HTML before you regenerate an edit.
+Record what you measured, what you looked at, and what you could not open.
 
 Reopen the saved file and compare it with the export. `scripts/render-still.mjs` writes the still and the phone file. When the map moves, `scripts/capture-motion.mjs` steps `__seek`.

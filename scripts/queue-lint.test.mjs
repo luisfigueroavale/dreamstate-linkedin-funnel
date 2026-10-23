@@ -1,9 +1,10 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
+import { copyFileSync, mkdtempSync, mkdirSync, readFileSync, rmSync } from "node:fs";
 import { spawnSync } from "node:child_process";
 import test from "node:test";
+import os from "node:os";
 import path from "node:path";
-import { bannedWordsFrom, bansFor } from "./queue-lint.mjs";
+import { bannedWordsFrom, bansFor, profileOf } from "./queue-lint.mjs";
 
 const root = path.resolve(import.meta.dirname, "..");
 const script = path.join(root, "scripts/queue-lint.mjs");
@@ -84,4 +85,25 @@ test("the command still runs when invoked", () => {
   const result = spawnSync(process.execPath, [script, "--help"], { encoding: "utf8" });
   assert.equal(result.status, 0);
   assert.match(result.stdout, /queue-lint\.mjs/);
+});
+
+test("renamed X folders use the X profile without --profile", () => {
+  const folders = ["draft-x-replies", "write-x-post", "write-x-article", "find-x-angles", "plan-x-week", "x-reply-queue"];
+  for (const folder of folders) {
+    assert.equal(profileOf(path.join("/tmp/work", folder, "queue.json"), []).name, "x", folder);
+  }
+  assert.equal(profileOf("/tmp/work/draft-linkedin-comments/queue.json", []).name, "linkedin");
+  assert.equal(profileOf("/tmp/work/draft-x-replies/queue.json", ["--profile", "linkedin"]).name, "linkedin");
+});
+
+test("a file under work/draft-x-replies lints as X without --profile", () => {
+  const dir = mkdtempSync(path.join(os.tmpdir(), "queue-lint-"));
+  const folder = path.join(dir, "work", "draft-x-replies");
+  mkdirSync(folder, { recursive: true });
+  const file = path.join(folder, "queue.json");
+  copyFileSync(path.join(root, "scripts/fixtures/queue-x.json"), file);
+  const result = spawnSync(process.execPath, [script, file], { encoding: "utf8" });
+  rmSync(dir, { recursive: true, force: true });
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /lint pass \(x\)/);
 });

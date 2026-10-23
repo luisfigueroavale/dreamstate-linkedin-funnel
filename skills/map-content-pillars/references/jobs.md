@@ -14,12 +14,12 @@ When the job is signup and `magnets/<slug>/` already stores them, name the keywo
 
 When the brief includes outbound that starts from a signal, name the signal source, the buyer-fit check, the exclusions, the route, and the conversation you intend.
 
-The check is the company against Ideal Customer and the person against the qualifying test, scored apart. If that page was not read, leave the check blank.
+The check is the company against Ideal Customer and the person against the qualifying test, scored apart.
 
 Route a resource request toward `send-lead-magnet`, and a person who already fits toward `draft-warm-followups`, as later work.
 
-Reactions are not intent or consent. Keep the fit check apart from the message. Provider choice stays with setup.
+Keep the fit check apart from the message. Provider choice stays with setup.
 
 Name the events you will count (seen, reply, registration, signup, resource requested) and what each cannot prove.
 
-Do not turn reach into claimed revenue. Unverified targets stay labeled targets. They are not results.
+Unverified targets stay labeled targets. They are not results.

@@ -60,22 +60,22 @@ Build one portrait, carousel slide, or thumbnail as HTML and CSS, with motion in
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 12 | `whoami` | read | no |
-| 13 | `social.visuals.source_create` | live | no |
+| 13 | `social.visuals.source_create` | live | yes |
 | 14 | `tools_get` | read | no |
-| 14 | `social.visuals.render_preview` | live | no |
+| 14 | `social.visuals.render_preview` | live | yes |
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 15 | `tools_get` | read | no |
-| 15 | `social.visuals.render_start` | live | no |
+| 15 | `social.visuals.render_start` | live | yes |
 | 16 | `tools_get` | read | no |
-| 16 | `social.visuals.render_get` | live | no |
+| 16 | `social.visuals.render_get` | live | yes |
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 17 | `tools_get` | read | no |
-| 17 | `social.visuals.file_get` | live | no |
-| 17 | `social.visuals.download_url` | live | no |
+| 17 | `social.visuals.file_get` | live | yes |
+| 17 | `social.visuals.download_url` | live | yes |
 
 ## Stop rules
 

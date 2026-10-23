@@ -45,8 +45,8 @@ Build a packaging brief from outlier evidence the owner can support: two titles 
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 4 | `tables.executable_definitions.list_resolved` | live | no |
-| 5 | `tables.table_sources.attach` | live | no |
+| 4 | `tables.executable_definitions.list_resolved` | live | yes |
+| 5 | `tables.table_sources.attach` | live | yes |
 | 6 | `tables.table_sources.run` | dry_run, then live | yes |
 
 ## Stop rules

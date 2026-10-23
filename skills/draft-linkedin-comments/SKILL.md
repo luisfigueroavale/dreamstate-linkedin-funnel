@@ -64,24 +64,24 @@ Draft a local queue of comments on other people's LinkedIn posts. Follow `docs/s
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 4 | `tools_get` | read | no |
-| 4 | `tools_run` | live | no |
-| 4 | `tables.executable_definitions.list_resolved` | live | no |
+| 4 | `tools_run` | live | yes |
+| 4 | `tables.executable_definitions.list_resolved` | live | yes |
 | 4 | `source.account_posts_linkedin_profile` | not tools_run | no |
 | 4 | `source.linkedin_posts_search` | not tools_run | no |
-| 5 | `tables.table_sources.attach` | live | no |
+| 5 | `tables.table_sources.attach` | live | yes |
 | 5 | `tables.table_sources.run` | dry_run, then live | yes |
-| 7 | `visibility.radar.inspiration_linkedin_list` | live | no |
-| 8 | `senders.linkedin_accounts.list` | live | no |
-| 11 | `social.linkedin_posts.comments_list` | live | no |
-| 12 | `social.linkedin_posts.get` | live | no |
+| 7 | `visibility.radar.inspiration_linkedin_list` | live | yes |
+| 8 | `senders.linkedin_accounts.list` | live | yes |
+| 11 | `social.linkedin_posts.comments_list` | live | yes |
+| 12 | `social.linkedin_posts.get` | live | yes |
 | 18 | `social.engagement.comment` | smoke_test | no |
 | 18 | `social.engagement.comment` | live | yes |
 | 19 | `social.posts.comment_publish` | dry_run, then live | yes |
-| 20 | `social.engagement.react` | smoke_test | no |
+| 20 | `social.engagement.react` | smoke_test | yes |
 | 20 | `social.engagement.react` | live | yes |
 | 21 | `social.feeds.create` | dry_run, then live | yes |
-| - | `sequence.linkedin.auto_engagements.replace` | never | no |
-| - | `sequence.x.auto_engagements.replace` | never | no |
+| - | `sequence.linkedin.auto_engagements.replace` | never | n/a |
+| - | `sequence.x.auto_engagements.replace` | never | n/a |
 
 ## Stop rules
 

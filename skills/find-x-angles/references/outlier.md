@@ -10,4 +10,4 @@ The script makes no network call. It dedupes, leaves a missing metric empty, and
 
 Do not explain performance from a snippet, and do not explain it from a median you did not compute. A popular line does not establish how a product works, what converted, or what caused the number. Keep three layers apart: what the post says, what you guess drew attention, and what the owner could add.
 
-Drop celebrity reach that is off the reader, an empty take, a copied story, and an outcome nobody checked. Do not lift a distinctive sentence. Do not present their screenshot as the owner's work.
+Drop celebrity reach that is off the reader, an empty take, a copied story, and an outcome nobody checked. Do not lift a distinctive sentence.

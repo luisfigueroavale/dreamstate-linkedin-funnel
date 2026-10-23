@@ -12,12 +12,9 @@ Make one named folder, at the path the owner gives, or else `vault/posts/<slug>-
 
 - The short description, the share post, and the comment, each ready to paste.
 
-Start a fresh folder. Replace an older pack only when its name and its files are this same article, and only after those files have been read.
+Start a fresh folder.
 
 Leave the essay, its HTML, and the portrait in place. The note names the editable HTML.
 
 Before the handoff, open each image at its real pixel size, confirm the format, read the type, confirm the figures follow the essay, resolve each local link, and confirm the article text is whole.
 
-The pack has to work with no ZIP.
-
-Files on disk do not allow a publish and do not allow a schedule. Say that nothing was uploaded.

@@ -2,7 +2,7 @@
 
 ## Score
 
-Score only surfaces fresh posts that are moving. Fit stays a human call.
+Score only surfaces fresh posts that are moving.
 
 age_hours is minutes divided by 60, with a floor of 0.25. velocity is reactions, plus comments times 3, plus reposts times 2, all over age_hours. fresh is 1.0 in the first hour, 0.85 through hour 2, 0.7 through hour 3, 0.45 through hour 6, and 0.2 after that.
 

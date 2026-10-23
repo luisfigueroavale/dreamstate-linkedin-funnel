@@ -1,3 +1,4 @@
+import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 // local
 import path from "node:path";
@@ -114,12 +115,67 @@ for (const name of folders) {
 }
 
 const emDash = "\u2014";
+const emDashSeen = new Set();
+function flagEmDash(rel) {
+  if (!rel || emDashSeen.has(rel) || rel === "scripts/queue-lint.mjs") return;
+  emDashSeen.add(rel);
+  const full = path.join(root, rel);
+  if (!existsSync(full)) return;
+  if (readFileSync(full, "utf8").includes(emDash)) bad(`${rel} contains an em dash`);
+}
+const tracked = execFileSync("git", ["ls-files", "-z"], { cwd: root, encoding: "utf8" }).split("\0").filter(Boolean);
+for (const rel of tracked) {
+  if (rel.endsWith(".md")) flagEmDash(rel);
+}
 for (const file of walk(root)) {
   const rel = path.relative(root, file);
   const skillText = rel.startsWith(`skills${path.sep}`) && /\.(md|html|json|txt)$/.test(file);
   const fixture = rel.startsWith(`scripts${path.sep}fixtures${path.sep}`);
-  if (!skillText && !fixture) continue;
-  if (readFileSync(file, "utf8").includes(emDash)) bad(`${rel} contains an em dash`);
+  if (skillText || fixture) flagEmDash(rel);
+}
+
+const ACTION = new Set(["live", "paid", "send", "post", "publish", "enroll", "schedule", "approve", "delete"]);
+const TOOL_ACTION = new Set(["paid", "send", "publish", "enroll", "schedule", "approve", "delete"]);
+
+function rowTokens(value) {
+  return String(value).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+}
+
+function toolMapYesIds() {
+  const text = readFileSync(path.join(root, "docs/tool-map.md"), "utf8");
+  const yes = /owner'?s?\s+yes|needs\s+(?:its\s+own\s+|a\s+)?yes|after\s+yes/i;
+  const ids = new Set();
+  for (const line of text.split(/\n/)) {
+    if (!line.startsWith("|")) continue;
+    const cells = line.split("|").slice(1, -1).map((cell) => cell.trim());
+    if (cells.length < 2) continue;
+    const id = cells[0].replace(/`/g, "").trim();
+    if (!id.includes(".")) continue;
+    if (yes.test(cells.slice(1).join(" "))) ids.add(id);
+  }
+  return ids;
+}
+
+const yesIds = toolMapYesIds();
+if (yesIds.size < 10) bad("docs/tool-map.md yes list did not parse");
+for (const name of folders) {
+  const text = readFileSync(path.join(skillRoot, name, "SKILL.md"), "utf8");
+  for (const line of text.split(/\n/)) {
+    if (!line.startsWith("|")) continue;
+    const cells = line.split("|").slice(1, -1).map((cell) => cell.trim());
+    if (cells.length < 4 || cells[1] === "Tool id" || !cells[1].includes("`")) continue;
+    const id = cells[1].replace(/`/g, "").trim();
+    const mode = cells[2];
+    const need = cells[3];
+    const modeTokens = rowTokens(mode);
+    if (modeTokens.includes("never")) {
+      if (need !== "n/a") bad(`${name}: ${id} is never and Needs yes is ${need}`);
+      continue;
+    }
+    const action = modeTokens.some((token) => ACTION.has(token)) || rowTokens(id).some((token) => TOOL_ACTION.has(token));
+    if (action && !/\byes\b/i.test(need)) bad(`${name}: ${id} ${mode} Needs yes is ${need}`);
+    if (yesIds.has(id) && need.toLowerCase() === "no") bad(`${name}: ${id} is marked yes in docs/tool-map.md and the row says no`);
+  }
 }
 
 for (const rel of ["brand/identity.md", "brand/voice.md", "brand/style.md", "audience/ideal-follower.md"]) {

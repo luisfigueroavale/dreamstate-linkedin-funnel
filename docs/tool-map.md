@@ -6,9 +6,9 @@ A capability id below is a `tools_run` target. Fetch it with `tools_get` before 
 
 Legend:
 
-- **plugin** — the id is a literal in `luisfigueroavale/dreamstate-plugins` skills.
-- **catalog** — `tools_get` returned a contract on 2026-10-22, server 1.3.7. Re-fetch. Schemas move.
-- **to-check** — not fetched. Search, then fetch. Do not call a guessed id.
+- **plugin**: the id is a literal in `luisfigueroavale/dreamstate-plugins` skills.
+- **catalog**: `tools_get` returned a contract on 2026-10-22, server 1.3.7. Re-fetch. Schemas move.
+- **to-check**: not fetched. Search, then fetch. Do not call a guessed id.
 
 ## Confirmed
 

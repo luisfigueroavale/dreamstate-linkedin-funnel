@@ -20,7 +20,7 @@ Open the top 5 donor stills they paste. Record subject (to-camera, back-shot, ob
 
 Brief `study-thumbnail-patterns` and `design-video-thumbnail`. On-image words name the niche outcome. The hero is the wave's mark. About 2 to 4 words.
 
-No other creator's face unless the video is about that person. Do not generate a face.
+No other creator's face unless the video is about that person.
 
 ## 5. Promise check
 

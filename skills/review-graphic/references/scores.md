@@ -1,15 +1,15 @@
 # Scores
 
-Five scores, written in words. Do not give a numeric score unless a rubric exists.
+Five scores, written in words.
 
 Meaning: the takeaway, reading order, and whether relationships and evidence hold.
 
 Content fit: the frame against the post or brief. Required steps, the figures, the caveats, and lines they chose. Flag type shrunk to squeeze copy in, and ornament that implies a result the source does not have.
 
-Identity: match rules that are written down. Headline text uses `--headline-gradient` when that token is set, and `--color-accent` when it is not. `--color-accent-2` is a second accent inside a gradient the owner wrote. With no rule, do not fail the piece for identity.
+Identity: match rules that are written down. `--color-accent-2` is a second accent inside a gradient the owner wrote.
 
 Craft: how large the type is, where lines break, alignment, the gaps, contrast, clipping, and connectors that cross or cover text. Letters are HTML. If you did not check contrast, say so.
 
 Delivery: pixel size, fonts that loaded, linked files, and both the editable page and the export when they were supplied.
 
-A set of frames uses the same five scores. A face or body that was generated or retouched fails. A logo, photo, or icon belongs only when `brand.local/assets/README.md` lists that use.
+A set of frames uses the same five scores. A logo, photo, or icon belongs only when `brand.local/assets/README.md` lists that use.

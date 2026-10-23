@@ -4,8 +4,6 @@
 
 `whoami` first.
 
-If more than one workspace is listed, stop until they name one.
-
 `tools_get` the capability, then run it.
 
 The fetched schema wins.
@@ -24,10 +22,3 @@ If a stored draft for this post already exists, read it with `social.content.art
 
 If the create cannot run, hand them the file and say the account copy was not saved.
 
-Saving a draft does not schedule.
-
-A day mark belongs to `update-content-board`.
-
-Do not call `social.content.schedule`.
-
-Say that nothing was sent.

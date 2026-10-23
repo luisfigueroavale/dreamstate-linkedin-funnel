@@ -68,13 +68,13 @@ Plan X posts with the owner for the next 7 days from three lanes. Follow `docs/s
 |---|---|---|---|
 | 1 | `whoami` | read | no |
 | 2 | `tools_get` | read | no |
-| 4 | `social.content.artifact_list` | live | no |
+| 4 | `social.content.artifact_list` | live | yes |
 | 6 | `tools_get` | read | no |
-| 6 | `tools_run` | live | no |
-| 6 | `visibility.analytics_query` | live | no |
+| 6 | `tools_run` | live | yes |
+| 6 | `visibility.analytics_query` | live | yes |
 | 8 | `tools_get` | read | no |
-| 8 | `tools_run` | live | no |
-| 8 | `visibility.radar.inspiration_x_list` | live | no |
+| 8 | `tools_run` | live | yes |
+| 8 | `visibility.radar.inspiration_x_list` | live | yes |
 | 9 | `source.x_posts_search` | quote, then run | yes |
 | 10 | `tools_get` | read | no |
 | 10 | `tools_run` | live | yes |
@@ -88,8 +88,8 @@ Plan X posts with the owner for the next 7 days from three lanes. Follow `docs/s
 | 18 | `social.content.plan` | live | yes |
 | 19 | `social.content.schedule` | live | yes |
 | 20 | `social.content.approve` | live | yes |
-| - | `social.content.auto_publish_set` | never | no |
-| - | `social.content.approval.authorize_publish` | never | no |
+| - | `social.content.auto_publish_set` | never | n/a |
+| - | `social.content.approval.authorize_publish` | never | n/a |
 
 ## Stop rules
 

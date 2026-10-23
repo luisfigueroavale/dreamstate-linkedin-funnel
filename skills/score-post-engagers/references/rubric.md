@@ -12,8 +12,6 @@ Person rubric is the follower file, including the qualifying test.
 
 Add two `column.ai_fit_score` columns with `tables.columns.add`, company and person, each 0 to 100.
 
-Do not call `column.ai`.
-
 Reuse an existing pair.
 
 `tools_search` then `tools_get` before a change.
@@ -23,10 +21,6 @@ Bind only keys the sheet has.
 A later lookup is `visibility.research.web_search` (`query`) or `visibility.research.urls_fetch` (`urls`).
 
 See `docs/calls.md`.
-
-A required unknown is a hold, not a no and not a yes.
-
-Hold is not enrolled or sent.
 
 A required no with evidence fails that side.
 
@@ -41,8 +35,6 @@ Missing headcount, remit, or intent stays unknown.
 A company name is not a domain match.
 
 Exclude teammates, customers, and open threads when that column exists.
-
-Do not delete rows to hide them.
 
 A company fail stops the row even when the person passes.
 

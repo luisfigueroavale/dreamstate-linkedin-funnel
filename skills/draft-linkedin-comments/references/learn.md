@@ -10,7 +10,7 @@ Match the 19-digit id that follows `activity-` or `activity:`. Strip a leading @
 
 Early rounds, while picks are still settling, write 2 drafts on each post. After two runs where one draft would have been the card they took most of the time, return to a single draft.
 
-An edit becomes a voice rule in `brand.local/voice.md`, not a stored copy of their sentence. A pattern seen twice becomes a rule. Edits are the strongest voice signal. One line in the handover says what you learned. Do not paste their comment into the repo. Recent comments of theirs are texture only.
+An edit becomes a voice rule in `brand.local/voice.md`, not a stored copy of their sentence. A pattern seen twice becomes a rule. Edits are the strongest voice signal. One line in the handover says what you learned. Recent comments of theirs are texture only.
 
 Skip reasons a card may store: "Post too old", "Already said", "Wrong angle", "Too long", "Not how I talk", "Not my topic", "No reason".
 

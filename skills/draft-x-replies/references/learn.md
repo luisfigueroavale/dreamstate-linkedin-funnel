@@ -1,6 +1,6 @@
 # Learn
 
-Do this before the next fetch. Use replies the owner actually sent. A click on the page is not that evidence. If they have not pasted the sent text and no fetched contract returned it, say so and do not invent the verdicts.
+Do this before the next fetch. Use replies the owner actually sent. A click on the page is not that evidence.
 
 Compare each earlier draft with the sent text after stripping leading @ mentions. Same text means posted as drafted. Different text means posted with edits. No sent text means not posted.
 

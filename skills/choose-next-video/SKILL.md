@@ -53,8 +53,8 @@ Follow `docs/skill-frame.md`.
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 5 | `tables.executable_definitions.list_resolved` | live | no |
-| 6 | `tables.table_sources.attach` | live | no |
+| 5 | `tables.executable_definitions.list_resolved` | live | yes |
+| 6 | `tables.table_sources.attach` | live | yes |
 | 7 | `tables.table_sources.run` | dry_run, then live | yes |
 
 ## Stop rules

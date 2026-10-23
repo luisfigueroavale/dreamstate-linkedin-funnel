@@ -10,8 +10,6 @@ A renamed font in docs is not done if the renderer still loads the old file.
 
 Shared CSS can change old renders, so keep the delivered file, or pin the values it used, when that picture must stay as it shipped.
 
-A single graphic request does not authorize a global palette change.
-
 On adoption, update the style words, the matching token values, and those consumers together, and only inside the scope they named.
 
 If a layout idea came from another skill or an example, name that source in the local file.

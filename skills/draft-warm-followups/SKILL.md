@@ -52,25 +52,25 @@ Build a short draft sequence for people who already fit, with a daily cap and fa
 | 5 | `senders.linkedin_accounts.list` | read | no |
 | 5 | `senders.social_accounts.list` | read | no |
 | 6 | `tools_get` | read | no |
-| 6 | `tools_run` | live | no |
-| 6 | `sequence.sequences.create_from_worksheet` | live | no |
+| 6 | `tools_run` | live | yes |
+| 6 | `sequence.sequences.create_from_worksheet` | live | yes |
 | 7 | `tools_get` | read | no |
-| 7 | `tools_run` | live | no |
-| 7 | `tables.columns.add` | live | no |
+| 7 | `tools_run` | live | yes |
+| 7 | `tables.columns.add` | live | yes |
 | 8 | `tools_get` | read | no |
-| 8 | `tools_run` | live | no |
-| 8 | `sequence.sequences.copy_preview` | live | no |
+| 8 | `tools_run` | live | yes |
+| 8 | `sequence.sequences.copy_preview` | live | yes |
 | 10 | `tools_get` | read | no |
 | 10 | `tools_run` | dry_run | no |
 | 10 | `tools_run` | live | yes |
-| 10 | `sequence.sequences.activate_audience` | dry_run | no |
+| 10 | `sequence.sequences.activate_audience` | dry_run | yes |
 | 10 | `sequence.sequences.activate_audience` | live | yes |
 | 12 | `tools_get` | read | no |
 | 13 | `tools_get` | read | no |
 | 13 | `tools_run` | live | yes |
 | 13 | `sequence.sequences.resume` | live | yes |
-| - | `sequence.linkedin.auto_engagements.replace` | never | no |
-| - | `sequence.x.auto_engagements.replace` | never | no |
+| - | `sequence.linkedin.auto_engagements.replace` | never | n/a |
+| - | `sequence.x.auto_engagements.replace` | never | n/a |
 
 ## Stop rules
 

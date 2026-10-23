@@ -10,8 +10,4 @@ Local values live in `brand.local/`.
 
 If that folder is absent, copy the blanks the way `brand/AGENTS.md` shows, then edit only the copies.
 
-A missing file, an empty line, or `Status: blank` means ask.
-
-Write only values the owner supplied.
-
 Paths stay inside this repo.

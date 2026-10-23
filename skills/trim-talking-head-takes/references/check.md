@@ -27,4 +27,4 @@ ffmpeg -nostats -hide_banner -an -i "$OUT" -vf "$BLACK" -f null -
 ffmpeg -nostats -hide_banner -i "$OUT" -af "silencedetect=noise=-45dB:d=0.6" -f null -
 ```
 
-`loudnorm` is a reading of the encoded file, not a new grade and not a restyle. Repair a failed join and render again. Three passes is the stop; then report what remains.
+`loudnorm` is a reading of the encoded file, not a new grade and not a restyle. Repair a failed join and render again.

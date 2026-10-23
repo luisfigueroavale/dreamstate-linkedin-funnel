@@ -45,14 +45,14 @@ List inbox threads that need a person and hand them to a reply draft. Follow `do
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 2 | `tools_get` | read | no |
-| 2 | `tools_run` | live | no |
-| 3 | `unibox.inbox.unified_list` | live | no |
+| 2 | `tools_run` | live | yes |
+| 3 | `unibox.inbox.unified_list` | live | yes |
 | 5 | `unibox.inbox.analyze` | dry_run | no |
 | 5 | `unibox.inbox.analyze` | live | yes |
-| 6 | `senders.linkedin_accounts.list` | live | no |
-| 6 | `senders.social_accounts.list` | live | no |
-| 9 | `runs_get` | live | no |
-| - | `senders.identities.inbox_scope_get` | never | no |
+| 6 | `senders.linkedin_accounts.list` | live | yes |
+| 6 | `senders.social_accounts.list` | live | yes |
+| 9 | `runs_get` | live | yes |
+| - | `senders.identities.inbox_scope_get` | never | n/a |
 
 ## Stop rules
 

@@ -58,36 +58,36 @@ After a post is live, collect engagers, score company and person apart, and draf
 |---|---|---|---|
 | 1 | `social.content.artifact_get` | read | no |
 | 2 | `senders.linkedin_accounts.list` | read | no |
-| 2 | `visibility.linkedin.engagement_harvest` | dry_run | no |
+| 2 | `visibility.linkedin.engagement_harvest` | dry_run | yes |
 | 2 | `visibility.linkedin.engagement_harvest` | live | yes |
 | 3 | `visibility.linkedin.engagement_status` | read | no |
 | 3 | `visibility.linkedin.engagement_engagers` | read | no |
 | 4 | `runs_get` | read | no |
 | 6 | `tools_search` | read | no |
 | 6 | `tools_get` | read | no |
-| 6 | `tables.columns.add` | live | no |
-| 7 | `visibility.research.web_search` | live | no |
-| 7 | `visibility.research.urls_fetch` | live | no |
+| 6 | `tables.columns.add` | live | yes |
+| 7 | `visibility.research.web_search` | live | yes |
+| 7 | `visibility.research.urls_fetch` | live | yes |
 | 9 | `tables.columns.run` | dry_run | no |
 | 9 | `tables.columns.run` | live | yes |
 | 10 | `runs_get` | read | no |
 | 11 | `tables.auto_run.set` | live | yes |
 | 13 | `social.comments.queue_list` | read | no |
-| 13 | `visibility.linkedin.comments.refresh` | live | no |
+| 13 | `visibility.linkedin.comments.refresh` | live | yes |
 | 14 | `social.content.article_deliveries_list` | read | no |
 | 14 | `visibility.linkedin_post_notifications_list` | read | no |
 | 15 | `social.comments.reply` | preview | no |
 | 16 | `social.comments.approve` | live | yes |
 | 17 | `visibility.analytics_query` | read | no |
 | 18 | `senders.social_accounts.list` | read | no |
-| 18 | `visibility.analytics_refresh` | live | no |
-| 19 | `workflow.workflows.activate` | smoke_test | no |
+| 18 | `visibility.analytics_refresh` | live | yes |
+| 19 | `workflow.workflows.activate` | smoke_test | yes |
 | 19 | `workflow.workflows.activate` | live | yes |
-| - | `tables.profile_watcher` | never | no |
-| - | `tables.x_post_engagers.run` | never | no |
-| - | `knowledge.engagement.people_engaged_n_times` | never | no |
-| - | `column.ai` | never | no |
-| - | `sequence.sequences.activate_audience` | never | no |
+| - | `tables.profile_watcher` | never | n/a |
+| - | `tables.x_post_engagers.run` | never | n/a |
+| - | `knowledge.engagement.people_engaged_n_times` | never | n/a |
+| - | `column.ai` | never | n/a |
+| - | `sequence.sequences.activate_audience` | never | n/a |
 
 ## Stop rules
 

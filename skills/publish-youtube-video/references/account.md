@@ -1,6 +1,6 @@
 # Account
 
-`senders.social_accounts.list` with `platform` `youtube` supplies `account_id` (the account `id`). If no YouTube account is connected, stop. `social.channels_list` is the channel row.
+`senders.social_accounts.list` with `platform` `youtube` supplies `account_id` (the account `id`). `social.channels_list` is the channel row.
 
 Both reads are live. Neither accepts dry_run. Re-read the channel row before a publish.
 

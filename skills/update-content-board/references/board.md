@@ -10,6 +10,3 @@ Move the line when the status changes.
 
 The draft lives in `vault/posts/<slug>.md`, using the fields in `vault/fields.md`.
 
-`publish_date` stays empty until the piece is actually out.
-
-Do not claim a card was saved in another app.

@@ -26,8 +26,6 @@ Reader phrases stay in the follower file.
 
 Add Product Information only if the interview, or the owner, says that page is missing.
 
-If it exists, leave it.
-
 New offer facts stay on the interview.
 
 Goal, repeated subject, reader next step, and cadence stay on the interview.

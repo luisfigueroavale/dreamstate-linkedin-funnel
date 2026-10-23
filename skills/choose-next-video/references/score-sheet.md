@@ -109,7 +109,7 @@ The report then lists up to 40 search outliers in the window, and up to 15 libra
 
 ## Limits that do not run
 
-Do not set a key, port a client, or build a watch or still url from an id. A pasted url stays their string. A caption is one they supply. Rebuild limits are in `skills/choose-next-video/references/score-sheet.md`.
+Rebuild limits are in `skills/choose-next-video/references/score-sheet.md`.
 
 Do not rebuild a video-host client. An older scanner priced one search at 100 units against a 10,000 unit day and asked to stay under 30 searches unless the owner wanted more. Its client defaulted to 60 searches and 1,500 calls. A lower-level sampler defaulted to 40 searches, 1,000 calls, and 100 uploads.
 

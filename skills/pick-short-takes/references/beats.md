@@ -4,8 +4,6 @@ For each beat record the source file, in-point, out-point, and why that range.
 
 Drop false starts.
 
-Reject an unfinished fragment even if it is the last thing they said.
-
 A retake can sit inside a phrase.
 
 Inspect at word level.

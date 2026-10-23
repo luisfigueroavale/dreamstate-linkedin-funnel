@@ -4,7 +4,7 @@ Each keep names a source, a start, and an end on that file. Output time is deriv
 
 A range that stores `out_start` fails when it disagrees.
 
-A words file passed with `--words-out` fails when it disagrees with that map, and fails when no map was built. Do not keep a second clock by hand.
+A words file passed with `--words-out` fails when it disagrees with that map, and fails when no map was built.
 
 A word is kept when its start lies in a range, start included, end excluded. The word's end is clipped to the range end. Tokens that are not type `word` are left out. A named transcript that is missing fails.
 
@@ -16,4 +16,4 @@ Paths resolve beside the plan file. Card times are seconds on the cut you are de
 
 If the picture is already one graded or scaled file, set `edl` to null and do not attach raw ranges.
 
-That file is the only clip, and its probed length is the clock. Sending audio out for a transcript needs the owner's yes. With no transcript, time the clip you have as one range from zero to its length, and say the words came from that file.
+That file is the only clip, and its probed length is the clock. With no transcript, time the clip you have as one range from zero to its length, and say the words came from that file.

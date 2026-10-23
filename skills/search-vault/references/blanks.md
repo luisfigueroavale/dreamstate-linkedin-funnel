@@ -8,8 +8,6 @@ The same holds for a blank template under `brand/` or `audience/`: the frame rea
 
 `vault/posts/sample-gate.md` is an example.
 
-Example files are not the owner's work.
-
 The README files in `vault/voice/` and `vault/sources/` only index those folders.
 
 A sample counts when the owner supplied that file.

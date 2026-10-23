@@ -2,7 +2,7 @@
 
 ## Where to enter
 
-Start at the stage the work is already in. Do not restart at 0 to look thorough.
+Start at the stage the work is already in.
 
 | What they handed you | Start |
 |---|---|
@@ -11,7 +11,7 @@ Start at the stage the work is already in. Do not restart at 0 to look thorough.
 | A raw file | 4 |
 | A live link | 5 |
 
-If the brief has no piece list yet, write that list before any draft. Do not draft a claim they have not sourced. Ask only what they alone can decide.
+If the brief has no piece list yet, write that list before any draft.
 
 ## The nine stages
 

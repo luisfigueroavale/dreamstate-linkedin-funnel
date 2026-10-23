@@ -53,19 +53,19 @@ Turn pasted posts, or a Dreamstate read that returns them, into sourced angles. 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 5 | `tools_get` | read | no |
-| 5 | `tools_run` | live | no |
-| 5 | `visibility.radar.inspiration_x_list` | live | no |
+| 5 | `tools_run` | live | yes |
+| 5 | `visibility.radar.inspiration_x_list` | live | yes |
 | 6 | `source.x_posts_search` | definition id | no |
 | 6 | `tables.executable_definitions.list_resolved` | read | no |
-| 6 | `tables.table_sources.attach` | live | no |
+| 6 | `tables.table_sources.attach` | live | yes |
 | 6 | `tables.table_sources.run` | live | yes |
 | 7 | `visibility.research.web_search` | live | yes |
 | 7 | `visibility.research.urls_fetch` | live | yes |
 | 8 | `senders.social_accounts.list` | read | no |
-| 8 | `tables.x_post_engagers.run` | not this scan | no |
-| 8 | `visibility.linkedin.engagement_harvest` | never | no |
+| 8 | `tables.x_post_engagers.run` | not this scan | yes |
+| 8 | `visibility.linkedin.engagement_harvest` | never | n/a |
 | 9 | `whoami` | read | no |
-| 14 | `sequence.x.auto_engagements.replace` | never | no |
+| 14 | `sequence.x.auto_engagements.replace` | never | n/a |
 | 14 | `social.feeds.create` | dry_run, then live | yes |
 
 ## Stop rules

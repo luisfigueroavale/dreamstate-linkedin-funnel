@@ -8,4 +8,3 @@ Connected is not the same as ready.
 
 Do not set up a mailbox here.
 
-Do not guess a name.

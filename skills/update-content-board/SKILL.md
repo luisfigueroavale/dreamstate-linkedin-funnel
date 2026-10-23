@@ -47,7 +47,7 @@ Place a week's pieces on the local board from the owner's dates, time zone, and 
 | 9 | `social.content.approve` | live | yes |
 | 10 | `social.content.unschedule` | live | yes |
 | 11 | `social.content.artifact_get` | read | no |
-| - | `social.content.unplan` | never | no |
+| - | `social.content.unplan` | never | n/a |
 
 ## Stop rules
 

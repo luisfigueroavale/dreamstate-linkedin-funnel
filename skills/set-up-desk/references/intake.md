@@ -4,4 +4,4 @@ Capture starts at `vault/intake/interview.md`. If missing, recreate headings and
 
 Do not seed identity, proof, voice, hooks, or topics from an example. Leave `vault/notes/hooks.md` and `vault/notes/pillars.md`.
 
-Pillars wait for `map-content-pillars`. Do not rename files in `skills/`, `brand/`, or `audience/`.
+Pillars wait for `map-content-pillars`.

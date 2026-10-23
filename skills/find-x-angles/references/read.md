@@ -1,8 +1,8 @@
 # Where to read
 
-Cheapest first: posts and links they pasted, then the browser, then `visibility.radar.inspiration_x_list`. That radar read is free. It takes `query`, `author_handles`, `ai_filter`, `limit`, `cursor`. `tools_get` before `tools_run`. The fetched schema wins. Sending dry_run still executes the read. Say that it was a read. Do not treat that mode as a preview that fetched nothing.
+Cheapest first: posts and links they pasted, then the browser, then `visibility.radar.inspiration_x_list`. That radar read is free. It takes `query`, `author_handles`, `ai_filter`, `limit`, `cursor`. `tools_get` before `tools_run`. The fetched schema wins. Sending dry_run still executes the read.
 
-Keep `limit` to a short page, about 10 to 20, and name the number you asked for. Pass `cursor` only when you mean to open the next page, and say so. Do not walk every page on your own. `ai_filter` is a short description for this call.
+Keep `limit` to a short page, about 10 to 20, and name the number you asked for. Pass `cursor` only when you mean to open the next page, and say so. `ai_filter` is a short description for this call.
 
 A reason in the response applies to this response only.
 

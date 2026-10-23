@@ -6,7 +6,7 @@ Script minute one as 5 beats. Aim near 160 words. A clear take may stretch towar
 
 Sentence one restates the title. Frame one is the hero object from the still. Write three alternates of sentence one. The owner reads them aloud, picks, and films that opening before the rest.
 
-`write-video-script` waits until all three gates pass. `edit-long-video` uses the cut marks.
+`edit-long-video` uses the cut marks.
 
 A studio paste uses the share still watching at 0:30. High means the opening delivered the package. Low means change the title, the still, or the opening.
 

@@ -46,7 +46,7 @@ Save interviews, notes, and writing the owner supplies, then file only the lines
 | 9 | `tools_run` | dry_run | no |
 | 9 | `tools_run` | live | yes |
 | 10 | `runs_get` | read | no |
-| - | `knowledge.vault.ingest` | never | no |
+| - | `knowledge.vault.ingest` | never | n/a |
 
 ## Stop rules
 

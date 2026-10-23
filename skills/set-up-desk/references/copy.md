@@ -1,6 +1,6 @@
 # Copy
 
-`brand.local/identity.md`, `brand.local/voice.md`, `brand.local/style.md`, and `audience.local/ideal-follower.md` stay `Status: blank` until the owner writes them. Do not fill a blank brand or audience file.
+`brand.local/identity.md`, `brand.local/voice.md`, `brand.local/style.md`, and `audience.local/ideal-follower.md` stay `Status: blank` until the owner writes them.
 
 Before write, look at `brand.local/`, `audience.local/`, `vault/`, and `.gitignore`. An owner folder is not a blank template. Keep their sources, settings, and edits.
 
@@ -16,4 +16,4 @@ cp audience/ideal-follower.md audience.local/ideal-follower.md
 
 Samples live in `vault/voice/`. Raw material lives in `vault/sources/`. Commit neither. These paths are also ignored: `output/`, `work/`, `pictures/**/export/`.
 
-If a local folder exists, replace nothing. Copy one missing template alone. After a copy, read the destination.
+Copy one missing template alone. After a copy, read the destination.

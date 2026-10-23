@@ -16,6 +16,3 @@ Their own uploads are proven only in the ledger.
 
 A ratio is current views against that channel's comparable uploads. It is not click-through, not views per hour, and not causation.
 
-Never call the age-band ratio velocity.
-
-Files and numbers come from the owner.

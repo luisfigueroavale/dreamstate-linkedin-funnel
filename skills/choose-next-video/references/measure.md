@@ -2,23 +2,17 @@
 
 Best source first. The cheapest source is a file already in `vault/sources/`.
 
-Call prices and modes are in `docs/calls.md`. No paid research without a yes.
+Call prices and modes are in `docs/calls.md`.
 
-Before hand-typed counts, resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`. It is a definition id, not a `tools_run` id.
+Before hand-typed counts, resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`.
 
 Attach with `tables.table_sources.attach`.
 
-Run `tables.table_sources.run` only after the quote and the owner's yes.
-
 If that definition is not resolved, they type the counts after opening the pages: the past 30 days, the channel behind each result, and the median of its last 20 to 30 long uploads.
 
-A badge from an outlier plugin is not a measurement you fetched.
+Score the sheet locally. What rank computes, what depth computes, and the sheet JSON are in `skills/choose-next-video/references/score-sheet.md`.
 
-Do not add a host client, a plugin, or a caption downloader. If a path needs an API key, drop it.
-
-Score the sheet locally. The script does not open a socket. What rank computes, what depth computes, and the sheet JSON are in `skills/choose-next-video/references/score-sheet.md`.
-
-Count 6 probes. Sheet size is a search cap of 20, a depth cap of 3, and those 6 probes. Default breadth is 4. Default outlier is 3. Going past 30 searches needs another yes.
+Count 6 probes. Sheet size is a search cap of 20, a depth cap of 3, and those 6 probes. Default breadth is 4. Default outlier is 3.
 
 Save numbers under `vault/sources/<date>-<slug>/` (append only). A fix is a new file.
 

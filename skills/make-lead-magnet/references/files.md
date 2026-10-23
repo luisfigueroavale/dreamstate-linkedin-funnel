@@ -29,4 +29,4 @@ Replace every line and leave no example sentence. A later reader must be able to
   4. the published stable address
   5. after the first result, one optional next step, with extras after that
 
-  It ends with the check. It pays off the promise with no sales conversation in the path.
+It ends with the check. It pays off the promise with no sales conversation in the path.

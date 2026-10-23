@@ -1,10 +1,10 @@
 ## Motion and sound
 
-Scan one frame every 10 seconds and label that frame with its timestamp. Sixteen frames fill one sheet. Then read positions from frames that carry a 10 percent grid. A missing label fails the review even when the checker exits 0.
+Scan one frame every 10 seconds and label that frame with its timestamp. Sixteen frames fill one sheet. Then read positions from frames that carry a 10 percent grid.
 
 An interlude is a full-frame flat card with centred type for the one idea or number the piece hangs on. Cut that card in hard. It lasts 1 to 4 seconds. Past 4 seconds the cut looks paused. Under 1 second the next card has not landed.
 
-Reframes and zooms are hard cuts. Set `ease` to 0. Do not ramp a zoom. On shorts and vertical cuts only, keep the scale between 1.1 and 1.3, about every 2 to 3 seconds.
+Reframes and zooms are hard cuts. On shorts and vertical cuts only, keep the scale between 1.1 and 1.3, about every 2 to 3 seconds.
 
 Soft motion is only for a type entrance: the words rise out of a blur, with no spring and no bounce.
 

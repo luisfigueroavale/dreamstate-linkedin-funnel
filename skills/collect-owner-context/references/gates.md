@@ -12,8 +12,6 @@ Live repeats `quote_hash`, sets `max_credits` to that ceiling (`0` only when the
 
 `approved: true` only after yes.
 
-A refused quote is a price.
-
 Do not retry.
 
 Live revises existing Ideal Customer, Proof, or Tone of Voice, not an existing Product Information page.
@@ -28,8 +26,3 @@ If compose cannot run, pages were not written; keep the raw folder.
 
 The only Dreamstate write is that compose, after the yes.
 
-This skill does not search, fetch, enrich, watch, publish, schedule, enroll, or send.
-
-Do not create a server, a worksheet, or a posts database.
-
-A capture yes does not cover those.

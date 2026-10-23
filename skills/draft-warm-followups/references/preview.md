@@ -4,8 +4,6 @@ Preview the scope and the row variables for at least 3 rows, including one thin 
 
 It is a free read.
 
-A refused dry_run runs live, so say it was a read.
-
 Report unresolved identities and tokens.
 
 Before activation, inspect preview and sending scope.

@@ -36,8 +36,8 @@ Note repeating thumbnail patterns in a set, and brief directions. Follow `docs/s
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 1 | `tables.executable_definitions.list_resolved` | live | no |
-| 2 | `tables.table_sources.attach` | live | no |
+| 1 | `tables.executable_definitions.list_resolved` | live | yes |
+| 2 | `tables.table_sources.attach` | live | yes |
 | 3 | `tables.table_sources.run` | dry_run, then live | yes |
 
 ## Stop rules

@@ -50,7 +50,7 @@ Draft or revise one LinkedIn post from the vault, the brand files, and allowed p
 | 12 | `social.content.artifact_get` | read | no |
 | 13 | `tools_get` | read | no |
 | 13 | `social.content.artifact_create` | dry_run, then live | yes |
-| - | `social.content.schedule` | never | no |
+| - | `social.content.schedule` | never | n/a |
 
 ## Stop rules
 

@@ -6,6 +6,5 @@ Copy `pictures/frames/thumb.html`. The frame is 1280×720.
 
 Load `pictures/timeline.js`, register a `DeskTimeline`, and install it so the page exposes `__seek`. Capture calls `__seek`. The still is the last seek.
 
-When this thumb is the closing frame of a scene, that seek is the final one. CSS does not animate.
+When this thumb is the closing frame of a scene, that seek is the final one.
 
-Do not hand the preview stand-in to the owner.
