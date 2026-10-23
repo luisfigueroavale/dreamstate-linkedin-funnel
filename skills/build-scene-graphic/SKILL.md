@@ -7,7 +7,7 @@ Follow `docs/skill-frame.md`.
 
 The scene is a place the reader gets quickly. Use it for stations, roles, or a flow. A dense lesson stays in `design-post-graphic`. A process drawn as plates stays in `draw-process-map`.
 
-Colors and type come from filled `brand.local` tokens. Stop if that file is blank. Do not deliver the stand-in. A number appears only when the post already states it. Lines are the post's own lines. Roles and tool names come from that source. Never invent a station. A mark or a photo is allowed only from a file the owner supplied, and a photo stays unchanged.
+Colors and type come from filled `brand.local` tokens. Headline text uses `--headline-gradient` when that token is set, and `--color-accent` when it is not. `--color-accent-2` is the second accent. Stop if that file is blank. Do not deliver the stand-in. A number appears only when the post already states it. Lines are the post's own lines. Roles and tool names come from that source. Never invent a station. A mark or a photo is allowed only from a file the owner supplied, and a photo stays unchanged.
 
 When the brief is open, offer three metaphors, one line each, and wait. They pick. Then state the reading order: what comes in, what each station does to it, and what leaves.
 

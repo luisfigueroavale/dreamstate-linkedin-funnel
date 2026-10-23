@@ -3,7 +3,9 @@ __pycache__/
 *.pyc
 work/
 output/
+brand.local
 brand.local/
+audience.local
 audience.local/
 vault/voice/*
 !vault/voice/README.md

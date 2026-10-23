@@ -4,6 +4,8 @@ HTML and CSS are the picture. JavaScript is the motion. PNG, PDF, GIF, and MP4 a
 
 Read [brand/AGENTS.md](../brand/AGENTS.md) first. Templates import [brand/tokens.css](../brand/tokens.css) for the token names. Owner values come from `brand.local/tokens.css`. If that file is missing or still `unset`, stop and ask. Do not invent a color. A preview stand-in in the template CSS is only so a blank checkout can render. Do not hand that stand-in to the owner.
 
+Headline text uses `--headline-gradient` when that token is set. When it is unset, the fill is `--color-accent`. `--color-accent-2` is a second accent the owner can name inside that gradient. Both stay `unset` in the committed template.
+
 ## Copy
 
 Each line is an instruction or a fact that is already in the post. Start with a verb when the line tells the reader to do something. Name the real object. Use the post's own lines. Do not put a number on a frame unless the post's source has that number.

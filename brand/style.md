@@ -16,8 +16,12 @@ Picture templates import `brand/tokens.css` for these names. They may show a pre
 | Text | `--color-fg` | |
 | Muted text | `--color-muted` | |
 | Accent | `--color-accent` | |
+| Second accent | `--color-accent-2` | |
+| Headline gradient | `--headline-gradient` | |
 | Rules and lines | `--color-line` | |
 | Plate surface | `--color-surface` | |
+
+Headline text uses `--headline-gradient` when that value is set. When the line is empty, the fill is `--color-accent`. `--color-accent-2` is a second stop the gradient can name. Leave both empty here.
 
 ## Fonts
 

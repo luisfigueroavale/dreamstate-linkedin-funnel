@@ -36,7 +36,7 @@ Templates may render with a preview stand-in so the scripts run. That stand-in i
 | `identity.md` | Who we are, the offer, who it is for, positioning, and which pages may be cited as proof. |
 | `voice.md` | Tone, word rules, do and don't, banned words, example lines the owner accepts. |
 | `style.md` | Color, type, spacing, grid, and platform sizes, in words. |
-| `tokens.css` | The same choices as variables. Picture templates import `brand/tokens.css` for the names. Owner values override from `brand.local/tokens.css`. |
+| `tokens.css` | The same choices as variables. Picture templates import `brand/tokens.css` for the names. Owner values override from `brand.local/tokens.css`. Headline text uses `--headline-gradient` when that token is set, and `--color-accent` when it is not. `--color-accent-2` is the second accent. Both stay unset in the template. |
 | `assets/` | Logos, photos the owner supplied, icons. The README is the allow-list. No generated faces. |
 | `taste.md` | The check every draft and design must pass before the owner sees it. |
 
