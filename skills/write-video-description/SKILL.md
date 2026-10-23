@@ -24,7 +24,7 @@ Write a paste-ready description, links, and chapters from the finished cut or a 
 
 5. Take chapter starts from the cut when the cut exists (`references/chapters.md`).
 
-6. Hand over the description ready to paste, then the chapters, and a title belongs to `write-video-titles`, and an upload belongs to `publish-youtube-video` (`references/handoff.md`).
+6. Hand over the description ready to paste, then the chapters (`references/handoff.md`). A title belongs to `write-video-titles`, and an upload belongs to `publish-youtube-video`.
 ## Dreamstate tools
 
 None. Local files only.

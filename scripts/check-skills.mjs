@@ -112,14 +112,33 @@ export function mentionsId(sentence, id) {
   return new RegExp("`?" + escaped + "`?(?!\\.[A-Za-z0-9_])(?![A-Za-z0-9_])").test(sentence);
 }
 
+function negatedObject(sentence, id) {
+  const escaped = String(id).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const re = new RegExp("`?" + escaped + "`?(?!\\.[A-Za-z0-9_])(?![A-Za-z0-9_])", "g");
+  let match;
+  let found = false;
+  while ((match = re.exec(sentence))) {
+    found = true;
+    const before = sentence.slice(0, match.index).replace(/`[^`]*`/g, " ");
+    const negs = [...before.matchAll(/\b(?:Do not|Never|never)\b/g)];
+    if (!negs.length) return false;
+    const span = before.slice(negs[negs.length - 1].index + negs[negs.length - 1][0].length);
+    if (/,\s*(?:and\s+|then\s+)?(?!or\b)[A-Za-z]/.test(span)) return false;
+    if (!/\b[A-Za-z]+\b/.test(span)) return false;
+  }
+  return found;
+}
+
 export function neverStepErrors(stepLine, ids) {
   const body = String(stepLine).replace(/^\d+\.\s*/, "");
   const sentences = body.split(/(?<=[.!?])\s+(?=[A-Z])/);
   const errors = [];
   for (const sentence of sentences) {
-    if (/^(Do not|Never)\b/.test(sentence)) continue;
+    const negated = /^(Do not|Never)\b/.test(sentence);
     for (const id of ids) {
-      if (mentionsId(sentence, id)) errors.push(`${id} is on the Never call line`);
+      if (!mentionsId(sentence, id)) continue;
+      if (negated && negatedObject(sentence, id)) continue;
+      errors.push(`${id} is on the Never call line`);
     }
   }
   return errors;
@@ -141,7 +160,7 @@ export function conditionClauses(stepText) {
     .replace(/\(`references\/[^`]+`\)/g, " ");
   const clauses = [];
   for (const sentence of body.split(/(?<=[.!?])\s+/)) {
-    const pattern = /\b(?:after owner yes|at least|only|when|if)\b/gi;
+    const pattern = /\b(?:after owner yes|needs owner yes|needs a yes|at least|only|when|if)\b/gi;
     let match;
     while ((match = pattern.exec(sentence))) {
       const clause = sentence.slice(match.index).replace(/\s+/g, " ").trim().replace(/[.,;:]+$/, "");

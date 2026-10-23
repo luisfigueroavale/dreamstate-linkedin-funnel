@@ -27,7 +27,7 @@ It points at the stage skills and orders one week from a sourced idea. Follow `d
 
 6. Bring four scans back in stage 0, and do not turn them into the pick (`references/stage-0.md`).
 
-7. Read LinkedIn outliers with `visibility.radar.inspiration_linkedin_list`, because sending dry_run executes that read (`references/stage-0.md`).
+7. Read LinkedIn outliers with `visibility.radar.inspiration_linkedin_list` (`references/stage-0.md`). Sending dry_run executes that read.
 
 8. Read moving posts through `find-x-angles`, which reads `visibility.radar.inspiration_x_list` (`references/stage-0.md`).
 

@@ -22,7 +22,7 @@ Score one finished frame for clarity, identity, and export quality. Follow `docs
 
 4. Write five scores in words (`references/scores.md`). Do not give a numeric score unless a rubric exists.
 
-5. Match identity to rules that are written down, and headline text uses `--headline-gradient` when that token is set, and `--color-accent` when it is not (`references/scores.md`).
+5. Match identity to rules that are written down (`references/scores.md`). Headline text uses `--headline-gradient` when that token is set, and `--color-accent` when it is not.
 
 6. Review the frames `__seek` returns, including the last one, on the `DeskTimeline`, and treat that last frame as the still (`references/motion.md`).
 

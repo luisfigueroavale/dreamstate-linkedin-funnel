@@ -22,7 +22,7 @@ Set or revise the owner's visual identity, token values, and graphic rules from 
 
 4. Put visual rules in `brand.local/style.md` and exact values in `brand.local/tokens.css` (`references/tokens.md`).
 
-5. Use the gradient for headline text when the owner set it and `--color-accent` when that value is still unset, and those names include `--color-accent-2` and `--headline-gradient` (`references/tokens.md`).
+5. Headline text uses the gradient when the owner set it, and `--color-accent` when that value is still unset (`references/tokens.md`). Those names include `--color-accent-2` and `--headline-gradient`.
 
 6. File licensed assets under `brand.local/assets/` (`references/assets.md`). Do not vendor fonts.
 

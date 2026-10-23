@@ -22,7 +22,7 @@ Place a week's pieces on the local board from the owner's dates, time zone, and 
 
 4. Give each piece one pillar, one topic, one subtopic, and one funnel job, and do not mint a pillar, a topic, or a job to fill an empty day (`references/pieces.md`).
 
-5. File the draft and record the planned day on the week brief, because that day is not a publish (`references/file.md`).
+5. File the draft and record the planned day on the week brief (`references/file.md`). That day is not a publish.
 
 6. Store the piece with `social.content.artifact_create` only when they ask, after `tools_get`, and do not call `social.content.plan` yet (`references/remote.md`).
 

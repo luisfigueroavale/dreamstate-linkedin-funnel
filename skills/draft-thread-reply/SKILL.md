@@ -33,7 +33,7 @@ Follow `docs/skill-frame.md`.
 
 7. Compose the reply from this thread (`references/voice.md`, `references/shapes.md`).
 
-8. Call `tools_get` before `tools_run` on `unibox.inbox.analyze` (`references/analyze.md`). Not a way to look busy.
+8. Call `tools_get` before `tools_run` on `unibox.inbox.analyze` (`references/analyze.md`). Do not analyze a pile of threads to look busy.
 
 9. Read `unibox.inbox.reply_drafts_list` with no dry_run (`references/save.md`).
 

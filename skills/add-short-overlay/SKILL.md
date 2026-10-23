@@ -24,7 +24,7 @@ Burn a cue-timed HTML overlay onto a short without covering the speaker or the c
 
 5. Keep captions, the face, and the graphic in distinct regions (`references/regions.md`).
 
-6. Burn the HTML overlay with ffmpeg, where motion is `DeskTimeline`, capture steps `__seek`, headline text uses `--headline-gradient` when that token is set and `--color-accent` when it is not, and `--color-accent-2` is the second accent (`references/burn.md`).
+6. Burn the HTML overlay with ffmpeg (`references/burn.md`). Motion is `DeskTimeline`, and capture steps `__seek`. Headline text uses `--headline-gradient` when that token is set and `--color-accent` when it is not, and `--color-accent-2` is the second accent.
 
 7. After an edit change, resolve the cues again from that final transcript before the next burn (`references/burn.md`).
 

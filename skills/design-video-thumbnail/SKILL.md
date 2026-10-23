@@ -26,7 +26,7 @@ Compose the thumbnail in HTML at the thumb size so the title and the picture mak
 
 5. Add on-image words for a fact the title left unsaid, two to four words (`references/words.md`).
 
-6. Start a large name from `pictures/frames/metal-title.css`, class `metal-title`, and the fill is `--headline-gradient` when that token is set, and `--color-accent` when it is not, and `--color-accent-2` is the second accent an owner can name inside the gradient (`references/metal.md`).
+6. Start a large name from `pictures/frames/metal-title.css`, class `metal-title` (`references/metal.md`). The fill is `--headline-gradient` when that token is set, and `--color-accent` when it is not, and `--color-accent-2` is the second accent an owner can name inside the gradient.
 
 7. Add `metal-title--soft` on the same element when one shadow is the better fit (`references/metal.md`).
 

@@ -16,7 +16,7 @@ Note repeating thumbnail patterns in a set, and brief directions. Follow `docs/s
 
 ## Steps
 
-1. Resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`, which is a definition id, not a `tools_run` id (`references/source.md`).
+1. Resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`; `source.account_posts_youtube` is a definition id, not a `tools_run` id (`references/source.md`).
 
 2. Attach that definition with `tables.table_sources.attach` (`references/source.md`).
 

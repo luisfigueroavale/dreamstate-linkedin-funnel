@@ -16,7 +16,7 @@ Build a small staged scene in HTML and CSS, with labels as real text, then captu
 
 ## Steps
 
-1. Offer three metaphors when the brief is open, one line each, and wait, and they pick (`references/brief.md`).
+1. Offer three metaphors when the brief is open, one line each, and wait (`references/brief.md`). They pick.
 
 2. State the reading order, and say what comes in, what each station does to it, and what leaves (`references/brief.md`).
 

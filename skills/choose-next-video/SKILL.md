@@ -27,7 +27,7 @@ Follow `docs/skill-frame.md`.
 
 4. Run `brand/taste.md` before you hand over the slate or the script.
 
-5. Resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`, which is a definition id, not a `tools_run` id (`references/measure.md`).
+5. Resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`; `source.account_posts_youtube` is a definition id, not a `tools_run` id (`references/measure.md`).
 
 6. Attach that definition with `tables.table_sources.attach` (`references/measure.md`).
 

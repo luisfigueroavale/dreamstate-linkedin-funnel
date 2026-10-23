@@ -19,7 +19,7 @@ Follow `docs/skill-frame.md`.
 
 2. Match their vocabulary and their rhythm from `brand.local/voice.md` and the samples in `vault/voice/`, and when the voice file is missing or blank, still write a neutral draft and say the draft does not match their voice (`references/read.md`).
 
-3. Take proof only from what `brand.local/identity.md` clears, because a blank identity file still stops you (`references/read.md`).
+3. Take proof only from what `brand.local/identity.md` clears (`references/read.md`). A blank identity file still stops you.
 
 4. Keep the post short (`references/shape.md`).
 

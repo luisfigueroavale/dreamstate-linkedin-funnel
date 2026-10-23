@@ -34,7 +34,7 @@ Make a LinkedIn article the owner can review from the finished essay. Follow `do
 
 10. Write the short description and the share post (`references/share.md`).
 
-11. Call `social.content.article_enabled_get` first, because it takes no params (`references/calls.md`).
+11. Call `social.content.article_enabled_get` first (`references/calls.md`). It takes no params.
 
 12. Draft the article with `social.content.article_create_schedule` only after the owner asks for a saved draft (`references/calls.md`).
 

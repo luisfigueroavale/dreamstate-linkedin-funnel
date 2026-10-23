@@ -31,7 +31,7 @@ Write, revise, or compare LinkedIn opening lines in the owner's voice, with coun
 
 6. Fetch `social.content.generate_hooks` with `tools_get` before `tools_run` (`references/tools.md`).
 
-7. Score the line with `social.draft_score`, because sending dry_run executes the read (`references/tools.md`).
+7. Score the line with `social.draft_score` (`references/tools.md`). Sending dry_run executes the read.
 
 8. Hand back the opening you recommend (`references/hand-back.md`).
 ## Dreamstate tools

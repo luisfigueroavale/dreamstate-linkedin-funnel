@@ -22,7 +22,7 @@ Animate a process as HTML plates and capture MP4 and GIF with the repo scripts. 
 
 4. Write motion as a `DeskTimeline` in the HTML page (`references/motion.md`). CSS does not animate or transition.
 
-5. Run `scripts/capture-motion.mjs`, which calls `__seek`, and headline text uses `--headline-gradient` when that token is set and `--color-accent` when it is not, and `--color-accent-2` is the second accent (`references/motion.md`).
+5. Run `scripts/capture-motion.mjs` (`references/motion.md`). It calls `__seek`. Headline text uses `--headline-gradient` when that token is set and `--color-accent` when it is not, and `--color-accent-2` is the second accent.
 
 6. Run a low-cost preview before the full encode (`references/capture.md`).
 

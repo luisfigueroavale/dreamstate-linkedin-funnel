@@ -23,7 +23,7 @@ Build a packaging brief from outlier evidence the owner can support: two titles 
 
 3. Read the reference set with `study-thumbnail-patterns` (`references/brief.md`).
 
-4. Resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`, which is a definition id, not a `tools_run` id (`references/outliers.md`).
+4. Resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`; `source.account_posts_youtube` is a definition id, not a `tools_run` id (`references/outliers.md`).
 
 5. Attach that definition with `tables.table_sources.attach` (`references/outliers.md`).
 

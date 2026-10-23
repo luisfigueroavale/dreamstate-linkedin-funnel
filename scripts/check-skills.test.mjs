@@ -64,7 +64,7 @@ test("plugin Read cells and ids ending in list_resolved are free reads", () => {
   assert.ok(live.some((error) => /free read/.test(error) || /not a mode/.test(error)));
 });
 
-test("a step cannot name a never-call id unless the sentence starts with Do not or Never", () => {
+test("a step cannot name a never-call id unless that id is the object of Do not or Never", () => {
   const banned = ["sequence.x.auto_engagements.replace"];
   const called = neverStepErrors(
     "14. Do with `sequence.x.auto_engagements.replace` (`references/keep.md`).",
@@ -77,6 +77,12 @@ test("a step cannot name a never-call id unless the sentence starts with Do not 
       banned,
     ),
     [],
+  );
+  assert.ok(
+    neverStepErrors(
+      "14. Do not schedule, call `sequence.x.auto_engagements.replace`.",
+      banned,
+    ).some((error) => error.includes("sequence.x.auto_engagements.replace")),
   );
   assert.ok(
     neverStepErrors("8. Leave `tables.x_post_engagers.run` out of this scan.", ["tables.x_post_engagers.run"]).length > 0,
@@ -114,6 +120,10 @@ test("if, only, when, at least, and after owner yes clauses are found when dropp
   assert.ok(yes.some((clause) => /after owner yes/i.test(clause)));
   const open = conditionClauses("6. Use `visibility.research.web_search` when local files leave the question open.");
   assert.ok(open.some((clause) => /when local files leave the question open/i.test(clause)));
+  const link = conditionClauses("15. A public link on that post needs a yes.");
+  assert.ok(link.some((clause) => clause.toLowerCase() === "needs a yes"));
+  const owner = conditionClauses("Send that text, which needs owner yes on that text.");
+  assert.ok(owner.some((clause) => /needs owner yes on that text/i.test(clause)));
 });
 
 test("a reversible 0-credit attach is write | no", () => {

@@ -24,9 +24,9 @@ Write the words and the shot list the owner can record. Follow `docs/skill-frame
 
 6. Deliver a read-aloud script, an outline, and a shot list, in that order (`references/outline.md`).
 
-7. Write the outline in `references/outline.md`. Promise the end state first.
+7. Write the outline as described in `references/outline.md`. Promise the end state first.
 
-8. Write each beat in `references/beats.md`, because no source means no beat.
+8. Write each beat as described in `references/beats.md`. No source means no beat.
 
 9. Match the requested runtime (`references/time.md`). Time it, then trim or restore.
 

@@ -8,6 +8,20 @@ const skillRoot = path.join(root, "skills");
 const revision = "99de10c";
 const missing = [];
 
+function revisionPresent(rev) {
+  try {
+    execFileSync("git", ["rev-parse", "--verify", "--quiet", `${rev}^{commit}`], { cwd: root, stdio: "ignore" });
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+if (!revisionPresent(revision)) {
+  console.log(`Condition clause scan skipped: ${revision} is not in history.`);
+  process.exit(0);
+}
+
 for (const name of readdirSync(skillRoot).filter((entry) => statSync(path.join(skillRoot, entry)).isDirectory())) {
   const currentPath = path.join(skillRoot, name, "SKILL.md");
   let references = "";

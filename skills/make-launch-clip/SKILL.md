@@ -34,7 +34,7 @@ Cut a short launch piece from a beat list and assets the owner already has. Foll
 
 11. Deliver the video, the editable HTML, the script, asset credits (file, source, license), and what you actually checked (`references/deliver.md`).
 
-12. Read `brand.local` before you draw a title or an overlay, because a cut does not need `brand.local` (`references/deliver.md`).
+12. Read `brand.local` before you draw a title or an overlay (`references/deliver.md`). A cut does not need `brand.local`.
 ## Dreamstate tools
 None. Local files only.
 
