@@ -42,18 +42,18 @@ test("headings and long lines stay out of the list", () => {
 test("owner banned words add to the stock list", () => {
   const rules = JSON.parse(readFileSync(path.join(root, "scripts/queue-rules.json"), "utf8"));
   const stock = [
-    "delve",
-    "unlock",
-    "seamless",
     "orchestrates",
     "leverages",
     "streamlines",
+    "seamless",
+    "unlock",
+    "game changer",
+    "delve",
     "crucial",
     "elevate",
     "empower",
     "testament",
     "thrilled",
-    "game changer",
   ];
   assert.deepEqual(rules.linkedin.banned, stock);
   assert.deepEqual(rules.x.banned, [

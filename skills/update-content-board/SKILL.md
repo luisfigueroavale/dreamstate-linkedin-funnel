@@ -2,17 +2,73 @@
 name: update-content-board
 description: "Place a week's pieces on the local board from the owner's dates, time zone, and cadence. Use when the slate belongs on vault/board.md. A planned day is not a publish."
 ---
+# Update the content board
 
-Follow `docs/skill-frame.md`.
+Place a week's pieces on the local board from the owner's dates, time zone, and cadence. Follow `docs/skill-frame.md`.
 
-The board is `vault/board.md`. It is the only board. Each line is a path under one status: Idea, Drafting, Review, Published, Backlog. Move the line when the status changes. The draft lives in `vault/posts/<slug>.md`, using the fields in `vault/fields.md`. `publish_date` stays empty until the piece is actually out. Do not claim a card was saved in another app.
+## Use when
 
-Filled files in `brand.local/` are the local preferences. Read the Proof page, `vault/notes/pillars.md`, `vault/notes/funnel-stages.md`, `vault/notes/concepts.md`, the board, a week brief under `vault/week/` when one exists, history they supplied, and any performance note already filed. Read `vault/voice/` and `vault/sources/` for words marked public or approved. Use a personal story only when the file says public, or the owner has approved it. Proof stays on the Proof page. The post's `proof` field only names lines from that page. Do not invent a conversion figure. If that history or performance note is missing, say so. Do not call a topic unused while the record is missing.
+- The slate belongs on `vault/board.md`.
 
-Use the dates, time zone, channel, and cadence they named. Do not assume four posts. Do not pin the work to a standing set of weekdays. A dated plan needs a time zone and a cadence. If either is missing, ask for the pair in a single question. If the channel is also missing, ask for it in that same question. An undated batch can proceed with neither. One LinkedIn post a day once a date exists. When two LinkedIn pieces share a date, keep one and list the other as still open.
+- A planned day is not a publish.
 
-Choose angles the supplied material can support. Mix pillars only among names already in `vault/notes/pillars.md`. One piece for every pillar is optional. Skip an idea already used on the board unless this piece contributes a point the earlier one lacks. Each piece gets one pillar, one topic, one subtopic, and one funnel job named in `vault/notes/funnel-stages.md` (reach, belief, or signup). If no pillar fits, leave the field empty. When that note is still empty, name the gap and point at `map-content-pillars`. Do not fill it here. Do not mint a pillar, a topic, or a job to fill an empty day. When material is missing, finish the pieces that have a source and list the gap. Do not add posts just to reach a number. The letter exists before posts that reuse it. LinkedIn goes through `write-linkedin-post`, the letter through `write-newsletter-issue`, X through `write-x-post`. Any other channel follows `brand.local/voice.md` and the format already written on the file.
+## Steps
 
-Read the titles and days already on the board and in `vault/posts/` before you add a line. A finished draft is filed under Drafting. A piece not written yet stays under Idea. The planned day is recorded on the week brief (`vault/week/<date>.md`, copied from `vault/week/brief.md`). That day is not a publish. For each piece, report the day or undated, the pillar, the topic, the funnel job, and the vault path, plus anything still waiting on the owner. If a tool call returned an artifact id, report that id. The board line is the path only. Do not copy the post body onto the board. When a write looks unclear, read the file again before you add a second line.
+1. Treat `vault/board.md` as the only board (`references/board.md`). `publish_date` stays empty until the piece is actually out.
 
-`social.content.plan` sets `planned_for` on an artifact that already exists. It does not publish. The board status stays where it is. If no artifact exists, the brief holds the day. When they ask to store the piece, `tools_get` `social.content.artifact_create` and follow `docs/content-desk.md`. Do not call it unasked. Do not call `social.content.plan` yet. `social.content.schedule` needs `expected_revision`, `scheduled_at`, and `artifact_id`. Dispatch still needs `social.content.approve` on that version. Plan and schedule both wait for yes. Approve waits for a yes on that version. `social.content.unschedule` takes `expected_revision` and `artifact_id`. It pulls an armed send that has not started. It is not `social.content.unplan`, and it does not retract a live post. When a call comes back unclear, read the artifact with `social.content.artifact_get` before you call again.
+2. Read Proof, the notes, the week brief, and words marked public or approved (`references/sources.md`).
+
+3. Place the week from the dates, time zone, channel, and cadence they named (`references/cadence.md`).
+
+4. Give each piece one pillar, one topic, one subtopic, and one funnel job (`references/pieces.md`). Do not mint a pillar, a topic, or a job to fill an empty day.
+
+5. File the draft and record the planned day on the week brief (`references/file.md`). That day is not a publish.
+
+6. Store the piece with `social.content.artifact_create` only when they ask, after `tools_get` (`references/remote.md`). Do not call `social.content.plan` yet.
+
+7. Set `planned_for` with `social.content.plan` on an artifact that already exists (`references/remote.md`). If no artifact exists, the brief holds the day.
+
+8. Schedule with `social.content.schedule` only after yes (`references/remote.md`).
+
+9. Approve with `social.content.approve` only after a yes on that version (`references/remote.md`).
+
+10. Pull an armed send that has not started with `social.content.unschedule` (`references/remote.md`).
+
+11. When a call comes back unclear, read the artifact with `social.content.artifact_get` before you call again.
+
+## Dreamstate tools
+
+| Step | Tool id | Mode | Needs yes? |
+|---|---|---|---|
+| 6 | `tools_get` | read | no |
+| 6 | `social.content.artifact_create` | live | yes |
+| 7 | `social.content.plan` | live | yes |
+| 8 | `social.content.schedule` | live | yes |
+| 9 | `social.content.approve` | live | yes |
+| 10 | `social.content.unschedule` | live | yes |
+| 11 | `social.content.artifact_get` | read | no |
+| - | `social.content.unplan` | never | no |
+
+## Stop rules
+
+- A planned day is not a publish.
+
+- `publish_date` stays empty until the piece is actually out.
+
+- Do not claim a card was saved in another app.
+
+- Do not invent a conversion figure.
+
+- Do not assume four posts.
+
+- Do not mint a pillar, a topic, or a job to fill an empty day.
+
+- Do not add posts just to reach a number.
+
+- Do not call it unasked.
+
+- Plan and schedule both wait for yes.
+
+- Approve waits for a yes on that version.
+
+- It is not `social.content.unplan`, and it does not retract a live post.

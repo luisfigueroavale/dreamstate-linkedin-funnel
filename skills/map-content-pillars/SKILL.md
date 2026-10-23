@@ -2,13 +2,68 @@
 name: map-content-pillars
 description: "Define pillars, topics, and subtopics, and map each topic to a funnel job, from the owner's reader, proof, and offer. Use when the pillar note is empty, or when they ask to revise what is already there. It does not draft the posts."
 ---
+# Map content pillars
 
-Follow `docs/skill-frame.md`.
+Define pillars, topics, and subtopics, and map each topic to a funnel job. Follow `docs/skill-frame.md`.
 
-Read `audience/AGENTS.md`, then `audience.local/ideal-follower.md`. If that file is missing or still says `Status: blank`, stop. The reader is that file. The buyer is the Ideal Customer page. A reader may never buy. Do not merge the reader and the buyer. Read `brand.local/identity.md`. If it is missing or blank, stop. Name the problem the reader has that identity or the Proof page can support. Public material is the Proof page and files under `vault/sources/`. If Proof was not read, the proof line stays empty. Read `vault/notes/funnel-stages.md` and `vault/notes/pillars.md` before you add a line. A goal the owner already stated can limit the mix. Do not invent a goal, a baseline, or a date. A missing offer can stay open while educational pillars are planned.
+## Use when
 
-Each pillar has a promise and a boundary, and one job from `vault/notes/funnel-stages.md`: reach, belief, or signup. Do not edit those job definitions. Pillars that cover the same ground get split, or the note says why the overlap stays. Build them from recurring reader needs and from experience the owner can show. Topics are recurring questions inside a pillar. Subtopics are sourced angles, and only when a file or a Proof line supports the angle. The 4x4x4 scaffold is a starting grid, not a duty to invent 64 ideas. Stop when the sourced questions run out. A name you suggest stays a proposal until the owner adopts it. An existing taxonomy stays unless they asked to revise. The template sentence in the pillar note is not a taxonomy.
+- The pillar note is empty, or they ask to revise what is already there.
 
-Map each topic to a funnel job, and write that job on the topic. The topic uses its pillar's one job. A topic that needs another job moves under the pillar that owns it. Reach makes the reader notice a problem or a point of view. The piece has to be seen, and the close does not ask for a booking. Belief shows a method or a tradeoff the owner has described, or evidence the Proof page holds. It adds no new proof. Signup is the offer they can take and the next step. Signup is the ask. It is not a pitch sequence. Name the inbound route: a reply, a registration, a signup, or a resource they asked for. When the job is signup and `magnets/<slug>/` already stores them, name the keyword, the full URL, and the sentence there. When the brief includes outbound that starts from a signal, name the signal source, the buyer-fit check, the exclusions, the route, and the conversation you intend. The check is the company against Ideal Customer and the person against the qualifying test, scored apart. If that page was not read, leave the check blank. Route a resource request toward `send-lead-magnet`, and a person who already fits toward `draft-warm-followups`, as later work. Reactions are not intent or consent. Keep the fit check apart from the message. Provider choice stays with setup. Name the events you will count (seen, reply, registration, signup, resource requested) and what each cannot prove. Do not turn reach into claimed revenue. Unverified targets stay labeled targets. They are not results.
+- Not for drafting the posts.
 
-Write the taxonomy in `vault/notes/pillars.md`: name, status, reader, job, promise, boundary, proof pointer, close, topics, subtopics, inbound route, events, and targets. Status is proposal or adopted. Put the reason and the source on each line. Point at the follower file, Proof, or a file under `vault/sources/`. Do not paste a Company Context page into the note. Leave a section empty when you do not know it. The taxonomy lives in the vault notes, not another app. There is no second database. Hand back the proposed names, the adopted names, the funnel path for each topic, and the decisions still open. Planning does not enrich or send. Do not draft the posts.
+## Steps
+
+1. Read `audience/AGENTS.md`, then `audience.local/ideal-follower.md` (`references/read.md`). Stop if that file is missing or still says `Status: blank`.
+
+2. Read `brand.local/identity.md` (`references/read.md`). Stop if it is missing or blank.
+
+3. Read `vault/notes/funnel-stages.md` and `vault/notes/pillars.md` before you add a line (`references/read.md`).
+
+4. Name the problem the reader has that identity or the Proof page can support (`references/sources.md`).
+
+5. Give each pillar one promise, one boundary, and one job (`references/pillars.md`).
+
+6. Map each topic to its pillar's funnel job (`references/jobs.md`).
+
+7. Write the taxonomy in `vault/notes/pillars.md` (`references/note.md`).
+
+8. Hand back the proposed names, the adopted names, the funnel path for each topic, and the decisions still open (`references/note.md`).
+
+## Dreamstate tools
+
+None. Local files only.
+
+## Stop rules
+
+- Stop if `audience.local/ideal-follower.md` is missing or still says `Status: blank`.
+
+- Stop if `brand.local/identity.md` is missing or blank.
+
+- Do not merge the reader and the buyer.
+
+- Do not invent a goal, a baseline, or a date.
+
+- Do not edit those job definitions.
+
+- The 4x4x4 scaffold is a starting grid, not a duty to invent 64 ideas.
+
+- Stop when the sourced questions run out.
+
+- An existing taxonomy stays unless they asked to revise.
+
+- If Proof was not read, the proof line stays empty.
+
+- If that page was not read, leave the check blank.
+
+- Do not paste a Company Context page into the note.
+
+- Do not turn reach into claimed revenue.
+
+- Reactions are not intent or consent.
+
+- Planning does not enrich or send.
+
+- There is no second database.
+
+- Do not draft the posts.

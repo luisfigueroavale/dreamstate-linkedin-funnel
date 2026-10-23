@@ -2,25 +2,70 @@
 name: check-short-export
 description: "Check a finished export for cuts, captions, motion, picture, sound, playback, and pace. Use before you call the file done. It does not approve publishing."
 ---
+# Check a short export
 
-Follow `docs/skill-frame.md`.
+Check a finished export before you call the file done. Follow `docs/skill-frame.md`.
 
-Hold the encoded file, the source, and the edit list. No script runs the seven checks. Use machine tools and record each result.
+## Use when
+- The encoded file, the source, and the edit list are in hand, and you are about to call the file done.
 
-For cuts, hear every join, with a short pad on both sides. Each word is complete. The line still means what was said.
-For captions, check names, numbers, short words, cue timing, line breaks, and crop. Read them against the words you hear.
-For motion, check the cue and the payoff with the audio playing. The fact lands with the speech. Watch the overlaps.
-For the image, align the source and the output frames. Leave intended overlays and crops out before a quality score.
-For audio, listen at a matched level. Check peaks, channel layout, integrated loudness near -14 LUFS, and a true-peak ceiling of -1.5 dBTP.
-For playback, decode the whole file. Play it in their player if it is on this machine.
-For pacing, play the whole story. Allow no duplicate take and no gap you cannot explain.
+- Not for approving a publish.
 
-Run `ffprobe` on the encoded file. The duration matches the edit list. Width and height stay at the native frame size. Read the channel count and the layout. Sample the opening second. A fade to black there fails unless the edit list asked for black.
+## Steps
+1. Hold the encoded file, the source, and the edit list (`references/hold.md`). No script runs the seven checks.
 
-Align frames on shared timestamps. Keep intended overlays and crops out before scoring. Another clip's threshold does not bind this one. Use a fresh temporary directory on each run, so files cannot mix.
+2. Hear every join (`references/checks.md`).
 
-A failure names the location, the defect, and the fix. Re-check the changed part. Confirm the same path, size, and duration. A JSON parse, or a renderer exit code, does not prove the picture or the sound. A header read is not a decode.
+3. Check captions against the words you hear (`references/checks.md`).
 
-Report what you measured, what you inspected, and what is unverified. Measured means the tool and the printed value. Inspected means what you heard or saw. If `ffprobe`, the loudness meter, or the target player is missing, mark that item unverified. Do not claim a gate when the tool was missing. A pass is not permission to publish.
+4. Check the cue and the payoff with the audio playing (`references/checks.md`).
 
-For titles or overlays, read `brand.local` before you set type or color. If that file is missing or blank, ask. Judgment stays unverified.
+5. Align the source and the output frames (`references/checks.md`). Leave intended overlays and crops out before a quality score.
+
+6. Listen at a matched level (`references/checks.md`). Check peaks, channel layout, integrated loudness near -14 LUFS, and a true-peak ceiling of -1.5 dBTP.
+
+7. Decode the whole file (`references/checks.md`).
+
+8. Play it in their player if it is on this machine (`references/checks.md`).
+
+9. Play the whole story (`references/checks.md`). Allow no duplicate take and no gap you cannot explain.
+
+10. Run `ffprobe` on the encoded file (`references/probe.md`).
+
+11. Align frames on shared timestamps (`references/probe.md`).
+
+12. Name the location, the defect, and the fix (`references/report.md`).
+
+13. Re-check the changed part (`references/report.md`). Confirm the same path, size, and duration.
+
+14. Report what you measured, what you inspected, and what is unverified (`references/report.md`). A pass is not permission to publish.
+
+15. Read `brand.local` before you set type or color (`references/report.md`). If that file is missing or blank, ask.
+
+## Dreamstate tools
+None. Local files only.
+
+## Stop rules
+- No script runs the seven checks.
+
+- Another clip's threshold does not bind this one.
+
+- Use a fresh temporary directory on each run, so files cannot mix.
+
+- A JSON parse, or a renderer exit code, does not prove the picture or the sound.
+
+- A header read is not a decode.
+
+- A fade to black there fails unless the edit list asked for black.
+
+- If `ffprobe`, the loudness meter, or the target player is missing, mark that item unverified.
+
+- Do not claim a gate when the tool was missing.
+
+- A pass is not permission to publish.
+
+- If `brand.local` is missing or blank, ask.
+
+- Judgment stays unverified.
+
+- It does not approve publishing.

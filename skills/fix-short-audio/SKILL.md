@@ -2,15 +2,47 @@
 name: fix-short-audio
 description: "Measure speech loudness and apply only a fix you can hear. Use when the recording is harsh, quiet, or rumbling. It does not master for a platform."
 ---
+# Fix short audio
 
+Measure speech loudness and apply only a fix you can hear.
 Follow `docs/skill-frame.md`.
 
-Measure first. Listen to the original. With the audio tools installed here, record sample rate, channel count, loudness, and peaks. Treat the fault that is actually present. Keep the problems apart: room tone, low level, clipping, noise, and uneven delivery. Touch noise only when you can hear it. Raising the level does not denoise.
+## Use when
 
-Use the smallest useful change. Where headroom allows it, one constant gain keeps the dynamics. Add compression or limiting only when that gain is not enough, and make the choice deliberate. Listen for pumping, for consonants that clip, and for room tone that drops out. Read the filter help before you run it. A linear mode can be limited or missing in the filter you have.
+- Use when the recording is harsh, quiet, or rumbling.
 
-For noise reduction, capture representative silence from this take. At matched loudness, compare the speech from before the filter with the speech after it. Reject a pass that burbles, or that strips texture from the voice. Do not copy a preset from another recording, and do not bring over a denoiser setting or a fixed gain.
+- Not for mastering for a platform. The combined file goes to `check-short-export`.
 
-Order the chain as channels, with conversion when the layout is wrong, then EQ, then dynamics, then the final level. Target -14 LUFS integrated and -1.5 dBTP. In the final mix, listen for music, sound effects, overlapping peaks, and any change between mono and stereo.
+## Steps
 
-Measure the encoded file and listen to it beside the original, not only the intermediate PCM. `brand.local` is not required for a loudness pass. Report the treatment, the numbers, and the audible tradeoff. `check-short-export` covers the combined file.
+1. Measure first (`references/measure.md`).
+
+2. Listen to the original (`references/measure.md`).
+
+3. Treat the fault that is actually present (`references/faults.md`).
+
+4. Use the smallest useful change (`references/gain.md`).
+
+5. Capture representative silence from this take for noise reduction (`references/noise.md`).
+
+6. Order the chain as channels, with conversion when the layout is wrong, then EQ, then dynamics, then the final level (`references/chain.md`).
+
+7. Measure the encoded file and listen to it beside the original (`references/report.md`).
+
+## Dreamstate tools
+
+None. Local files only.
+
+## Stop rules
+
+- Touch noise only when you can hear it.
+
+- Raising the level does not denoise.
+
+- Reject a pass that burbles, or that strips texture from the voice.
+
+- Do not copy a preset from another recording, and do not bring over a denoiser setting or a fixed gain.
+
+- It does not master for a platform.
+
+- `brand.local` is not required for a loudness pass.

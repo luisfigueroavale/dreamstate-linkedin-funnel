@@ -2,21 +2,76 @@
 name: triage-inbox
 description: "List inbox threads that need a person and hand them to a reply draft. Use for triage. It does not send."
 ---
+# Triage the inbox
 
-Follow `docs/skill-frame.md`.
+List inbox threads that need a person and hand them to a reply draft. Follow `docs/skill-frame.md`.
 
-Triage threads that are already open. The set is email, LinkedIn, WhatsApp, and one email that is not on a cadence. A new LinkedIn conversation, and any outreach program, goes to `draft-warm-followups`. Stay on the account and the thread the owner named. Ground every class, and any note you pass on, in the thread and in Company Context. Ids are in `docs/tool-map.md`. `tools_get` before `tools_run`. The fetched schema wins.
+## Use when
 
-List with `unibox.inbox.unified_list`. Keep each page small. When those fields are still on the schema, narrow by channel, time, status, one participant, or a shared tag. With no status cut, the list also returns threads that already have an answer. For a reply queue, pass tab `needs_action` when that enum is still in the schema.
+- Use this for triage of threads that are already open.
 
-Read the whole thread that matters, and the Company Context pages that bear on it, before a classification or a draft. Keep the provider thread id, the participants, the sending account, and the delivery state the call returned. For a review of one thread, `unibox.inbox.analyze` costs 1 credit and never sends. Required `conversation_id`. Optional `analysis_mode` (`classify_only` or `draft_reply`, default `draft_reply`), `account_id`, `message_id`. dry_run, then live with `quote_hash`, `max_credits`, and an `idempotency_key`. Spend that credit on one conversation.
+- The set is email, LinkedIn, WhatsApp, and one email that is not on a cadence.
 
-LinkedIn rows are visible for the sender you resolved. Resolve accounts with `senders.linkedin_accounts.list` and `senders.social_accounts.list`. Do not call `senders.identities.inbox_scope_get`. It is an email mailbox allowlist. An empty result is not an empty LinkedIn inbox. If expected threads are missing, look again with those two lists. Do not read that empty allowlist as the whole inbox. Do not widen what that account ingests just to locate extra threads.
+- A new LinkedIn conversation, and any outreach program, goes to `draft-warm-followups`.
 
-A reply carries the exact text, the thread, the account, and the recipients. Hand one thread to `draft-thread-reply`. Do not send. A send needs the owner's yes on that text.
+- It does not send.
 
-A label edit, an archive, or a bulk change shows the real count and the scope first, and leaves every conversation outside that scope untouched. Do not invent a capability id for it.
+## Steps
 
-A timeout does not prove the message was never delivered. Before a retry, read the returned message and the run with `runs_get`. A comment posted in public on a post goes to `draft-linkedin-comments`.
+1. Stay on the account and the thread the owner named (`references/scope.md`). Ids are in `docs/tool-map.md`.
 
-Report only the slice you opened: each classification, the draft when you handed one thread to `draft-thread-reply`, a message link only when the tool returned one, and the threads still unresolved. On an error, do not file feedback and do not copy the conversation or its transcript anywhere else.
+2. Call `tools_get` before `tools_run` (`references/scope.md`). The fetched schema wins.
+
+3. List threads with `unibox.inbox.unified_list` (`references/list.md`).
+
+4. Read the whole thread before a classification or a draft (`references/read.md`).
+
+5. Review one thread with `unibox.inbox.analyze` (`references/read.md`). dry_run, then live with `quote_hash`, `max_credits`, and an `idempotency_key`.
+
+6. Resolve accounts with `senders.linkedin_accounts.list` and `senders.social_accounts.list` (`references/linkedin.md`).
+
+7. Hand one thread to `draft-thread-reply` (`references/reply.md`). Do not send.
+
+8. Show the real count and the scope before a label edit, an archive, or a bulk change (`references/changes.md`).
+
+9. On a timeout, read the returned message and the run with `runs_get` (`references/changes.md`).
+
+10. Hand a public comment on a post to `draft-linkedin-comments` (`references/changes.md`).
+
+11. Report only the slice you opened (`references/report.md`).
+
+## Dreamstate tools
+
+| Step | Tool id | Mode | Needs yes? |
+|---|---|---|---|
+| 2 | `tools_get` | read | no |
+| 2 | `tools_run` | live | no |
+| 3 | `unibox.inbox.unified_list` | live | no |
+| 5 | `unibox.inbox.analyze` | dry_run | no |
+| 5 | `unibox.inbox.analyze` | live | yes |
+| 6 | `senders.linkedin_accounts.list` | live | no |
+| 6 | `senders.social_accounts.list` | live | no |
+| 9 | `runs_get` | live | no |
+| - | `senders.identities.inbox_scope_get` | never | no |
+
+## Stop rules
+
+- It does not send.
+
+- A send needs the owner's yes on that text.
+
+- Do not call `senders.identities.inbox_scope_get`.
+
+- An empty result is not an empty LinkedIn inbox.
+
+- Do not read that empty allowlist as the whole inbox.
+
+- Do not widen what that account ingests just to locate extra threads.
+
+- Spend that credit on one conversation.
+
+- Do not invent a capability id for a label edit, an archive, or a bulk change.
+
+- A timeout does not prove the message was never delivered.
+
+- On an error, do not file feedback and do not copy the conversation or its transcript anywhere else.

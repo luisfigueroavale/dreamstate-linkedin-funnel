@@ -2,17 +2,56 @@
 name: add-short-overlay
 description: "Burn a cue-timed HTML overlay onto a short without covering the speaker or the captions. Use when the words need a label. It does not replace the footage."
 ---
+# Add a short overlay
 
-Follow `docs/skill-frame.md`.
+Burn a cue-timed HTML overlay onto a short without covering the speaker or the captions. Follow `docs/skill-frame.md`.
 
-A graphic belongs on the cut when it explains a spoken fact. Scout the finished cut for a number, a comparison, a step, a label, or a supporting image. Read brand first. Open `brand/AGENTS.md`, then `brand.local/`. Stop if a required file is blank. A retention interval you invented is not a reason to add a graphic.
+## Use when
+- The words on a finished cut need a label, and a graphic explains a spoken fact.
 
-Each plan row records the cue phrase, the payload, the duration, the region, and the reason. Resolve each cue against the final transcript of the cut you will ship. When a cue is spoken twice, name which occurrence. The payoff arrives with the spoken fact. The entrance may begin earlier, and the fact stays visible while the line is heard.
+- Not for replacing the footage.
 
-Captions, the face, and the graphic keep distinct regions, and each region stays readable. Use a lower third when it keeps useful picture. Full screen needs a story reason. Every metric has a supported value and a unit from the recording or the notes. A supporting image is a file the owner supplied. The shot under the overlay still carries its meaning.
+- `check-short-export` is the last pass.
 
-The overlay is HTML, burned with ffmpeg onto the footage. Headline text on the overlay uses `--headline-gradient` when that token is set, and `--color-accent` when it is not. `--color-accent-2` is the second accent. Motion is `DeskTimeline`. Capture steps `__seek`. CSS is layout and color. On the burned frames, confirm the alpha channel, the layering, the text metrics, and that font loading succeeded. Read the installed ffmpeg help before you invent flags. Fonts are the files `brand.local` lists. When that list is empty, say the system face is in use. Do not vendor a font. Do not cover the mouth or the captions. Do not replace the footage.
+## Steps
+1. Open `brand/AGENTS.md`, then `brand.local/` (`references/plan.md`). Stop if a required file is blank.
 
-After an edit change, resolve the cues again from that final transcript before the next burn.
+2. Scout the finished cut for a number, a comparison, a step, a label, or a supporting image (`references/plan.md`).
 
-Inspect before, during, and after: a frame ahead of the graphic, a frame while the fact is spoken, and a frame once it has left. Play that span with audio. Return the editable source and the render. Report uncertain timing and anything unrendered. If ffmpeg is not installed, stop and say the burn did not run. `check-short-export` is the last pass.
+3. Record each plan row (`references/cues.md`).
+
+4. Resolve each cue against the final transcript of the cut you will ship (`references/cues.md`). When a cue is spoken twice, name which occurrence.
+
+5. Keep captions, the face, and the graphic in distinct regions (`references/regions.md`).
+
+6. Burn the HTML overlay with ffmpeg (`references/burn.md`). Motion is `DeskTimeline`, capture steps `__seek`, headline text uses `--headline-gradient` when that token is set and `--color-accent` when it is not, and `--color-accent-2` is the second accent.
+
+7. After an edit change, resolve the cues again from that final transcript before the next burn (`references/burn.md`).
+
+8. Inspect before, during, and after (`references/inspect.md`).
+
+9. Play that span with audio (`references/inspect.md`).
+
+10. Return the editable source and the render (`references/inspect.md`). `check-short-export` is the last pass.
+
+## Dreamstate tools
+None. Local files only.
+
+## Stop rules
+- Follow the skill-frame writing rules.
+
+- Stop if a required file is blank.
+
+- A retention interval you invented is not a reason to add a graphic.
+
+- Full screen needs a story reason.
+
+- Do not vendor a font.
+
+- Do not cover the mouth or the captions.
+
+- Do not replace the footage.
+
+- CSS is layout and color.
+
+- If ffmpeg is not installed, stop and say the burn did not run.

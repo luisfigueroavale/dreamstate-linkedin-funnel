@@ -2,20 +2,59 @@
 name: write-long-essay
 description: "Write a long document with one argument, examples that stay inside the source, and a claim list the owner can check. Use when the piece is not an X essay and not a LinkedIn article. It does not publish."
 ---
+# Write a long essay
 
+Write a long document with one argument, examples that stay inside the source, and a claim list the owner can check.
 Follow `docs/skill-frame.md`.
 
-Start from a sourced idea. Read the filled reader file (`audience.local/ideal-follower.md`), the voice file (`brand.local/voice.md`), and the whole primary source they named, not an excerpt, before any sentence. Name the question the reader is actually asking, and the answer this piece can support. The brief sets the format and the length. Do not pad to a made-up count.
+## Use when
 
-Make one argument. Map the argument before drafting: thesis, the claims that hold it up, the evidence for each, one counterpoint or limit, and what the reader can do with it. Before drafting, check the source behind each claim. If the evidence is missing, narrow the thesis or label the line a hypothesis.
+- The piece is not an X essay and not a LinkedIn article. Start from a sourced idea.
 
-Draft so each section promises something concrete. Every example stays inside the source, and only when it is useful to the question. When the reader has to perform a process, include a worked example. Keep the owner's experience, research, and each guest's account in separate sentences. Keep dates, scope, and uncertainty in the sentence that needs them.
+- Not for publishing. Use `split-long-source` only when they also want other formats.
 
-Edit for logical order, repetition, and absolutes the source does not support. Re-check facts that change over time against the appropriate primary sources, and write the date you checked. Quotations stay inside permitted use and keep their meaning.
+## Steps
 
-Return a title, an optional second title, the full draft, and source notes that sit outside the copy. Those notes are the claim list: the sentence, the source path, and whether it is supported or still open. The ending says what the reader can do or decide. That close does not restate the opening. Save the file they asked for. Use `split-long-source` only when they also want other formats.
+1. Start from a sourced idea (`references/read.md`).
 
-This is not the X essay and not a LinkedIn article. Do not publish.
+2. Read the filled reader file (`audience.local/ideal-follower.md`), the voice file (`brand.local/voice.md`), and the whole primary source they named, not an excerpt, before any sentence (`references/read.md`).
+
+3. Name the question the reader is actually asking, and the answer this piece can support (`references/argument.md`).
+
+4. Make one argument (`references/argument.md`).
+
+5. Map the argument before drafting (`references/argument.md`).
+
+6. Check the source behind each claim before drafting (`references/argument.md`).
+
+7. Draft so each section promises something concrete (`references/draft.md`).
+
+8. Edit for logical order, repetition, and absolutes the source does not support (`references/edit.md`).
+
+9. Return a title, an optional second title, the full draft, and source notes that sit outside the copy (`references/return.md`).
+
+10. Save the file they asked for (`references/return.md`).
+
+## Dreamstate tools
+
+None. Local files only.
 
 ## Stop rules
+
 - Follow the skill-frame writing rules.
+
+- Do not pad to a made-up count.
+
+- If the evidence is missing, narrow the thesis or label the line a hypothesis.
+
+- Every example stays inside the source, and only when it is useful to the question.
+
+- Quotations stay inside permitted use and keep their meaning.
+
+- That close does not restate the opening.
+
+- This is not the X essay and not a LinkedIn article.
+
+- Do not publish.
+
+- Use `split-long-source` only when they also want other formats.

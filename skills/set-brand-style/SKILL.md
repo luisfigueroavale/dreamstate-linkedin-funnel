@@ -2,21 +2,62 @@
 name: set-brand-style
 description: "Set or revise the owner's visual identity, token values, and graphic rules from preferences and files they supplied. Use when brand.local is blank or a color, type, or asset rule should change. It does not invent a look or copy another creator."
 ---
+# Set brand style
 
-Follow `docs/skill-frame.md`.
+Set or revise the owner's visual identity, token values, and graphic rules from preferences and files they supplied. Follow `docs/skill-frame.md`.
 
-No brand is preinstalled. Read the root `AGENTS.md` and `brand/AGENTS.md` before you set a value. Committed files in `brand/` stay blank templates. Local values live in `brand.local/`. If that folder is absent, copy the blanks the way `brand/AGENTS.md` shows, then edit only the copies. A missing file, an empty line, or `Status: blank` means ask. Write only values the owner supplied. Paths stay inside this repo.
+## Use when
 
-One owner file for intent is `brand.local/identity.md`. On a first identity, record the impression they want, the constraints they named, assets they already hold, and where the look will be used. Read the Company Context pages that file names, and `audience.local/ideal-follower.md`, before a rule depends on them. Use only references they supplied. Voice stays in `brand.local/voice.md` (lines they dictated; `derive-voice-rules` derives rules). Link those pages. Do not paste them into identity. Read order stays `brand/AGENTS.md`. Do not add a navigation page.
+- `brand.local` is blank, or a color, type, or asset rule should change.
 
-Offer a direction only when they asked for design work. Label proposals draft until the owner adopts them. Leave `Status: blank` until that yes, then set `Status: filled` and show them the file. The adopted lines in that file are the record. Do not copy another creator's identity.
+- Not for inventing a look or copying another creator.
 
-Visual usage rules, in words, go in `brand.local/style.md`. Put exact values in `brand.local/tokens.css` only, under names from `brand/tokens.css`. Those names include `--color-accent-2` and `--headline-gradient`. Headline text uses the gradient when the owner set it, and `--color-accent` when that value is still unset. Do not rename a token. Do not write a value into the committed file. Do not copy the preview stand-in palette into the local token file. Add a role only when a picture you are making needs it. Layouts may differ. They share those type and color roles. Keep source tokens, blank templates, draft tries, generated renders, and delivered files in separate places.
+## Steps
 
-Licensed assets live under `brand.local/assets/`. The README there is the allow-list. Do not install example assets as defaults. `pictures/examples` is not a starter kit. Do not vendor fonts. Fonts are files the owner listed in that README. Otherwise say the system face is the fallback. `scripts/frame-page.mjs` waits on `document.fonts.ready` after `goto`. Screenshots stay faithful to the real product.
+1. Read the root `AGENTS.md` and `brand/AGENTS.md` before you set a value (`references/files.md`). A missing file, an empty line, or `Status: blank` means ask.
 
-Before a token change, list consumers and say which renders are stale: `pictures/frames`, `pictures/timeline.js`, `pictures/examples`, `scripts/frame-page.mjs`, `design-post-graphic`, `draw-process-map`, `review-graphic`. Check the font file those actually load, and this skill's description. Editing the body alone does not finish the change. A renamed font in docs is not done if the renderer still loads the old file. Shared CSS can change old renders, so keep the delivered file, or pin the values it used, when that picture must stay as it shipped. A single graphic request does not authorize a global palette change. On adoption, update the style words, the matching token values, and those consumers together, and only inside the scope they named. If a layout idea came from another skill or an example, name that source in the local file. Do not install that look as this owner's identity.
+2. Record intent in `brand.local/identity.md` (`references/identity.md`). Write only values the owner supplied.
 
-Use `npm run check`, and render through `scripts/frame-page.mjs` (`npm run still` or `npm run capture`). Do not assume a script or a template from another repo is on disk. Do not add a second store, index, or log. A skill-only edit does not regenerate brand files; check this folder and its links. If a capture helper changed, export one small scene into a temporary folder and inspect it. When you look, check that the font loaded, that type is not clipped, that contrast holds, and that asset paths still resolve from `brand.local/assets`. If a picture was produced another way, check it with the tool that built it. Do not claim a visual check you did not run. Do not claim a build you did not run.
+3. Offer a direction only when they asked for design work (`references/identity.md`). Leave `Status: blank` until that yes.
 
-Hand back the files you changed, whether each line is still draft or the owner set filled, and any consumer or font path that still has the old value.
+4. Put visual rules in `brand.local/style.md` and exact values in `brand.local/tokens.css` (`references/tokens.md`).
+
+5. Headline text uses the gradient when the owner set it, and `--color-accent` when that value is still unset (`references/tokens.md`). Those names include `--color-accent-2` and `--headline-gradient`.
+
+6. File licensed assets under `brand.local/assets/` (`references/assets.md`). Do not vendor fonts.
+
+7. Before a token change, list consumers and say which renders are stale (`references/consumers.md`).
+
+8. Run `npm run check`, and render through `scripts/frame-page.mjs` (`references/check.md`).
+
+9. Hand back the files you changed, and any path that still has the old value (`references/check.md`).
+
+## Dreamstate tools
+
+None. Local files only.
+
+## Stop rules
+
+- A missing file, an empty line, or `Status: blank` means ask.
+
+- Write only values the owner supplied.
+
+- Do not copy another creator's identity.
+
+- Do not rename a token.
+
+- Do not write a value into the committed file.
+
+- Do not copy the preview stand-in palette into the local token file.
+
+- Headline text uses the gradient when the owner set it, and `--color-accent` when that value is still unset.
+
+- Do not vendor fonts.
+
+- A single graphic request does not authorize a global palette change.
+
+- Do not add a second store, index, or log.
+
+- Do not claim a visual check you did not run.
+
+- Do not claim a build you did not run.

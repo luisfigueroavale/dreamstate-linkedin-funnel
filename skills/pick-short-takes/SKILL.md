@@ -2,15 +2,39 @@
 name: pick-short-takes
 description: "Choose complete takes and drop false starts and dead air, keeping speech meaning and word boundaries. Use before a short is assembled. It does not export the final file."
 ---
+# Pick short takes
 
+Choose complete takes and drop false starts and dead air, keeping speech meaning and word boundaries.
 Follow `docs/skill-frame.md`.
 
-Read the full transcript and listen to the candidate ranges. Inspect each candidate range. Decide whether a repeat is a retake or emphasis they meant. On retake-heavy footage, prefer the last complete attempt. When the brief or the performance says otherwise, the strongest coherent take wins.
+## Use when
 
-For each beat record the source file, in-point, out-point, and why that range. Drop false starts. Reject an unfinished fragment even if it is the last thing they said. A retake can sit inside a phrase. Inspect at word level.
+- Use before a short is assembled.
 
-Speech-to-text times are a start. Listen around every cut so a consonant or a breath is not clipped. Keep each word boundary whole, and keep the speech meaning. Remove silence inside a take only when the pace gets better. Keep a pause they meant. Drop dead air that sits between attempts.
+- Not for exporting the final file. The finished-file pass is `check-short-export`.
 
-Build the list from source time. That list is the EDL. Output positions are cumulative. Derive output positions by adding durations. After the cut changes, regenerate caption times and overlay cues. Regenerate the downstream timing map in the same pass. Do not keep two conflicting timelines by hand.
+## Steps
 
-Play every join in context. If you cannot play a join here, render that join and watch it in context. Return the kept ranges, the rejected alternatives when they matter, the final duration, and any transcript you do not trust. `check-short-export` is the finished-file pass. This skill does not export the final file.
+1. Read the full transcript and listen to the candidate ranges (`references/listen.md`).
+
+2. Inspect each candidate range (`references/listen.md`).
+
+3. For each beat record the source file, in-point, out-point, and why that range (`references/beats.md`).
+
+4. Build the list from source time (`references/time.md`). That list is the EDL.
+
+5. Play every join in context (`references/joins.md`).
+
+## Dreamstate tools
+
+None. Local files only.
+
+## Stop rules
+
+- Drop false starts.
+
+- Reject an unfinished fragment even if it is the last thing they said.
+
+- Do not keep two conflicting timelines by hand.
+
+- This skill does not export the final file.

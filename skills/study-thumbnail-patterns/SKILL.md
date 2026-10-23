@@ -2,23 +2,64 @@
 name: study-thumbnail-patterns
 description: "Note repeating thumbnail patterns in a set the owner pasted or a tool returned, and brief directions. Use before design-video-thumbnail. It does not treat the set as a market law."
 ---
+# Study thumbnail patterns
 
-Follow `docs/skill-frame.md`.
+Note repeating thumbnail patterns in a set, and brief directions. Follow `docs/skill-frame.md`.
 
-Run before `design-video-thumbnail` builds a picture. Titles stay in `write-video-titles`. This skill only briefs directions.
+## Use when
 
-This desk does not call a video-host API. Before hand-typed counts, resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`. It is a definition id, not a `tools_run` id. Attach with `tables.table_sources.attach`, then run `tables.table_sources.run` only after the quote and the owner's yes. If that definition is not resolved, patterns come from a set the owner pasted or a tool response they supplied. There is no ranking plugin and no host image to fetch. If a full-size still is missing, say so. Keep a link only when that set already had one. Do not invent a link. Do not treat another channel's result as the owner's. Call a still high-performing only when the paste or the tool response already says so.
+- Use before `design-video-thumbnail` builds a picture.
 
-The set is not a market law. A catalog from someone else's tool niche or sales motion does not transfer. When the paste includes counts, use the outlier test in `write-video-titles`. A ratio the set does not contain stays unknown. Stills from channels the reader already watches, and any the paste groups as lookalikes, stay in the sort only when they are already in the set.
+- Titles stay in `write-video-titles`. This skill only briefs directions.
 
-On each still, note text, face or UI, numeral size, colour, and the first eye-hit. Judge at 1280×720 and at 320×180.
+- It does not treat the set as a market law.
 
-Split overused from useful. Overused is the same face crop, the same arrow, or the same three-word joke. Also flag a clone the set keeps repeating: a huge face beside a giant dimensional numeral and a short brag; a face plus a crowd of product marks and a take-these line; a loud volume boast sitting on spreadsheet strips; a row of three tool marks, or a versus frame. Do not copy one of these just because it is common.
+## Steps
 
-Useful is a pattern that still matches this video's proof. An uncommon shape counts only when this video can show it. Candidates, and only with that proof: one large mark rather than a row of tiny ones; a small count badge only if this video shows that figure; the owner working in a real place, rather than a face lifted off its background; a steady face rather than a wide-open shock.
+1. Resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved` (`references/source.md`). It is a definition id, not a `tools_run` id.
 
-On-image type is two to four words. A numeral on the image has to appear in the video. Mark any figure still waiting on proof. Separate it by the setting, by the one mark, and by the hook words.
+2. Attach that definition with `tables.table_sources.attach` (`references/source.md`).
 
-No generated face. Do not smooth a face they gave you, and do not swap it. A portrait stays the photo they supplied. Colour in a concept comes from `brand.local`. If that file is blank or missing, stop and ask. Do not guess a colour.
+3. Run `tables.table_sources.run` only after the quote and the owner's yes (`references/source.md`).
 
-Write four to six concepts. Each one names the words on the image, how the frame is arranged, which title it sits with, and any figure still waiting on proof. Return the references from the set, what to borrow, what to avoid, and those concepts for `design-video-thumbnail`. The owner picks before a frame is built.
+4. When that definition is not resolved, use the set the owner pasted or a tool response they supplied (`references/source.md`, `references/set.md`).
+
+5. Note text, face or UI, numeral size, colour, and the first eye-hit on each still (`references/still.md`). Judge at 1280×720 and at 320×180.
+
+6. Split overused from useful (`references/patterns.md`).
+
+7. Keep colour from `brand.local` (`references/concepts.md`). Stop if that file is blank or missing.
+
+8. Write four to six concepts for `design-video-thumbnail` (`references/concepts.md`). The owner picks before a frame is built.
+
+## Dreamstate tools
+
+| Step | Tool id | Mode | Needs yes? |
+|---|---|---|---|
+| 1 | `tables.executable_definitions.list_resolved` | live | no |
+| 2 | `tables.table_sources.attach` | live | no |
+| 3 | `tables.table_sources.run` | dry_run, then live | yes |
+
+## Stop rules
+
+- This desk does not call a video-host API.
+
+- The set is not a market law.
+
+- Do not invent a link.
+
+- Do not treat another channel's result as the owner's.
+
+- Call a still high-performing only when the paste or the tool response already says so.
+
+- Do not copy one of these just because it is common.
+
+- No generated face.
+
+- Do not smooth a face they gave you, and do not swap it.
+
+- If that file is blank or missing, stop and ask.
+
+- Do not guess a colour.
+
+- Titles stay in `write-video-titles`.

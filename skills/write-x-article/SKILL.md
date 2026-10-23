@@ -3,33 +3,91 @@ name: write-x-article
 description: "Write or revise a long X article from the owner's letter, framework, notes, or giveaway, with pictures only where they explain a claim. Also write the short post for a new video. Use for that long piece or that video post. A short post is write-x-post. It does not publish."
 ---
 
-Follow `docs/skill-frame.md`.
+# Write an X article
 
-Write or revise a native X article, or a long illustrated post. A short post or a thread is `write-x-post`. A week's slate is `plan-x-week`. The announcement post for a video stays in this skill. Adapt the argument the owner already approved. In a week, that argument is the letter. With no letter, use the transcript, framework, post, or giveaway they named. Do not invent a thesis. The words and the pictures describe that same argument.
+Write or revise a long X article, or the short post for a new video, from a source the owner already approved. Follow `docs/skill-frame.md`.
 
-Ground the brief before any sentence. Read the source itself, the Proof page, `brand.local/identity.md`, `brand.local/voice.md`, `audience.local/ideal-follower.md`, `vault/notes/pillars.md`, and `vault/notes/funnel-stages.md`. How they sound comes from `brand.local/voice.md`. This opening is not a LinkedIn hook: do not shrink it to about 210 characters, and do not force the last line to ask. The brief names the reader's problem, the thesis, what the owner contributed, the evidence, the section order, the pillar, the funnel job, and the pictures. If a note is empty, say so. Ask only when the answer would change the argument.
+## Use when
 
-If they supply a post URL, open that post and any article linked from it, cover included, inline pictures included. Say what you could read, and which parts stayed closed. Do not rebuild the piece from a card or a preview. A paste needs no fetch. A fetch is `visibility.research.urls_fetch` after `tools_get`. Required `urls`. Call prices and modes are in `docs/calls.md`.
+- Use for that long piece or that video post.
 
-The title is specific. The opening is the result, the proof they can show, and the reader's payoff. Use the strongest result the Proof page supports. The payoff is what they can build. After that, the mechanism: tools, order, decisions, and why. Keep their concrete details and their first-person experience.
+- A short post or a thread is `write-x-post`.
 
-Personal means a documented habit, mistake, or decision. Changing "you" to "I" is not personal. Keep the names they gave their frameworks. Explain each name once, on first use.
+- A week's slate is `plan-x-week`.
 
-Use the shortest explanation that is still complete. Two sentences and one picture can be a whole section. Do not pad. State the action or the belief, then the reason. Short lists are for inputs, stages, and routing. A failure is the missing input or the decision they named. Say that missing piece, such as context the draft never received. Do not replace it with a general complaint that the piece lacked a point. Each section keeps the job you gave it. Leave out an example, a script, or a side topic they already cut, even when it still feels relevant.
+- It does not publish.
 
-Separate what they demonstrated from what they only propose. A number comes only from the Proof page. Keep each time window in its own claim. A reference piece is craft only. Study how it makes the stakes plain, and how a picture holds a fact. Do not take its stories, its numbers, or its lines.
+## Steps
 
-Use numerals. Do not use a hashtag or generic machine phrasing. A link on their own site uses `utm_source=x` and `utm_campaign` set to the weekly slug on the brief. Every other link stays clean.
+1. Read the source, the Proof page, and the brand, audience, and vault notes (`references/brief.md`).
 
-A picture only where it explains the next claim. That is a cover, or an inline frame beside the paragraph it proves. Record the cover path and each inline path on the brief. Number those inline files in article order, and add where each one sits. Keep a caption only when it adds a fact the picture does not show. Placeholder text from an editor is not a caption. New pictures are `design-post-graphic` or `draw-process-map`. Keep the HTML. The still is the last frame of that timeline, at full size. Do not redraw it from a small export.
+2. Write the brief before any sentence (`references/brief.md`).
 
-For the post that goes with a new video, use this shape. Write one line on the reader's world or the result. Write one or two lines on what the video shows. Attach the native video if they have the file. If the file is missing, say so and leave the video off. Put the full https URL in the post. Do not shorten that URL.
+3. Open a supplied URL with `visibility.research.urls_fetch` after `tools_get` (`references/fetch.md`). A paste needs no fetch.
 
-A hand edit sets the rule in `brand.local/voice.md` without storing a second copy of their sentence. Compare that edit with the draft before it. The rule covers the depth and the pace, plus each addition, each cut, and each rename. Length, examples, headings, and tone in the edit replace the earlier draft. Writing the rule does not start another rewrite. It does not publish.
+4. Write the title, the opening, and the mechanism (`references/draft.md`).
 
-Return the title, the article, the cover path, each inline path with its place, and any fact still open. Do not publish. Do not schedule. Do not call `social.content.schedule` or `social.content.approve`. Do not call `social.content.article_create` (no cover field, and it cannot schedule), `social.content.article_create_schedule` (it refuses a date; `scheduled_date` omitted or null is the only form that call accepts), or `social.content.article_delivery_create` (two of its shapes publish). Hand the draft and the picture files to the owner. They paste both into X's article editor. Tell them this desk did not post anything. If they ask to store the video post, `tools_get` `social.content.artifact_create` and save one draft. Fetch the shape of the channel field. x is one of the writable channels the contract named. Re-fetch, because that list moves. That save does not publish. Do not put the long article in that post artifact.
+5. Place a picture only where it explains the next claim (`references/pictures.md`).
 
-Before you hand it back, check five things. The title promises a useful outcome. The opening holds the strongest result the Proof page supports. The owner would recognize the reasoning. A reader can scan the piece and act. The words, the pictures, and the links describe one system.
+6. Write the short post that goes with a new video (`references/video-post.md`).
+
+7. Record a hand edit as a rule in `brand.local/voice.md` (`references/edit.md`).
+
+8. Fetch `social.content.artifact_create` with `tools_get` when they ask to store the video post (`references/hand-back.md`).
+
+9. Save one draft with `social.content.artifact_create` (`references/hand-back.md`). That save does not publish.
+
+10. Check five things, then hand the draft and the picture files to the owner (`references/hand-back.md`).
+
+## Dreamstate tools
+
+| Step | Tool id | Mode | Needs yes? |
+|---|---|---|---|
+| 3 | `tools_get` | read | no |
+| 3 | `visibility.research.urls_fetch` | live | yes |
+| 8 | `tools_get` | read | no |
+| 9 | `social.content.artifact_create` | live | yes |
+
+| Step | Tool id | Mode | Needs yes? |
+|---|---|---|---|
+| - | `social.content.schedule` | never | no |
+| - | `social.content.approve` | never | no |
+| - | `social.content.article_create` | never | no |
+| - | `social.content.article_create_schedule` | never | no |
+| - | `social.content.article_delivery_create` | never | no |
 
 ## Stop rules
+
 - Follow the skill-frame writing rules.
+
+- Do not invent a thesis.
+
+- Do not shrink this opening to about 210 characters, and do not force the last line to ask.
+
+- A number comes only from the Proof page.
+
+- Do not use a hashtag or generic machine phrasing.
+
+- Do not rebuild the piece from a card or a preview.
+
+- Do not redraw a picture from a small export.
+
+- Do not shorten that URL.
+
+- Writing the rule does not start another rewrite.
+
+- Do not publish.
+
+- Do not schedule.
+
+- Do not call `social.content.schedule` or `social.content.approve`.
+
+- Do not call `social.content.article_create` (no cover field, and it cannot schedule).
+
+- Do not call `social.content.article_create_schedule` (it refuses a date; `scheduled_date` omitted or null is the only form that call accepts).
+
+- Do not call `social.content.article_delivery_create` (two of its shapes publish).
+
+- That save does not publish.
+
+- Do not put the long article in that post artifact.

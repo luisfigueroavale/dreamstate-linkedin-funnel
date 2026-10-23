@@ -2,36 +2,96 @@
 name: draft-warm-followups
 description: "Build a short draft sequence for people who already fit, with a daily cap and fallback copy. Use after fit is accepted. It does not activate."
 ---
+# Draft warm followups
 
-Follow `docs/skill-frame.md`.
+Build a short draft sequence for people who already fit, with a daily cap and fallback copy. Follow `docs/skill-frame.md`.
 
-A sequence is a new conversation, even with one recipient; cadenced outreach; or outreach to more than one recipient. An existing thread goes to `draft-thread-reply`. Email with no cadence is not a sequence. A public comment goes to `draft-linkedin-comments`. A file request goes to `send-lead-magnet`, and the file goes first. Fit does not condition handoff. Do not activate in the same step as delivering the file.
+## Use when
 
-Take only rows that passed both scores. A required unknown is a hold and is not enrolled. Hold is not sent. `tables.profile_watcher` and the fit column do not enroll anyone. Use a reviewed cohort. In-thread rows stay out unless the owner names them. Exclusions, suppression, prior-contact rules, and tags stay out.
+- Fit is accepted and the owner wants a short draft sequence.
 
-Start with buyer fit and the exact public context. Match what they did. Keep the copy evidence-based, adaptable, and short. Add no deadline or timing claim, and do not make a rate claim. Use three steps or fewer. Do not add a questionnaire.
+- Not for activation. An existing thread goes to `draft-thread-reply`. A public comment goes to `draft-linkedin-comments`.
 
-Use the post's words for the topic, the comment's actual point, one experience you stand behind, and whether that problem is their work. A relevant question beats a like. Allow a file ask or product weighing only if it is true. Do not write a reaction-only observation. Waiting or a public follow-up can be right. Do not say you saw a like. Ask one question. Do not make an offer. Do not add a calendar link unless they asked to meet. Do not add a side pitch off the file handoff.
+## Steps
 
-Ask about today's work and the stuck point, and only what they shared. If the offer addresses that problem, keep it proportionate: one relevant example, part of the asset, or one evidenced suggestion. The conversation can pick an answer, the resource, one signup, a demonstration, or a call. Stop on a decline or a stop request. Reply stops stay on. Replies go to `draft-thread-reply`.
+1. Route work that is not a sequence (`references/scope.md`). A file request goes to `send-lead-magnet`, and the file goes first.
 
-`tools_get` before every `tools_run`. Take step ids from `sequence.sequences.step_options`. Do not invent a step. Read the definition, the version, the ordered steps, the delays, the variants, the send window, the time zone, and the channel fallback.
+2. Take only rows that passed both scores (`references/cohort.md`). A required unknown is a hold and is not enrolled.
 
-From `senders.linkedin_accounts.list` and `senders.social_accounts.list`, read the account, the mailbox, health, and limits. Keep a stable recipient-to-sender binding. Connected is not the same as ready. Do not set up a mailbox here. Do not guess a name.
+3. Write three steps or fewer from what they did (`references/copy.md`). Ask one question.
 
-`sequence.sequences.create_from_worksheet` drafts and does not start. Nothing was sent. Map identity and worksheet variables only. Put fallback copy on row-field steps. Empty fields must still be a sentence. Use `{{first_name}}` only with a real `first_name` column. Else `tables.columns.add` as a formula, or do not greet by name.
+4. Take step ids from `sequence.sequences.step_options` after `tools_get` and before `tools_run` (`references/sequence.md`).
 
-Preview the scope and the row variables for at least 3 rows, including one thin row, via `sequence.sequences.copy_preview` (`sequence_id` required). It is a free read. A refused dry_run runs live, so say it was a read. Report unresolved identities and tokens.
+5. Read the account, the mailbox, health, and limits with `senders.linkedin_accounts.list` and `senders.social_accounts.list` (`references/senders.md`).
 
-Before activation, inspect preview and sending scope. Draft or paused enrollments may stay pending. Active may deliver after enrollment. Enrollment is not dispatch. There is no lifetime ceiling. `max_live_sends` in params covers at least the dry-run recipient count, and it is not authorization. Inspect bounces. Do not invent a bounce count.
+6. Draft with `sequence.sequences.create_from_worksheet` (`references/draft.md`). Nothing was sent.
 
-The ask names both `max_new_enrollments_per_day` and `max_live_sends`. `sequence.sequences.activate_audience` is a separate yes on that audience and text and starts sending. Stay in scope and fetched gates. Use dry_run if offered. Show the recipient count, the credit estimate, and `quote_hash`. A live run repeats the hash, sets `max_credits` at the dry-run ceiling, and uses a new `idempotency_key`. Do not restart. Never call `sequence.linkedin.auto_engagements.replace` or `sequence.x.auto_engagements.replace`.
+7. Use `{{first_name}}` only with a real `first_name` column (`references/draft.md`). Else add a formula with `tables.columns.add`, or do not greet by name.
 
-Record the enrollment id, the variant, and the run id. For events and counts, search, then call `tools_get`. Do not invent an id. Keep the named sender. A missing identity stays unnamed. Count delivered, replies, qualified talks, and opportunities apart. Keep the source post and the profile. Signups and meetings differ from opportunities and revenue. Ungiven numbers stay unknown.
+8. Preview at least 3 rows, including one thin row, with `sequence.sequences.copy_preview` (`references/preview.md`).
 
-For recovery, preview the failed or deferred rows, and reconcile provider outcomes before a retry. `sequence.sequences.resume` is resume only (owner yes, same send rule, `max_live_sends` in params when listed), not pause, retirement, or capacity recovery.
+9. Name both `max_new_enrollments_per_day` and `max_live_sends` in the ask (`references/activate.md`).
 
-Return the counts, the held reasons, the state, and the budget. Give a deep link only if one was returned.
+10. Activate with `sequence.sequences.activate_audience` only on a separate yes (`references/activate.md`).
+
+11. Record the enrollment id, the variant, and the run id (`references/record.md`).
+
+12. For events and counts, call `tools_get` (`references/record.md`). Do not invent an id.
+
+13. Resume with `sequence.sequences.resume` only after owner yes (`references/recover.md`).
+
+14. Return the counts, the held reasons, the state, and the budget (`references/record.md`).
+
+## Dreamstate tools
+
+| Step | Tool id | Mode | Needs yes? |
+|---|---|---|---|
+| 4 | `tools_get` | read | no |
+| 4 | `tools_run` | read | no |
+| 4 | `sequence.sequences.step_options` | read | no |
+| 5 | `senders.linkedin_accounts.list` | read | no |
+| 5 | `senders.social_accounts.list` | read | no |
+| 6 | `tools_get` | read | no |
+| 6 | `tools_run` | live | no |
+| 6 | `sequence.sequences.create_from_worksheet` | live | no |
+| 7 | `tools_get` | read | no |
+| 7 | `tools_run` | live | no |
+| 7 | `tables.columns.add` | live | no |
+| 8 | `tools_get` | read | no |
+| 8 | `tools_run` | live | no |
+| 8 | `sequence.sequences.copy_preview` | live | no |
+| 10 | `tools_get` | read | no |
+| 10 | `tools_run` | dry_run | no |
+| 10 | `tools_run` | live | yes |
+| 10 | `sequence.sequences.activate_audience` | dry_run | no |
+| 10 | `sequence.sequences.activate_audience` | live | yes |
+| 12 | `tools_get` | read | no |
+| 13 | `tools_get` | read | no |
+| 13 | `tools_run` | live | yes |
+| 13 | `sequence.sequences.resume` | live | yes |
+| - | `sequence.linkedin.auto_engagements.replace` | never | no |
+| - | `sequence.x.auto_engagements.replace` | never | no |
 
 ## Stop rules
+
 - Follow the skill-frame writing rules.
+
+- A required unknown is a hold and is not enrolled.
+
+- Hold is not sent.
+
+- Do not activate in the same step as delivering the file.
+
+- Fit does not condition handoff.
+
+- Never call `sequence.linkedin.auto_engagements.replace` or `sequence.x.auto_engagements.replace`.
+
+- `sequence.sequences.activate_audience` is a separate yes on that audience and text and starts sending.
+
+- Do not invent an id.
+
+- Do not guess a name.
+
+- Nothing was sent.
+
+- A refused dry_run runs live, so say it was a read.
