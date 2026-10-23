@@ -14,17 +14,17 @@ Burn a cue-timed HTML overlay onto a short without covering the speaker or the c
 - `check-short-export` is the last pass.
 
 ## Steps
-1. Open `brand/AGENTS.md`, then `brand.local/` (`references/plan.md`). Stop if a required file is blank.
+1. Stop if a required file is blank (`references/plan.md`).
 
-2. Scout the finished cut for a number, a comparison, a step, a label, or a supporting image (`references/plan.md`).
+2. Scout (`references/plan.md`).
 
 3. Record each plan row (`references/cues.md`).
 
-4. Resolve each cue against the final transcript of the cut you will ship (`references/cues.md`). When a cue is spoken twice, name which occurrence.
+4. When a cue is spoken twice, name which occurrence (`references/cues.md`).
 
-5. Keep captions, the face, and the graphic in distinct regions (`references/regions.md`).
+5. Keep (`references/regions.md`).
 
-6. Burn the HTML overlay with ffmpeg (`references/burn.md`). Motion is `DeskTimeline`, capture steps `__seek`, headline text uses `--headline-gradient` when that token is set and `--color-accent` when it is not, and `--color-accent-2` is the second accent.
+6. Burn with ffmpeg (`references/burn.md`). Motion is `DeskTimeline`, and capture steps `__seek`.
 
 7. After an edit change, resolve the cues again from that final transcript before the next burn (`references/burn.md`).
 
@@ -32,8 +32,7 @@ Burn a cue-timed HTML overlay onto a short without covering the speaker or the c
 
 9. Play that span with audio (`references/inspect.md`).
 
-10. Return the editable source and the render (`references/inspect.md`). `check-short-export` is the last pass.
-
+10. `check-short-export` is the last pass (`references/inspect.md`).
 ## Dreamstate tools
 None. Local files only.
 

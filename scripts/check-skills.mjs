@@ -126,6 +126,7 @@ function flagEmDash(rel) {
 const tracked = execFileSync("git", ["ls-files", "-z"], { cwd: root, encoding: "utf8" }).split("\0").filter(Boolean);
 for (const rel of tracked) {
   if (rel.endsWith(".md")) flagEmDash(rel);
+  if (!rel.startsWith("skills/") && /\.(mjs|html|json)$/.test(rel)) flagEmDash(rel);
 }
 for (const file of walk(root)) {
   const rel = path.relative(root, file);
@@ -134,30 +135,96 @@ for (const file of walk(root)) {
   if (skillText || fixture) flagEmDash(rel);
 }
 
-const ACTION = new Set(["live", "paid", "send", "post", "publish", "enroll", "schedule", "approve", "delete"]);
-const TOOL_ACTION = new Set(["paid", "send", "publish", "enroll", "schedule", "approve", "delete"]);
+const DOOR_FREE = new Set([
+  "whoami", "runs_get", "runs_events", "runs_list", "runs_cancel", "tools_search",
+  "packs_list", "packs_get", "packs_route", "skills_list", "skills_get",
+]);
+const EXTRA_FREE = new Set([
+  "social.visuals.download_url",
+  "social.visuals.file_get",
+  "tables.profile_watcher.get",
+  "social.content.article_deliveries_list",
+]);
+const PAID_RUN = new Set(["tables.columns.run", "tables.table_sources.run"]);
+const ACTION_TOKEN = new Set(["send", "publish", "enroll", "schedule", "approve", "delete"]);
 
-function rowTokens(value) {
-  return String(value).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
+function idTokens(id) {
+  return String(id).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean);
 }
-
-function toolMapYesIds() {
+function hasAction(id) {
+  return idTokens(id).some((token) => ACTION_TOKEN.has(token));
+}
+function yesText(use) {
+  return /owner'?s?\s+yes|needs\s+(?:its\s+own\s+|a\s+)?yes|after\s+yes|door-level approval|needs `approved:\s*true`|live needs `approved:\s*true`|live posts only with|always owner yes/i.test(use);
+}
+function paidText(use) {
+  return /\bpaid\b/i.test(use) || /\b[1-9]\d*\s+credits?\b/.test(use);
+}
+function isFreeRead(id, use) {
+  if (DOOR_FREE.has(id) || EXTRA_FREE.has(id)) return true;
+  if (hasAction(id) || yesText(use) || paidText(use) || /posts a public/i.test(use)) return false;
+  if (/free read|free external read|local read|free people or company|(?:^|\.\s+)Free\.|\bRead only\b/i.test(use)) return true;
+  if (/\b0 credits\b|costs 0/i.test(use)) return true;
+  if (/^(Read|List|Counts|State of|People already|Stored conversations|Comments waiting|The step ids|Price an unsaved|Page count)/i.test(use)) return true;
+  if (/(\.(get|list)|_(get|list))$/.test(id)) return true;
+  return false;
+}
+function parseToolMap() {
   const text = readFileSync(path.join(root, "docs/tool-map.md"), "utf8");
-  const yes = /owner'?s?\s+yes|needs\s+(?:its\s+own\s+|a\s+)?yes|after\s+yes/i;
-  const ids = new Set();
+  const uses = new Map();
+  const definitions = new Set();
+  let inDef = false;
   for (const line of text.split(/\n/)) {
+    if (/^## Definition ids/.test(line)) {
+      inDef = true;
+      continue;
+    }
+    if (/^## /.test(line)) inDef = false;
     if (!line.startsWith("|")) continue;
     const cells = line.split("|").slice(1, -1).map((cell) => cell.trim());
     if (cells.length < 2) continue;
     const id = cells[0].replace(/`/g, "").trim();
-    if (!id.includes(".")) continue;
-    if (yes.test(cells.slice(1).join(" "))) ids.add(id);
+    if (!id.includes(".") || id === "Id") continue;
+    if (inDef) definitions.add(id);
+    else if (!uses.has(id)) uses.set(id, cells.slice(1).join(" "));
   }
-  return ids;
+  if (uses.size < 40) bad("docs/tool-map.md did not parse");
+  return { uses, definitions };
+}
+function rowSide(mode) {
+  const value = mode.toLowerCase();
+  if (value.includes("never") || value.includes("not this")) return "never";
+  if (value.includes("definition") || value.includes("not tools_run")) return "definition";
+  const live = /\blive\b/.test(value);
+  const preview = /\b(dry_run|smoke_test|preview|read|quote)\b/.test(value);
+  if (preview && live) return "combined";
+  if (preview) return "preview";
+  if (live || /\bwrite\b/.test(value)) return "outward";
+  return "other";
+}
+function sends(id, use) {
+  return hasAction(id) || /starts sending|\benrolls?\b/i.test(use);
+}
+function previewYes(id, use) {
+  if (/always owner yes/i.test(use)) return true;
+  if (/dry run is allowed and costs 0|smoke_test to preview|preview when|modes smoke_test and live/i.test(use)) return false;
+  return sends(id, use);
+}
+function outwardYes(id, use) {
+  return sends(id, use) || yesText(use) || paidText(use) || PAID_RUN.has(id) || /posts a public/i.test(use);
+}
+function expectedNeed(id, mode, use) {
+  if (id === "tools_get" || id === "tools_run" || rowSide(mode) === "never") return "forbid";
+  if (rowSide(mode) === "definition" || id.startsWith("source.") || id.startsWith("column.")) return "no";
+  if (isFreeRead(id, use)) return "no";
+  const side = rowSide(mode);
+  if (side === "preview") return previewYes(id, use) ? "yes" : "no";
+  if (side === "combined" || side === "outward") return outwardYes(id, use) ? "yes" : "no";
+  return "no";
 }
 
-const yesIds = toolMapYesIds();
-if (yesIds.size < 10) bad("docs/tool-map.md yes list did not parse");
+const { uses: toolUses, definitions } = parseToolMap();
+const seenMode = new Map();
 for (const name of folders) {
   const text = readFileSync(path.join(skillRoot, name, "SKILL.md"), "utf8");
   for (const line of text.split(/\n/)) {
@@ -167,14 +234,24 @@ for (const name of folders) {
     const id = cells[1].replace(/`/g, "").trim();
     const mode = cells[2];
     const need = cells[3];
-    const modeTokens = rowTokens(mode);
-    if (modeTokens.includes("never")) {
-      if (need !== "n/a") bad(`${name}: ${id} is never and Needs yes is ${need}`);
-      continue;
+    if (id === "tools_get" || id === "tools_run") bad(`${name}: drop the ${id} wrapper row`);
+    if (rowSide(mode) === "never") bad(`${name}: fold ${id} into Never call`);
+    const use = toolUses.get(id) || "";
+    const expected = expectedNeed(id, mode, use);
+    if (expected === "forbid") bad(`${name}: ${id} ${mode} is not a tool row`);
+    if (need !== "yes" && need !== "no") bad(`${name}: ${id} Needs yes is ${need}`);
+    if (isFreeRead(id, use) && (mode !== "read" || need !== "no")) {
+      bad(`${name}: ${id} is a free read and must be read | no`);
     }
-    const action = modeTokens.some((token) => ACTION.has(token)) || rowTokens(id).some((token) => TOOL_ACTION.has(token));
-    if (action && !/\byes\b/i.test(need)) bad(`${name}: ${id} ${mode} Needs yes is ${need}`);
-    if (yesIds.has(id) && need.toLowerCase() === "no") bad(`${name}: ${id} is marked yes in docs/tool-map.md and the row says no`);
+    if ((definitions.has(id) || id.startsWith("source.") || id.startsWith("column.")) && mode !== "definition id") {
+      bad(`${name}: ${id} must be definition id | no`);
+    }
+    if (expected === "yes" && need !== "yes") bad(`${name}: ${id} ${mode} needs yes`);
+    if (expected === "no" && need !== "no") bad(`${name}: ${id} ${mode} is free and must say no`);
+    const key = `${id}\0${mode}`;
+    const prior = seenMode.get(key);
+    if (prior && prior !== need) bad(`${id} ${mode} is ${prior} in one skill and ${need} in ${name}`);
+    seenMode.set(key, need);
   }
 }
 

@@ -14,20 +14,19 @@ Derive voice rules from the owner's own samples and edits. Follow `docs/skill-fr
 
 ## Steps
 
-1. Read `brand.local/identity.md`, `brand.local/voice.md`, and `vault/voice/` (`references/read.md`). If the voice file is missing, copy `brand/voice.md` to `brand.local/voice.md`.
+1. If the voice file is missing, copy `brand/voice.md` to `brand.local/voice.md` (`references/read.md`).
 
-2. Save a new sample in `vault/voice/` under its filename (`references/samples.md`).
+2. Save (`references/samples.md`).
 
 3. Classify each path beside the file (`references/classify.md`).
 
 4. Observe several samples before a rule (`references/observe.md`). One is tentative, not a universal style.
 
-5. Write into existing `brand.local/voice.md` sections (`references/write.md`).
+5. Write (`references/write.md`).
 
-6. Write a calibration draft only when asked (`references/calibrate.md`). Read `audience.local/ideal-follower.md` first.
+6. Write a calibration draft only when asked (`references/calibrate.md`).
 
-7. Hand back the guide (`references/empty.md`). This skill does not post, send, or spend.
-
+7. Hand (`references/empty.md`).
 ## Dreamstate tools
 
 None. Local files only.

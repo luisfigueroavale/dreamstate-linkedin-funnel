@@ -14,22 +14,21 @@ Define pillars, topics, and subtopics, and map each topic to a funnel job. Follo
 
 ## Steps
 
-1. Read `audience/AGENTS.md`, then `audience.local/ideal-follower.md` (`references/read.md`). Stop if that file is missing or still says `Status: blank`.
+1. Stop (`references/read.md`).
 
-2. Read `brand.local/identity.md` (`references/read.md`). Stop if it is missing or blank.
+2. Stop if it is missing or blank (`references/read.md`).
 
-3. Read `vault/notes/funnel-stages.md` and `vault/notes/pillars.md` before you add a line (`references/read.md`).
+3. Read (`references/read.md`).
 
-4. Name the problem the reader has that identity or the Proof page can support (`references/sources.md`).
+4. Name (`references/sources.md`).
 
-5. Give each pillar one promise, one boundary, and one job (`references/pillars.md`).
+5. Give (`references/pillars.md`).
 
-6. Map each topic to its pillar's funnel job (`references/jobs.md`).
+6. Map (`references/jobs.md`).
 
-7. Write the taxonomy in `vault/notes/pillars.md` (`references/note.md`).
+7. Write (`references/note.md`).
 
-8. Hand back the proposed names, the adopted names, the funnel path for each topic, and the decisions still open (`references/note.md`).
-
+8. Hand (`references/note.md`).
 ## Dreamstate tools
 
 None. Local files only.

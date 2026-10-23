@@ -20,46 +20,29 @@ Confirm the active Dreamstate workspace before a write or a spend. Follow `docs/
 
 2. Read `senders.linkedin_accounts.list`, `social.channels_list`, and `senders.social_accounts.list` (`references/accounts.md`).
 
-3. Call `tools_get` on `tables.profile_watcher.preview` before `tools_run` (`references/preview.md`). Preview only public person-profile URLs the owner gave.
+3. Preview only public person-profile URLs the owner gave (`references/preview.md`).
 
-4. Call `tools_get` on `tables.profile_watcher.get` before another watcher (`references/watcher.md`). Live, and if none is stored, do not create.
+4. Live, and if none is stored, do not create (`references/watcher.md`).
 
 5. On a timeout, call `runs_get` (`references/watcher.md`). Do not start a second watcher.
 
-6. Qualify from Ideal Customer and the follower file (`references/qualify.md`). Read `audience/AGENTS.md` first.
+6. Read (`references/qualify.md`).
 
 7. Do not call `sequence.sequences.activate_audience`, `sequence.sequences.resume`, or `workflow.workflows.activate` (`references/later.md`).
-
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 1 | `whoami` | live | yes |
-| 2 | `senders.linkedin_accounts.list` | live | yes |
-| 2 | `social.channels_list` | live | yes |
-| 2 | `senders.social_accounts.list` | live | yes |
-| 3 | `tools_get` | read | no |
-| 3 | `tools_run` | live | yes |
-| 3 | `tables.profile_watcher.preview` | live | yes |
-| 4 | `tools_get` | read | no |
-| 4 | `tables.profile_watcher.get` | live | yes |
-| 5 | `runs_get` | live | yes |
-| - | `senders.identities.inbox_scope_get` | never | n/a |
-| - | `tables.profile_watcher.create` | never | n/a |
-| - | `tables.profile_watcher.resume` | never | n/a |
-| - | `visibility.linkedin.engagement_harvest` | never | n/a |
+| 1 | `whoami` | read | no |
+| 2 | `senders.linkedin_accounts.list` | read | no |
+| 2 | `social.channels_list` | read | no |
+| 2 | `senders.social_accounts.list` | read | no |
+| 3 | `tables.profile_watcher.preview` | read | no |
+| 4 | `tables.profile_watcher.get` | read | no |
+| 5 | `runs_get` | read | no |
 | - | `tables.x_post_engagers.run` | live | yes |
-| - | `tables.columns.add` | never | n/a |
-| - | `tables.columns.update` | never | n/a |
-| - | `tables.columns.run` | never | n/a |
-| - | `tables.table_runs.preview_cost` | never | n/a |
-| - | `tables.auto_run.set` | never | n/a |
-| - | `tables.executables.save` | never | n/a |
-| - | `visibility.research.web_search` | never | n/a |
-| - | `visibility.research.urls_fetch` | never | n/a |
-| - | `sequence.sequences.activate_audience` | never | n/a |
-| - | `sequence.sequences.resume` | never | n/a |
-| - | `workflow.workflows.activate` | never | n/a |
+
+Never call: `senders.identities.inbox_scope_get`, `sequence.sequences.activate_audience`, `sequence.sequences.resume`, `tables.auto_run.set`, `tables.columns.add`, `tables.columns.run`, `tables.columns.update`, `tables.executables.save`, `tables.profile_watcher.create`, `tables.profile_watcher.resume`, `tables.table_runs.preview_cost`, `visibility.linkedin.engagement_harvest`, `visibility.research.urls_fetch`, `visibility.research.web_search`, `workflow.workflows.activate`.
 
 ## Stop rules
 

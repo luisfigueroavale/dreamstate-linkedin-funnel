@@ -19,30 +19,28 @@ Write, revise, or compare LinkedIn opening lines in the owner's voice, with coun
 
 ## Steps
 
-1. Read the draft or the factual brief, `brand.local/voice.md`, and `audience.local/ideal-follower.md` (`references/scope.md`).
+1. Read (`references/scope.md`).
 
-2. Name the reader and the one point the body will pay off (`references/scope.md`).
+2. Name (`references/scope.md`).
 
 3. Choose a family the facts support (`references/families.md`).
 
-4. Write the opening, or edit the line they handed you (`references/shape.md`).
+4. Write (`references/shape.md`).
 
-5. Measure that text with `node scripts/opening-measure.mjs --json` (`references/measure.md`).
+5. Measure (`references/measure.md`).
 
-6. Fetch `social.content.generate_hooks` with `tools_get` before `tools_run` (`references/tools.md`).
+6. Fetch with `social.content.generate_hooks` (`references/tools.md`).
 
-7. Score the line with `social.draft_score` (`references/tools.md`). Sending dry_run executes the read.
+7. Score the line with `social.draft_score` (`references/tools.md`).
 
-8. Hand back the opening you recommend (`references/hand-back.md`).
-
+8. Hand (`references/hand-back.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 6 | `tools_get` | read | no |
-| 6 | `tools_run` | dry_run | no |
-| 6 | `social.content.generate_hooks` | dry_run | no |
-| 7 | `social.draft_score` | dry_run | no |
+| 6 | `social.content.generate_hooks` | read | no |
+| 7 | `social.draft_score` | read | no |
+
 
 ## Stop rules
 

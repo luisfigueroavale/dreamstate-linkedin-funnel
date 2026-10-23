@@ -18,4 +18,4 @@ Mark flags on watchlist hits rather than silently deleting them: `comment_gate`,
 
 One bad profile does not end the run. One bad thread read does not end the run. One bad refresh does not end the run. Write the miss on `errors` and name it in the summary. `rate_limit_exceeded` ("Capacity is busy"): back off, then retry, with never more than 5 calls in parallel.
 
-On a paid read, `provider_outcome_unknown` gets a single retry. `provider_response_error` goes to a second pass, done 1 at a time. Weekends are flakier. If reading their own comments fails, continue. You lose feedback and the already-commented check, and you do not pretend those reads succeeded.
+On a paid read, `provider_outcome_unknown` gets a single retry. `provider_response_error` goes to a second pass, done 1 at a time. Weekends are flakier. You lose feedback and the already-commented check, and you do not pretend those reads succeeded.

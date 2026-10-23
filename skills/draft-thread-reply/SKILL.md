@@ -19,11 +19,11 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. Read `AGENTS.md`, then the filled files `brand/AGENTS.md` points at (`references/read.md`).
+1. Read with `AGENTS.md` (`references/read.md`).
 
-2. Read `audience/AGENTS.md` and `audience.local/ideal-follower.md` when fit matters (`references/read.md`).
+2. Read (`references/read.md`).
 
-3. Call `whoami` before the first write or spend (`references/read.md`). If more than one workspace is listed, ask which, and stop.
+3. If more than one workspace is listed, ask which, and stop (`references/read.md`).
 
 4. Open the thread in `docs/conversations.md` (`references/route.md`).
 
@@ -35,55 +35,42 @@ Follow `docs/skill-frame.md`.
 
 8. Call `tools_get` before `tools_run` on `unibox.inbox.analyze` (`references/analyze.md`). Not a way to look busy.
 
-9. Read `unibox.inbox.reply_drafts_list` (`references/save.md`). No dry_run.
+9. Read with `unibox.inbox.reply_drafts_list` (`references/save.md`).
 
-10. Save with `unibox.inbox.reply_draft_edit` (`references/save.md`). Say nothing was sent.
+10. Save with `unibox.inbox.reply_draft_edit` (`references/save.md`).
 
-11. Preview `social.comments.reply` for an own-post reply (`references/own-post.md`).
+11. Preview with `social.comments.reply` (`references/own-post.md`).
 
-12. Call `social.comments.approve` after yes (`references/own-post.md`).
+12. Call with `social.comments.approve` (`references/own-post.md`).
 
-13. Read `sequence_stop_state` before a send is offered (`references/send.md`).
+13. Read (`references/send.md`).
 
-14. Send with `unibox.context.thread_reply_send` after yes on that text (`references/send.md`). Call `tools_get` first.
+14. Send with `unibox.context.thread_reply_send` (`references/send.md`).
 
-15. Create the meeting with `integrations.calendar.events_create` (`references/calendar.md`). Owner yes first.
+15. Create with `integrations.calendar.events_create` (`references/calendar.md`).
 
-16. Quote `visibility.research.web_search` and `visibility.research.urls_fetch` before a paid read (`references/research.md`). Run only after yes.
+16. Quote with `visibility.research.web_search` and `visibility.research.urls_fetch` (`references/research.md`).
 
-17. Hand over the route and the draft (`references/handover.md`).
+17. Hand (`references/handover.md`).
 
 18. Record a rewrite in `brand.local/voice.md` (`references/voice.md`).
-
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 3 | `whoami` | read | no |
 | 5 | `unibox.inbox.unified_list` | read | no |
-| 8 | `tools_get` | read | no |
-| 8 | `tools_run` | dry_run | no |
 | 8 | `unibox.inbox.analyze` | dry_run | no |
 | 8 | `unibox.inbox.analyze` | live | yes |
-| 9 | `tools_get` | read | no |
-| 9 | `tools_run` | live | yes |
-| 9 | `unibox.inbox.reply_drafts_list` | live | yes |
-| 10 | `tools_get` | read | no |
-| 10 | `tools_run` | live | yes |
-| 10 | `unibox.inbox.reply_draft_edit` | live | yes |
-| 11 | `tools_get` | read | no |
+| 9 | `unibox.inbox.reply_drafts_list` | read | no |
+| 10 | `unibox.inbox.reply_draft_edit` | live | no |
 | 11 | `social.comments.reply` | preview | no |
-| 12 | `tools_get` | read | no |
 | 12 | `social.comments.approve` | live | yes |
-| 14 | `tools_get` | read | no |
-| 14 | `tools_run` | dry_run | no |
-| 14 | `unibox.context.thread_reply_send` | dry_run | yes |
-| 14 | `unibox.context.thread_reply_send` | live | yes |
-| 15 | `tools_get` | read | no |
+| 14 | `unibox.context.thread_reply_send` | dry_run, then live | yes |
 | 15 | `integrations.calendar.events_create` | live | yes |
-| 16 | `tools_get` | read | no |
-| 16 | `visibility.research.web_search` | quote, then live | yes |
-| 16 | `visibility.research.urls_fetch` | quote, then live | yes |
+| 16 | `visibility.research.web_search` | live | yes |
+| 16 | `visibility.research.urls_fetch` | live | yes |
+
 
 ## Stop rules
 

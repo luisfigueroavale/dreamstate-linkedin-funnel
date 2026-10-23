@@ -4,7 +4,7 @@ Run `node scripts/queue-lint.mjs work/draft-x-replies/<YYYY-MM-DD>-<HHMM>z.json 
 
 Lengths, line breaks, openers, banned words, stock shapes, and product brags are `scripts/queue-rules.json`. Read that file's `review` list and fix those shapes before you run the command.
 
-A non-zero exit means do not write the page. Run `scripts/queue-page.mjs` to write the page only after lint passes, and a lint failure does not write the file.
+Run `scripts/queue-page.mjs` to write the page only after lint passes, and a lint failure does not write the file.
 
 Exit 0 stamps `lint` as `pass`. Do not set that field yourself. The page renders no cards without it.
 

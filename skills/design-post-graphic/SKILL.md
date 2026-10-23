@@ -15,21 +15,21 @@ Build one portrait, carousel slide, or thumbnail as HTML and CSS, with motion in
 
 ## Steps
 
-1. Read the brief, the post, and `docs/picture-rules.md` (`references/brief.md`).
+1. Read (`references/brief.md`).
 
-2. Read `brand/AGENTS.md`, then the filled `brand.local/` files (`references/brief.md`). Stop if a required file is missing or blank.
+2. Stop if a required file is missing or blank (`references/brief.md`).
 
-3. Write three HTML-comment notes before drawing (`references/brief.md`).
+3. Write (`references/brief.md`).
 
 4. Build the plates from the post and the brief (`references/plates.md`).
 
-5. Take sizes from `docs/picture-rules.md` (`references/sizes.md`).
+5. Take (`references/sizes.md`).
 
-6. Import `brand/tokens.css` and use owner values in `brand.local/tokens.css` (`references/tokens.md`).
+6. Import (`references/tokens.md`).
 
 7. Lay out the frame in HTML and CSS (`references/layout.md`).
 
-8. Write the portrait, slide, or thumbnail file (`references/files.md`).
+8. Write (`references/files.md`).
 
 9. Drive motion with `DeskTimeline` (`references/motion.md`). Capture calls `__seek`.
 
@@ -39,43 +39,33 @@ Build one portrait, carousel slide, or thumbnail as HTML and CSS, with motion in
 
 12. Call `whoami` before writing (`references/render.md`).
 
-13. Store the page with `social.visuals.source_create` (`references/render.md`).
+13. Store with `social.visuals.source_create` (`references/render.md`).
 
-14. Fetch `social.visuals.render_preview` with `tools_get` (`references/render.md`).
+14. Fetch with `social.visuals.render_preview` (`references/render.md`).
 
-15. Fetch `social.visuals.render_start` with `tools_get` (`references/render.md`). Pass `scope_hash`.
+15. Fetch with `social.visuals.render_start` (`references/render.md`).
 
-16. Fetch `social.visuals.render_get` with `tools_get` (`references/render.md`).
+16. Fetch with `social.visuals.render_get` (`references/render.md`).
 
-17. Read the bytes with `social.visuals.file_get` or `social.visuals.download_url` (`references/render.md`).
+17. Read with `social.visuals.file_get` and `social.visuals.download_url` (`references/render.md`).
 
-18. Inspect the 1080px PNG, the 390px view, and the thumbnail at 1280×720 (`references/inspect.md`).
+18. Inspect (`references/inspect.md`).
 
-19. Run `brand/taste.md` before the owner sees it (`references/inspect.md`).
+19. Run (`references/inspect.md`).
 
 20. State what you reached and hand back the HTML (`references/inspect.md`).
-
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 12 | `whoami` | read | no |
-| 13 | `social.visuals.source_create` | live | yes |
-| 14 | `tools_get` | read | no |
-| 14 | `social.visuals.render_preview` | live | yes |
+| 13 | `social.visuals.source_create` | live | no |
+| 14 | `social.visuals.render_preview` | live | no |
+| 15 | `social.visuals.render_start` | live | no |
+| 16 | `social.visuals.render_get` | read | no |
+| 17 | `social.visuals.file_get` | read | no |
+| 17 | `social.visuals.download_url` | read | no |
 
-| Step | Tool id | Mode | Needs yes? |
-|---|---|---|---|
-| 15 | `tools_get` | read | no |
-| 15 | `social.visuals.render_start` | live | yes |
-| 16 | `tools_get` | read | no |
-| 16 | `social.visuals.render_get` | live | yes |
-
-| Step | Tool id | Mode | Needs yes? |
-|---|---|---|---|
-| 17 | `tools_get` | read | no |
-| 17 | `social.visuals.file_get` | live | yes |
-| 17 | `social.visuals.download_url` | live | yes |
 
 ## Stop rules
 

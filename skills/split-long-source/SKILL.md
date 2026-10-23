@@ -14,29 +14,29 @@ Split one long source into separate pieces and picture briefs that keep its fact
 
 ## Steps
 
-1. Read the whole source before a cut (`references/source.md`). If it is not already in `vault/sources/`, preserve it with `collect-owner-context` first.
+1. If it is not already in `vault/sources/`, preserve it with `collect-owner-context` first (`references/source.md`).
 
-2. Read `vault/notes/pillars.md` and the offer in `brand.local/identity.md` (`references/source.md`).
+2. Read (`references/source.md`).
 
-3. Record a section or a timestamp on each candidate (`references/candidates.md`).
+3. Record (`references/candidates.md`).
 
-4. Rank by the reader in `audience.local/ideal-follower.md`, the pillars, and the offer (`references/candidates.md`).
+4. Rank (`references/candidates.md`).
 
-5. Give each piece one point, a source section, a pillar, a funnel job, and a format (`references/piece.md`).
+5. Give (`references/piece.md`).
 
-6. Pick the shape before the sentences (`references/shapes.md`).
+6. Pick (`references/shapes.md`).
 
-7. Match the CTA to the current offer and that piece's funnel job (`references/handoff.md`).
+7. Match (`references/handoff.md`).
 
-8. Write the source-to-piece map outside the copy (`references/handoff.md`).
+8. Write (`references/handoff.md`).
 
-9. Save a draft with `social.content.artifact_create` when they ask to store a piece (`references/handoff.md`). That call saves the draft and does not post.
-
+9. Save with `social.content.artifact_create` (`references/handoff.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 9 | `social.content.artifact_create` | live | yes |
+| 9 | `social.content.artifact_create` | live | no |
+
 
 ## Stop rules
 

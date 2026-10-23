@@ -12,6 +12,6 @@ If they were missing from the watchlist, treat them as on it for that pass. When
 
 `references/reach.md` is for the speed pass: active accounts at or above 50,000 followers, in or near the lanes, on topics where the owner can add a real line. Confirm the follower count before a name goes in.
 
-Skip a political feed, a crypto feed, an account that only posts tool roundups, and a company account with no back-and-forth. Write one line with the handle and the follower count.
+Write one line with the handle and the follower count.
 
 The speed set is that file, plus the circle, plus watchlist rows already at 50,000 followers. If the file is still blank, speed uses the circle and those watchlist rows.

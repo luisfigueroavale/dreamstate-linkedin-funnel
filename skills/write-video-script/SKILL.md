@@ -12,28 +12,27 @@ Write the words and the shot list the owner can record. Follow `docs/skill-frame
 - Not for titles (`write-video-titles`), the description and chapters (`write-video-description`), the thumbnail (`design-video-thumbnail`), a render, or generated footage.
 
 ## Steps
-1. Start after `choose-next-video` passes its three gates (`references/open.md`).
+1. Start (`references/open.md`).
 
-2. Keep the gate 3 opening minute unless the owner rewrites it (`references/open.md`).
+2. Keep (`references/open.md`).
 
-3. Read the named source, the article, `brand.local/voice.md`, the named samples, and `audience.local/ideal-follower.md` (`references/open.md`). Stop if that file is missing or `Status: blank`.
+3. Stop (`references/open.md`).
 
-4. Walk today's real workflow (`references/open.md`).
+4. Walk (`references/open.md`).
 
-5. Say what they will know, and what they can do, when it stops (`references/outline.md`).
+5. Say (`references/outline.md`).
 
-6. Deliver a read-aloud script, an outline, and a shot list, in that order (`references/outline.md`).
+6. Deliver (`references/outline.md`).
 
 7. Write the outline in `references/outline.md`. Promise the end state first.
 
-8. Write each beat in `references/beats.md`. No source means no beat.
+8. Write each beat in `references/beats.md`.
 
 9. Match the requested runtime (`references/time.md`). Time it, then trim or restore.
 
-10. Return the script and the shot list (`references/deliver.md`). Name the bracket, the visual, and the source.
+10. Name the bracket, the visual, and the source (`references/deliver.md`).
 
-11. Run `brand/taste.md` before the owner sees the pages (`references/deliver.md`). Nothing was recorded.
-
+11. Run (`references/deliver.md`).
 ## Dreamstate tools
 None. Local files only.
 

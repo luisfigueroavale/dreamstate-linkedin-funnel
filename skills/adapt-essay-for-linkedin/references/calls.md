@@ -24,8 +24,7 @@ The store call is `social.content.artifact_create`. The portrait remains the fee
 
 Required `channel` `"linkedin"`, `account_id`, `target_post_urn`, `body`, and `consequence` `"public_comment"`.
 
-It runs only from an approved durable run step, or the call returns 409 `durable_run_step_required`. The owner says yes on that exact body.
+The owner says yes on that exact body.
 
 `social.engagement.comment` can preview when `approved` is omitted. A live comment also needs `approved: true` and an `idempotency_key`.
 
-Neither runs before a yes on that comment text.

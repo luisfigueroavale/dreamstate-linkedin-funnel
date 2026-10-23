@@ -15,24 +15,23 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. Watch the footage and read the request before you choose the treatment (`references/treat.md`).
+1. Watch (`references/treat.md`).
 
-2. Leave original files and any saved project edit untouched (`references/treat.md`).
+2. Leave (`references/treat.md`).
 
 3. Write a project note (`references/note.md`).
 
-4. Build the edit list from source ranges (`references/edit.md`).
+4. Build (`references/edit.md`).
 
-5. Use `pick-short-takes`, `fix-short-audio`, and `add-short-overlay` where that job fits (`references/edit.md`).
+5. Use (`references/edit.md`).
 
-6. Read the help for the tools installed here and follow the grammar it documents (`references/render.md`).
+6. Read (`references/render.md`).
 
-7. Render, watch, and revise until the piece matches the brief (`references/render.md`).
+7. Render (`references/render.md`).
 
-8. Run `check-short-export` when a file was rendered (`references/render.md`).
+8. Run (`references/render.md`).
 
-9. Hand over the export, the project note, and the edit list (`references/render.md`).
-
+9. Hand (`references/render.md`).
 ## Dreamstate tools
 
 None. Local files only.

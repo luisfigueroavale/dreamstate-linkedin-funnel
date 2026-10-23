@@ -11,7 +11,7 @@ Bring four scans back.
 | X | `find-x-angles`, which reads `visibility.radar.inspiration_x_list` | Posts in the niche that are already moving |
 | LinkedIn | Posts they saved or pasted, or `visibility.radar.inspiration_linkedin_list` | Outlier posts and the hook. That read is free. Sending dry_run executes it |
 
-`choose-next-video` uses evidence they supply. It does not call a video-host API.
+`choose-next-video` uses evidence they supply.
 
 Each slate line carries four fields: why it is hot (the outlier, or numbers they actually have), which pillar in `vault/notes/pillars.md` it belongs to, which job it serves, and a receipt they can put on camera. Only a line that passes `choose-next-video` is a recording candidate. The rest may still feed LinkedIn or X.
 

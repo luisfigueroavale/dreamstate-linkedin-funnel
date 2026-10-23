@@ -16,67 +16,63 @@ Prepare a tracked link and the reply that delivers a giveaway. Follow `docs/skil
 
 ## Steps
 
-1. Use one live post, one file, and one destination (`references/setup.md`). Call `whoami` before the first write, and call `tools_get` before every `tools_run`.
+1. Call `whoami` before the first write, and call `tools_get` before every `tools_run` (`references/setup.md`).
 
-2. Follow the shared procedure in `docs/lead-magnet.md` (`references/link.md`). The body carries the full destination URL plus UTM and never `short_url`.
+2. The body carries the full destination URL plus UTM and never `short_url` (`references/link.md`).
 
 3. Call `social.content.tracking_links_lookup`, then `social.content.tracking_link_create` and `social.content.tracking_link_get` (`references/link.md`).
 
-4. Call `social.outreach.keyword_dm_rules.list` before `keyword_dm_rules.replace` (`references/rules.md`). Keep `dm_enabled` false until the owner says yes on that exact text.
+4. Keep `dm_enabled` false until the owner says yes on that exact text (`references/rules.md`).
 
-5. Run `node skills/send-lead-magnet/scripts/check-delivery.mjs` before showing it (`references/checks.md`).
+5. Run (`references/checks.md`).
 
 6. Decide who is asking (`references/ask.md`). Match a whole-word keyword, plus the typo list.
 
 7. Run the duplicate guard (`references/duplicate.md`). Nobody gets the file twice.
 
-8. Send the file message first, read it back, then send the public line (`references/send.md`). Add a receipt column with `tables.columns.add` after `tools_get`.
+8. Add a receipt column with `tables.columns.add` after `tools_get` (`references/send.md`).
 
-9. Shape the message from a real first name, or a neutral stand-in (`references/copy.md`). Do not guess a name.
+9. Do not guess a name (`references/copy.md`).
 
-10. Read `senders.linkedin_accounts.list` and keep that account's own spacing (`references/pace.md`).
+10. Read with `senders.linkedin_accounts.list` (`references/pace.md`).
 
 11. Run one pass inside the caps in `references/pass.md`. Start each pass by reading comments.
 
-12. Call `social.linkedin_posts.get` for a short post link (`references/one.md`). For one comment, use `social.comments.reply` and `social.comments.approve`.
+12. Call with `social.linkedin_posts.get` (`references/one.md`).
 
 13. Before a new file message to a first-degree person, check other campaigns (`references/campaign.md`).
 
-14. Find threads with `unibox.inbox.unified_list` since the post went live (`references/inbox.md`). Draft with `draft-thread-reply`.
+14. Find threads with `unibox.inbox.unified_list` (`references/inbox.md`). Draft with `draft-thread-reply`.
 
-15. Keep private messages as the default (`references/public.md`). A public link on that post needs a yes.
+15. Keep private messages as the default (`references/public.md`).
 
 16. After a live pass, verify with `social.outreach.keyword_dm_sends.list` (`references/verify.md`).
 
 17. On a failed pass, read `runs_get` and `runs_events` (`references/fail.md`).
-
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 1 | `whoami` | read | no |
-| 1 | `tools_get` | read | no |
-| 1 | `tools_run` | live | yes |
-| 3 | `social.content.tracking_links_lookup` | live | yes |
-| 3 | `social.content.tracking_link_create` | live | yes |
+| 3 | `social.content.tracking_links_lookup` | read | no |
+| 3 | `social.content.tracking_link_create` | live | no |
 | 3 | `social.content.tracking_link_get` | read | no |
 | 4 | `social.outreach.keyword_dm_rules.list` | read | no |
-| 4 | `keyword_dm_rules.replace` | live | yes |
+| 4 | `social.outreach.keyword_dm_rules.replace` | live | yes |
 | 7 | `social.outreach.keyword_dm_sends.list` | read | no |
 | 8 | `tables.columns.add` | write | no |
-| 8 | `tools_get` | read | no |
 | 10 | `senders.linkedin_accounts.list` | read | no |
 | 11 | `social.comments.queue_list` | read | no |
-| 11 | `social.linkedin_posts.comments_list` | live | yes |
+| 11 | `social.linkedin_posts.comments_list` | read | no |
 | 11 | `social.outreach.keyword_dm_sends.list` | read | no |
-| 12 | `social.linkedin_posts.get` | live | yes |
-| 12 | `social.comments.reply` | live | yes |
+| 12 | `social.linkedin_posts.get` | read | no |
+| 12 | `social.comments.reply` | preview | no |
 | 12 | `social.comments.approve` | live | yes |
-| 13 | `tools_get` | read | no |
 | 14 | `unibox.inbox.unified_list` | read | no |
 | 16 | `social.outreach.keyword_dm_sends.list` | read | no |
 | 17 | `runs_get` | read | no |
 | 17 | `runs_events` | read | no |
+
 
 ## Stop rules
 

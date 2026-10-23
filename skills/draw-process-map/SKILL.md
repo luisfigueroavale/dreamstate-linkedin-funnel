@@ -15,38 +15,37 @@ Draw a process as numbered HTML plates in reading order, with connectors that do
 
 ## Steps
 
-1. Read the workflow you are mapping (`references/read.md`).
+1. Read (`references/read.md`).
 
 2. When the picture is a funnel, read the stage notes the owner already has (`references/read.md`).
 
-3. Open the HTML you are changing and any script that draws it (`references/read.md`).
+3. Open (`references/read.md`).
 
-4. State the reading order before you place a card (`references/order.md`).
+4. State (`references/order.md`).
 
-5. Name the trigger, the input, the work, each decision, the output, the exception, and any feedback (`references/order.md`).
+5. Name (`references/order.md`).
 
 6. Choose the card for each station (`references/cards.md`).
 
 7. Place one mark per card (`references/marks.md`).
 
-8. Take colors from filled `brand.local` tokens (`references/marks.md`). Stop when those files are blank.
+8. Stop when those files are blank (`references/marks.md`).
 
 9. Bind both ends of each connector (`references/connectors.md`).
 
-10. Measure the glyphs before you change the type size (`references/type.md`).
+10. Measure (`references/type.md`).
 
 11. If the map moves, drive it with `DeskTimeline` (`references/motion.md`). Capture calls `__seek`.
 
-12. Run `node skills/draw-process-map/scripts/map-check.mjs <map.json> <asset-names.txt>` (`references/inspect.md`).
+12. Run (`references/inspect.md`).
 
-13. Look at the full-size frame and at phone width, 390px (`references/inspect.md`).
+13. Look (`references/inspect.md`).
 
-14. Write the still with `scripts/render-still.mjs` (`references/inspect.md`).
+14. Write (`references/inspect.md`).
 
 15. When the map moves, step `__seek` with `scripts/capture-motion.mjs` (`references/inspect.md`).
 
-16. Hand back the HTML, the preview when a render ran, the pixel size, and the inspection limit (`references/hand-back.md`).
-
+16. Hand (`references/hand-back.md`).
 ## Dreamstate tools
 
 None. Local files only.

@@ -21,67 +21,64 @@ Draft a local queue of comments on other people's LinkedIn posts. Follow `docs/s
 
 2. If `work/draft-linkedin-comments/` already has a run, start from the newest file (`references/learn.md`).
 
-3. Ask when their audience is on LinkedIn and set the window (`references/cadence.md`).
+3. Ask (`references/cadence.md`).
 
-4. Run `tools_get` before `tools_run`, then resolve `source.account_posts_linkedin_profile` and `source.linkedin_posts_search` with `tables.executable_definitions.list_resolved` (`references/calls.md`).
+4. Run with `source.account_posts_linkedin_profile` and `source.linkedin_posts_search` and `tables.executable_definitions.list_resolved` (`references/calls.md`).
 
 5. Bind sources with `tables.table_sources.attach`, then dry-run `tables.table_sources.run` and go live only after yes (`references/calls.md`, `references/fetch.md`).
 
-6. Fetch the window, flag the hits, and retry a failure (`references/fetch.md`).
+6. Fetch (`references/fetch.md`).
 
-7. Read stored inspiration with `visibility.radar.inspiration_linkedin_list` (`references/calls.md`). Do not send dry_run.
+7. Read with `visibility.radar.inspiration_linkedin_list` (`references/calls.md`). Do not send dry_run.
 
-8. Take `account_id` from `senders.linkedin_accounts.list` before a LinkedIn read (`references/calls.md`).
+8. Take with `senders.linkedin_accounts.list` (`references/calls.md`).
 
-9. Score fresh posts that are moving (`references/score.md`). Fit stays a human call.
+9. Fit stays a human call (`references/score.md`).
 
 10. Pick 10 to 12 (`references/pick.md`). Do not pad with old posts.
 
 11. Read picked threads with `social.linkedin_posts.comments_list` (`references/thread.md`).
 
-12. Refresh every pick with `social.linkedin_posts.get` before the page (`references/thread.md`).
+12. Refresh with `social.linkedin_posts.get` (`references/thread.md`).
 
 13. Check the author and the proof before you write (`references/receipt.md`).
 
 14. Write one move per draft (`references/draft.md`).
 
-15. Lint with `node scripts/queue-lint.mjs` before the page is written (`references/lint.md`). A non-zero exit means do not write the page.
+15. A non-zero exit means do not write the page (`references/lint.md`).
 
 16. Save the run and render the page with `scripts/queue-page.mjs` (`references/page.md`).
 
-17. Hand over two lines (`references/page.md`). Name the 2 or 3 that will go stale first.
+17. Hand (`references/page.md`).
 
-18. Post one card with `social.engagement.comment` only after yes on that exact body (`references/calls.md`).
+18. Post with `social.engagement.comment` (`references/calls.md`).
 
-19. Use `social.posts.comment_publish` only when they asked for that call and said yes on that exact body (`references/calls.md`).
+19. Use with `social.posts.comment_publish` (`references/calls.md`).
 
 20. React with `social.engagement.react` only when they named that reaction (`references/calls.md`).
 
 21. Create a feed with `social.feeds.create` only when they have accepted that recurring trigger (`references/calls.md`).
-
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 4 | `tools_get` | read | no |
-| 4 | `tools_run` | live | yes |
-| 4 | `tables.executable_definitions.list_resolved` | live | yes |
-| 4 | `source.account_posts_linkedin_profile` | not tools_run | no |
-| 4 | `source.linkedin_posts_search` | not tools_run | no |
-| 5 | `tables.table_sources.attach` | live | yes |
+| 4 | `tables.executable_definitions.list_resolved` | live | no |
+| 4 | `source.account_posts_linkedin_profile` | definition id | no |
+| 4 | `source.linkedin_posts_search` | definition id | no |
+| 5 | `tables.table_sources.attach` | read | no |
 | 5 | `tables.table_sources.run` | dry_run, then live | yes |
-| 7 | `visibility.radar.inspiration_linkedin_list` | live | yes |
-| 8 | `senders.linkedin_accounts.list` | live | yes |
-| 11 | `social.linkedin_posts.comments_list` | live | yes |
-| 12 | `social.linkedin_posts.get` | live | yes |
+| 7 | `visibility.radar.inspiration_linkedin_list` | read | no |
+| 8 | `senders.linkedin_accounts.list` | read | no |
+| 11 | `social.linkedin_posts.comments_list` | read | no |
+| 12 | `social.linkedin_posts.get` | read | no |
 | 18 | `social.engagement.comment` | smoke_test | no |
 | 18 | `social.engagement.comment` | live | yes |
 | 19 | `social.posts.comment_publish` | dry_run, then live | yes |
-| 20 | `social.engagement.react` | smoke_test | yes |
+| 20 | `social.engagement.react` | smoke_test | no |
 | 20 | `social.engagement.react` | live | yes |
 | 21 | `social.feeds.create` | dry_run, then live | yes |
-| - | `sequence.linkedin.auto_engagements.replace` | never | n/a |
-| - | `sequence.x.auto_engagements.replace` | never | n/a |
+
+Never call: `sequence.linkedin.auto_engagements.replace`, `sequence.x.auto_engagements.replace`.
 
 ## Stop rules
 

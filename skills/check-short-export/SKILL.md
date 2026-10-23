@@ -12,25 +12,25 @@ Check a finished export before you call the file done. Follow `docs/skill-frame.
 - Not for approving a publish.
 
 ## Steps
-1. Hold the encoded file, the source, and the edit list (`references/hold.md`). No script runs the seven checks.
+1. No (`references/hold.md`).
 
 2. Hear every join (`references/checks.md`).
 
-3. Check captions against the words you hear (`references/checks.md`).
+3. Check (`references/checks.md`).
 
-4. Check the cue and the payoff with the audio playing (`references/checks.md`).
+4. Check (`references/checks.md`).
 
-5. Align the source and the output frames (`references/checks.md`). Leave intended overlays and crops out before a quality score.
+5. Leave intended overlays and crops out before a quality score (`references/checks.md`).
 
 6. Listen at a matched level (`references/checks.md`). Check peaks, channel layout, integrated loudness near -14 LUFS, and a true-peak ceiling of -1.5 dBTP.
 
 7. Decode the whole file (`references/checks.md`).
 
-8. Play it in their player if it is on this machine (`references/checks.md`).
+8. Play (`references/checks.md`).
 
 9. Play the whole story (`references/checks.md`). Allow no duplicate take and no gap you cannot explain.
 
-10. Run `ffprobe` on the encoded file (`references/probe.md`).
+10. Run (`references/probe.md`).
 
 11. Align frames on shared timestamps (`references/probe.md`).
 
@@ -38,10 +38,9 @@ Check a finished export before you call the file done. Follow `docs/skill-frame.
 
 13. Re-check the changed part (`references/report.md`). Confirm the same path, size, and duration.
 
-14. Report what you measured, what you inspected, and what is unverified (`references/report.md`). A pass is not permission to publish.
+14. A pass is not permission to publish (`references/report.md`).
 
-15. Read `brand.local` before you set type or color (`references/report.md`). If that file is missing or blank, ask.
-
+15. If that file is missing or blank, ask (`references/report.md`).
 ## Dreamstate tools
 None. Local files only.
 

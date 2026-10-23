@@ -16,77 +16,57 @@ Make a LinkedIn article the owner can review from the finished essay. Follow `do
 
 1. Call `whoami` before the first write (`references/calls.md`).
 
-2. Call `tools_get` before every `tools_run` (`references/calls.md`). The schema just fetched wins.
+2. The schema just fetched wins (`references/calls.md`).
 
-3. Read the finished essay, the newest picture set, the HTML for each figure, the figure list, and the Proof page (`references/read.md`).
+3. Read (`references/read.md`).
 
 4. When the finished essay is a remote page, open it with `visibility.research.urls_fetch` (`references/remote.md`).
 
-5. Keep the title, the argument, the section sequence, the examples, the links, the figures, and the voice (`references/edit.md`).
+5. Keep (`references/edit.md`).
 
-6. Change a sentence only when LinkedIn's article editor would make the essay's version worse (`references/edit.md`).
+6. Change (`references/edit.md`).
 
-7. Keep each figure where the essay put it (`references/figures.md`).
+7. Keep (`references/figures.md`).
 
-8. Build the article cover at 16:9 (`references/cover.md`).
+8. Build (`references/cover.md`).
 
-9. Make the file pack at `vault/posts/<slug>-linkedin/` (`references/pack.md`).
+9. Make (`references/pack.md`).
 
-10. Write the short description and the share post (`references/share.md`).
+10. Write (`references/share.md`).
 
 11. Call `social.content.article_enabled_get` (`references/calls.md`).
 
 12. Draft the article with `social.content.article_create_schedule` only after the owner asks for a saved draft (`references/calls.md`).
 
-13. Update that draft with `social.content.article_update` (`references/calls.md`).
+13. Update with `social.content.article_update` (`references/calls.md`).
 
-14. Call `social.content.article_delivery_create` only after a yes on that article (`references/calls.md`).
+14. Call with `social.content.article_delivery_create` (`references/calls.md`).
 
-15. Store the share post with `social.content.artifact_create` only when the owner asks (`references/calls.md`).
+15. Store with `social.content.artifact_create` (`references/calls.md`).
 
-16. Call `social.posts.comment_publish` only after a yes on that exact body (`references/calls.md`).
+16. Call with `social.posts.comment_publish` (`references/calls.md`).
 
-17. Call `social.engagement.comment` only after a yes on that comment text (`references/calls.md`).
+17. Call with `social.engagement.comment` (`references/calls.md`).
 
-18. Save the LinkedIn line on `vault/board.md` only after the owner asks (`references/board.md`).
+18. Save (`references/board.md`).
 
 19. Hand over the folder and say that nothing was uploaded (`references/pack.md`).
-
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 1 | `whoami` | read | no |
-| 2 | `tools_get` | read | no |
-| 4 | `tools_get` | read | no |
-| 4 | `tools_run` | live | yes |
 | 4 | `visibility.research.urls_fetch` | live | yes |
-| 11 | `tools_get` | read | no |
-| 11 | `tools_run` | live | yes |
-| 11 | `social.content.article_enabled_get` | live | yes |
-| 12 | `tools_get` | read | no |
-| 12 | `tools_run` | live | yes |
+| 11 | `social.content.article_enabled_get` | read | no |
 | 12 | `social.content.article_create_schedule` | live | yes |
-| 13 | `tools_get` | read | no |
-| 13 | `tools_run` | live | yes |
-| 13 | `social.content.article_update` | live | yes |
-| 14 | `tools_get` | read | no |
-| 14 | `tools_run` | live | yes |
+| 13 | `social.content.article_update` | live | no |
 | 14 | `social.content.article_delivery_create` | live | yes |
-| 15 | `tools_get` | read | no |
-| 15 | `tools_run` | live | yes |
-| 15 | `social.content.artifact_create` | live | yes |
-| 16 | `tools_get` | read | no |
-| 16 | `tools_run` | dry_run | yes |
-| 16 | `tools_run` | live | yes |
-| 16 | `social.posts.comment_publish` | dry_run | yes |
-| 16 | `social.posts.comment_publish` | live | yes |
-| 17 | `tools_get` | read | no |
-| 17 | `tools_run` | preview | yes |
-| 17 | `tools_run` | live | yes |
-| 17 | `social.engagement.comment` | preview | yes |
+| 15 | `social.content.artifact_create` | live | no |
+| 16 | `social.posts.comment_publish` | dry_run, then live | yes |
+| 17 | `social.engagement.comment` | smoke_test | no |
 | 17 | `social.engagement.comment` | live | yes |
-| - | `social.content.article_create` | never | n/a |
+
+Never call: `social.content.article_create`.
 
 ## Stop rules
 

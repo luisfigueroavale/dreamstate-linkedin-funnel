@@ -1,10 +1,6 @@
 # Gates
 
-Gate 1 compares the idea with the channel median they supply.
-
 Gate 2 keeps an outside structure only at 3× or more, from 3 or more channels, across 2 or more niches, inside 90 days, in evidence they provided, and not worn at home.
-
-Gate 3 is the first minute.
 
 The ledger is the day after, three days, a week, and four weeks (28 days).
 

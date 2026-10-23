@@ -19,7 +19,6 @@ Turn one reader job into a folder they can finish without the owner. Follow `doc
 6. Write `README.md` so a stranger reaches the first result, then checks it: bad input, a skipped requirement, and what failure looks like.
 7. Run the stranger test in `references/checks.md`. You are done when one result is reachable with the folder alone.
 8. Hand over the folder, confirm each check passed, and say that nothing was sent.
-
 ## Dreamstate tools
 None. Local files only. Tracked links and delivery belong to `send-lead-magnet`.
 

@@ -6,6 +6,6 @@ Queue a piece on its day only after yes on that text, that media, and that time.
 
 The letter stays a draft until they approve it. Status stays Drafting until the piece is live, then Published.
 
-One LinkedIn post a day. An idea post takes an open day. It never becomes a second post on a day that already has one.
+One LinkedIn post a day. An idea post takes an open day.
 
 To pull an armed send back, use the unschedule call in stage 8. It does not retract a live post.

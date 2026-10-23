@@ -1,7 +1,5 @@
 # Failure modes
 
-Failure modes stop the run before encode:
-
 - `sources` is absent, empty, or not a list
 
 - an `id` is blank, or the same id appears twice

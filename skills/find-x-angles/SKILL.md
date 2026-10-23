@@ -20,13 +20,13 @@ Turn pasted posts, or a Dreamstate read that returns them, into sourced angles. 
 
 2. Read the brand files and `audience.local/ideal-follower.md` (`references/ground.md`). Stop if identity, voice, or the follower file is missing or `Status: blank`.
 
-3. Map every pillar in `vault/notes/pillars.md` before a wide scan (`references/ground.md`).
+3. Map (`references/ground.md`).
 
 4. Keep a pasted post a lookup, and start discovery with two or three queries inside the last 7 days (`references/width.md`).
 
-5. Read cheapest first, then call `visibility.radar.inspiration_x_list` (`references/read.md`). Call `tools_get` before `tools_run`.
+5. Read with `visibility.radar.inspiration_x_list` (`references/read.md`).
 
-6. Resolve `source.x_posts_search` with `tables.executable_definitions.list_resolved`, then attach with `tables.table_sources.attach` (`references/sources.md`). Run `tables.table_sources.run` only after the quote and the owner's yes.
+6. Resolve `source.x_posts_search` with `tables.executable_definitions.list_resolved`, then attach with `tables.table_sources.attach` (`references/sources.md`).
 
 7. Wait for a quote and a yes before `visibility.research.web_search` or `visibility.research.urls_fetch` (`references/sources.md`).
 
@@ -36,37 +36,33 @@ Turn pasted posts, or a Dreamstate read that returns them, into sourced angles. 
 
 10. Turn the set into rows and keep each metric separate (`references/set.md`).
 
-11. Save the rows you hold and run `python3 skills/find-x-angles/scripts/hold_median.py` (`references/outlier.md`).
+11. Save (`references/outlier.md`).
 
-12. Lead with a short recommendation and name the sample size and the window (`references/brief.md`).
+12. Lead (`references/brief.md`).
 
-13. Write watch rows only from posts you opened and names the owner chose (`references/watch.md`).
+13. Write (`references/watch.md`).
 
-14. Do not schedule, publish, reply, send a DM, follow, or like (`references/keep.md`). Do not call `sequence.x.auto_engagements.replace`.
+14. Do with `sequence.x.auto_engagements.replace` (`references/keep.md`).
 
 15. When they want the scan kept, write `vault/notes/<date>-x-<topic>.md` (`references/keep.md`).
 
 16. When they ask for copy, hand the brief to `write-x-post` or `plan-x-week` (`references/drafts.md`).
-
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 5 | `tools_get` | read | no |
-| 5 | `tools_run` | live | yes |
-| 5 | `visibility.radar.inspiration_x_list` | live | yes |
+| 5 | `visibility.radar.inspiration_x_list` | read | no |
 | 6 | `source.x_posts_search` | definition id | no |
 | 6 | `tables.executable_definitions.list_resolved` | read | no |
-| 6 | `tables.table_sources.attach` | live | yes |
-| 6 | `tables.table_sources.run` | live | yes |
+| 6 | `tables.table_sources.attach` | read | no |
+| 6 | `tables.table_sources.run` | dry_run, then live | yes |
 | 7 | `visibility.research.web_search` | live | yes |
 | 7 | `visibility.research.urls_fetch` | live | yes |
 | 8 | `senders.social_accounts.list` | read | no |
-| 8 | `tables.x_post_engagers.run` | not this scan | yes |
-| 8 | `visibility.linkedin.engagement_harvest` | never | n/a |
 | 9 | `whoami` | read | no |
-| 14 | `sequence.x.auto_engagements.replace` | never | n/a |
 | 14 | `social.feeds.create` | dry_run, then live | yes |
+
+Never call: `sequence.x.auto_engagements.replace`, `tables.x_post_engagers.run`, `visibility.linkedin.engagement_harvest`.
 
 ## Stop rules
 

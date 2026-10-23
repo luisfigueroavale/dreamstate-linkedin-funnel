@@ -17,62 +17,60 @@ It points at the stage skills and orders one week from a sourced idea. Follow `d
 
 1. Stop if `audience.local/ideal-follower.md` is missing or blank (`references/rules.md`).
 
-2. Read `docs/plan-content-week.md`, then copy `vault/week/brief.md` to `vault/week/<date>.md` and fill every line (`references/rules.md`).
+2. Read (`references/rules.md`).
 
-3. Enter at the stage the work is already in (`references/enter.md`). Do not restart at 0 to look thorough.
+3. Do not restart at 0 to look thorough (`references/enter.md`).
 
 4. Keep the standing rules before any draft (`references/rules.md`). The idea is theirs.
 
 5. Map the trunk and the three roots (`references/roots.md`).
 
-6. Bring four scans back in stage 0 (`references/stage-0.md`). Do not turn them into the pick.
+6. Do not turn them into the pick (`references/stage-0.md`).
 
-7. Read LinkedIn outliers with `visibility.radar.inspiration_linkedin_list` (`references/stage-0.md`). Sending dry_run executes that read.
+7. Read LinkedIn outliers with `visibility.radar.inspiration_linkedin_list` (`references/stage-0.md`).
 
 8. Read moving posts through `find-x-angles`, which reads `visibility.radar.inspiration_x_list` (`references/stage-0.md`).
 
-9. Write stage 1 from the picked idea (`references/stage-1.md`). Ask only the release day, and their verdict when the recording is a review.
+9. Ask only the release day, and their verdict when the recording is a review (`references/stage-1.md`).
 
 10. Reuse rows on `vault/board.md`, move a line with `update-content-board`, and set a day mark with `social.content.plan` (`references/stage-2.md`). That mark is not a schedule.
 
 11. Leave the recording to them in stage 3 (`references/stage-3.md`). You do not record for them.
 
-12. Package in stage 4 (`references/stage-4.md`). Hand off with `publish-youtube-video` only after a yes on that exact video.
+12. Package (`references/stage-4.md`).
 
-13. Draft stage 5 from the letter first (`references/stage-5.md`).
+13. Draft (`references/stage-5.md`).
 
-14. Queue a piece with `social.content.schedule` only after yes on that text, that media, and that time (`references/stage-6.md`).
+14. Queue with `social.content.schedule` (`references/stage-6.md`).
 
-15. Dispatch that version with `social.content.approve` (`references/stage-6.md`).
+15. Dispatch with `social.content.approve` (`references/stage-6.md`).
 
 16. Convert engagers in stage 7 (`references/stage-7.md`). A view count does not finish the week.
 
-17. Store a watcher with `tables.profile_watcher.create` after yes (`references/stage-7.md`).
+17. Store with `tables.profile_watcher.create` (`references/stage-7.md`).
 
-18. Collect engagers with `visibility.linkedin.engagement_harvest` through `score-post-engagers` (`references/stage-7.md`).
+18. Collect with `visibility.linkedin.engagement_harvest` (`references/stage-7.md`).
 
-19. Close in stage 8 from `docs/plan-content-week.md` (`references/stage-8.md`). Fetch each id before you run it.
+19. Fetch each id before you run it (`references/stage-8.md`).
 
 20. After each stage, name the file or id that came back and the next stage (`references/handoff.md`).
 
-21. Call `whoami` before the first Dreamstate write in the session (`references/rules.md`).
+21. Call (`references/rules.md`).
 
-22. Run `tools_get` before `tools_run` (`references/rules.md`).
-
+22. Run (`references/rules.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 7 | `visibility.radar.inspiration_linkedin_list` | live | yes |
-| 8 | `visibility.radar.inspiration_x_list` | live | yes |
-| 10 | `social.content.plan` | live | yes |
+| 7 | `visibility.radar.inspiration_linkedin_list` | read | no |
+| 8 | `visibility.radar.inspiration_x_list` | read | no |
+| 10 | `social.content.plan` | live | no |
 | 14 | `social.content.schedule` | live | yes |
 | 15 | `social.content.approve` | live | yes |
 | 17 | `tables.profile_watcher.create` | live | yes |
 | 18 | `visibility.linkedin.engagement_harvest` | live | yes |
-| 21 | `whoami` | live | yes |
-| 22 | `tools_get` | read | no |
-| 22 | `tools_run` | live | yes |
+| 21 | `whoami` | read | no |
+
 
 ## Stop rules
 

@@ -14,24 +14,23 @@ Set or revise the owner's visual identity, token values, and graphic rules from 
 
 ## Steps
 
-1. Read the root `AGENTS.md` and `brand/AGENTS.md` before you set a value (`references/files.md`). A missing file, an empty line, or `Status: blank` means ask.
+1. A missing file, an empty line, or `Status: blank` means ask (`references/files.md`).
 
-2. Record intent in `brand.local/identity.md` (`references/identity.md`). Write only values the owner supplied.
+2. Write only values the owner supplied (`references/identity.md`).
 
-3. Offer a direction only when they asked for design work (`references/identity.md`). Leave `Status: blank` until that yes.
+3. Offer (`references/identity.md`).
 
-4. Put visual rules in `brand.local/style.md` and exact values in `brand.local/tokens.css` (`references/tokens.md`).
+4. Put (`references/tokens.md`).
 
-5. Headline text uses the gradient when the owner set it, and `--color-accent` when that value is still unset (`references/tokens.md`). Those names include `--color-accent-2` and `--headline-gradient`.
+5. Those names include `--color-accent-2` and `--headline-gradient` (`references/tokens.md`).
 
 6. File licensed assets under `brand.local/assets/` (`references/assets.md`). Do not vendor fonts.
 
 7. Before a token change, list consumers and say which renders are stale (`references/consumers.md`).
 
-8. Run `npm run check`, and render through `scripts/frame-page.mjs` (`references/check.md`).
+8. Run (`references/check.md`).
 
-9. Hand back the files you changed, and any path that still has the old value (`references/check.md`).
-
+9. Hand (`references/check.md`).
 ## Dreamstate tools
 
 None. Local files only.

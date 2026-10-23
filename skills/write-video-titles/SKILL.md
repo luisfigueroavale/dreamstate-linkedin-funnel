@@ -17,37 +17,37 @@ Build a packaging brief from outlier evidence the owner can support: two titles 
 
 ## Steps
 
-1. Read the Proof page before any number that would be public (`references/brief.md`).
+1. Read (`references/brief.md`).
 
 2. Package to a filled week brief (`references/brief.md`).
 
-3. Read the reference set with `study-thumbnail-patterns` (`references/brief.md`).
+3. Read (`references/brief.md`).
 
-4. Resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved` (`references/outliers.md`). It is a definition id, not a `tools_run` id.
+4. It is a definition id, not a `tools_run` id (`references/outliers.md`).
 
-5. Attach that definition with `tables.table_sources.attach` (`references/outliers.md`).
+5. Attach with `tables.table_sources.attach` (`references/outliers.md`).
 
-6. Run `tables.table_sources.run` only after the quote and the owner's yes (`references/outliers.md`).
+6. Run with `tables.table_sources.run` (`references/outliers.md`).
 
-7. Screen the rows and shortlist five to ten (`references/outliers.md`).
+7. Screen (`references/outliers.md`).
 
-8. Clear the outside-niche test in `choose-next-video` gate 2 (`references/structures.md`).
+8. Clear (`references/structures.md`).
 
-9. Write Variant A, then Variant B (`references/titles.md`).
+9. Write (`references/titles.md`).
 
-10. Judge thumbnail concepts at 320×180 (`references/thumbs.md`).
+10. Judge (`references/thumbs.md`).
 
 11. Hand those concepts to `design-video-thumbnail` after the owner chooses (`references/thumbs.md`).
 
-12. Return the shortlist, both titles, the concepts, and what the owner still has to confirm (`references/thumbs.md`).
-
+12. Return (`references/thumbs.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 4 | `tables.executable_definitions.list_resolved` | live | yes |
-| 5 | `tables.table_sources.attach` | live | yes |
+| 4 | `tables.executable_definitions.list_resolved` | live | no |
+| 5 | `tables.table_sources.attach` | read | no |
 | 6 | `tables.table_sources.run` | dry_run, then live | yes |
+
 
 ## Stop rules
 

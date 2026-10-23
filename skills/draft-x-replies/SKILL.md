@@ -17,62 +17,49 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. Fill blank list files with the owner before the first drafts (`references/lists.md`). Stop while one is `Status: blank`.
+1. Stop while one is `Status: blank` (`references/lists.md`).
 
-2. Fetch `senders.social_accounts.list` with `tools_get` before `tools_run` (`references/calls.md`). The fetched schema wins.
+2. Fetch with `senders.social_accounts.list` (`references/calls.md`).
 
-3. Ask when their targets are online (`references/cadence.md`).
+3. Ask (`references/cadence.md`).
 
-4. Read candidates with `visibility.radar.inspiration_x_list` (`references/enter.md`).
+4. Read with `visibility.radar.inspiration_x_list` (`references/enter.md`).
 
 5. Score the posts that clear the gates (`references/score.md`).
 
 6. Keep a pick only when all four answers are yes (`references/pick.md`).
 
-7. Read the thread for a pick with 5 or more replies using `tables.x_post_engagers.run` (`references/thread.md`). Live only after yes.
+7. Read with `tables.x_post_engagers.run` (`references/thread.md`).
 
 8. Read the brand files, `references/verdicts.md`, and `taste.json` before writing (`references/draft.md`).
 
-9. Write one reply per post (`references/draft.md`).
+9. Write (`references/draft.md`).
 
 10. Lint the run (`references/page.md`).
 
 11. Render the page only after lint exits 0 (`references/page.md`).
 
-12. Hand back the page path, the count, and the 2 or 3 to send first (`references/cadence.md`).
+12. Hand (`references/cadence.md`).
 
 13. Post one reply with `social.engagement.comment` only when the fetched contract allows that exact text (`references/calls.md`). Otherwise the owner posts the draft.
 
-14. Preview a reaction with `social.engagement.react` only when the contract covers this account (`references/calls.md`). Live needs yes on that reaction.
+14. Preview a reaction with `social.engagement.react` only when the contract covers this account (`references/calls.md`).
 
-15. Judge sent replies before the next fetch (`references/learn.md`).
-
+15. Judge (`references/learn.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
-| 2 | `tools_get` | read | no |
-| 2 | `tools_run` | live | yes |
-| 2 | `senders.social_accounts.list` | live | yes |
-| 4 | `tools_get` | read | no |
-| 4 | `tools_run` | live | yes |
-| 4 | `visibility.radar.inspiration_x_list` | live | yes |
-| 7 | `tools_get` | read | no |
-| 7 | `tools_run` | smoke_test | no |
-| 7 | `tools_run` | live | yes |
-| 7 | `tables.x_post_engagers.run` | smoke_test | yes |
+| 2 | `senders.social_accounts.list` | read | no |
+| 4 | `visibility.radar.inspiration_x_list` | read | no |
+| 7 | `tables.x_post_engagers.run` | read | no |
 | 7 | `tables.x_post_engagers.run` | live | yes |
-| 13 | `tools_get` | read | no |
-| 13 | `tools_run` | smoke_test | no |
-| 13 | `tools_run` | live | yes |
 | 13 | `social.engagement.comment` | smoke_test | no |
 | 13 | `social.engagement.comment` | live | yes |
-| 14 | `tools_get` | read | no |
-| 14 | `tools_run` | smoke_test | no |
-| 14 | `tools_run` | live | yes |
-| 14 | `social.engagement.react` | smoke_test | yes |
+| 14 | `social.engagement.react` | smoke_test | no |
 | 14 | `social.engagement.react` | live | yes |
-| - | `sequence.x.auto_engagements.replace` | never | n/a |
+
+Never call: `sequence.x.auto_engagements.replace`.
 
 ## Stop rules
 

@@ -14,39 +14,36 @@ Save interviews, notes, and writing the owner supplies, then file only the lines
 
 ## Steps
 
-1. Read `AGENTS.md`, the company docs, the interview, and `vault/sources/` (`references/read.md`). There is no `context/` tree.
+1. There is no `context/` tree (`references/read.md`).
 
-2. Ask only blank interview lines this task needs (`references/read.md`). Leave every other answer blank.
+2. Leave every other answer blank (`references/read.md`).
 
-3. Save exact material in a new dated folder under `vault/sources/` (`references/sources.md`). Do not commit.
+3. Save (`references/sources.md`).
 
 4. File positioning, the reader, and the buyer on the pages the evidence supports (`references/pages.md`).
 
-5. Add Product Information only if that page is missing (`references/pages.md`). If it exists, leave it.
+5. If it exists, leave it (`references/pages.md`).
 
 6. File accepted samples in `vault/voice/` and supplied visual values (`references/voice.md`). Do not draw a face.
 
-7. Call `whoami` before the first write (`references/compose.md`). If more than one workspace is listed, ask which one and stop.
+7. Call `whoami` before the first write (`references/compose.md`).
 
-8. Compose with `knowledge.brain.context.compose_pages` after `tools_get` (`references/compose.md`). The schema wins.
+8. Compose with `knowledge.brain.context.compose_pages` (`references/compose.md`).
 
-9. Run `tools_run` with `dry_run` first (`references/gates.md`). Live repeats `quote_hash` only after the yes matches.
+9. Live repeats `quote_hash` only after the yes matches (`references/gates.md`).
 
-10. Poll `runs_get` on a run id (`references/compose.md`).
+10. Poll (`references/compose.md`).
 
-11. Name changed pages with id and revision, and each local path (`references/report.md`).
-
+11. Name (`references/report.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
 |---|---|---|---|
 | 7 | `whoami` | read | no |
-| 8 | `tools_get` | read | no |
 | 8 | `knowledge.brain.context.compose_pages` | dry_run, then live | yes |
-| 9 | `tools_run` | dry_run | no |
-| 9 | `tools_run` | live | yes |
 | 10 | `runs_get` | read | no |
-| - | `knowledge.vault.ingest` | never | n/a |
+
+Never call: `knowledge.vault.ingest`.
 
 ## Stop rules
 

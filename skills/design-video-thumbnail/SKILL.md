@@ -16,28 +16,27 @@ Compose the thumbnail in HTML at the thumb size so the title and the picture mak
 
 ## Steps
 
-1. Read the video, the reader, the title, and `brand.local` (`references/idea.md`). Stop if a required brand file is blank.
+1. Stop (`references/idea.md`).
 
-2. Settle on one concrete idea the video can fulfill (`references/idea.md`).
+2. Settle (`references/idea.md`).
 
-3. Use a face or a screenshot only when that file was supplied (`references/idea.md`).
+3. Use (`references/idea.md`).
 
 4. Keep the composition that stays legible when the frame is small (`references/words.md`).
 
-5. Add on-image words for a fact the title left unsaid (`references/words.md`). Two to four words.
+5. Add (`references/words.md`).
 
-6. Start a large name from `pictures/frames/metal-title.css`, class `metal-title` (`references/metal.md`). The fill is `--headline-gradient` when that token is set, and `--color-accent` when it is not, and `--color-accent-2` is the second accent an owner can name inside the gradient.
+6. Start (`references/metal.md`).
 
-7. Add `metal-title--soft` on the same element when one shadow is the better fit (`references/metal.md`).
+7. Add (`references/metal.md`).
 
-8. Copy `pictures/frames/thumb.html` and import `brand/tokens.css` (`references/build.md`).
+8. Copy (`references/build.md`).
 
-9. Load `pictures/timeline.js`, register a `DeskTimeline`, and install it so the page exposes `__seek` (`references/build.md`). Capture calls `__seek`.
+9. Load `pictures/timeline.js` and register a `DeskTimeline` so the page exposes `__seek` (`references/build.md`).
 
-10. Inspect 1280×720 and 320×180 (`references/inspect.md`).
+10. Inspect (`references/inspect.md`).
 
-11. Return the export, the HTML source, the real dimensions, and any upload limit you did not verify (`references/inspect.md`).
-
+11. Return (`references/inspect.md`).
 ## Dreamstate tools
 
 None. Local files only.

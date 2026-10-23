@@ -19,16 +19,15 @@ Follow `docs/skill-frame.md`.
 
 2. Listen to the original (`references/measure.md`).
 
-3. Treat the fault that is actually present (`references/faults.md`).
+3. Treat (`references/faults.md`).
 
 4. Use the smallest useful change (`references/gain.md`).
 
-5. Capture representative silence from this take for noise reduction (`references/noise.md`).
+5. Capture (`references/noise.md`).
 
-6. Order the chain as channels, with conversion when the layout is wrong, then EQ, then dynamics, then the final level (`references/chain.md`).
+6. Order (`references/chain.md`).
 
-7. Measure the encoded file and listen to it beside the original (`references/report.md`).
-
+7. Measure (`references/report.md`).
 ## Dreamstate tools
 
 None. Local files only.

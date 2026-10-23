@@ -1,6 +1,6 @@
 # Failure modes
 
-One viral video is an anecdote. A gap is closed when a bigger niche channel got there first. Crowded means many small uploads at baseline.
+A gap is closed when a bigger niche channel got there first. Crowded means many small uploads at baseline.
 
 Under 7 days, do not trust the ratio alone. If there is no tool where they live, the receipt is 0. Nothing back from a probe, once that wave has died, is not an opening.
 

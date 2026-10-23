@@ -2,7 +2,7 @@
 
 Run before `design-video-thumbnail` builds a picture.
 
-This desk does not call a video-host API. Before hand-typed counts, resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`.
+Before hand-typed counts, resolve `source.account_posts_youtube` with `tables.executable_definitions.list_resolved`.
 
 Attach with `tables.table_sources.attach`, then run `tables.table_sources.run` only after the quote and the owner's yes.
 

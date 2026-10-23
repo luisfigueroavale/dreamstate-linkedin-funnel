@@ -14,18 +14,17 @@ Write a paste-ready description, links, and chapters from the finished cut or a 
 
 ## Steps
 
-1. Start from the finished cut, or from a transcript that already carries times (`references/opener.md`). Read the promise on the brief and the offer links the owner already wrote.
+1. Read the promise on the brief and the offer links the owner already wrote (`references/opener.md`).
 
-2. Write the opener as one sentence of no more than about 16 words (`references/opener.md`).
+2. Write (`references/opener.md`).
 
-3. Include a resource when it helps this video (`references/links.md`). A video resource uses `https://www.youtube.com/watch?v=` plus the id.
+3. Include (`references/links.md`).
 
-4. Set `utm_source=youtube` and `utm_campaign` on the owner's own site (`references/links.md`). A pinned-comment link carries its own `utm_content`.
+4. Set (`references/links.md`).
 
-5. Take chapter starts from the cut when the cut exists (`references/chapters.md`).
+5. Take (`references/chapters.md`).
 
-6. Hand over the description ready to paste, then the chapters (`references/handoff.md`). A title belongs to `write-video-titles`, and an upload belongs to `publish-youtube-video`.
-
+6. Hand (`references/handoff.md`).
 ## Dreamstate tools
 
 None. Local files only.

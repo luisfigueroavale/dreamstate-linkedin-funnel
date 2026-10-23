@@ -15,16 +15,15 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. Read the full transcript and listen to the candidate ranges (`references/listen.md`).
+1. Read (`references/listen.md`).
 
 2. Inspect each candidate range (`references/listen.md`).
 
 3. For each beat record the source file, in-point, out-point, and why that range (`references/beats.md`).
 
-4. Build the list from source time (`references/time.md`). That list is the EDL.
+4. That list is the EDL (`references/time.md`).
 
 5. Play every join in context (`references/joins.md`).
-
 ## Dreamstate tools
 
 None. Local files only.

@@ -1,7 +1,5 @@
 # Copy
 
-`brand.local/identity.md`, `brand.local/voice.md`, `brand.local/style.md`, and `audience.local/ideal-follower.md` stay `Status: blank` until the owner writes them.
-
 Before write, look at `brand.local/`, `audience.local/`, `vault/`, and `.gitignore`. An owner folder is not a blank template. Keep their sources, settings, and edits.
 
 Copy `brand/` to `brand.local/` and `audience/` to `audience.local/` only if absent. Identity, voice, and brand values go in `brand.local/`. The reader goes in `audience.local/ideal-follower.md`. Templates stay in `brand/` and `audience/`:
