@@ -54,11 +54,6 @@ test("owner banned words add to the stock list", () => {
     "testament",
     "thrilled",
     "game changer",
-    "insightful",
-    "resonates",
-    "invaluable",
-    "paramount",
-    "synergy",
   ];
   assert.deepEqual(rules.linkedin.banned, stock);
   assert.deepEqual(rules.x.banned, [
