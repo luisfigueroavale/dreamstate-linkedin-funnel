@@ -6,8 +6,8 @@ const root = path.resolve(import.meta.dirname, "..");
 const strict = process.argv.includes("--strict");
 
 const VISUAL = [
-  "frame-build", "frame-review", "station-map", "stage-build",
-  "step-motion", "thumb-frame", "clip-motion",
+  "design-post-graphic", "review-graphic", "draw-process-map", "build-scene-graphic",
+  "animate-process", "design-video-thumbnail", "add-short-overlay",
 ];
 
 const QUESTIONS = [
@@ -80,7 +80,7 @@ for (const name of folders) {
   if (VISUAL.includes(name) && !text.includes("DeskTimeline") && !text.includes("__seek")) {
     bad(`${name}: motion is not the JavaScript timeline`);
   }
-  if ((name === "post-path" || name === "warm-cadence") && !/required unknown/i.test(text)) {
+  if ((name === "score-post-engagers" || name === "draft-warm-followups") && !/required unknown/i.test(text)) {
     bad(`${name}: qualifying test is missing`);
   }
 }

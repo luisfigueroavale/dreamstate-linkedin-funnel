@@ -10,7 +10,7 @@ Add two `column.ai_fit_score` columns with `tables.columns.add`. Adding a column
 
 Each rubric lists Required and Nice to have. A Required fail that the row's evidence supports scores 0 on that side. Missing evidence stays unsure. The plugin's own line is: missing data is unsure, and a Required fail scores 0. Do not tell the column to use 0 for "we did not look".
 
-Write the company rubric from Ideal Customer and from exclusions you have actually named. If Ideal Customer is empty, stop and run `context-intake`. Do not invent a market to make the column runnable.
+Write the company rubric from Ideal Customer and from exclusions you have actually named. If Ideal Customer is empty, stop and run `collect-owner-context`. Do not invent a market to make the column runnable.
 
 Write the person rubric from the filled follower file. Include that file's qualifying test. The three questions in `audience/ideal-follower.md` are templates. They are not answers. Use the questions the owner kept, cut, or wrote, and only the Required marks they set.
 

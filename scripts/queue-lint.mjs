@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Lint a comment-queue or x-reply-queue run before the page is written.
+ * Lint a draft-linkedin-comments or draft-x-replies run before the page is written.
  *
  *   node scripts/queue-lint.mjs <run.json> [--profile linkedin|x]
  *

@@ -8,8 +8,8 @@
     "capture": "node scripts/capture-motion.mjs",
     "fit": "node scripts/fit-check.mjs",
     "skills": "node scripts/check-skills.mjs",
-    "test": "node --test skills/station-map/scripts/map-check.test.mjs scripts/queue-page.test.mjs scripts/queue-lint.test.mjs",
-    "check": "node scripts/check-skills.mjs && node --test skills/station-map/scripts/map-check.test.mjs scripts/queue-page.test.mjs scripts/queue-lint.test.mjs && node scripts/fit-check.mjs && node scripts/queue-check.mjs"
+    "test": "node --test skills/draw-process-map/scripts/map-check.test.mjs scripts/queue-page.test.mjs scripts/queue-lint.test.mjs",
+    "check": "node scripts/check-skills.mjs && node --test skills/draw-process-map/scripts/map-check.test.mjs scripts/queue-page.test.mjs scripts/queue-lint.test.mjs && node scripts/fit-check.mjs && node scripts/queue-check.mjs"
   },
   "dependencies": {
     "playwright": "^1.49.0"

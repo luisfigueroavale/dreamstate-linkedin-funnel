@@ -32,9 +32,9 @@ Prices and modes for `visibility.research.web_search` and `visibility.research.u
 
 ## When the source is thin
 
-Cut the sentence, or ask once. Do not approximate. `source-notes` writes the gap into the brief under Open, and the draft skills leave that sentence out.
+Cut the sentence, or ask once. Do not approximate. `write-research-brief` writes the gap into the brief under Open, and the draft skills leave that sentence out.
 
-`context-intake` keeps the raw file in `vault/sources/` and adds one index line to `vault/sources/README.md`.
+`collect-owner-context` keeps the raw file in `vault/sources/` and adds one index line to `vault/sources/README.md`.
 
 ## Examples in this repo
 

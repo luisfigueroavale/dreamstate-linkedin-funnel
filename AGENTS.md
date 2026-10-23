@@ -56,11 +56,11 @@ Before drafting a post, read `vault/notes/` and the post file. After the owner a
 
 | Job | Skill |
 |---|---|
-| First session | `desk-setup`, then `context-intake` |
-| Confirm the workspace | `workspace-check` |
-| One week of posts | `week-spread` |
-| A picture | `frame-build`, then `frame-review` |
-| People who engaged | `post-path` |
-| A giveaway | `magnet-build`, then `magnet-send` |
+| First session | `set-up-desk`, then `collect-owner-context` |
+| Confirm the workspace | `check-dreamstate-workspace` |
+| One week of posts | `plan-content-week` |
+| A picture | `design-post-graphic`, then `review-graphic` |
+| People who engaged | `score-post-engagers` |
+| A giveaway | `make-lead-magnet`, then `send-lead-magnet` |
 
 The index is [skills/README.md](skills/README.md).

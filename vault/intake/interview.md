@@ -1,6 +1,6 @@
 # Context interview
 
-`context-intake` copies unanswered questions here. Leave a line blank when the owner has not answered it. Do not fill a gap from a guess.
+`collect-owner-context` copies unanswered questions here. Leave a line blank when the owner has not answered it. Do not fill a gap from a guess.
 
 Status: blank
 
