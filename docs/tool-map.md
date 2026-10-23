@@ -6,9 +6,9 @@ A capability id below is a `tools_run` target. Fetch it with `tools_get` before 
 
 Legend:
 
-- **plugin** — the id is a literal in `luisfigueroavale/dreamstate-plugins` skills.
-- **catalog** — `tools_get` returned a contract on 2026-10-22, server 1.3.7. Re-fetch. Schemas move.
-- **to-check** — not fetched. Search, then fetch. Do not call a guessed id.
+- **plugin**: the id is a literal in `luisfigueroavale/dreamstate-plugins` skills.
+- **catalog**: `tools_get` returned a contract on 2026-10-22, server 1.3.7. Re-fetch. Schemas move.
+- **to-check**: not fetched. Search, then fetch. Do not call a guessed id.
 
 ## Confirmed
 
@@ -103,7 +103,7 @@ Legend:
 | `visibility.linkedin.followers_import` | Required `worksheet_id`, `linkedin_account_id`, `target_provider_id`. 0 credits. dry_run first. Live needs door-level approval. Writes local worksheet rows only and never contacts followers. |
 | `visibility.linkedin.comments.refresh` | Required `delivery_id`. 0 credits. Articles and newsletters return 422. Not a comment publish. |
 | `knowledge.vault.ingest` | Required `title`, `markdown`. Always creates a new note. A blank idempotency key is refused. Not for Company Context pages. |
-| `tables.table_sources.attach` | 0 credits. Reversible. Required `table_id`. `source_column_id` may be null. Pass `binding_spec` or `binding`, not both. `source_id` only when editing an existing source. Spending happens on `tables.table_sources.run`, not here. |
+| `tables.table_sources.attach` | 0 credits. Reversible write. Required `table_id`. `source_column_id` may be null. Pass `binding_spec` or `binding`, not both. `source_id` only when editing an existing source. Spending happens on `tables.table_sources.run`, not here. |
 | `social.linkedin_posts.get` | Required `account_id`, `post_id`. 0 credits. Calls LinkedIn. Read only. No real dry_run. Do not send that mode. |
 | `unibox.inbox.reply_drafts_list` | Free read. No required args. Optional `conversation_id`, `channels`, `limit` (max 200), `cursor`. No dry_run. Source of `expected_revision` for a reply draft. |
 | `unibox.inbox.analyze` | 1 credit. Required `conversation_id`. Optional `analysis_mode` (`classify_only` or `draft_reply`, default `draft_reply`), `account_id`, `message_id`. dry_run, then `quote_hash`, `max_credits`, `idempotency_key`. Never sends. |

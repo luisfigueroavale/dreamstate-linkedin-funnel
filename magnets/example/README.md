@@ -2,7 +2,7 @@
 
 This folder is a blank shape. The sentences in it are examples. They are not a real offer and not a result.
 
-Copy the folder to `magnets/<your-slug>/` and replace every line. Skill: `magnet-build`, then `magnet-send`.
+Copy the folder to `magnets/<your-slug>/` and replace every line. Skill: `make-lead-magnet`, then `send-lead-magnet`.
 
 | File | Role |
 |---|---|

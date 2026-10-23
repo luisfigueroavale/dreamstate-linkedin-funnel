@@ -1,0 +1,6 @@
+# Treatment
+
+Watch the footage and read the request before you choose the treatment.
+
+The brief picks interview, montage, tutorial, or talking head for this piece.
+

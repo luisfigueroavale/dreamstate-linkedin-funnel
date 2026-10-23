@@ -34,7 +34,7 @@ export function tokensFilled(css) {
   });
 }
 
-export async function openFrame(htmlPath, scale = 1) {
+export async function openFrame(htmlPath, scale = 1, tokensPath) {
   const manifest = readManifest(htmlPath);
   const browser = await chromium.launch();
   const page = await browser.newPage({
@@ -44,11 +44,13 @@ export async function openFrame(htmlPath, scale = 1) {
   await page.goto(pathToFileURL(htmlPath).href, { waitUntil: "load" });
   await page.evaluate(() => document.fonts.ready);
 
-  const local = path.join(root, "brand.local", "tokens.css");
+  const local = tokensPath
+    ? path.resolve(tokensPath)
+    : path.join(root, "brand.local", "tokens.css");
   if (existsSync(local) && tokensFilled(readFileSync(local, "utf8"))) {
     await page.addStyleTag({ path: local });
     await page.evaluate(() => {
-      document.querySelectorAll("[data-preview-stand-in]").forEach((node) => node.remove());
+      document.querySelectorAll("[data-preview-stand-in]:not(html)").forEach((node) => node.remove());
       document.documentElement.removeAttribute("data-preview-stand-in");
     });
   }

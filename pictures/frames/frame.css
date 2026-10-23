@@ -85,6 +85,12 @@ body.thumb {
   font-weight: normal;
   font-size: var(--size-title, 40px);
   line-height: 1.15;
+  color: transparent;
+  background-image: var(--headline-gradient, none);
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--headline-gradient, var(--color-accent, var(--color-fg, #1c1917)));
 }
 
 .plate p,

@@ -1,6 +1,6 @@
 # Pillars
 
-Fill this with `pillar-map` after the reader file and the Ideal Customer page exist.
+Fill this with `map-content-pillars` after the reader file and the Ideal Customer page exist.
 
 Each pillar records a name, a reader, a job (attention, trust, or ask), and the proof it may use.
 

@@ -1,5 +1,5 @@
-/* Face-frame title. The fill runs the whole em box, 0% to 100%, so a
-   different face does not slide the color row. Tracking is -0.03em,
+/* Face-frame title. The fill is --headline-gradient when that token
+   is set, and --color-accent when it is not. Tracking is -0.03em,
    three percent of the em. End padding is 0.12em so the clip box
    clears the last stem. The contact blur is 2.5% of the em. The lift
    is a 4.5% offset and a 9% blur in a blue-black, not a pure black halo. */
@@ -10,16 +10,17 @@
   font-weight: 700;
   letter-spacing: -0.03em;
   white-space: nowrap;
-  background-image: linear-gradient(#eef3f8 0%, #6d7886 100%);
-  background-clip: text;
   color: transparent;
+  background-image: var(--headline-gradient, none);
+  background-repeat: no-repeat;
+  background-clip: text;
   -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--headline-gradient, var(--color-accent, var(--color-fg, #1c1917)));
   filter:
     drop-shadow(0 0.008em 0.025em rgba(0, 0, 0, 0.55))
     drop-shadow(0 0.045em 0.09em rgba(10, 16, 24, 0.5));
 }
 
 .metal-title--soft {
-  background-image: linear-gradient(#f7f4ef 0%, #a39e96 100%);
   filter: drop-shadow(0 0.03em 0.07em rgba(0, 0, 0, 0.7));
 }

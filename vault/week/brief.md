@@ -11,7 +11,7 @@ Release day: YYYY-MM-DD. Piece count: N. Every row below takes its date from the
 - **Reader question.** The question this reader is trying to answer.
 - **Claim.** The one sentence the recording has to prove.
 - **Worked example.** What they show on screen. Prefer a file they already have, or a real run.
-- **Resource.** The existing file the recording points at. A new build only if they asked for `magnet-build`.
+- **Resource.** The existing file the recording points at. A new build only if they asked for `make-lead-magnet`.
 - **After they watch.** One move you want them to make.
 - **Stance.** What they have already said in public on this, and whether the recording extends it or names a change.
 - **Source.** A page, a file in `vault/sources/`, or a note. No source means the idea is not ready.
@@ -23,7 +23,7 @@ List a claim here only after you opened where it was published. Name that page o
 
 ## Opening minute
 
-Scripted word for word, as its own take. `record-script` writes it after `video-pick` passes.
+Scripted word for word, as its own take. `write-video-script` writes it after `choose-next-video` passes.
 
 - Beats, and what is on screen for each beat.
 - Three versions of the first sentence.
@@ -43,11 +43,11 @@ One chapter answers one objection a buyer raises, so a later reply can point at 
 
 ## Packaging
 
-Written before this outline. Two titles. Two thumbnail directions. Each claim marked sourced, on-screen only, or unsupported. A structure is checked outside the niche only when `video-pick` says so.
+Written before this outline. Two titles. Two thumbnail directions. Each claim marked sourced, on-screen only, or unsupported. A structure is checked outside the niche only when `choose-next-video` says so.
 
 ## Days
 
-Copy the default rows from `docs/week-spread.md`. Every row has a date, a piece, a status, a platform, a job, and a skill. A day here is a plan, not a publish time.
+Copy the default rows from `docs/plan-content-week.md`. Every row has a date, a piece, a status, a platform, a job, and a skill. A day here is a plan, not a publish time.
 
 | Date | Piece | Status | Platform | Job | Skill |
 |---|---|---|---|---|---|

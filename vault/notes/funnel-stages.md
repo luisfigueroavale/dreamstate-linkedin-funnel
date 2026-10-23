@@ -1,6 +1,6 @@
 # Funnel jobs
 
-`pillar-map` uses these three jobs. A pillar gets one. The names below are the definitions. The owner's pillars live in `vault/notes/pillars.md`.
+`map-content-pillars` uses these three jobs. A pillar gets one. The names below are the definitions. The owner's pillars live in `vault/notes/pillars.md`.
 
 Status: blank
 

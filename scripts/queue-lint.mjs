@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Lint a comment-queue or x-reply-queue run before the page is written.
+ * Lint a draft-linkedin-comments or draft-x-replies run before the page is written.
  *
  *   node scripts/queue-lint.mjs <run.json> [--profile linkedin|x]
  *
@@ -11,6 +11,7 @@
 import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 // local
 import path from "node:path";
+import { pathToFileURL } from "node:url";
 
 const root = path.resolve(import.meta.dirname, "..");
 const rules = JSON.parse(readFileSync(path.join(root, "scripts/queue-rules.json"), "utf8"));
@@ -82,15 +83,28 @@ function companyName(pack) {
   return String(name).trim();
 }
 
-function voiceBans() {
+export function bannedWordsFrom(text) {
+  const chunk = String(text).split(/^##\s+Banned(?:\s+words)?\s*$/im)[1];
+  if (!chunk) return [];
+  return chunk
+    .split(/^##\s+/m)[0]
+    .split(/\r?\n/)
+    .map((line) => line.replace(/^[-*]\s*/, "").trim())
+    .filter((line) => line && !line.startsWith("#") && line.length < 40);
+}
+
+export function bansFor(stock, voiceText, packWords) {
+  const voice = voiceText ? bannedWordsFrom(voiceText) : [];
+  const extra = Array.isArray(packWords) ? packWords : [];
+  return [...(stock || []), ...voice, ...extra];
+}
+
+function voiceText() {
   const file = path.join(root, "brand.local/voice.md");
   try {
-    const text = readFileSync(file, "utf8");
-    const chunk = text.split(/^##\s+Banned\s*$/im)[1];
-    if (!chunk) return [];
-    return chunk.split(/^##\s+/m)[0].split(/\r?\n/).map((line) => line.replace(/^[-*]\s*/, "").trim()).filter((line) => line && !line.startsWith("#") && line.length < 40);
+    return readFileSync(file, "utf8");
   } catch {
-    return [];
+    return "";
   }
 }
 
@@ -250,9 +264,24 @@ function sameMove(pack) {
   return fails;
 }
 
-function profileOf(file, argv) {
+const X_FOLDERS = new Set([
+  "draft-x-replies",
+  "write-x-post",
+  "write-x-article",
+  "find-x-angles",
+  "plan-x-week",
+]);
+
+function xQueuePath(file) {
+  return String(file).split(/[\\/]/).some((part) => {
+    if (X_FOLDERS.has(part)) return true;
+    return part.includes("x-reply") || part.includes("x-replies");
+  });
+}
+
+export function profileOf(file, argv) {
   const flag = argv.indexOf("--profile");
-  const name = flag >= 0 ? argv[flag + 1] : file.includes("x-reply") ? "x" : "linkedin";
+  const name = flag >= 0 ? argv[flag + 1] : xQueuePath(file) ? "x" : "linkedin";
   const profile = rules[name];
   if (!profile) throw new Error(`unknown profile ${name}`);
   return { name, profile };
@@ -268,7 +297,7 @@ function main() {
   const file = path.resolve(argv[0]);
   const { name, profile } = profileOf(file, process.argv.slice(2));
   const pack = JSON.parse(readFileSync(file, "utf8"));
-  const bans = [...(profile.banned || []), ...voiceBans(), ...(Array.isArray(pack.banned_words) ? pack.banned_words : [])];
+  const bans = bansFor(profile.banned, voiceText(), pack.banned_words);
   const company = companyName(pack);
   const fails = [];
   const warns = [];
@@ -305,4 +334,10 @@ function main() {
   console.log(`lint pass (${name}).`);
 }
 
-main();
+function directRun() {
+  const entry = process.argv[1];
+  if (!entry) return false;
+  return import.meta.url === pathToFileURL(path.resolve(entry)).href;
+}
+
+if (directRun()) main();

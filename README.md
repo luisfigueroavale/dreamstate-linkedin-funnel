@@ -17,7 +17,7 @@ It will not post, comment, send a DM, enroll a sequence, launch a campaign, spen
 ## The first 30 minutes
 
 1. Install the Dreamstate plugin if it is not installed. The easiest path is `npx @trydreamstate/cli install`. For one agent, run `claude plugin marketplace add luisfigueroavale/dreamstate-plugins` then `claude plugin install dreamstate@dreamstate`, or the Codex pair `codex plugin marketplace add` and `codex plugin add` with the same repo and plugin id. Sign in in the browser. Do not paste a key.
-2. Open this folder in Codex or Claude Code and tell it to run the `desk-setup` skill. It calls `whoami`. If you have more than one workspace, name the one this folder should use.
+2. Open this folder in Codex or Claude Code and tell it to run the `set-up-desk` skill. It calls `whoami`. If you have more than one workspace, name the one this folder should use.
 3. Create the local brand copies and fill them. The agent reads [brand/AGENTS.md](brand/AGENTS.md) first and stops if a required file is missing or still says `Status: blank`.
 
    ```sh
@@ -35,7 +35,7 @@ It will not post, comment, send a DM, enroll a sequence, launch a campaign, spen
    ```
 
    The one-sentence reader, the company facts, and the yes/no test live here. The buyer stays on the Ideal Customer page in Company Context. Set `Status: filled` only when the answers are yours.
-5. Tell the agent to run `context-intake`. Have this ready: who buys (Ideal Customer), proof you are willing to show (Proof), and how you sound (Tone of Voice). The agent previews the page write and waits. Read it. Say yes only if the text is yours. Do not paste the follower file into that page.
+5. Tell the agent to run `collect-owner-context`. Have this ready: who buys (Ideal Customer), proof you are willing to show (Proof), and how you sound (Tone of Voice). The agent previews the page write and waits. Read it. Say yes only if the text is yours. Do not paste the follower file into that page.
 6. Open [vault/board.md](vault/board.md) and [vault/posts/sample-gate.md](vault/posts/sample-gate.md). That is the shape of one post. Status moves Idea, Drafting, Review, Published, Backlog.
 7. From this folder, after `npm install` and `npx playwright install chromium`:
 
