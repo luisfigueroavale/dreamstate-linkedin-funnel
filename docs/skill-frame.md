@@ -31,3 +31,7 @@ Do not invent a metric, a face, or a connection. Dreamstate plus local tools onl
 Drafted copy uses no em dash. That covers posts, comments, replies, DMs, newsletters, scripts, titles, descriptions, and articles. Use a period, a comma, or and. Comments and replies also use no en dash.
 
 Stock banned words are the `banned` lists in `scripts/queue-rules.json`. Words under `## Banned words` in `brand.local/voice.md` add to the list for that run. They do not replace it. A writing skill does not copy either list. Its stop rule is: Follow the skill-frame writing rules.
+
+Every draft also passes `docs/ai-tells.md` before the owner sees it. That list adds to the banned words. It does not replace them.
+
+A post picked as inspiration, a quote target, or a reply target clears `docs/viral-bar.md`. Cite its link and its counts.

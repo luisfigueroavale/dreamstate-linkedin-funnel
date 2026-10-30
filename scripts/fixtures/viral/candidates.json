@@ -1,0 +1,28 @@
+[
+ {
+  "id": "p1",
+  "author": "author_a",
+  "likes": 180,
+  "bookmarks": 20,
+  "views": 12000
+ },
+ {
+  "id": "p2",
+  "author": "author_a",
+  "likes": 400,
+  "bookmarks": 30
+ },
+ {
+  "id": "p3",
+  "author": "author_b",
+  "likes": 250,
+  "bookmarks": 0
+ },
+ {
+  "id": "p4",
+  "author": "author_a",
+  "likes": 50,
+  "bookmarks": 0,
+  "views": 3000
+ }
+]

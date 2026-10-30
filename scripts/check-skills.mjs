@@ -62,11 +62,11 @@ function bad(message) {
 
 const skillRoot = path.join(root, "skills");
 const folders = readdirSync(skillRoot).filter((name) => statSync(path.join(skillRoot, name)).isDirectory());
-if (folders.length !== 50) bad(`expected 50 skills, found ${folders.length}`);
+if (folders.length !== 52) bad(`expected 52 skills, found ${folders.length}`);
 
 const framePath = path.join(root, "docs/skill-frame.md");
 const frame = readFileSync(framePath, "utf8");
-for (const needle of ["audience/AGENTS.md", "brand/AGENTS.md", "brand/taste.md", "required unknown", "queue-rules.json", "no em dash"]) {
+for (const needle of ["audience/AGENTS.md", "brand/AGENTS.md", "brand/taste.md", "required unknown", "queue-rules.json", "no em dash", "docs/ai-tells.md", "docs/viral-bar.md"]) {
   if (!frame.includes(needle)) bad(`docs/skill-frame.md is missing ${needle}`);
 }
 
@@ -74,11 +74,13 @@ const WRITING = [
   "adapt-essay-for-linkedin",
   "choose-next-video",
   "draft-linkedin-comments",
+  "draft-quote-reposts",
   "draft-thread-reply",
   "draft-warm-followups",
   "draft-x-replies",
   "find-x-angles",
   "make-lead-magnet",
+  "plan-content-day",
   "plan-content-week",
   "plan-x-week",
   "score-post-engagers",
@@ -467,4 +469,4 @@ if (terms === null || terms.length === 0) {
 }
 
 if (failed) process.exit(1);
-console.log("50 skills. Audience and timeline checks passed.");
+console.log("52 skills. Audience and timeline checks passed.");

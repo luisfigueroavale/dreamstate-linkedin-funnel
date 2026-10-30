@@ -4,6 +4,8 @@ This folder is a local desk for one owner. Dreamstate is the system of record fo
 
 Before any draft or design, read [brand/AGENTS.md](brand/AGENTS.md) first. A missing or blank required file under `brand.local/` means stop and ask. Do not guess. Run [brand/taste.md](brand/taste.md) before you hand the work to the owner.
 
+Every draft passes [docs/ai-tells.md](docs/ai-tells.md) on top of the banned words. Inspiration, quote targets, and reply targets clear [docs/viral-bar.md](docs/viral-bar.md).
+
 Before content, scoring, or qualification, read [audience/AGENTS.md](audience/AGENTS.md). The reader is `audience.local/ideal-follower.md`. The buyer stays on the Ideal Customer page in Company Context. A missing or blank follower file means stop and ask. Score a person with that file's qualifying test.
 
 ## Workspace
@@ -44,7 +46,7 @@ Report a number only when a tool, a file the owner supplied, or a page you opene
 
 Do not generate, retouch, or replace a face or a body. A portrait uses a photo the owner supplied, unchanged.
 
-Do not add a connection this repo does not already use. Dreamstate, the browser sign-in, and local tools (Node, Playwright, ffmpeg) are the set. Do not install a mailer, a hosted video API, a scraper account, or a second social login to make a skill run.
+Do not add a connection this repo does not already use. Dreamstate, the browser sign-in, and local tools (Node, Playwright, ffmpeg) are the set. Public X reads the agent host already carries count as the browser does: read-only, public posts only, listed in [docs/tool-map.md](docs/tool-map.md). Do not install a mailer, a hosted video API, a scraper account, or a second social login to make a skill run.
 
 ## Files
 
@@ -57,6 +59,9 @@ Before drafting a post, read `vault/notes/` and the post file. After the owner a
 | Job | Skill |
 |---|---|
 | First session | `set-up-desk`, then `collect-owner-context` |
+| Voice from the owner's own posts | `derive-voice-rules` |
+| What is moving in the niche | `find-x-angles` |
+| Today's posts, quotes, and replies | `plan-content-day` |
 | Confirm the workspace | `check-dreamstate-workspace` |
 | One week of posts | `plan-content-week` |
 | A picture | `design-post-graphic`, then `review-graphic` |
