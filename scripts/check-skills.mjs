@@ -35,7 +35,16 @@ function matchesTerm(text, term) {
 }
 
 function bannedTerms() {
-  const file = path.join(root, ".banned-terms.local");
+  let file = path.join(root, ".banned-terms.local");
+  if (!existsSync(file)) {
+    // A git worktree has no copy of gitignored files, so fall back to the main checkout's list.
+    try {
+      const common = execFileSync("git", ["rev-parse", "--path-format=absolute", "--git-common-dir"], { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+      file = path.join(path.dirname(common), ".banned-terms.local");
+    } catch {
+      return null;
+    }
+  }
   if (!existsSync(file)) return null;
   return readFileSync(file, "utf8")
     .split(/\r?\n/)
@@ -62,7 +71,7 @@ function bad(message) {
 
 const skillRoot = path.join(root, "skills");
 const folders = readdirSync(skillRoot).filter((name) => statSync(path.join(skillRoot, name)).isDirectory());
-if (folders.length !== 52) bad(`expected 52 skills, found ${folders.length}`);
+if (folders.length !== 58) bad(`expected 58 skills, found ${folders.length}`);
 
 const framePath = path.join(root, "docs/skill-frame.md");
 const frame = readFileSync(framePath, "utf8");
@@ -82,6 +91,7 @@ const WRITING = [
   "make-lead-magnet",
   "plan-content-day",
   "plan-content-week",
+  "plan-launch-video",
   "plan-x-week",
   "score-post-engagers",
   "send-lead-magnet",
@@ -90,6 +100,7 @@ const WRITING = [
   "write-long-essay",
   "write-newsletter-issue",
   "write-opening-lines",
+  "write-reddit-post",
   "write-video-description",
   "write-video-script",
   "write-video-titles",
@@ -454,7 +465,7 @@ if (!scene.includes("DeskTimeline") || /@keyframes|transition\s*:/.test(scene)) 
 
 const terms = bannedTerms();
 if (terms === null || terms.length === 0) {
-  console.log("BANNED-TERM SCAN SKIPPED");
+  console.log("BANNED-TERM SCAN SKIPPED (no .banned-terms.local here or in the main checkout)");
   if (strict) bad("strict: .banned-terms.local is missing or empty");
 } else {
   const lowered = terms.map((term) => term.toLowerCase());
@@ -469,4 +480,4 @@ if (terms === null || terms.length === 0) {
 }
 
 if (failed) process.exit(1);
-console.log("52 skills. Audience and timeline checks passed.");
+console.log("58 skills. Audience and timeline checks passed.");
