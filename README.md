@@ -77,7 +77,7 @@ After something is published, the agent can collect people who reacted or commen
 
 ## Names you never want in the repo
 
-Put them in `.banned-terms.local`, one name per line. Blank lines and lines that start with `#` are ignored. Git does not track the file. `npm run check` scans the repo for those names when the file is present. When the file is missing it prints `BANNED-TERM SCAN SKIPPED` and continues. `npm run skills -- --strict` fails in that case.
+Put them in `.banned-terms.local`, one name per line. Blank lines and lines that start with `#` are ignored. Git does not track the file. `npm run check` scans the repo for those names when the file is present. A git worktree has no copy of the file, so the check reads the main checkout's copy instead. When neither exists it prints `BANNED-TERM SCAN SKIPPED` and continues. `npm run skills -- --strict` fails in that case.
 
 ## Local tools
 

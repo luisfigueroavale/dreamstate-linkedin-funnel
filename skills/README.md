@@ -28,6 +28,10 @@ Every draft passes `docs/ai-tells.md` on top of the banned words, and every pick
 | `adapt-essay-for-linkedin` | Adapt a finished essay into a LinkedIn article draft and a short share post, keeping the claims. Use after write-x-article. It does not upload or publish. |
 | `write-newsletter-issue` | Write one letter or newsletter issue with a single takeaway from sourced material. Use for the long written piece in a week. It does not send email. |
 | `write-long-essay` | Write a long document with one argument, examples that stay inside the source, and a claim list the owner can check. Use when the piece is not an X essay and not a LinkedIn article. It does not publish. |
+| `pick-reddit-category` | Pick one of six Reddit categories and its shape (story, list, or paragraph) for a sourced idea. Use before write-reddit-post. It does not draft. |
+| `check-subreddit-rules` | Read a subreddit's posted rules and top posts, logged out, and write a rules card. Use before a Reddit draft. It does not post, comment, vote, or message. |
+| `write-reddit-post` | Draft one Reddit post for one checked subreddit, with no link in the body and the promotion limit applied. Use after pick-reddit-category. The owner posts by hand. |
+| `review-reddit-post` | Review a Reddit draft against its category, the rules card, and the house rules, and return pass or exact fixes. Use before the owner sees it. A pass is not a yes to post. |
 | `design-post-graphic` | Build one portrait, carousel slide, or thumbnail as HTML and CSS, with motion in a JavaScript timeline. Use when a piece needs a picture. It does not publish. |
 | `review-graphic` | Review a rendered frame at full size and phone width, and a motion filmstrip when one exists. Use after design-post-graphic. The owner is the last reviewer. |
 | `draw-process-map` | Draw a process as numbered HTML plates in reading order, with connectors that do not cross. Use for a flow, a funnel, or a system map. It does not publish. |
@@ -39,6 +43,8 @@ Every draft passes `docs/ai-tells.md` on top of the banned words, and every pick
 | `write-video-titles` | Draft two titles from the script, each claim marked sourced or unsupported. Use before a title is chosen. It does not invent performance. |
 | `choose-next-video` | Decide whether an idea is worth recording, using only evidence the owner can support. Use before write-video-script. It does not call a video-host API. |
 | `publish-youtube-video` | Package a finished video folder and optionally save a Dreamstate draft. Use when the file is ready for the owner to upload. It does not upload. |
+| `plan-launch-video` | Plan a launch video: brief, proof ledger, hook options, timed beats, capture list, and audit. Use before write-video-script and make-launch-clip. It does not render, upload, or post. |
+| `study-launch-videos` | Read the dreamstate-launch-videos library for hook, structure, and proof patterns that fit a brief. Use from plan-launch-video. Until the library exists it reports pending. |
 | `make-launch-clip` | Cut a short launch piece from a beat list and assets the owner already has. Use for a launch. It does not generate footage or a face. |
 | `edit-long-video` | Edit a longer recording into an opener still plus the screen recording, with chapters. Use when a plain trim is not enough. It does not upload. |
 | `render-captioned-video` | Turn an edit list and a recording into one captioned file with ffmpeg. Use for a single pass on footage they supplied. It does not upload. |
