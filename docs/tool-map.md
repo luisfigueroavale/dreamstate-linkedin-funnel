@@ -124,6 +124,21 @@ These are not `tools_run` targets. `tools_get` returns not found. Resolve them w
 | `source.account_posts_youtube` | Source definition for posts on a YouTube channel. |
 | `source.x_posts_search` | Source definition for an X post search. |
 
+## Public X reads
+
+These are not Dreamstate tools. Some agent hosts already carry public X reads. Use them only when the host has them, read-only, and only for public posts. Do not add an X login, a paid X key, or a scraper to get them. Names below are the ones the team host uses. Another host may name them differently. Read the host's schema first.
+
+| Read | Use |
+|---|---|
+| `search_posts_all` | Post search. `from:<handle> -is:retweet -is:reply` returns that account's recent originals. Also topic queries inside a window. |
+| `get_users_posts` | A user's recent posts, when the host can resolve the user id. |
+| `get_posts_quoted_posts` | Quotes of one post. |
+| `get_posts_reposted_by` | Accounts that reposted one post. |
+| `get_posts_counts_recent` | Post counts for a query over the last 7 days. |
+| `get_trends_by_woeid` | Current trends for a place. |
+
+Never post, like, repost, follow, bookmark, or DM through X from this desk. The owner posts with the tap-to-post links the drafting skills write.
+
 ## Do not call
 
 `social.content.auto_publish_set` and `social.content.approval.authorize_publish` are named in the team rules as calls this desk does not make.

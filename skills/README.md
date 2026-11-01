@@ -2,14 +2,14 @@
 
 Both agents read this folder (`.agents/skills` and `.claude/skills` point here).
 
-Before a skill drafts or designs, it reads `brand/AGENTS.md`. Before it writes for a reader, scores, or qualifies, it reads `audience/AGENTS.md`. Before it hands work to the owner, it runs `brand/taste.md`. A picture's motion is the JavaScript timeline in that HTML file. The still is the timeline's last frame.
+Every draft passes `docs/ai-tells.md` on top of the banned words, and every pick from other people's posts clears `docs/viral-bar.md`. Before a skill drafts or designs, it reads `brand/AGENTS.md`. Before it writes for a reader, scores, or qualifies, it reads `audience/AGENTS.md`. Before it hands work to the owner, it runs `brand/taste.md`. A picture's motion is the JavaScript timeline in that HTML file. The still is the timeline's last frame.
 
 | Skill | When |
 |---|---|
 | `set-up-desk` | Install the Dreamstate plugin for this folder, confirm the workspace, and create brand.local and audience.local from the blank templates. Use at the first session. It does not post, send, or spend. |
 | `check-dreamstate-workspace` | Confirm the active Dreamstate workspace before a write or a spend. Use at the start of a later session. It does not draft or send. |
 | `collect-owner-context` | Turn the owner's notes into Company Context pages: Ideal Customer, Proof, and Tone of Voice, plus Product Information when it is missing. Use when the pages are empty or wrong. The reader stays in audience.local. It does not invent claims. |
-| `derive-voice-rules` | Derive voice rules from the owner's own samples and edits. Use when Tone of Voice or brand.local/voice.md is thin. It does not import another person's voice. |
+| `derive-voice-rules` | Derive voice rules from the owner's own X posts, pasted LinkedIn posts, samples, and edits, each rule tied to example posts. Use at setup, or when Tone of Voice or brand.local/voice.md is thin. It does not import another person's voice. |
 | `set-brand-style` | Help the owner fill brand.local from the blank templates. Use when identity, voice, style, or tokens are missing. It writes only values the owner supplied. |
 | `search-vault` | Search the local vault before drafting and add a concept back after the owner accepts a piece. Use when you need a prior note. It does not call Dreamstate. |
 | `map-content-pillars` | Define content pillars, the reader for each, and the job in the funnel, from the owner's audience and offer. Use once, when the notes are empty. It does not draft the posts. |
@@ -21,7 +21,9 @@ Before a skill drafts or designs, it reads `brand/AGENTS.md`. Before it writes f
 | `write-linkedin-post` | Draft or revise one LinkedIn post from the vault, the brand files, and allowed proof. Use for a single post. It does not schedule or publish. |
 | `write-x-post` | Draft a short X post or thread from a sourced idea in the owner's voice. Use for X copy. It does not publish. |
 | `plan-x-week` | Plan X posts with the owner from three lanes: adapted LinkedIn pieces, notes they captured, and launches they already have. Use for an X slate. It does not post. |
-| `find-x-angles` | Turn posts the owner pasted, or a Dreamstate read that returns them, into sourced angles. Use for a niche scan. It does not require a new X login and does not invent reach. |
+| `find-x-angles` | Turn live public X reads, posts the owner pasted, or a Dreamstate read into sourced angles that clear the viral bar. Use for a niche scan or the first read at setup. It does not require a new X login and does not invent reach. |
+| `draft-quote-reposts` | Draft 3 quote reposts a day on recent in-space posts that clear the viral bar, each with the source link, its counts, the quote, and a tap-to-post link. Use for the daily quote round. It never posts. |
+| `plan-content-day` | Draft a short phone plan for today: 1 X post, 3 quotes, 3 to 5 replies with tap-to-post links, and one LinkedIn idea tagged by stage. Monday adds voice-note prompts. Use for the daily plan or an idea the owner sends. It does not schedule or post. |
 | `write-x-article` | Write a long X article from the owner's letter, framework, or vault notes, with pictures only where they explain a claim. Use when they want a long X piece. It does not publish. |
 | `adapt-essay-for-linkedin` | Adapt a finished essay into a LinkedIn article draft and a short share post, keeping the claims. Use after write-x-article. It does not upload or publish. |
 | `write-newsletter-issue` | Write one letter or newsletter issue with a single takeaway from sourced material. Use for the long written piece in a week. It does not send email. |

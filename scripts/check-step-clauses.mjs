@@ -34,7 +34,12 @@ for (const name of readdirSync(skillRoot).filter((entry) => statSync(path.join(s
     references = "";
   }
   const haystack = readFileSync(currentPath, "utf8") + "\n" + references;
-  const old = execFileSync("git", ["show", `${revision}:skills/${name}/SKILL.md`], { cwd: root, encoding: "utf8" });
+  let old;
+  try {
+    old = execFileSync("git", ["show", `${revision}:skills/${name}/SKILL.md`], { cwd: root, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] });
+  } catch {
+    continue; // a skill added after that revision has no earlier clauses to keep
+  }
   for (const line of stepLines(old)) {
     for (const clause of conditionClauses(line)) {
       if (clauseMissing(clause, haystack)) missing.push(`${name}: ${clause}`);

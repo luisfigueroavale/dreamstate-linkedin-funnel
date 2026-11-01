@@ -4,7 +4,7 @@ Turn the question into a topic, a problem the reader has, and, when it helps, a 
 
 Read the post, the media, and the thread before you say why it traveled. Open a linked doc, repo, or benchmark when the post depends on one. A cut-off snippet is not the post. Confirm a cited post at the source before you treat a number or a quotation as fact.
 
-Dedupe on post id. Keep a row that fits the reader, shows a real mechanism, has a discussion worth joining, and leaves the owner an angle their evidence can carry. Do not drop a row because the like count is low. Modest reach stays when the problem is real.
+Dedupe on post id. Keep a row that fits the reader, shows a real mechanism, has a discussion worth joining, and leaves the owner an angle their evidence can carry. Do not drop a row because the like count is low. Modest reach stays when the problem is real, as a reader note. It is inspiration only when it clears `docs/viral-bar.md`.
 
 Read a reply before you infer the mood from a count.
 

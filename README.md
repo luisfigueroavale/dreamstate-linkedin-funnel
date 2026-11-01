@@ -36,8 +36,9 @@ It will not post, comment, send a DM, enroll a sequence, launch a campaign, spen
 
    The one-sentence reader, the company facts, and the yes/no test live here. The buyer stays on the Ideal Customer page in Company Context. Set `Status: filled` only when the answers are yours.
 5. Tell the agent to run `collect-owner-context`. Have this ready: who buys (Ideal Customer), proof you are willing to show (Proof), and how you sound (Tone of Voice). The agent previews the page write and waits. Read it. Say yes only if the text is yours. Do not paste the follower file into that page.
-6. Open [vault/board.md](vault/board.md) and [vault/posts/sample-gate.md](vault/posts/sample-gate.md). That is the shape of one post. Status moves Idea, Drafting, Review, Published, Backlog.
-7. From this folder, after `npm install` and `npx playwright install chromium`:
+6. Give the agent your X handle and LinkedIn profile URL. `set-up-desk` runs `derive-voice-rules` on your own recent posts and shows you rules tied to examples. Flip `brand.local/voice.md` to `Status: filled` when they are yours. Then it runs `find-x-angles` for a first read of what is moving in your space, held to [docs/viral-bar.md](docs/viral-bar.md), and `plan-content-day` for a first daily plan in `work/plans/`. All read-only. You post from the tap-to-post links, or not.
+7. Open [vault/board.md](vault/board.md) and [vault/posts/sample-gate.md](vault/posts/sample-gate.md). That is the shape of one post. Status moves Idea, Drafting, Review, Published, Backlog.
+8. From this folder, after `npm install` and `npx playwright install chromium`:
 
    ```sh
    npm run still
@@ -46,9 +47,13 @@ It will not post, comment, send a DM, enroll a sequence, launch a campaign, spen
    ```
 
    Look at `pictures/examples/gate/export/`. The PNG is the last frame of the JavaScript timeline. The MP4 is that same timeline. The GIF opens on an empty stage, so a loop returns there.
-8. Stop. Nothing has been posted. The next real piece of work is one idea in the vault, not a send.
+9. Stop. Nothing has been posted. The next real piece of work is one idea in the vault, not a send.
 
 The longer path is [docs/getting-started.md](docs/getting-started.md).
+
+## How a day moves
+
+`plan-content-day` gives you one short plan you can read on a phone: 1 X post, 3 quote reposts, 3 to 5 replies, each with a tap-to-post link and the source post with its counts, plus one LinkedIn idea tagged reach, belief, or signup. Monday adds three voice-note prompts. Send an idea or a voice note any day and it comes back as an X post and a LinkedIn draft. Every draft passes [docs/ai-tells.md](docs/ai-tells.md). Nothing is scheduled. A daily run on a timer needs your yes.
 
 ## How a week moves
 
@@ -76,7 +81,7 @@ Put them in `.banned-terms.local`, one name per line. Blank lines and lines that
 
 ## Local tools
 
-Node 22 or current LTS, Playwright's Chromium, and ffmpeg on the PATH for MP4 and GIF. Skip ffmpeg and the still PNG still renders. No other account is required.
+Node 22 or current LTS, Playwright's Chromium, and ffmpeg on the PATH for MP4 and GIF. Skip ffmpeg and the still PNG still renders. No other account is required. Public X reads come from the agent host when it has them. The desk does not add an X login.
 
 ## License
 

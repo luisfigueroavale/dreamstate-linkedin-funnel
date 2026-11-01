@@ -26,6 +26,13 @@ Change `Status: blank` to `Status: filled` only when the sections below are your
 
 - Reader file: `audience.local/ideal-follower.md`
 
+## Accounts
+
+<!-- Your own handles. The voice and viral reads use them. They stay in brand.local, which git ignores. -->
+
+- X handle:
+- LinkedIn profile URL:
+
 ## Positioning
 
 <!-- One sentence: the category, who it is for, and what you will not pretend to be. -->

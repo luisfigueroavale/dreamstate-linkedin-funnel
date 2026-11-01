@@ -1,10 +1,10 @@
 ---
 name: set-up-desk
-description: "Install the Dreamstate plugin for this folder, confirm the workspace, and create brand.local and audience.local from the blank templates when those folders are absent. Use at the first session. It does not post, send, or spend."
+description: "Install the Dreamstate plugin for this folder, confirm the workspace, create brand.local and audience.local from the blank templates when those folders are absent, then learn the owner's voice from their own posts, read what is moving, and draft a first daily plan. Use at the first session. It does not post, send, or spend."
 ---
 # Set up the desk
 
-Install the Dreamstate plugin, confirm the workspace, and create the local folders when they are absent. Follow `docs/skill-frame.md`.
+Install the Dreamstate plugin, confirm the workspace, create the local folders when they are absent, and run the first read-only content pass. Follow `docs/skill-frame.md`.
 
 ## Use when
 
@@ -36,7 +36,15 @@ Install the Dreamstate plugin, confirm the workspace, and create the local folde
 
 11. Search with local file tools (`references/search.md`).
 
-12. Run `npm run check` (`references/check.md`).
+12. Ask for the owner's X handle and LinkedIn profile URL, and write them only under Accounts in `brand.local/identity.md` (`references/social.md`).
+
+13. Run `derive-voice-rules` on the owner's own recent posts, and leave `brand.local/voice.md` at `Status: blank` for the owner to flip (`references/social.md`).
+
+14. Run a first viral read with `find-x-angles` only when identity, voice, and the follower file are filled (`references/social.md`).
+
+15. Draft a first plan with `plan-content-day` only after that read (`references/social.md`). This step does not post or schedule.
+
+16. Run `npm run check` (`references/check.md`).
 ## Dreamstate tools
 
 | Step | Tool id | Mode | Needs yes? |
@@ -49,7 +57,11 @@ Install the Dreamstate plugin, confirm the workspace, and create the local folde
 
 - `brand.local/identity.md`, `brand.local/voice.md`, `brand.local/style.md`, and `audience.local/ideal-follower.md` stay `Status: blank` until the owner writes them.
 
-- Do not fill a blank brand or audience file.
+- Do not fill a blank brand or audience file. A handle the owner gave goes under Accounts and does not fill the file.
+
+- Do not create a routine. A daily plan routine needs the owner's yes and a reason.
+
+- Never post, like, repost, follow, or DM through an X read tool.
 
 - Do not add a second MCP server.
 
