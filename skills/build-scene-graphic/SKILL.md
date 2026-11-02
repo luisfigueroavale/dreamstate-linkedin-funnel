@@ -1,6 +1,6 @@
 ---
 name: build-scene-graphic
-description: "Build a small staged scene in HTML and CSS, with labels as real text, then capture it. Use when the idea is a place or a line of stations. It does not use a 3D library."
+description: "Build a small staged scene in HTML and CSS, with labels as real text, then capture it. Use when the idea is a place or a line of stations. It does not use a 3D library. A real 3D render comes from dreamstate-design."
 ---
 # Build a scene graphic
 
@@ -12,7 +12,7 @@ Build a small staged scene in HTML and CSS, with labels as real text, then captu
 
 - A dense lesson stays in `design-post-graphic`. A process drawn as plates stays in `draw-process-map`.
 
-- It does not use a 3D library.
+- It does not use a 3D library. A real 3D scene is built in local Blender from [dreamstate-design](https://github.com/luisfigueroavale/dreamstate-design), and its still can sit under an HTML frame here.
 
 ## Steps
 
