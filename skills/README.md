@@ -35,7 +35,7 @@ Every draft passes `docs/ai-tells.md` on top of the banned words, and every pick
 | `design-post-graphic` | Build one portrait, carousel slide, or thumbnail as HTML and CSS, with motion in a JavaScript timeline. Use when a piece needs a picture. It does not publish. |
 | `review-graphic` | Review a rendered frame at full size and phone width, and a motion filmstrip when one exists. Use after design-post-graphic. The owner is the last reviewer. |
 | `draw-process-map` | Draw a process as numbered HTML plates in reading order, with connectors that do not cross. Use for a flow, a funnel, or a system map. It does not publish. |
-| `build-scene-graphic` | Build a small staged scene in HTML and CSS, with labels as real text, then capture it. Use when the idea is a place or a line of stations. It does not use a 3D library. |
+| `build-scene-graphic` | Build a small staged scene in HTML and CSS, with labels as real text, then capture it. Use when the idea is a place or a line of stations. It does not use a 3D library. A real 3D render comes from [dreamstate-design](https://github.com/luisfigueroavale/dreamstate-design). |
 | `write-video-script` | Write a script the owner can record, with a viewer promise, sourced beats, and a payoff that the footage will actually show. Use before filming. It does not generate footage. |
 | `write-video-description` | Write the description, links, and chapters from the final transcript the owner supplied. Use after the cut exists. It does not invent timestamps. |
 | `design-video-thumbnail` | Compose the thumbnail in HTML at the thumb size so the title and the picture make the same promise. Use after the title is chosen. It does not generate a face. |
