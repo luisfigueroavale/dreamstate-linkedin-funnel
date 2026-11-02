@@ -43,8 +43,8 @@ Every draft passes `docs/ai-tells.md` on top of the banned words, and every pick
 | `write-video-titles` | Draft two titles from the script, each claim marked sourced or unsupported. Use before a title is chosen. It does not invent performance. |
 | `choose-next-video` | Decide whether an idea is worth recording, using only evidence the owner can support. Use before write-video-script. It does not call a video-host API. |
 | `publish-youtube-video` | Package a finished video folder and optionally save a Dreamstate draft. Use when the file is ready for the owner to upload. It does not upload. |
-| `plan-launch-video` | Plan a launch video: brief, proof ledger, hook options, timed beats, capture list, and audit. Use before write-video-script and make-launch-clip. It does not render, upload, or post. |
-| `study-launch-videos` | Read the dreamstate-launch-videos library for hook, structure, and proof patterns that fit a brief. Use from plan-launch-video. Until the library exists it reports pending. |
+| `plan-launch-video` | Plan a launch video: brief, proof ledger, scored hooks, a timed script and storyboard, capture list, launch post and reply bank drafts, and audit. Use before write-video-script and make-launch-clip. It does not render, upload, or post. |
+| `study-launch-videos` | Read the public dreamstate-launch-videos library for comparable launches and their dated, scoped numbers, and draft a Dreamstate launch record after a post goes live. Use from plan-launch-video. Until the library exists it reports pending. It does not commit. |
 | `make-launch-clip` | Cut a short launch piece from a beat list and assets the owner already has. Use for a launch. It does not generate footage or a face. |
 | `edit-long-video` | Edit a longer recording into an opener still plus the screen recording, with chapters. Use when a plain trim is not enough. It does not upload. |
 | `render-captioned-video` | Turn an edit list and a recording into one captioned file with ffmpeg. Use for a single pass on footage they supplied. It does not upload. |
