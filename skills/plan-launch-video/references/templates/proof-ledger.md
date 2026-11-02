@@ -2,11 +2,11 @@
 
 ## Aha moments, strongest first
 
-| Rank | Problem | Input | Action | Output | Why it matters | Evidence file | Can capture | Limits |
-|---|---|---|---|---|---|---|---|---|
-| 1 | | | | | | | yes / no | |
-| 2 | | | | | | | | |
-| 3 | | | | | | | | |
+| Rank | Problem | Input | Action | Output | Why it matters | How it differs | Evidence file | Can capture | Limits |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | | | | | | | | yes / no | |
+| 2 | | | | | | | | | |
+| 3 | | | | | | | | | |
 
 ## Claim lines
 

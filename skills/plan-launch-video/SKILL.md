@@ -1,6 +1,6 @@
 ---
 name: plan-launch-video
-description: "Plan a product launch video: brief, proof ledger, scored hooks, a timed script and storyboard, a capture list, a launch post with a reply bank, and an audit. Use before write-video-script and make-launch-clip, or to check a launch cut. It does not render, upload, post, pay, or contact anyone."
+description: "Plan a product launch video: brief, proof ledger, scored hooks, a timed script and storyboard, a capture list, a launch post with a reply bank, and an audit. Use before make-launch-clip, or to check a launch cut. It does not render, upload, post, pay, or contact anyone."
 ---
 # Plan a launch video
 
@@ -11,7 +11,7 @@ Follow `docs/skill-frame.md`.
 
 - The owner is launching a product or a feature and wants a video plan, hook options, a launch post, or a check of a cut.
 
-- Not for rendering. `make-launch-clip` cuts the piece and `write-video-script` writes the read.
+- Not for rendering. `make-launch-clip` cuts the piece. This skill writes the launch read itself, so it does not go to `write-video-script`, which is for YouTube videos after `choose-next-video`.
 
 ## Steps
 
@@ -33,7 +33,7 @@ Follow `docs/skill-frame.md`.
 
 9. Write the capture list, one shot per ledger line, with every shot labeled (`references/capture.md`).
 
-10. Hand the read to `write-video-script` and the beats to `make-launch-clip` (`references/package.md`).
+10. Hand the beat sheet, the spoken lines, and the capture files to `make-launch-clip` (`references/package.md`).
 
 11. Draft the launch post and the reply bank from ledger lines only (`references/package.md`).
 
@@ -43,7 +43,7 @@ Follow `docs/skill-frame.md`.
 
 ## Dreamstate tools
 
-None. Local files only. Footage comes from local files or a Google Drive folder the owner shared, read-only.
+None. Local files only. Footage comes from a local folder the owner named. If the footage lives somewhere else, the owner or the seat puts a copy in that folder first. This skill never connects to a drive or a cloud folder.
 
 ## Stop rules
 
@@ -51,7 +51,7 @@ None. Local files only. Footage comes from local files or a Google Drive folder 
 
 - Never invent a metric, a customer, a quote, a view count, or a feature. Unknown stays unknown.
 
-- Every screen is a real feature, or it is labeled concept or demo. Label sped-up and cut shots.
+- Every screen is a real feature, or it is labeled illustration, concept, or demo. Label sped-up and cut shots.
 
 - Never splice separate runs into one fake continuous run.
 

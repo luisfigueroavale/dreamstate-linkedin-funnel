@@ -1,10 +1,10 @@
 # Package
 
-Hand the beats and spoken lines to `write-video-script`. Hand the beat sheet and the capture files to `make-launch-clip`. Captions go to `render-captioned-video`, and the file goes to `check-short-export`.
+The spoken lines in the script and storyboard are the final read. This skill owns them. Hand the beat sheet, the spoken lines, and the capture files to `make-launch-clip`. Captions go to `render-captioned-video`, and the file goes to `check-short-export`.
 
 ## Launch post and reply bank
 
-Copy `references/templates/post-and-replies.md`. Every line comes from a `verified` ledger line.
+Copy `references/templates/post-and-replies.md`. Every factual claim comes from a `verified` ledger line. The action and the destination come from the brief. Price or access comes from the brief only when the owner confirmed it. Measurements come from the tools named below.
 
 - Launch post: the first line matches the video's opening promise, then the product and its plain use, one proof detail, and one action.
 - Reply bank: what it does, who it is for, how it differs, price or access only if confirmed, its limits, and how to try it. Each reply points at a real screenshot or output.

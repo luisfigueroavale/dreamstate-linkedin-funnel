@@ -9,7 +9,7 @@ Follow `docs/skill-frame.md`.
 
 ## Use when
 
-- `plan-launch-video` asks for comparable launches by viewer, product type, proof type, and length.
+- `plan-launch-video` asks for comparable launches by product type, proof type, and length.
 
 - The owner posted a Dreamstate launch video and wants its record drafted for the library.
 
@@ -17,9 +17,9 @@ Follow `docs/skill-frame.md`.
 
 ## Steps
 
-1. Find the library checkout, or read it through GitHub read-only, and report pending when it is missing (`references/library.md`).
+1. Find the library checkout, or read it through GitHub read-only for comparables only, and report pending when it is missing (`references/library.md`).
 
-2. Read the viewer, product type, proof type, and length from the brief (`references/match.md`).
+2. Read the product type, proof type, and length from the brief (`references/match.md`).
 
 3. Filter `data/launches/*.json` on those fields and keep at most five records (`references/match.md`).
 
@@ -29,7 +29,7 @@ Follow `docs/skill-frame.md`.
 
 6. Return the comparables block for the proof ledger, or say there are none (`references/notes.md`).
 
-7. Draft a Dreamstate launch record in `data/launches/` only after the owner posted it (`references/record.md`).
+7. Draft a Dreamstate launch record in `data/launches/` only after the owner posted it, and only in a local checkout. Through GitHub alone, stop and ask for one (`references/record.md`).
 
 8. Run the library validator and hand the draft record to the owner (`references/record.md`).
 

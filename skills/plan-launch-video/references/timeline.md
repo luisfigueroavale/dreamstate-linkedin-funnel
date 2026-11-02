@@ -1,6 +1,6 @@
 # Timed structures
 
-Starting points, not platform rules. Times are in seconds. Pick the length from the brief's channel.
+Starting points, not platform rules. Times are in seconds. Pick the structure from the brief's `Length (seconds)`. The channel sets the frame and the pace, not the length.
 
 | Length | Beats |
 |---|---|
