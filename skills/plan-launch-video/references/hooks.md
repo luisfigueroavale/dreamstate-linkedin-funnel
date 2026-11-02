@@ -37,4 +37,4 @@ Checks before you keep a hook: pause at second five and say what it is, for whom
 
 Cut these openings: an announcement, company history, a category label, an unmeasured time saving, a superlative, or a montage with no meaning.
 
-When the posted video opened differently from the plan, label the record from what it actually opened on. A score helps the owner choose. It is not a view forecast, and the family is a label, not a cause.
+A score helps the owner choose. It is not a view forecast, and the family is a label, not a cause.

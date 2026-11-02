@@ -2,7 +2,7 @@
 
 Only after the owner posted the video. Follow the library's own `skills/add-launch-record` and `docs/data-model.md`. Save the record in the local checkout as `data/launches/<company-slug>-<id>.json`: company `Dreamstate`, so the slug is `dreamstate`, and the id is `x-<status id>`. The schema requires an X `post_url` and a matching `posted_by`, so with no X post, stop and tell the owner the record cannot pass the check yet. Set `owner` to `dreamstate`, `posted_by` to the handle in `post_url`, and `product` to the product or feature launched.
 
-Fill `hook_family`, `category`, `kind`, and `duration_seconds` from the saved plan in `drafts/launch-video/`, using the library's ids. Set `hook_basis` and `kind_basis` to `owner-supplied` or `observed-in-video` only when that is true.
+Fill `hook_family`, `category`, `kind`, and `duration_seconds` from the saved plan in `drafts/launch-video/`, using the library's ids. `hook_family` is the library id saved next to the chosen hook. If the posted video opens on a different hook than the plan, use the id for what it opens on and set `hook_basis` to `observed-in-video`. Set `hook_basis` and `kind_basis` to `owner-supplied` or `observed-in-video` only when that is true.
 
 Numbers come from a tool read only. Each read is its own snapshot, added first in `snapshots`. Never merge two reads, two channels, or two scopes into one snapshot:
 

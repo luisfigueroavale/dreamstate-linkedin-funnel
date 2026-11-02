@@ -4,12 +4,12 @@ The spoken lines in the script and storyboard are the final read. This skill own
 
 ## Launch post and reply bank
 
-Copy `references/templates/post-and-replies.md`. Every factual claim comes from a `verified` ledger line. The action and the destination come from the brief. Price or access comes from the brief only when the owner confirmed it. Measurements come from the tools named below.
+Copy `references/templates/post-and-replies.md`. Every product claim comes from a `verified` ledger line. The action and the destination come from the brief. Price or access comes from the brief only when the owner confirmed it. Measurements come only from a tool read the seat made and passed in: the X read tool `get_posts_by_ids`, or `visibility.analytics_query`. This skill makes no tool calls itself.
 
 - Launch post: the first line matches the video's opening promise, then the product and its plain use, one proof detail, and one action.
 - Reply bank: what it does, who it is for, how it differs, price or access only if confirmed, its limits, and how to try it. Each reply points at a real screenshot or output.
 - Follow-ups for days two to seven: a deeper proof, a common objection answered, a real use case. Results in week two only when they are real and permitted.
-- Measurement: the numbers the tools actually return, each with its scope and retrieval date. Unknown stays unknown.
+- Measurement: the numbers those reads actually returned, each with its scope and retrieval date. Unknown stays unknown.
 
 All of it is a draft. Posting, scheduling, paying, and outreach each need the owner's yes on that exact item.
 
