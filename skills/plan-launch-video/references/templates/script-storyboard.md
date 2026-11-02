@@ -9,6 +9,11 @@ Spoken words, estimate: <n> at 130 to 160 a minute
 | 1 | 0 | | | | | | | | P | |
 | 2 | | | | | | | | | P | |
 | 3 | | | | | | | | | P | |
+| 4 | | | | | | | | | P | |
+| 5 | | | | | | | | | P | |
+| 6 | | | | | | | | | P | |
+
+<Keep the rows your structure uses, four to six, and delete the rest and this line.>
 
 Shot labels used: <real time / sped up / waiting cut / illustration / concept / demo>
 Voice: <owner recording, or the voice the owner picked>. Paid voice quote and yes: <none / link to the yes>

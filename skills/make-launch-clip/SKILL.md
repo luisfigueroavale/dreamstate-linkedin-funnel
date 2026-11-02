@@ -53,7 +53,7 @@ None. Local files only.
 
 - Do not generate footage.
 
-- Every screen is a real feature, or it is labeled concept or demo.
+- Every screen is a real feature, or it is labeled illustration, concept, or demo.
 
 - A prebuilt scene library is dropped: a ready-made kit would put up a screen that is not this feature, and each screen is HTML for this launch so a later capture rebuilds the piece.
 

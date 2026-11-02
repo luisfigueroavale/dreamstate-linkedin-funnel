@@ -8,12 +8,14 @@ Brand files read: identity <status>, voice <status>, style <status>, ideal follo
 |---|---|---|
 | What works today | | |
 | Viewer | | audience.local/ideal-follower.md |
-| Buyer | | Ideal Customer page |
+| Buyer | | Ideal Customer page (Company Context), read <YYYY-MM-DD> |
 | Wanted result | | |
 | Current way | | |
 | Usual alternative | | |
 | Visible difference | | |
 | Proof on hand | | |
+| Product type (library category id) | | |
+| Proof type (output / live_demo / before_after / measured_result / concept) | | |
 | Action and destination | | |
 | Channel | | |
 | Length (seconds) | | |
