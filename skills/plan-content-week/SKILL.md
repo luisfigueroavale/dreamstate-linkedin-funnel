@@ -134,7 +134,7 @@ It points at the stage skills and orders one week from a sourced idea. Follow `d
 
 - Do not mine the transcript again to invent a fresh argument for every row.
 
-- Do not add a 3D scene library.
+- Do not add a 3D scene library to this repo. A 3D scene goes to the Graphic Designer, who builds it in [dreamstate-design](https://github.com/luisfigueroavale/dreamstate-design).
 
 - Do not also arm a second send for the same piece.
 
@@ -164,7 +164,7 @@ It points at the stage skills and orders one week from a sourced idea. Follow `d
 
 - Do not upload to a video host.
 
-- Do not install a ranking plugin, a paid social radar, or a 3D scene library.
+- Do not install a ranking plugin, a paid social radar, or a 3D scene library in this repo. 3D lives in dreamstate-design.
 
 - Do not run another product's installer.
 
